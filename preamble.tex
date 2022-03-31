@@ -1,7 +1,19 @@
 \usepackage[margin=1in]{geometry}
+\usepackage{csquotes}
 \usepackage{fancyhdr}
 \usepackage{marginnote}
+\usepackage{scrextend}
+\usepackage[bottom]{footmisc}
+\usepackage{enumitem}
+\usepackage[style=apa]{biblatex}
+\usepackage{float,subcaption}
+\usepackage{tikz}
+\usepackage{amsmath,amssymb}
+\usepackage{mhchem}
+\usepackage{chemfig}
 \usepackage[hidelinks]{hyperref}
+
+\MakeOuterQuote{"}
 
 \fancypagestyle{main}{
     \fancyhf{}
@@ -15,5 +27,25 @@
 }
 
 \reversemarginpar
+
+\deffootnotemark{\textsuperscript{\textup{[}\thefootnotemark\textup{]}}}
+\deffootnote[2.1em]{0em}{0em}{\textsuperscript{\thefootnote}}
+
+\setitemize[3]{label={\scriptsize$\blacksquare$}}
+
+\addbibresource{../main.bib}
+\DefineBibliographyStrings{english}{bibliography={References}}
+
+\colorlet{rex}{magenta}
+\colorlet{orx}{orange!90!yellow!95!black!90}
+\colorlet{ory}{orange!90!yellow!95!black!20}
+\colorlet{grx}{green!60!cyan!70!black}
+\tikzset{
+    numcirc/.style={circle,draw,inner sep=1pt,font=\scriptsize},
+    curved arrow/.style 2 args={rex,semithick,shorten <=#1,shorten >=#2}
+}
+
+\setchemfig{atom sep=2em,fixed length=true,bond offset=3pt,cram width=3pt}
+\setcharge{extra sep=3pt}
 
 \usepackage{subfiles}

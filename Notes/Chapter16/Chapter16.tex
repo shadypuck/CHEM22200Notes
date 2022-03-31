@@ -12,7 +12,468 @@
 \chapter{Aldehydes and Ketones}
 \section{Electron Pushing}
 \begin{itemize}
-    \item \marginnote{3/28:}
+    \item \marginnote{3/28:}Levin and Weixin\footnote{WAY-shin} are teaching.
+    \item Problem sets are based on lecture content.
+    \item Levin took the class just 13 years ago.
+    \item We're gonna learn a lot about carbonyls this quarter.
+    \item Unit 1: Additions to carbonyls.
+    \item Defines carbonyls, ketones, aldehydes, and formaldehyde.
+    \begin{itemize}
+        \item Formaldehyde is the most electrophilic carbonyl compound due to electronics and sterics: Carbons are both electron-donating and bulky.
+        \item Note that sterics are the primary factor.
+    \end{itemize}
+    \item Carbonyls are electrophilic at the carbon (Levin draws the resonance structure).
+    \item Reviews curved arrow formalism.
+    \begin{itemize}
+        \item You should be able to write a full English sentence to describe each arrow.
+        \begin{itemize}
+            \item In the formaldehyde resonance structure, for example, we can write, "The \ce{C=O} $\pi$ bond breaks and the electrons become a lone pair on the oxygen."
+            \item As another example, consider \ce{Et3N} attacking acetic acid, leaving behind the acetate ion. In this case, we can write the two sentences, "The nitrogen lone pair makes a new bond to the hydrogen" and "The \ce{O-H} bond breaks and the electrons become a lone pair on oxygen."
+        \end{itemize}
+        \item You can draw arrows from negative charges; this notation is assumed to imply there's a lone pair on the negatively charged atom that actually does the attacking.
+    \end{itemize}
+    \item Ways to make carbonyls.
+    \begin{enumerate}
+        \item Oxidation of alcohols.
+        \item Friedel-Crafts acylation.
+        \item Ozonolysis.
+        \item Diol cleavage.
+        \item Alkyne hydration.
+        \item Alkyne hydroboration.
+    \end{enumerate}
+    \item Oxidation of alcohols.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{R-[:30]-[2]OH}
+            \arrow{->[PCC]}
+            \chemfig{R-[:30](=[2]O)-[:-30]H}
+        \schemestop
+    \end{center}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \vspace{1em}
+        \footnotesize
+        \schemestart
+            \chemfig{R-[:30]-[2]@{O1}\charge{0=\:}{O}-[:150]H}
+            \arrow{0}[,0.5]
+            \chemfig{@{Cr2}Cr(=[:70]O)(=[:110]O)(-[5]\charge{90:3pt=$\ominus$}{O})(-[@{sb2}7]@{Cl2}Cl)}
+            \arrow
+            \chemfig{R-[:30]-[2]@{O3}\charge{90:3pt=$\oplus$}{O}(-[@{sb3}:150]@{H3}H)-[:30]Cr(=[:70]O)(=[:110]O)-[:-30]\charge{45:1pt=$\ominus$}{O}}
+            \arrow{0}[,0.5]
+            \chemfig{@{Cl4}\charge{90:3pt=$\ominus$}{Cl}}
+            \arrow{->[][-\ce{HCl}]}
+            \chemfig{R-[:30](-[@{sb5a}:-30]@{H5}H)-[@{sb5b}2]O-[@{sb5c}:30]@{Cr5}Cr(=[:70]O)(=[:110]O)-[:-30]@{O5}\charge{-90:3pt=$\ominus$}{O}}
+            \arrow
+            \chemfig{R-[:30](=[2]O)-[:-30]H}
+            \arrow{0}[,0.1]\+{,,0.5em}
+            \chemfig{\charge{45:3pt=$\ominus$}{Cr}(-[2]OH)(=[:-30]O)(=[:-150]O)}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={6pt}{2pt}] (O1) to[out=0,in=180] node[above=3pt,numcirc]{1} (Cr2);
+            \draw [curved arrow={2pt}{2pt}] (sb2) to[bend left=90,looseness=3] node[above=3pt,numcirc]{2} (Cl2);
+            \draw [curved arrow={10pt}{2pt}] (Cl4) to[bend right=90,looseness=1.2] node[above=3pt,numcirc]{3} (H3);
+            \draw [curved arrow={2pt}{2pt}] (sb3) to[bend right=90,looseness=3] node[left=3pt,numcirc]{4} (O3);
+            \draw [curved arrow={10pt}{2pt}] (O5) to[out=-90,in=0,looseness=1.3] node[below right=2pt,numcirc]{5} (H5);
+            \draw [curved arrow={2pt}{2pt}] (sb5a) to[bend right=70,looseness=2.4] node[right=3pt,numcirc]{6} (sb5b);
+            \draw [curved arrow={2pt}{2pt}] (sb5c) to[bend left=70,looseness=2.4] node[left=3pt,numcirc]{7} (Cr5);
+        }
+        \caption{Oxidation of alcohols mechanism.}
+        \label{fig:mechanismAlcoholOxidation}
+    \end{figure}
+    \begin{itemize}
+        \item We could also draw a resonance structure of the \ce{CrO2OH} product that puts the negative charge on one of the previously double-bonded oxygens.
+        \item The mechanism of this reaction is hotly debated, and the above is only the most likely case.
+        \begin{itemize}
+            \item One contested point of this mechanism is what the role of pyridinium is. Some mechanisms show it doing the third-step deprotonation, for example.
+        \end{itemize}
+        \item Note that the numbering of the curved arrows identifies them with the following sentences.
+        \begin{enumerate}
+            \item Oxygen lone pair makes \ce{Cr-O} bond.
+            \item \ce{Cr-Cl} bond breaks; becomes \ce{Cl} l.p.
+            \item \ce{Cl} l.p. makes \ce{H-Cl} bond.
+            \item \ce{O-H} bond breaks; becomes \ce{O} l.p.
+            \item \ce{O} l.p. makes new \ce{OH} bond.
+            \item \ce{CH} bond breaks and electrons make a new \ce{C=O} $\pi$ bond.
+            \item \ce{O-Cr} bond breaks; becomes a \ce{Cr} l.p.
+        \end{enumerate}
+    \end{itemize}
+    \item Friedel-Crafts acylation.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{MeO-[:30]*6(=-=-=-)}
+            \arrow{0}[,0.1]\+{,,1.6em}
+            \chemfig{Cl-[:30](=[2]O)-[:-30]}
+            \arrow{->[\ce{AlCl3}]}[,1.1]
+            \chemfig{MeO-[:30]*6(=-(-[,,,,white]-[6,,,,white]\phantom{O})=(-(=[2]O)-[:-30])-=-)}
+        \schemestop
+    \end{center}
+    \item Mechanism.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30]@{Cl1}\charge{90=\:}{Cl}}
+            \arrow{->[\chemfig[atom sep=1.4em,cram width=2pt,bond offset=2.5pt]{@{Al2}Al(-Cl)(<:[:160]Cl)(<[:-150]Cl)-[6,1.6,,,white]}]}[,2]
+            \chemfig{-[:30](=[@{db3}2]@{O3}\charge{[extra sep=1.5pt]45=\:,135=\:}{O})-[@{sb3}:-30]@{Cl3}\charge{-90:3pt=$\oplus$}{Cl}-[:30]\charge{90:3pt=$\ominus$}{Al}Cl_3}
+            \arrow{->[][-\ce{AlCl4-}]}[,1.2]
+            \chemfig{-@{C4}~[@{tb4}]@{O4}\charge{90:3pt=$\oplus$}{O}}
+            \arrow{->[\chemfig[atom sep=1.4em]{OMe-[2]*6(-=-=[@{db5}]-=)}]}[,1.2]
+            \chemfig{OMe-[2]*6(-=-(-[@{sb6a}:110]@{H6}H)(-[:70](-[::40])(=[::-65,0.8]O))-[@{sb6b}]\charge{135:1pt=$\oplus$}{}-=)}
+            \arrow{->[\chemfig[atom sep=1.4em]{@{Cl7}\charge{90=\:}{Cl}-\charge{90:3pt=$\ominus$}{Al}Cl_3}][-\ce{AlCl3, HCl}]}[,1.5]
+            \chemfig{OMe-[2]*6(=-=(-(-[::-60])(=[::60]O))-=-)}
+        \schemestop
+        \chemmove{
+            \filldraw [-,thick,draw=orx,fill=ory] ([yshift=1mm]Al2.89) to[bend right=110,looseness=600] ([yshift=1mm]Al2.91);
+            \filldraw [-,thick,draw=orx,fill=ory] ([yshift=-1mm]Al2.-91) to[bend right=110,looseness=600] ([yshift=-1mm]Al2.-89);
+            \draw [curved arrow={6pt}{2pt}] (Cl1) to[out=90,in=180,looseness=1.5] node[above left=2pt,numcirc]{1} (Al2);
+            \draw [curved arrow={6pt}{3pt}] (O3) to[out=135,in=180,looseness=4] node[above=3.3mm,numcirc]{2} (db3);
+            \draw [curved arrow={2pt}{2pt}] (sb3) to[out=60,in=90,looseness=2.5] node[above=3pt,numcirc]{3} (Cl3);
+            \draw [curved arrow={2pt}{4pt}] (db5) to[out=120,in=90,in looseness=2] node[above left=2pt,numcirc]{4} (C4);
+            \draw [curved arrow={4pt}{2pt}] (tb4) to[bend right=90,looseness=3] node[below=3pt,numcirc]{5} (O4);
+            \draw [curved arrow={6pt}{2pt}] (Cl7) to[out=90,in=90,looseness=1.5] node[above=3pt,numcirc]{6} (H6);
+            \draw [curved arrow={2pt}{2pt}] (sb6a) to[bend right=60,looseness=2] node[above left=2pt,numcirc]{7} (sb6b);
+        }
+        \caption{Friedel-Crafts acylation mechanism.}
+        \label{fig:mechanismFCacylation}
+    \end{figure}
+    \begin{itemize}
+        \item Note that the charge on aluminum in \ce{AlCl4-} is a \emph{formal} charge; it is not indicative of the presence of a lone pair.
+        \item Remember that we form the ortho/para product because those dearomatized intermediates benefit more greatly from resonance stabilization.
+        \item Sentences.
+        \begin{enumerate}
+            \item \ce{Cl} l.p. makes a bond to aluminum.
+            \item \ce{O} l.p. makes \ce{C=O} $\pi$ bond.
+            \item \ce{C-Cl} bond breaks; becomes \ce{Cl} l.p.
+            \item \ce{C-C} $\pi$ bond breaks, and makes a new \ce{C-C} bond.
+            \item \ce{C#O} $\pi$ bond breaks; makes \ce{O} l.p.
+            \item \ce{Cl} l.p. makes a bond to \ce{H}.
+            \item \ce{C-H} bond breaks; becomes a \ce{C=C} $\pi$ bond.
+        \end{enumerate}
+    \end{itemize}
+    \item We will not show any sentences hereafter, but it's a good idea to write them if you're still unclear on what the arrows are doing.
+    \item Ozonolysis.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30]=_[:-30]-[:30]}
+            \arrow{->[1. \ce{O3}\rule{3.4mm}{0pt}][2. \ce{Me2S}]}[,1.3]
+            \chemfig{O=[4](-[::60]H)(-[::-60])}
+            \+
+            \chemfig{O=(-[::60]H)(-[::-60])}
+            \arrow{0}[,0.1]\+{,,0.8em}
+            \chemfig{S(=[2]O)(-[:-30])(-[:-150])}
+        \schemestop
+    \end{center}
+    \item Mechanism.
+    \begin{itemize}
+        \item Nearly identical to Dong's first quarter (Figure 7.3 of \textcite{bib:CHEM22000Notes}), but a few steps are combined and a few others are separated.
+        \item If you don't add \ce{Me2S}, you can isolate the ozonide intermediate. Use caution, however, as ozonides are explosive.
+    \end{itemize}
+    \item Diol cleavage.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{[:30]*6(---(<OH)-(<HO)--)}
+            \arrow{->[\ce{HIO4}]}
+            \chemfig{H-[:30](=[2]O)-[:-30]-[:30]-[:-30]-[:30]-[:-30](=[6]O)-[:30]H}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item Cis-diols react faster, but aren't necessarily required.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{[:30]*6(---(<O\textcolor{grx}{H})-(<\textcolor{grx}{H}O)--)}
+            \arrow{-U>[\chemfig{I(-[2]OH)(=[:-30]O)(=[:-110]O)(=[:-150]\textcolor{grx}{O}-[4,,,,white])}][\color{grx}\ce{H2O}]}[,2]
+            \chemfig{[:30]*6(---(<[@{sb3d}]O-[@{sb3e}:138,1.1]\phantom{I})-[@{sb3c}](<[@{sb3b}]O-[@{sb3a}:42,1.1]@{I3}I(=[1]O)(-[2]OH)(=[3]O))--)}
+            \arrow{->[][-\ce{HIO3}]}
+            \chemfig{H-[:30](=[2]O)-[:-30]-[:30]-[:-30]-[:30]-[:-30](=[6]O)-[:30]H}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={2pt}{3pt}] (sb3a) to[bend left=40,looseness=1.2] (sb3b);
+            \draw [curved arrow={2pt}{3pt}] (sb3c) to[bend left=60,looseness=2] (sb3d);
+            \draw [curved arrow={2pt}{3pt}] (sb3e) to[bend left=70,looseness=2.5] (I3);
+        }
+        \caption{Diol cleavage mechanism.}
+        \label{fig:mechanismDiolCleavage}
+    \end{figure}
+    \item Alkyne hydration.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{R-~-H}
+            \arrow{->[\ce{Ph3PAu+}][\ce{H2O}]}[,1.3]
+            \chemfig{R-[:30](=[2]O)-[:-30](-[:-70]H)(-[:-110]H)-[:30]H}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item Every place gold is we can use mercury instead, but since gold is less toxic and more active, we prefer to use it (even though it's more expensive). Any of the soft Lewis acid transition metals in the bottom-right corner island will work, though.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{R-~[@{tb1}]-H}
+            \arrow{->[*{0}\chemfig{Ph_3P@{Au2}\charge{45:1pt=$\oplus$}{Au}-[,0.3,,,white]}]}[90]
+            \chemfig{AuPPh_3-[2]-[2,0.2,,,white]-[,0.5,,,white](~[4]-[4]R)(-H)}
+            \arrow{<=>}[90]
+            \chemfig{R-[:30]@{C4}\charge{90:3pt=$\oplus$}{}=_[:-30](-[6]AuPPh_3)-[:30]H}
+            \arrow{->[\chemfig{H_2@{O5}\charge{90=\:}{O}}]}
+            \chemfig{R-[:30](-[2]@{O6}\charge{90:3pt=$\oplus$}{O}(-[@{sb6}:30]@{H6}H)(-[:150]H))=_[:-30](-[6]AuPPh_3)-[:30]H}
+            \arrow{->[\chemfig{H_2@{O7}\charge{90=\:}{O}}]}
+            \chemfig{R-[:30](-[2]OH)=_[:-30](-[@{sb8}6]AuPPh_3)-[:30]H}
+            \arrow{0}[,0.1]\+
+            \chemfig{@{H9}H-[@{sb9}]@{O9}\charge{90:3pt=$\oplus$}{O}H_2}
+            \arrow{->[][-\ce{H2O, Ph3PAu+}]}[,1.9]
+            \chemfig{R-[:30](-[2]OH)=_[:-30](-[6]H)-[:30]H}
+            \arrow{->}[-90]
+            \chemfig{R-[:30](=[2]O)-[:-30](-[:-70]H)(-[:-110]H)-[:30]H}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={4pt}{2pt}] (tb1) to[out=90,in=-90,in looseness=1.5] (Au2);
+            \draw [curved arrow={6pt}{2pt}] (O5) to[out=90,in=30] (C4);
+            \draw [curved arrow={6pt}{2pt}] (O7) to[out=90,in=0,looseness=1.2] (H6);
+            \draw [curved arrow={2pt}{2pt}] (sb6) to[bend left=90,looseness=3] (O6);
+            \draw [curved arrow={2pt}{2pt}] (sb8) to[out=0,in=-135,looseness=1.2] (H9);
+            \draw [curved arrow={2pt}{2pt}] (sb9) to[bend right=90,looseness=3] (O9);
+        }
+        \caption{Alkyne hydrogenation mechanism.}
+        \label{fig:mechanismAlkyneHydrogenation}
+    \end{figure}
+    \begin{itemize}
+        \item We won't need to know the arrow-pushing mechanism for the tautomerization until Unit 3.
+    \end{itemize}
+    \item Alkyne hydroboration.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{R-~-H}
+            \arrow{->[1. 9-BBN-H\rule{3.3mm}{0pt}][2. \ce{H2O2, HO-}]}[,1.8]
+            \chemfig{R-[:30](-[:70]H)(-[:110]H)-[:-30](=[6]O)-[:30]H}
+        \schemestop
+    \end{center}
+    \item \textbf{9-BBN-H}: 9-Borabicyclo[3.3.1]nonane, a source of \ce{R2B-H} with really big \ce{R} groups, just like \ce{(sia)2BH}. \emph{Structure}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{*8(---(-[:157.5,1.1]\chemabove{B}{H}?)----?-)}
+        \caption{9-Borabicyclo[3.3.1]nonane (9-BBN-H).}
+        \label{fig:9-BBN-H}
+    \end{figure}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \subscheme{
+                \chemfig{R-[2]@{C1}~[@{tb1}2]-[2]H}
+                \arrow{0}[,0.6]
+                \chemfig{H-[@{sb2}2]@{B2}BR_2}
+            }
+            \arrow[90]
+            \chemfig{R-[:30](-[2]H)=_[:-30](-[6]H)-[:30]@{B3}BR_2}
+            \arrow{->[
+                \setchemfig{arrow double sep=2pt}
+                \subscheme{
+                    \subscheme{
+                        \chemfig{\charge{90:3pt=$\ominus$}{O}H}
+                        \+
+                        \chemfig{H_2O_2}
+                    }
+                    \arrow{<=>}[-90,0.8]
+                    \subscheme{
+                        \chemfig{HO@{O6}\charge{90=\:,45:1pt=$\ominus$}{O}}
+                        \+
+                        \chemfig{H_2O}
+                    }
+                }
+            ]}[,2]
+            \chemfig{R-[:30]=_[:-30]-[@{sb8a}:30]\chembelow{\charge{90:3pt=$\ominus$}{B}}{{\color{white}{}_2}R_2}-[:-30]@{O8a}O-[@{sb8b}:30]@{O8b}OH}
+            \arrow
+            \subscheme{
+                \chemname{\chemfig{R-[:30]=_[:-30]-[:30]O(-[2,0.7,,,white])-[:-30]BR_2}}{Enol boronate}
+                \arrow{0}[,0.1]\+
+                \chemfig{\charge{90:3pt=$\ominus$}{O}H}
+            }
+            \arrow[-90]
+            \chemfig{R-[:30](-[:70]H)(-[:110]H)-[:-30](=[6]O)-[:30]H}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={4pt}{2pt}] (tb1) to[out=0,in=180] (B2);
+            \draw [curved arrow={2pt}{4pt}] (sb2) to[out=180,in=0] (C1);
+            \draw [curved arrow={6pt}{2pt}] (O6) to[bend right=90,looseness=1.5] (B3);
+            \draw [curved arrow={2pt}{2pt}] (sb8a) to[bend right=60,looseness=1.3] (O8a);
+            \draw [curved arrow={2pt}{2pt}] (sb8b) to[bend left=90,looseness=3] (O8b);
+        }
+        \caption{Alkyne hydroboration mechanism.}
+        \label{fig:mechanismAlkyneHydroboration}
+    \end{figure}
+    \begin{itemize}
+        \item The \textbf{enol boronate} undergoes another kind of tautomerization (which, again, we'll see in Unit 3) to yield the final product.
+    \end{itemize}
+    \item The two(-ish) most important mechanisms in CHEM 222 are Figure \ref{fig:222KeyMechanism} promoted either by acid or base.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]R'}
+            \arrow{0}[,0.1]\+
+            \chemfig{NuH}
+            \arrow{<=>[acid or][base]}[,1.1]
+            \chemfig{R-[:30](-[:70]Nu)(-[:110]HO)-[:-30]R'}
+        \schemestop
+        \caption{The key mechanism in CHEM 22200.}
+        \label{fig:222KeyMechanism}
+    \end{figure}
+    \item Acidic mechanism.
+    \begin{figure}[h!]
+        \centering
+        \vspace{1em}
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30](=[2]@{O1}\charge{90=\:}{O})-[:-30]R'}
+                \arrow{0}[,0.6]
+                \chemfig{@{H2}H-[@{sb2}]@{X2}X}
+                \arrow
+                \chemfig{R-[:30]@{C3}(=[@{db3}2]@{O3}\charge{135:1pt=$\oplus$}{O}-[:30]H)-[:-30]R'}
+                \arrow{0}[,0.1]\+
+                \chemfig{\charge{45:1pt=$\ominus$}{X}}
+                \arrow{->[\chemfig[atom sep=1.4em]{@{Nu5}\charge{90=\:}{Nu}-H}]}[,1.2]
+                \chemfig{R-[:30](-[:110]HO)(-[:70]@{Nu6}\charge{90:3pt=$\oplus$}{Nu}-[@{sb6}]@{H6}H)-[:-30]R'}
+                \arrow{0}[,0.1]\+
+                \chemfig{@{X7}\charge{90=\:,45:1pt=$\ominus$}{X}}
+                \arrow{->[][-\ce{HX}]}
+                \chemfig{R-[:30](-[:110]HO)(-[:70]Nu)-[:-30]R'}
+            \schemestop
+            \chemmove{
+                \draw [curved arrow={6pt}{2pt}] (O1) to[out=90,in=90,looseness=1.5] (H2);
+                \draw [curved arrow={2pt}{2pt}] (sb2) to[bend left=90,looseness=3] (X2);
+                \draw [curved arrow={6pt}{2pt}] (Nu5) to[out=90,in=30] (C3);
+                \draw [curved arrow={3pt}{2pt}] (db3) to[bend left=90,looseness=3] (O3);
+                \draw [curved arrow={6pt}{2pt}] (X7) to[out=90,in=0,looseness=1.1] (H6);
+                \draw [curved arrow={2pt}{2pt}] (sb6) to[bend left=90,looseness=3] (Nu6);
+            }
+            \caption{Forward direction.}
+            \label{fig:acidPromotedNua}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30](-[:110]HO)(-[:70]@{Nu1}\charge{0=\:}{Nu})-[:-30]R'}
+                \arrow{0}[,0.6]
+                \chemfig{@{H2}H-[@{sb2}]@{X2}X}
+                \arrow
+                \chemfig{R-[:30](-[@{sb3a}:120]H@{O3}\charge{90=\:}{O})(-[@{sb3b}:60]@{Nu3}\charge{90:3pt=$\oplus$}{Nu}-H)-[:-30]R'}
+                \arrow{0}[,0.1]\+
+                \chemfig{\charge{45:1pt=$\ominus$}{X}}
+                \arrow{->[][-\ce{NuH}]}
+                \chemfig{R-[:30](=[2]@{O5}\charge{135:1pt=$\oplus$}{O}-[@{sb5}:30]@{H5}H)-[:-30]R'}
+                \arrow{0}[,0.1]\+
+                \chemfig{@{X6}\charge{90=\:,45:1pt=$\ominus$}{X}}
+                \arrow{->[][-\ce{HX}]}
+                \chemfig{R-[:30](=[2]O)-[:-30]R'}
+            \schemestop
+            \chemmove{
+                \draw [curved arrow={6pt}{2pt}] (Nu1) to[out=0,in=180] (H2);
+                \draw [curved arrow={2pt}{2pt}] (sb2) to[bend left=90,looseness=3] (X2);
+                \draw [curved arrow={6pt}{2pt}] (O3) to[out=100,in=-150,looseness=6] (sb3a);
+                \draw [curved arrow={2pt}{2pt}] (sb3b) to[bend right=90,looseness=2.5] (Nu3);
+                \draw [curved arrow={6pt}{2pt}] (X6) to[out=90,in=0,looseness=1.3] (H5);
+                \draw [curved arrow={2pt}{2pt}] (sb5) to[bend left=90,looseness=3] (O5);
+            }
+            \caption{Reverse direction.}
+            \label{fig:acidPromotedNub}
+        \end{subfigure}
+        \caption{Nucleophilic addition/elimination with carbonyls (acid-promoted).}
+        \label{fig:acidPromotedNu}
+    \end{figure}
+    \begin{itemize}
+        \item The forward and reverse mechanisms are the same.
+    \end{itemize}
+    \item \textbf{Principle of microscopic reversibility}: The lowest energy path in the forward direction must be the lowest energy path in the reverse direction.
+    \item Basic mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{@{Nu1}Nu-[@{sb1}]@{H1}H}
+                \arrow{->[\chemfig{@{B2}\charge{90=\:}{B}}]}
+                \chemfig{@{Nu3}\charge{90=\:,45:1pt=$\ominus$}{Nu}}
+                \+
+                \chemfig{H\charge{90:3pt=$\oplus$}{B}}
+                \arrow{-U>[\chemfig[atom sep=1.4em]{R-[:30]@{C5}(=[@{db5}2]@{O5}O)-[:-30]R'}][][][][80]}[,1.5]
+                \chemfig{R-[:30](-[:110]@{O6}\charge{90=\:,135:1pt=$\ominus$}{O})(-[:70]Nu)-[:-30]R'}
+                \arrow{0}[,0.1]\+
+                \chemfig{@{H7}H-[@{sb7}]@{B7}\charge{90:3pt=$\oplus$}{B}}
+                \arrow{->[][-B]}
+                \chemfig{R-[:30](-[:110]HO)(-[:70]Nu)-[:-30]R'}
+            \schemestop
+            \chemmove{
+                \draw [curved arrow={6pt}{2pt}] (B2) to[out=90,in=90,looseness=2] (H1);
+                \draw [curved arrow={2pt}{2pt}] (sb1) to[bend right=90,looseness=3] (Nu1);
+                \draw [curved arrow={6pt}{3pt}] (Nu3) to[out=90,in=150] (C5);
+                \draw [curved arrow={3pt}{2pt}] (db5) to[bend right=90,looseness=3] (O5);
+                \draw [curved arrow={6pt}{2pt}] (O6) to[out=90,in=90,looseness=1.5] (H7);
+                \draw [curved arrow={2pt}{2pt}] (sb7) to[bend right=90,looseness=3] (B7);
+            }
+            \caption{Forward direction.}
+            \label{fig:basePromotedNua}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30](-[:110]@{O1}O-[@{sb1}4]@{H1}H)(-[:70]Nu)-[:-30]R'}
+                \arrow{->[\chemfig{@{B2}\charge{90=\:}{B}}]}
+                \chemfig{R-[:30](-[@{sb3a}:110]@{O3}\charge{180=\:,90:3pt=$\ominus$}{O})(-[@{sb3b}:70]@{Nu3}Nu)-[:-30]R'}
+                \arrow{0}[,0.1]\+
+                \chemfig{H\charge{90:3pt=$\oplus$}{B}}
+                \arrow{-U>[][\chemfig[atom sep=1.4em]{R-[:30](=[2]O)-[:-30]R'}][][][80]}[,1.3]
+                \chemfig{@{Nu6}\charge{90=\:,45:1pt=$\ominus$}{Nu}}
+                \+
+                \chemfig{@{H7}H-[@{sb7}]@{B7}\charge{90:3pt=$\oplus$}{B}}
+                \arrow{->[][-B]}
+                \chemfig{NuH}
+            \schemestop
+            \chemmove{
+                \draw [curved arrow={6pt}{2pt}] (B2) to[out=90,in=90,looseness=1.2] (H1);
+                \draw [curved arrow={2pt}{2pt}] (sb1) to[bend left=90,looseness=3] (O1);
+                \draw [curved arrow={6pt}{2pt}] (O3) to[out=180,in=-150,in looseness=4,out looseness=3] (sb3a);
+                \draw [curved arrow={2pt}{2pt}] (sb3b) to[bend right=90,looseness=3] (Nu3);
+                \draw [curved arrow={6pt}{2pt}] (Nu6) to[out=90,in=90,looseness=1.5] (H7);
+                \draw [curved arrow={2pt}{2pt}] (sb7) to[bend right=90,looseness=3] (B7);
+            }
+            \caption{Reverse direction.}
+            \label{fig:basePromotedNub}
+        \end{subfigure}
+        \caption{Nucleophilic addition/elimination with carbonyls (base-promoted).}
+        \label{fig:basePromotedNu}
+    \end{figure}
+    \begin{itemize}
+        \item B: means base, not boron.
+    \end{itemize}
 \end{itemize}
 
 
