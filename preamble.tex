@@ -6,9 +6,12 @@
 \usepackage[bottom]{footmisc}
 \usepackage{enumitem}
 \usepackage[style=apa]{biblatex}
+\usepackage{tocloft}
 \usepackage{float,subcaption}
+\usepackage{siunitx}
 \usepackage{tikz}
 \usepackage{amsmath,amssymb}
+\usepackage{bm}
 \usepackage{mhchem}
 \usepackage{chemfig}
 \usepackage[hidelinks]{hyperref}
@@ -36,16 +39,26 @@
 \addbibresource{../main.bib}
 \DefineBibliographyStrings{english}{bibliography={References}}
 
+\setlength\cftfignumwidth{3em}
+
+\DeclareSIUnit{\angstrom}{\textup{\AA}}
+
+\usetikzlibrary{decorations.pathmorphing}
 \colorlet{rex}{magenta}
 \colorlet{orx}{orange!90!yellow!95!black!90}
 \colorlet{ory}{orange!90!yellow!95!black!20}
 \colorlet{grx}{green!60!cyan!70!black}
+\colorlet{gax}{gray!50}
+\colorlet{blx}{cyan}
 \tikzset{
     numcirc/.style={circle,draw,inner sep=1pt,font=\scriptsize},
-    curved arrow/.style 2 args={rex,semithick,shorten <=#1,shorten >=#2}
+    curved arrow/.style 2 args={rex,semithick,shorten <=#1,shorten >=#2},
+    wv/.style={decorate,decoration={coil,aspect=0,amplitude=2pt,segment length=11pt}}
 }
 
 \setchemfig{atom sep=2em,fixed length=true,bond offset=3pt,cram width=3pt}
 \setcharge{extra sep=3pt}
+
+\newcommand{\pKa}{\text{p}K_\text{a}}
 
 \usepackage{subfiles}

@@ -369,7 +369,7 @@
             \chemmove{
                 \draw [curved arrow={6pt}{2pt}] (O1) to[out=90,in=90,looseness=1.5] (H2);
                 \draw [curved arrow={2pt}{2pt}] (sb2) to[bend left=90,looseness=3] (X2);
-                \draw [curved arrow={6pt}{2pt}] (Nu5) to[out=90,in=30] (C3);
+                \draw [curved arrow={6pt}{3pt}] (Nu5) to[out=90,in=30] (C3);
                 \draw [curved arrow={3pt}{2pt}] (db3) to[bend left=90,looseness=3] (O3);
                 \draw [curved arrow={6pt}{2pt}] (X7) to[out=90,in=0,looseness=1.1] (H6);
                 \draw [curved arrow={2pt}{2pt}] (sb6) to[bend left=90,looseness=3] (Nu6);
@@ -474,6 +474,507 @@
     \begin{itemize}
         \item B: means base, not boron.
     \end{itemize}
+\end{itemize}
+
+
+
+\section{Aldehydes and Ketones 1}
+\begin{itemize}
+    \item \marginnote{3/31:}Final exam: Tuesday, May 31 from 8-10 PM. A few different rooms; more on that later.
+    \item Picking up from last time with acid- and base-catalyzed nucleophilic addition to carbonyls (Figures \ref{fig:acidPromotedNu} and \ref{fig:basePromotedNu}).
+    \begin{itemize}
+        \item Today: Specific nucleophiles and mechanisms.
+    \end{itemize}
+    \item \textbf{Carbonyl hydrate}: The class of molecules resulting from the nucleophilic addition of \ce{H2O} to a carbonyl group. \emph{Structure}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{R-[:30](-[:70]OH)(-[:110]HO)-[:-30]R'}
+        \caption{Carbonyl hydrate ($\ce{R$'$}=\ce{H},\ce{C}$).}
+        \label{fig:carbonylHydrate}
+    \end{figure}
+    \item Carbonyl hydrate formation constants in aqueous solution.
+    \begin{itemize}
+        \item \ce{COMe2 <<=> C(OH)2Me2}: $K=\num{1.4e-3}$.
+        \item \ce{COMeH <=> C(OH)2MeH}: $K\approx 1$.
+        \item \ce{COH2 <=>> C(OH)2H2}: $K=\num{2.2e3}$.
+        \begin{itemize}
+            \item This means that in aqueous solution, formaldehyde largely exists as a diol.
+        \end{itemize}
+        \item \ce{COPhH <<=> C(OH)2PhH}: $K=\num{8.3e-3}$.
+        \begin{itemize}
+            \item Conjugation stablilizes the aldehyde; when you go to the hydrate, you break that conjugation.
+        \end{itemize}
+        \item \ce{CO^{$i$}PrH <=> C(OH)2^{$i$}PrH}: $K=0.6$.
+        \begin{itemize}
+            \item Sterically bulky aldehydes favor the carbonyl form because the diol is bulkier and thus less thermodynamically stable (more steric clashing).
+        \end{itemize}
+    \end{itemize}
+    \item Aside: Formaldehyde's state at STP is gaseous.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \chemfig{*6(O?--O--O-?)}
+            \caption{Trioxane.}
+            \label{fig:formaldehydeFormsa}
+        \end{subfigure}\\
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \chemfig{-[:120,,,,wv]-[:-60,0.5,,,opacity=0]-[:30]-[:-30]O-[:30]-[:-30]O-[:30]-[:-30]O-[:30]-[:-30]O-[:30]-[:-30]O-[:30]-[:120,0.5,,,white]-[:-60,,,,wv]}
+            \caption{Paraformaldehyde.}
+            \label{fig:formaldehydeFormsb}
+        \end{subfigure}
+        \caption{Anhydrous nongaseous formaldehyde forms.}
+        \label{fig:formaldehydeForms}
+    \end{figure}
+    \begin{itemize}
+        \item Outside of the gas phase (and aqueous solution), formaldehyde is very unstable; it will either exist as \textbf{trioxane} or \textbf{paraformaldehyde} (see Figure \ref{fig:formaldehydeForms}).
+    \end{itemize}
+    \item Hydrate formation.
+    \begin{itemize}
+        \item Occurs under both acidic and basic conditions.
+    \end{itemize}
+    \item Mechanism.
+    \begin{itemize}
+        \item The mechanisms are identical to Figures \ref{fig:acidPromotedNua} and \ref{fig:basePromotedNua} with $\ce{Nu-H}=\ce{HO-H}$ and $\ce{H-X}=\ce{H-OH2+}$ or $\ce{B}=\ce{OH-}$, respectively.
+        \item Note that it is not necessary to show the first step of Figure \ref{fig:basePromotedNua} (deprotonation of the nucleophile by the base) in this case because this is just the reaction \ce{HO-H + OH- -> HO- + H-OH}.
+    \end{itemize}
+    \item Note that \ce{H3O+} or \ce{H+} is an abbreviation for some strong acid in solution, but there is always a counterion present; if there were even a couple of excess positive molecules, you would generate a huge static field.
+    \item \textbf{Ketal}: The class of molecules resulting from the nucleophilic addition of an alcohol (\ce{ROH}) to a ketone. \emph{Structure}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{R'-[:30](-[:70]OR)(-[:110]RO)-[:-30]R''}
+        \caption{Ketal.}
+        \label{fig:ketal}
+    \end{figure}
+    \item \textbf{Acetal}: The class of molecules resulting from the nucleophilic addition of an alcohol (\ce{ROH}) to an aldehyde. \emph{Structure}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{R'-[:30](-[:70]OR)(-[:110]RO)-[:-30]H}
+        \caption{Acetal.}
+        \label{fig:acetal}
+    \end{figure}
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30]}
+            \arrow{0}[,0.1]\+
+            2 \chemfig{MeOH}
+            \arrow{->[\ce{H+}][$[-\ce{H2O}]$]}[,1.2]
+            \chemfig{-[:30](-[:70]OMe)(-[:110]MeO)-[:-30]}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item We have an acid catalyst, and we are \emph{removing water} in the process.
+        \begin{itemize}
+            \item Water is generated as a byproduct during the course of the reaction, and removing it drives the reaction in the forward direction by Le Ch\^{a}telier's principle.
+        \end{itemize}
+        \item The formation of ketals and acetals incorporates two molecules of \ce{ROH}.
+        \item Ketals and acetals can only form under acidic conditions.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[H]
+        \centering
+        \vspace{1em}
+        \footnotesize
+        \schemestart
+            \chemfig{-[:30](=[2]@{O1}\charge{90=\:}{O})-[:-30]}
+            \arrow{->[\chemfig{@{H2}\charge{45:1pt=$\oplus$}{H}}]}
+            \chemfig{-[:30]@{C3}(=[@{db3}2]@{O3}\charge{45:1pt=$\oplus$}{O}-[:150]H)-[:-30]}
+            \arrow{->[\chemfig{Me@{O4}\charge{90=\:}{O}H}]}[,1.1]
+            \chemfig{-[:30](-[:110]HO)(-[:70]@{O5}\charge{45:1pt=$\oplus$}{O}(-[@{sb5}2]@{H5}H)-Me)-[:-30]}
+            \arrow{->[\chemfig{Me@{O6}\charge{90=\:}{O}H}]}[,1.1]
+            \subscheme{
+                \chemname{\chemfig{-[:30](-[:110]H@{O7}\charge{90=\:}{O})(-[:70]OMe)-[:-30]}}{Hemiketal}
+                \arrow{0}[,0.1]\+
+                \chemfig{Me-@{O8}\charge{0:3pt=$\oplus$}{O}(-[@{sb8}:60]@{H8}H)(-[:-60]H)}
+            }
+            \arrow{->[][*{0}-\ce{MeOH}]}[-90]
+            \chemfig{-[:30](-[@{sb9a}:110]@{O9a}\charge{135:1pt=$\oplus$}{O}(-[2]H)(-[4]H))(-[@{sb9b}:70]@{O9b}\charge{90=\:}{O}Me)-[:-30]}
+            \arrow{->[][*{0.90}-\ce{H2O}]}[180]
+            \chemname{\chemfig{-[:30]@{C10}(=[@{db10}2,,,2]Me@{O10}\charge{90:3pt=$\oplus$}{O})-[:-30]}}{Oxocarbenium}
+            \arrow{->[*{0.-90}\chemfig{Me@{O11}\charge{90=\:}{O}H}]}[180,1.1]
+            \chemfig{-[:30](-[:110]MeO)(-[:70]@{O12}\charge{45:1pt=$\oplus$}{O}(-[@{sb12}2]@{H12}H)-Me)-[:-30]}
+            \arrow{->[*{0.-90}\chemfig{Me@{O13}\charge{90=\:}{O}H}][-\ce{MeOH2+}]}[180,1.3]
+            \chemfig{-[:30](-[:110]MeO)(-[:70]OMe)-[:-30]}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={6pt}{2pt}] (O1) to[out=90,in=90,looseness=2] (H2);
+            \draw [curved arrow={6pt}{3pt}] (O4) to[out=90,in=30,out looseness=2,in looseness=1.2] (C3);
+            \draw [curved arrow={3pt}{2pt}] (db3) to[bend left=90,looseness=3] (O3);
+            \draw [curved arrow={6pt}{2pt}] (O6) to[out=90,in=0] (H5);
+            \draw [curved arrow={2pt}{2pt}] (sb5) to[bend right=70,looseness=2.5] (O5);
+            \draw [curved arrow={6pt}{2pt}] (O7) to[out=90,in=90] (H8);
+            \draw [curved arrow={2pt}{2pt}] (sb8) to[bend right=90,looseness=3] (O8);
+            \draw [curved arrow={6pt}{2pt}] (O9b) to[out=90,in=-30,looseness=9] (sb9b);
+            \draw [curved arrow={2pt}{2pt}] (sb9a) to[bend left=90,looseness=3] (O9a);
+            \draw [curved arrow={6pt}{3pt}] (O11) to[out=90,in=150,out looseness=2,in looseness=1.2] (C10);
+            \draw [curved arrow={3pt}{2pt}] (db10) to[bend right=90,looseness=3] (O10);
+            \draw [curved arrow={6pt}{2pt}] (O13) to[out=90,in=180] (H12);
+            \draw [curved arrow={2pt}{2pt}] (sb12) to[bend right=70,looseness=2.5] (O12);
+        }
+        \caption{Ketal formation mechanism.}
+        \label{fig:mechanismKetalFormation}
+    \end{figure}
+    \begin{itemize}
+        \item Basic conditions don't work because we need water as a good leaving group; \ce{OH-} is a terrible leaving group, so if we were to try to run this reaction in basic media, we would get stuck at the hemiketal.
+        \item Energetically, this is not always the most favored mechanism. This is why removing water is important if we want to form a ketal.
+        \begin{itemize}
+            \item Indeed, if we have a ketal and add an excess of water and acid, we will recover the original ketone.
+        \end{itemize}
+        \item Note that just like there are hemiketals, there are hemiacetals.
+        \item We should know both the forward and reverse direction for ketal formation, even though Levin only showed the forward mechanism explicitly. (Know that microscopic reversibility still holds here.)
+    \end{itemize}
+    \item \textbf{Dean-Stark apparatus}: An experimental setup that removes water during the course of a reaction.
+    \begin{figure}[h!]
+        \centering
+        \begin{tikzpicture}
+            \fill [gray!20] (0.9,-0.1) arc[start angle=0,end angle=-180,x radius=9mm,y radius=3mm];
+            \filldraw [semithick,fill=gax] (-1,0) arc[start angle=-180,end angle=0,x radius=1cm,y radius=5mm] -- ++(-0.1,0) arc[start angle=0,end angle=-180,x radius=9mm,y radius=4mm] -- cycle;
+    
+            \fill [ory] (10:0.3) arc[start angle=10,end angle=-190,radius=3mm];
+            \fill [ory] (0.4,1.2) -- ++(0.05,-0.3) -- ++(0.1,0) -- ++(0.05,0.3);
+            \fill [blx!50] (0.45,0.9) -- ++(0.05,-0.3) -- ++(0.05,0.3);
+            \draw [ory,thick] (75:0.3) ++(0,-0.1) -- ++(0,0.7) arc[start angle=180,end angle=90,radius=3.2mm];
+            \draw [blx!50,very thin,decorate,decoration={random steps,segment length=1pt,amplitude=0.7pt}] (0,0.1) -- ++(0,0.4);
+            \draw [semithick]
+                (70:0.3) arc[start angle=70,end angle=-250,radius=3mm]
+                (70:0.3) -- ++(0,0.6) arc[start angle=180,end angle=90,radius=3mm] -- ++(0.1,-0.6) -- ++(0.1,0.6) -- ++(0,1)
+                (110:0.3) -- ++(0,0.6) arc[start angle=180,end angle=90,radius=5mm] -- ++(0,0.8)
+            ;
+            \draw [semithick,decorate,decoration={coil,segment length=2pt,amplitude=1.5pt,pre length=1pt}] (0.5,1.5) -- ++(0,0.65);
+        \end{tikzpicture}
+        \caption{Dean-Stark apparatus.}
+        \label{fig:deanStark}
+    \end{figure}
+    \begin{itemize}
+        \item The bowl at the bottom of Figure \ref{fig:deanStark} is a heat bath. The orange solvent is toluene, and we can see water evaporating from the mixture as it is formed during the reaction and then boiled off.
+        \item As water evaporates, it moves upward to the reflux condenser, where it condenses and falls into the bath of toluene below.
+        \item Toluene is not miscible with water and it floats above water. Thus, droplets that fall off of the condenser sink to the bottom of the toluene bath to be trapped and displace more toluene back into the reaction flask at the same time.
+        \begin{itemize}
+            \item Note that the immiscibility with and lower density than water are the two key properties we look for in the solvent we use for such a reaction. Toluene is a common choice, but not the only possible one. 
+        \end{itemize}
+    \end{itemize}
+    \item The Dean-Stark apparatus is a \emph{physical} method for removing water.
+    \item An example of a \emph{chemical} method would be using a drying agent.
+    \begin{itemize}
+        \item Although we could use \ce{Na2SO4} or \ce{MgSO4} as we have in lab, these materials tend to get a bit clumpy, hindering the reaction.
+        \item As such, the substance of choice is a $\SI{3}{\angstrom}$ molecular sieve (an aluminosilicate).
+        \item Aluminsilicates have pores so small that they can selectively absorb very tiny molecules, such as water, even at the exclusion of methanol.
+    \end{itemize}
+    \item Note that we will not be asked names on exams, but it's good to know them for continuing studies in chemistry as well as knowing what he's talking about in class.
+    \item Since ketals are stable through basic conditions and their formation is reversible, we can use them as protecting groups.
+    \item Example syntheses using ketals as protecting groups.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{-[:30](=[2]O)-[:-30]-[:30]-[:-30]-[:30]-[:-30]Br}
+                \arrow{->[\chemfig[atom sep=1.4em]{HO-[:60]--[:-60]OH}][\ce{H+} $[-\ce{H2O}]$]}[,1.6]
+                \chemfig{-[:30](-[:60,1.2]O-[:104,0.75]-[4]?)(-[:120,1.2]O?)-[:-30]-[:30]-[:-30]-[:30]-[:-30]Br}
+                \arrow{->[\ce{Mg${}^\circ$}]}
+                \chemfig{-[:30](-[:60,1.2]O-[:104,0.75]-[4]?)(-[:120,1.2]O?)-[:-30]-[:30]-[:-30]-[:30]-[:-30]MgBr}
+                \arrow{->[*{0.180}\hspace{-2mm}\begin{tabular}{l}1. \ce{PhCOH}\\2. \ce{H3O+}\end{tabular}]}[-90]
+                \chemfig{-[:30](-[:60,1.2]O-[:104,0.75]-[4]?)(-[:120,1.2]O?)-[:-30]-[:30]-[:-30]-[:30]-[:-30](-[6]*6(=-=-=-))-[:30]OH}
+                \arrow{->[*{0.-90}\ce{H3O+}]}[180]
+                \chemfig{-[:30](=[2]O)-[:-30]-[:30]-[:-30]-[:30]-[:-30](-[6]*6(=-=-=-))-[:30]OH}
+            \schemestop
+            \caption{Protecting carbonyls.}
+            \label{fig:ketalProtectiona}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{HO-[:-30]-[:30](-[2]OH)-[:-30]-[:30]-[:-30]-[:30]-[:-30]-[:30]OH}
+                \arrow{->[\chemfig[atom sep=1.4em]{-[:30](=[2]O)-[:-30]}][\ce{H+} $[-\ce{H2O}]$]}[,1.5]
+                \chemfig{[:-24]*5(O?--(-[:-30]-[:30]-[:-30]-[:30]-[:-30]-[:30]OH)-O-?(-[:100])(-[:140]))}
+                \arrow{->[*{0}PCC]}[-90]
+                \chemfig{[:-24]*5(O?--(-[:-30]-[:30]-[:-30]-[:30]-[:-30](-[6]H)=[:30]O)-O-?(-[:100])(-[:140]))}
+                \arrow{->[*{0.-90}\ce{H3O+}][*{0.90}\ce{H2O}]}[180]
+                \chemfig{HO-[:-30]-[:30](-[2]OH)-[:-30]-[:30]-[:-30]-[:30]-[:-30](-[6]H)=[:30]O}
+            \schemestop
+            \caption{Protecting alcohols.}
+            \label{fig:ketalProtectionb}
+        \end{subfigure}
+        \caption{Using ketals as protecting groups.}
+        \label{fig:ketalProtection}
+    \end{figure}
+    \item Using a ketal to protect a carbonyl (Figure \ref{fig:ketalProtectiona}).
+    \begin{itemize}
+        \item If we convert 1-bromo-5-hexanone (the starting material in Figure \ref{fig:ketalProtectiona}) to a Grignard directly, we can't prevent the intramolecular attack.
+        \item However, we can first add an alcohol under acidic conditions while removing water.
+        \begin{itemize}
+            \item Chemists usually use ethylene glycol, which forms a cyclic diol.
+            \item Ethylene glycol is cheap, provides a more stable ring, and forms faster due to increased local concentration.
+        \end{itemize}
+        \item Now that no part of the molecule is electrophilic, we are free to make it into a Grignard and carry out our desired Grignard-based synthesis.
+        \item As a last step, we can remove the alcohol.
+        \begin{itemize}
+            \item Note that adding \ce{H3O+} for a few seconds quenches the alkoxides, yielding the fourth molecule in Figure \ref{fig:ketalProtectiona}. If we let that molecule sit with the acid for a few hours, though, then the alcohol will come off, and we can isolate the fifth molecule in Figure \ref{fig:ketalProtectiona}.
+        \end{itemize}
+    \end{itemize}
+    \item Using a ketal to protect a 1,2-diol (Figure \ref{fig:ketalProtectionb}).
+    \begin{itemize}
+        \item The initial reaction selectively forms the five-membered rings because five- and six-membered rings have extra stability.
+        \begin{itemize}
+            \item This implies that we can also use this method to protect 1,3-diols.
+            \item For the purposes of this class, medium sized rings will not form.
+        \end{itemize}
+        \item Once we have protected our alcohols, we can react the rest of the molecule, finally removing our protecting group with \ce{H3O+ + H2O}.
+        \item We'd need methods beyond the scope of this class to convert the other alcohols to aldehydes.
+    \end{itemize}
+    \item Hemiacetals and hemiketals are rarely isolable.
+    \begin{itemize}
+        \item Exception: Hemiacetals in ring systems.
+        \item For example, glucose contains a hemiacetal.
+        \item Hemiketals are almost never observed.
+    \end{itemize}
+    \item \textbf{Imine}: The class of molecules containing a \ce{C=N} double bond. \emph{Structure}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{R'-[:30](=[2]N-[:30]R)-[:-30]R''}
+        \caption{Imine.}
+        \label{fig:imine}
+    \end{figure}
+    \begin{itemize}
+        \item Note that all three R groups can be carbon, hydrogen, or another heteroatom such as oxygen (see the below discussion of oximes and hydrazones, for instance).
+    \end{itemize}
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30]}
+            \arrow{0}[,0.1]\+
+            \chemfig{MeNH_2}
+            \arrow
+            \chemfig{-[:30](=[2]N-[:30])-[:-30]}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item Can form under acidic, basic, and neutral conditions.
+        \item The mechanism is pretty complicated with a lot of variations, but we are only responsible for the one described below.
+        \begin{itemize}
+            \item Others are provided in the notes posted on Canvas.
+        \end{itemize}
+    \end{itemize}
+    \item Nitrogen is tricky.
+    \begin{itemize}
+        \item Electronegativity: $\ce{C}=2.55$, $\ce{N}=3.04$, and $\ce{O}=3.44$.
+        \item Methylamine is more basic and more nucleophilic than methanol.
+        \begin{itemize}
+            \item Water and methanol both have $\pKa\approx 15$, whereas methylamine has $\pKa\approx 40$.
+            \item Similarly, methylammonium has $\pKa\approx 10$, while \ce{MeOH2+} has $\pKa\approx -4$ and a protonated carbonyl has $\pKa\approx -6$.
+        \end{itemize}
+    \end{itemize}
+    \item Further equilibrium constants.
+    \begin{itemize}
+        \item \ce{CMe2(OH)+ + MeOH <=>> COMe2 + MeOH2}: $K\approx 100$.
+        \begin{itemize}
+            \item This equilibrium is related to ketal formation (Figure \ref{fig:mechanismKetalFormation}).
+            \item In particular, it shows that even though only one out of every hundred molecules of acetone will exist in the protonated form (on average), that is enough to proceed with ketal formation.
+        \end{itemize}
+        \item \ce{CMe2(OH)+ + MeNH2 <=>> COMe2 + MeNH3+}: $K\approx 10^{16}$.
+        \begin{itemize}
+            \item Thus, acid catalysis is far slower for amines than for alcohols.
+        \end{itemize}
+    \end{itemize}
+    \item Mechanism (acidic conditions).
+    \begin{itemize}
+        \item The mechanism is entirely analogous to Figure \ref{fig:mechanismKetalFormation} up until the formation of the \textbf{iminium} ion. This intermediate is simply deprotonated at the nitrogen to yield the final imine.
+        \item Note that it proceeds through a \textbf{hemiaminal} intermediate as opposed to a hemiketal/hemiacetal.
+    \end{itemize}
+    \item \textbf{Hemiaminal}: The functional group consisting of a hydroxyl and amine group bound to the same carbon. \emph{Structure}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{R'-[:30](-[:110]HO)(-[:70]NRH)-[:-30]R''}
+        \caption{Hemiaminal.}
+        \label{fig:hemiaminal}
+    \end{figure}
+    \item Regeneration of the acid catalyst in both Figure \ref{fig:mechanismKetalFormation} and the acid imine formation mechanism.
+    \begin{itemize}
+        \item It is correct to depict \ce{MeOH} and \ce{MeNH2}, respectively, taking off the proton in the last step.
+        \item However, neither \ce{MeOH2+} nor \ce{MeNH3+} sticks around long.
+        \item Indeed, there is a background proton transfer equilibrium between the strong acid and the alcohol/amine. Such equilibria are typically established much more quickly than other kinds of equilibria and serve to quickly replenish the quantity of free acid in solution.
+    \end{itemize}
+    \item \textbf{Hydroxylamine}: The compound \ce{H2N-OH}.
+    \item \textbf{Oxime}: The class of molecules resulting from the nucleophilic addition of hydroxylamine to a carbonyl group. \emph{Structure}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{R-[:30](=[2]N-[:30]OH)-[:-30]R'}
+        \caption{Oxime.}
+        \label{fig:oxime}
+    \end{figure}
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30]}
+            \arrow{0}[,0.1]\+
+            \chemfig{H_2N-OH}
+            \arrow{->[cat. \ce{H+}]}[,1.2]
+            \chemfig{-[:30](=[2]N-[:30]OH)-[:-30]}
+        \schemestop
+    \end{center}
+    \item \textbf{Hydrazine}: The compound \ce{H2N-NH2}.
+    \begin{itemize}
+        \item Hydrazine is used as rocket fuel.
+        \item It is highly explosive as a reduced (and thus less stable) form of dinitrogen (one of the most stable molecules in existence) that can, in addition, release hydrogen gas.
+    \end{itemize}
+    \item \textbf{Hydrazone}: The class of molecules resulting from the nucleophilic addition of hydrazine to a carbonyl group. \emph{Structure}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{R-[:30](=[2]N-[:30]NH_2)-[:-30]R'}
+        \caption{Hydrazone.}
+        \label{fig:hydrazone}
+    \end{figure}
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30]}
+            \arrow{0}[,0.1]\+
+            \chemfig{H_2N-NH_2}
+            \arrow{->[cat. \ce{H+}]}[,1.2]
+            \chemfig{-[:30](=[2]N-[:30]NH_2)-[:-30]}
+        \schemestop
+    \end{center}
+    \item Imine stability.
+    \begin{itemize}
+        \item Imines are sensitive; they are prone to hydrolysis and can convert back to carbonyls easily.
+        \item Oximes and hydrazones are much more stable.
+    \end{itemize}
+    \item Reasons why oximes and hydrazones are more stable.
+    \begin{itemize}
+        \item Oximes.
+        \begin{itemize}
+            \item The starting material (hydroxylamine) is destabilized by the \textbf{$\bm{\alpha}$-effect}.
+            \item There is increased $s$-character in the nitrogen lone pair of an oxime, which stabilizes the product.
+        \end{itemize}
+        \item Hydrazones.
+        \begin{itemize}
+            \item Resonance lends stability (we can push the lone pair of the terminal nitrogen toward the \ce{N-N} single bond, and push the \ce{N=C} double bond toward the carbon to form a carbanion).
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{$\bm{\alpha}$-effect}: The destabilizing effect of the repulsion of lone pairs across a chemical bond.
+    \item The Wolff-Kirshner reduction.
+    \begin{itemize}
+        \item Again, we won't need to know names for tests ("the old white men who developed these reactions get enough credit"), but we will need them as we more forward in chemistry.
+    \end{itemize}
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30](=[2]N-[:30]NH_2)-[:-30]}
+            \arrow{->[\ce{NaOH, H2O}][$\Delta$ ($\SI{200}{\celsius}\,+$)]}[,1.6]
+            \chemfig{-[:30](-[:110]H)(-[:70]H)-[:-30]}
+            \arrow{0}[,0.1]\+
+            \chemfig{N~N}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item The driving force is the creation of \ce{N2}, which is a huge thermodynamic sink.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemleft{[}
+                \subscheme{
+                    \chemfig{-[:30]@{C1}(=[@{db1,0.6}2]N-[@{sb1}:30]@{N1}\charge{90=\:}{N}H_2)-[:-30]}
+                    \arrow{<->}
+                    \chemfig{-[:30]\charge{45:2pt=$\ominus$}{}(-[2]N=[:30]@{N2}\charge{135:1pt=$\oplus$}{N}(-[@{sb2}2]@{H2}H)-[:-30]H)-[:-30]}
+                }
+            \chemright{]}
+            \arrow{->[*{0}\chemfig{@{O3}\charge{-90=\:,135:1pt=$\ominus$}{O}H}]}[90]
+            \chemfig{-[:30]@{C4}\charge{45:2pt=$\ominus$}{}(-[2]N=[:30]N-[:-30]H)-[:-30]}
+            \arrow{->[\chemfig[atom sep=1.4em]{@{H5}H-[@{sb5}]@{O5}OH}]}[,1.2]
+            \chemfig{-[:30](-[:110]N=[::-60]@{N6}N-[@{sb6}::-60]@{H6}H)(-[:70]H)-[:-30]}
+            \arrow{0}[,0.1]\+
+            \chemfig{@{O7}\charge{90=\:,135:1pt=$\ominus$}{O}H}
+            \arrow{->[][-\ce{H2O}]}
+            \chemfig{-[:30]@{C8}(-[@{sb8,0.6}:110]N=[@{db8}::-60]@{N8}\charge{90=\:,45:1pt=$\ominus$}{N})(-[:70]H)-[:-30]}
+            \arrow{->[][-\ce{N2}]}
+            \chemfig{-[:30]@{C9}\charge{45:2pt=$\ominus$}{}(-[2]H)-[:-30]}
+            \arrow{->[\chemfig[atom sep=1.4em]{@{H10}H-[@{sb10}]@{O10}OH}]}[,1.2]
+            \chemfig{-[:30](-[:110]H)(-[:70]H)-[:-30]}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={6pt}{2pt},blx] (N1) to[out=90,in=120,looseness=3] (sb1);
+            \draw [curved arrow={3pt}{2pt},blx] (db1) to[out=20,in=30,looseness=3.5] (C1);
+            \draw [curved arrow={6pt}{2pt}] (O3) to[out=-90,in=180] (H2);
+            \draw [curved arrow={2pt}{2pt}] (sb2) to[bend left=90,looseness=3] (N2);
+            \draw [curved arrow={11pt}{2pt}] (C4) to[out=45,in=-160] (H5);
+            \draw [curved arrow={2pt}{2pt}] (sb5) to[bend left=90,looseness=3] (O5);
+            \draw [curved arrow={6pt}{2pt}] (O7) to[out=90,in=0,looseness=1.2] (H6);
+            \draw [curved arrow={2pt}{2pt}] (sb6) to[bend right=90,looseness=3] (N6);
+            \draw [curved arrow={6pt}{3pt}] (N8) to[out=90,in=140,looseness=4] (db8);
+            \draw [curved arrow={2pt}{2pt}] (sb8) to[out=180,in=170,looseness=3] (C8);
+            \draw [curved arrow={11pt}{2pt}] (C9) to[out=45,in=180] (H10);
+            \draw [curved arrow={2pt}{2pt}] (sb10) to[bend left=90,looseness=3] (O10);
+        }
+        \caption{Wolff-Kirshner reduction mechanism.}
+        \label{fig:mechanismWolffKirshner}
+    \end{figure}
+    \begin{itemize}
+        \item Essentially, what we do is we return the hydrazone to a carbonyl, and then we remove the carbonyl.
+    \end{itemize}
+    \item \textbf{Enamine}: The class of molecules resulting from the nucleophilic addition of dialkyl amines (\ce{R2NH}) to a ketone or aldehyde. \emph{Structure}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{R'-[:30](-[2]N(-[:150]R)(-[:30]R))=[:-30]R''}
+        \caption{Enamine.}
+        \label{fig:enamine}
+    \end{figure}
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30]}
+            \arrow{0}[,0.1]\+{,,-1em}
+            \chemfig{-[:-30]\chembelow{N}{H}-[:30]}
+            \arrow{->[cat. \ce{H+}]}[,1.2]
+            \chemfig{-[:30](-[2]N(-[:150])(-[:30]))=[:-30]}
+        \schemestop
+    \end{center}
+    \item \textbf{Iminium}: The class of ions containing a \ce{C=N+} double bond. \emph{Structure}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{R'-[:30](=[2]\charge{90:3pt=$\oplus$}{N}(-[:30]R)(-[:150]R))-[:-30]R''}
+        \caption{Iminium.}
+        \label{fig:iminium}
+    \end{figure}
+    \item Mechanism.
+    \begin{itemize}
+        \item As with the formation of imines, we get to an iminium intermediate.
+        \item After that, however, we deprotonate at the $\alpha$-carbon and rearrange into our final enamine.
+    \end{itemize}
+    \item Summary of today: Acetone can combine with\dots
+    \begin{enumerate}
+        \item Water to form a hydrate;
+        \item Alcohols to form a ketal;
+        \item Primary amines to form imines;
+        \item Secondary amines to form enamines.
+    \end{enumerate}
 \end{itemize}
 
 
