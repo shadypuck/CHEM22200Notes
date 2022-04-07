@@ -979,5 +979,418 @@
 
 
 
+\section{Aldehydes and Ketones 2}
+\begin{itemize}
+    \item \marginnote{4/5:}Announcements:
+    \begin{itemize}
+        \item PSet 1 is due Thursday 4/7.
+        \begin{itemize}
+            \item Covers through today's content.
+        \end{itemize}
+        \item Midterm 4/21 during class.
+        \begin{itemize}
+            \item No notes, no cheat sheets.
+            \item Shouldn't require stuff from last quarter.
+            \item Exams should be like problem sets but shorter and easier.
+            \item The practice exam and midterm are of identical structure.
+            \item PSet 1-2 material will be tested.
+        \end{itemize}
+    \end{itemize}
+    \item Plan for today:
+    \begin{itemize}
+        \item Hydride and carbide nucleophiles.
+        \item Finish Unit 1.
+    \end{itemize}
+    \item You can't use acidic conditions in reactions with hydride and carbide nucleophiles.
+    \begin{itemize}
+        \item The reason for this restriction is that hydrides and carbides are both strong bases and will preferentially react with any acids in solution instead of performing the chemistry that we want them to.
+    \end{itemize}
+    \item Hydrogen nucleophiles.
+    \item Levin reviews the reduction of carbonyls with \ce{NaBH4} and \ce{LiAlH4}.
+    \item Misc. notes.
+    \begin{itemize}
+        \item The solvent for \ce{NaBH4} is methanol, while adding \ce{LiAlH4} requires a subsequent acidic workup.
+        \item \ce{BH4-} is less reactive than \ce{AlH4-} because boron is more electronegative than aluminum.
+        \item Mixing \ce{LiAlH4} with methanol will cause an explosion, but \ce{NaBH4} is mild enough that methanol is a feasible solvent.
+    \end{itemize}
+    \item Mechanism (\ce{NaBH4}).
+    \begin{itemize}
+        \item A concerted mechanism.
+        \item Herein, the \ce{H-BH3-} single-bond electrons attack the carbonyl carbon, the \ce{C=O} $\pi$ electrons attack the hydroxyl hydrogen on methanol, and the \ce{H-OCH3} single-bond electrons retreat onto methanol's oxygen.
+    \end{itemize}
+    \item Mechanism (\ce{LiAlH4}).
+    \begin{itemize}
+        \item A stepwise mechanism.
+        \item \ce{AlH4-} is a strong enough nucleophile to add into a carbonyl directly without needing the thermodynamic help of the methanol proton as in the \ce{NaBH4} mechanism.
+        \item The alkoxide is then protonated by acid.
+        \item However, we have to beware of the alkoxide attacking \ce{AlH3} in an unwanted side reaction.
+        \begin{itemize}
+            \item The trapped form is the dominant form in solution, but overtime the alkoxide form protonates off.
+            \item \ce{AlH3} also eventually reacts with enough acid to become \textbf{alumina}.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Alumina}: The complex ion \ce{Al(OH)4-}.
+    \item Carbon nucleophiles.
+    \item \textbf{Lithiate}: An organolithium compound.
+    \item Levin reviews the syntheses of both lithiates and Grigards.
+    \item Recall that both of these can also only work in basic solution.
+    \item Levin reviews the mechanism of a lithiate/Grignard attack on a ketone/aldehyde.
+    \item Cyanide is another important carbon nucleophile.
+    \begin{itemize}
+        \item It is formed from the reaction \ce{H-CN <=> H+ + CN-}.
+        \item This is important because it's a rare carbanion with a reasonably acidic conjugate acid.
+        \begin{itemize}
+            \item For instance, the \ce{H} in \ce{H-CR3} has $\pKa>50$.
+            \item However, \ce{HCN} has $\pKa\approx 9$.
+            \item The acidity arises from the \ce{C#N} triple bond and nitrogen functioning as an EWG.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Cyanohydrin}: The class of molecules resultin from the nucleophilic addition of \ce{HCN} to a ketone or aldehyde. \emph{Structure}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{R-[:30](-[:110]HO)(-[:70]CN)-[:-30]R'}
+        \caption{Cyanohydrin.}
+        \label{fig:cyanohydrin}
+    \end{figure}
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30]}
+            \arrow{0}[,0.1]\+
+            \chemfig{HCN}
+            \arrow{->[reagents?]}[,1.3]
+            \chemfig{R-[:30](-[:110]HO)(-[:70]CN)-[:-30]R'}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item The "reagents?" refers to the fact that this reaction \emph{can} be accelerated by an acid or base catalyst, but no catalyst is necessary.
+        \item Acid catalysts are the most common, but anything works.
+    \end{itemize}
+    \item Mechanism (neutral).
+    \begin{itemize}
+        \item Similar to Figure \ref{fig:acidPromotedNua}, but with no final deprotonation step necessary.
+    \end{itemize}
+    \item We now transition to the problem of replacing carbonyls with vinyl groups.
+    \begin{itemize}
+        \item We could do this by alkylating the carbonyl and then dehydrating. However, this leads to several possible products since acid-catalyzed dehydration does not select any alkene in particular.
+        \item A cleaner form exists using a new carbon nucleophile, a \textbf{phosphorous ylide}.
+    \end{itemize}
+    \item \textbf{Phosphorus ylide}: The class of molecules having a \ce{P-C} bond with a negative charge on \ce{C} and a positive charge on \ce{P}. \emph{Structure}
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{\charge{90:3pt=$\oplus$}{P}(-[:120]**6(------))(-[:180]**6(------))(-[:240]**6(------))-\charge{90:3pt=$\ominus$}{C}(-[:60]R')(-[:-60]R)}
+            \arrow{<->}
+            \chemfig{Ph_3P=C(-[:60]R')(-[:-60]R)}
+        \schemestop
+        \caption{Phosphorous ylide.}
+        \label{fig:Pylide}
+    \end{figure}
+    \begin{itemize}
+        \item The reactivity of phosphorous ylides is dominated by the left resonance structure in Figure \ref{fig:Pylide}.
+    \end{itemize}
+    \item Synthesis of phosphorous ylides.
+    \begin{figure}[h!]
+        \centering
+        \vspace{1em}
+        \footnotesize
+        \schemestart
+            \chemfig{@{P1}\charge{90=\:}{P}Ph_3}
+            \+
+            \chemfig{H_3@{C2}C-[@{sb2}]@{Br2}Br}
+            \arrow
+            \chemname{\chemfig{Ph_3\charge{90:3pt=$\oplus$}{P}(-[:70,0.7,,,white]\charge{45:1pt=$\ominus$}{Br})-@{C3}CH_2-[@{sb3}2]@{H3}H}}{Phosphonium salt}
+            \arrow{->[\chemfig[atom sep=1.4em]{K@{O4}\charge{90=\:}{O}^{\emph{t}}Bu}][-\ce{HO^{$t$}Bu, KBr}]}[,1.6]
+            \chemfig{Ph_3\charge{90:3pt=$\oplus$}{P}-\charge{90:3pt=$\ominus$}{C}H_2}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={6pt}{2pt}] (P1) to[bend left=90,looseness=1.5] (C2);
+            \draw [curved arrow={2pt}{2pt}] (sb2) to[bend left=90,looseness=3] (Br2);
+            \draw [curved arrow={6pt}{2pt}] (O4) to[out=90,in=90,looseness=1.5] (H3);
+            \draw [curved arrow={2pt}{2pt}] (sb3) to[bend right=70,looseness=2.5] (C3);
+        }
+        \caption{Synthesizing phosphorous ylides.}
+        \label{fig:PylideSynthesis}
+    \end{figure}
+    \begin{itemize}
+        \item The first step is proceeds through an S\textsubscript{N}2 mechanism.
+        \item The second step is aided by the fact that there is only one site with $\alpha$-hydrogens. Additionally, the protons are mildly acidic because of the positive charge.
+        \item Note that we can use $n$-butyl lithium in place of \ce{KO^{$t$}Bu} if we want.
+    \end{itemize}
+    \item A nice thing about \ce{PPh3} is that it's air stable, so we can measure it out on the lab bench. (\ce{PMe3} is pyrophoric, for instance).
+    \item The Wittig\footnote{"VIT-tig"} olefination.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]R'}
+            \arrow{0}[,0.1]\+
+            \chemfig{Ph_3\charge{90:3pt=$\oplus$}{P}-\charge{90:3pt=$\ominus$}{C}H_2}
+            \arrow
+            \chemfig{R-[:30](=[2]CH_2)-[:-30]R'}
+            \arrow{0}[,0.1]\+
+            \chemfig{Ph_3P=O}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item The creation of \ce{Ph3P=O} (a very stable compound) is the thermodynamic driving force for the reaction.
+        \begin{itemize}
+            \item Making this compound as a driving force is actually a common trick in organic chemistry.
+        \end{itemize}
+    \end{itemize}
+    \item Mechanism (wrong).
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{R-[:30]@{C1}(=[@{db1}2]@{O1}O)-[:-30]R'}
+            \arrow{0}[,0.1]\+
+            \chemfig{Ph_3\charge{90:3pt=$\oplus$}{P}-@{C2}\charge{90:3pt=$\ominus$}{C}H_2}
+            \arrow
+            \chemname[0.9em]{\chemfig{@{O3}\charge{90:3pt=$\ominus$}{O}-[:-60](-[:-140]R')(-[:-100]R)--[:60]@{P3}\charge{90:3pt=$\oplus$}{P}Ph_3}}{Betaine}
+            \arrow
+            \chemname[-1em]{\chemfig[atom sep=2.5em]{*4((-[:-155,0.8]R)(-[:-115,0.8]R')-[@{sb4a}]-[@{sb4b,0.6}]PPh_3-[@{sb4c}]O-[@{sb4d}])}}{Oxaphosphetane}
+            \arrow
+            \chemfig{R-[:30](=[2]CH_2)-[:-30]R'}
+            \arrow{0}[,0.1]\+
+            \chemfig{Ph_3P=O}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={10pt}{3pt}] (C2) to[out=90,in=30] (C1);
+            \draw [curved arrow={3pt}{2pt}] (db1) to[bend left=90,looseness=3] (O1);
+            \draw [curved arrow={4pt}{2pt}] ([yshift=6pt]O3.north) to[bend left=30] (P3);
+            \draw [curved arrow={2pt}{2pt}] (sb4b) to[bend right=50,looseness=1.5] (sb4a);
+            \draw [curved arrow={2pt}{2pt}] (sb4d) to[bend right=40,looseness=1.2] (sb4c);
+        }
+        \caption{Wittig olefination mechanism (stepwise).}
+        \label{fig:mechanismWittigStepwise}
+    \end{figure}
+    \begin{itemize}
+        \item Follows the model we've been using. Only recently disproven. We may use either this one or the correct one on exams.
+        \begin{itemize}
+            \item The Newtonian mechanics of OChem; we can get the right answer by using the wrong model.
+            \item The modern understanding is that the betaine never forms.
+        \end{itemize}
+        \item This is a \textbf{retro-pericyclic mechanism}.
+        \item The last step is a \textbf{retro-[$\bm{2+2}$]}.
+        \begin{itemize}
+            \item Note that the arrows may be drawn either of the two ways between adjacent bonds.
+        \end{itemize}
+    \end{itemize}
+    \item The Wittig olefination is stereoselective for the \emph{cis}-product.
+    \begin{itemize}
+        \item This is strange since the \emph{cis}-product is the less thermodynamically stable one.
+    \end{itemize}
+    \item Three-dimensional intuition for the stereoselectivity.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemleft{[}
+                    \subscheme{
+                        \chemfig{@{O1}O(-[4,1.5,,,white])=_[6]@{C1}(<[:-110]R)(<:[:-70]H)}
+                        \arrow{0}[,1]
+                        \chemfig{PPh_3-[2]@{C2}\charge{45:1pt=$\ominus$}{C}(<[:110]R')(<:[:70]H)(-[2,1.45,,,white])(-[,1.5,,,white])}
+                        \arrow{<->}
+                        \chemfig{\tikz{
+                            \draw (0,0) -- (30:0.8) node[xshift=6pt,yshift=1pt]{H};
+                            \draw (0,0) -- (150:0.8) node(R1)[xshift=-6pt,yshift=1pt]{R$'$} ([yshift=-1mm]R1.south west) edge[blx,thick,bend right=45] ([yshift=-1mm]R1.south east);
+                            \draw (0,0) -- (-90:0.8) node[xshift=4pt,yshift=-9pt]{\ce{{}^{$\oplus$}PPh_3}};
+                            \draw (-30:0.5) -- (-30:0.8) node[xshift=6pt,yshift=-5pt]{H};
+                            \draw (-150:0.5) -- (-150:0.8) node(R)[xshift=-6pt,yshift=-5pt]{R} ([yshift=1mm]R.north west) edge[blx,thick,bend left=45] ([yshift=1mm]R.north east);
+                            \draw [double=white,double distance=2pt] (90:0.5) -- (90:0.8) node[yshift=3pt]{O};
+                            \draw [white,line width=2pt] (90:0.5) -- (90:0.85);
+                            \draw circle (5mm);
+                            \node {\ce{{}^{$\ominus$}}};
+                        }}
+                    }
+                \chemright{]^\ddagger}
+                \arrow{-/>}
+                \chemfig{\phantom{H}-[:30,,,,white]-[,,,,white]-[:30,,,,white]\phantom{R'}}
+            \schemestop
+            \chemmove{
+                \filldraw [-,thick,draw=orx,fill=ory] ([xshift=1.5mm]C1.east) to[bend right=110,looseness=600] ([xshift=1.5mm,yshift=0.15pt]C1.east);
+                \draw [-,thick,orx] ([xshift=-1.5mm]C1.west) to[bend left=110,looseness=600] ([xshift=-1.5mm,yshift=0.15pt]C1.west);
+                \draw [-,thick,orx] ([xshift=0.5mm]O1.east) to[bend right=110,looseness=600] ([xshift=0.5mm,yshift=0.15pt]O1.east);
+                \filldraw [-,thick,draw=orx,fill=ory] ([xshift=-0.5mm]O1.west) to[bend left=110,looseness=600] ([xshift=-0.5mm,yshift=0.15pt]O1.west);
+                \filldraw [-,thick,draw=orx,fill=ory] ([xshift=-1.5mm]C2.west) to[bend left=110,looseness=600] ([xshift=-1.5mm,yshift=0.15pt]C2.west);
+                \draw [-,thick,orx] ([xshift=0.5mm]C2.east) to[bend right=110,looseness=600] ([xshift=0.5mm,yshift=0.15pt]C2.east);
+            }
+            \caption{Unsuccessful collision.}
+            \label{fig:wittigStereob}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemleft{[}
+                    \subscheme{
+                        \chemfig{@{O1}O(-[4,1.5,,,white])=_[6]@{C1}(<[:-110]R)(<:[:-70]H)}
+                        \arrow{0}[,1]
+                        \chemfig{PPh_3-[2]@{C2}\charge{45:1pt=$\ominus$}{C}(<[:110]H)(<:[:70]R')(-[2,1.45,,,white])(-[,1.5,,,white])}
+                        \arrow{<->}
+                        \chemfig{\tikz{
+                            \draw (0,0) -- (30:0.8) node[xshift=6pt,yshift=1pt]{R$'$};
+                            \draw (0,0) -- (150:0.8) node[xshift=-6pt,yshift=1pt]{H};
+                            \draw (0,0) -- (-90:0.8) node[xshift=4pt,yshift=-9pt]{\ce{{}^{$\oplus$}PPh_3}};
+                            \draw (-30:0.5) -- (-30:0.8) node[xshift=6pt,yshift=-5pt]{H};
+                            \draw (-150:0.5) -- (-150:0.8) node[xshift=-6pt,yshift=-5pt]{R};
+                            \draw [double=white,double distance=2pt] (90:0.5) -- (90:0.8) node[yshift=3pt]{O};
+                            \draw [white,line width=2pt] (90:0.5) -- (90:0.85);
+                            \draw circle (5mm);
+                            \node {\ce{{}^{$\ominus$}}};
+                        }}
+                    }
+                \chemright{]^\ddagger}
+                \arrow
+                \chemfig{\charge{45:1pt=$\ominus$}{O}-[6](<:[:-155]H)(<[:-115]R)-[@{sb3}](<:[:25]R')(<[:65]H)-[6]\charge{135:1pt=$\oplus$}{P}Ph_3}
+                \arrow[-90]
+                \chemfig{\charge{90:3pt=$\ominus$}{O}-[6](<[5]R)-(<[7]R')-[2]\charge{90:3pt=$\oplus$}{P}Ph_3}
+                \arrow[180]
+                \chemfig{R>[1]*4(-(<R')-PPh_3-O-)}
+                \arrow{->[][*{0.90}-\ce{Ph3PO}]}[180,1.2]
+                \chemfig{R-[:60]=_-[:-60]R'}
+            \schemestop
+            \chemmove{
+                \filldraw [-,thick,draw=orx,fill=ory] ([xshift=1.5mm]C1.east) to[bend right=110,looseness=600] ([xshift=1.5mm,yshift=0.15pt]C1.east);
+                \draw [-,thick,orx] ([xshift=-1.5mm]C1.west) to[bend left=110,looseness=600] ([xshift=-1.5mm,yshift=0.15pt]C1.west);
+                \draw [-,thick,orx] ([xshift=0.5mm]O1.east) to[bend right=110,looseness=600] ([xshift=0.5mm,yshift=0.15pt]O1.east);
+                \filldraw [-,thick,draw=orx,fill=ory] ([xshift=-0.5mm]O1.west) to[bend left=110,looseness=600] ([xshift=-0.5mm,yshift=0.15pt]O1.west);
+                \filldraw [-,thick,draw=orx,fill=ory] ([xshift=-1.5mm]C2.west) to[bend left=110,looseness=600] ([xshift=-1.5mm,yshift=0.15pt]C2.west);
+                \draw [-,thick,orx] ([xshift=0.5mm]C2.east) to[bend right=110,looseness=600] ([xshift=0.5mm,yshift=0.15pt]C2.east);
+                \draw [curved arrow={0pt}{0pt},blx] ([yshift=-2mm]sb3) to[bend left=45,looseness=1.3] ([yshift=2mm]sb3);
+            }
+            \caption{Successful collision.}
+            \label{fig:wittigStereoa}
+        \end{subfigure}
+        \caption{Wittig olefination stereoselectivity.}
+        \label{fig:wittigStereo}
+    \end{figure}
+    \begin{itemize}
+        \item We break the $\pi$ \ce{C=O} bond by filling the $\pi^*$ \ce{C=O} orbital. Thus, our carbanion $p$ orbital collides end-on with the \ce{C=O} $\pi^*$ orbital.
+        \item A gauche clash (as in Figure \ref{fig:wittigStereoa}) is higher energy and is not the favored collision.
+        \item Thus, Figure \ref{fig:wittigStereob} is the transition state that forms.
+        \begin{itemize}
+            \item But we need to form a \ce{P-O} bond, so after forming the \emph{trans} imtermediate, we need to rotate the bond.
+            \item Once you form the \emph{cis} product, you can't go back, so we'll go ahead and rotate to get the \ce{P-O} bond.
+        \end{itemize}
+    \end{itemize}
+    \item Stabilized ylides.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30](=[2]O)-[:-30]H}
+                \+{,,2em}
+                \chemfig{PPh_3=_[2]-[:30]EWG}
+                \arrow
+                \chemfig{R-[:30]=_[:-30]-[:30]EWG}
+            \schemestop
+            \caption{General form.}
+            \label{fig:ylideStablea}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig[atom sep=2.5em]{R>[1,0.8]*4(-@{C1}(<[,0.8](=[0,0.8]O)(-[:-120,0.8]MeO))-[@{sb1a}]PPh_3-[@{sb1b}]@{O1}\charge{90=\:}{O}-)}
+                \arrow
+                \chemfig[atom sep=2.5em]{R>[1,0.8]*4(-[@{sb2}]\charge{90:3pt=$\ominus$}{}(<[,0.8](=[0,0.8]O)(-[:-120,0.8]MeO))-[,,,,opacity=0]PPh_3=\charge{135:1pt=$\oplus$}{O}-)}
+                \arrow
+                \chemfig[atom sep=2.5em]{R>[1,0.8]*4(-@{C3}\charge{90:3pt=$\ominus$}{}(<:[,0.8](=[0,0.8]O)(-[:-120,0.8]MeO))-[,,,,opacity=0]@{P3}PPh_3=[@{db3}]@{O3}\charge{135:1pt=$\oplus$}{O}-)}
+                \arrow
+                \chemfig[atom sep=2.5em]{R>[1,0.8]*4(-(<:[,0.8](=[0,0.8]O)(-[:-120,0.8]MeO))-PPh_3-O-)}
+            \schemestop
+            \chemmove{
+                \draw [curved arrow={6pt}{2pt}] (O1) to[bend left=90,looseness=3] (sb1b);
+                \draw [curved arrow={2pt}{2pt}] (sb1a) to[out=20,in=20,looseness=4] (C1);
+                \draw [curved arrow={0pt}{0pt},blx] ([yshift=2mm]sb2) to[bend right=45,looseness=1.3] ([yshift=-2mm]sb2);
+                \draw [curved arrow={12pt}{2pt}] (C3) to[bend left=10] (P3);
+                \draw [curved arrow={2pt}{2pt}] (db3) to[bend right=90,looseness=3] (O3);
+            }
+            \caption{Intermediate rearrangement.}
+            \label{fig:ylideStableb}
+        \end{subfigure}
+        \caption{Stabilized ylides.}
+        \label{fig:ylideStable}
+    \end{figure}
+    \begin{itemize}
+        \item If the ylide has an EWG, the \emph{trans} alkene will be formed.
+        \item In particular, the EWG stabilizes a carbocation formed from the oxaphosphetane EWG. We can then rotate and rebond before proceeding to the trans product.
+        \item Note that if the EWG on the aldehyde, we still form the \emph{cis} product..
+    \end{itemize}
+    \item Mechanism (correct).
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{R-[:30]@{C1}=^[@{db1}2]O}
+            \arrow{0}[,0.6]
+            \chemfig{R'-[:150]=_[@{db2}2]@{P2}PPh_3}
+            \arrow
+            \chemleft{[}
+                \chemfig{R-[:30]?(-[:-30]H)=[2,2]O>:[7,1.3]PPh_3=[4,2]?[,6](-[:120]R')(-[:-120]H)}
+            \chemright{]^\ddagger}
+            \arrow
+            \chemfig[atom sep=2.5em]{*4((<[,0.8]R)-(<[,0.8]R')-O-Ph_3P-[,,2])}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={3pt}{2pt}] (db1) to[bend left=30] (P2);
+            \draw [curved arrow={3pt}{2pt}] (db2) to[bend left=30] (C1);
+        }
+        \caption{Wittig olefination mechanism (modern).}
+        \label{fig:mechanismWittigModern}
+    \end{figure}
+    \begin{itemize}
+        \item A [$2+2$] followed by a retro [$2+2$]. We also have a T-shaped transition state that puts them far away. Then they rotate into cis position for the oxyphosphatane.
+    \end{itemize}
+    \item Ketone Wittigs.
+    \begin{itemize}
+        \item Slower but still proceed.
+        \item The biggest groups always end up cis.
+    \end{itemize}
+    \item \textbf{$\bm{\alpha,\beta}$ unsaturated carbonyl}: A carbonyl conjugated with an alkene spanning the $\alpha$ to $\beta$ positions.
+    \item The two possible nucleophilic additions to $\alpha,\beta$ unsaturated carbonyls are \textbf{1,2-additions} and \textbf{1,4-additions}.
+    \item \textbf{1,2-addition}: A nucleophilic addition to the $\beta$ position (numbered $4^\text{th}$ atom from the carbonyl oxygen, which is 1 in turn).
+    \item \textbf{1,4-addition}: A nucleophilic addition to the carbonyl carbon (numbered $2^\text{nd}$ atom from the carbonyl oxygen, which is 1 in turn).
+    \item \ce{NaBH4}.
+    \begin{itemize}
+        \item The mechanism is similar to that in Figure 9.3a of \textcite{bib:CHEM22100Notes}. However, Levin shows the the complete formation of an enol (after 1,2-addition) that then tautomerizes to a normal carbonyl before being attacked again.
+    \end{itemize}
+    \item \ce{LiAlH4}.
+    \begin{itemize}
+        \item The mechanism is similar to that in Figure 9.3b of \textcite{bib:CHEM22100Notes}. However, Levin shows a single nucleophilic attack that can't proceed to a second until reductant is added into solution, but this inactivates the \ce{LiAlH4}.
+    \end{itemize}
+    \item The pure 1,2-addition product is the major product for both \ce{NaBH4} and \ce{LiAlH4}, but you get a mix of products?
+    \item Organolithiums are highly selective for the 1,2-addition product, however.
+    \begin{itemize}
+        \item Lithium is small and hard and favors bonding with the oxygen.
+    \end{itemize}
+    \item Grignards still give a mixture.
+    \begin{itemize}
+        \item Magnesium is happy to coordinate both the oxygen and the alkene (it's of intermediate hardness/softness).
+    \end{itemize}
+    \item Hard-hard interactions are preferred because of Coulombic attraction; soft-soft interactions are preferred because of van der Waals forces.
+    \item \textbf{Cuprate}: A compound containing an anionic copper complex.
+    \begin{itemize}
+        \item The cuprates relevant to us are dialkyl cuprates, which have the form \ce{LiCuMe2}.
+        \item These are formed via the reaction
+        \begin{equation*}
+            \ce{2MeLi ->[CuI][-LiI] LiCuMe2}
+        \end{equation*}
+        \item Cuprates are soft and yield exclusively 1,4-addition.
+    \end{itemize}
+    \item Levin goes over some practice problems.
+\end{itemize}
+
+
+
 
 \end{document}
