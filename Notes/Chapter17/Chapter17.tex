@@ -808,5 +808,69 @@
 
 
 
+\section{Office Hours (Levin)}
+\begin{itemize}
+    \item \marginnote{4/11:}$\alpha,\beta$-unsaturated carbonyls?
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{-[:30](=[@{db1a}2]O)-[@{sb1}:-30]=_[@{db1b}6]@{C1}}
+                \arrow{->[\chemfig[atom sep=1.4em]{@{H2}H-[@{sb2}]@{O2}OMe}][\chemfig[atom sep=1.4em]{\charge{45:1pt=$\oplus$}{Na}-[,0.6,,,white]H-[@{sb3}]\charge{90:3pt=$\ominus$}{B}H_3-[2,0.6,,,opacity=0]}]}[,1.7]
+                \chemfig{-[:30](-[2]OH)=_[:-30]-[6]}
+                \arrow
+                \chemfig{-[:30](=[2]O)-[:-30]-[6]}
+                \arrow{->[\ce{NaBH4}][\ce{MeOH}]}[,1.2]
+                \chemname{\chemfig{-[:30](-[2]OH)-[:-30]=_[6]}}{50\%}
+                \arrow{0}[,0.1]\+
+                \chemname{\chemfig{-[:30](-[2]OH)-[:-30]-[6]}}{50\%}
+            \schemestop
+            \chemmove{
+                \draw [curved arrow={2pt}{2pt}] (sb3) to[out=-90,in=-30] (C1);
+                \draw [curved arrow={4pt}{2pt}] (db1b) to[bend left=60,looseness=2] (sb1);
+                \draw [curved arrow={3pt}{2pt}] (db1a) to[bend left=30] (H2);
+                \draw [curved arrow={2pt}{2pt}] (sb2) to[bend left=90,looseness=4] (O2);
+            }
+            \caption{\ce{NaBH4}.}
+            \label{fig:alphaBetaReductiona}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{-[:30](=[@{db1a}2]@{O1}O)-[@{sb1}:-30]=_[@{db1b}6]@{C1}}
+                \arrow{->[][\chemfig[atom sep=1.4em]{\charge{45:1pt=$\oplus$}{Li}-[,0.6,,,white]H-[@{sb2}]\charge{90:3pt=$\ominus$}{Al}H_3-[2,0.6,,,opacity=0]}]}[,1.7]
+                \chemfig{-[:30](-[2]O-[:30]\charge{90:3pt=$\ominus$}{Al}H_3)=_[:-30]-[6]}
+                \arrow{->[\ce{H3O+}]}
+                \chemname{\chemfig{-[:30](-[2]OH)-[:-30]=_[6]}}{Major}
+                \arrow{0}[,0.1]\+
+                \chemname{\chemfig{-[:30](=[2]O)-[:-30]-[6]}}{Minor}
+            \schemestop
+            \chemmove{
+                \draw [curved arrow={2pt}{2pt}] (sb2) to[out=-90,in=-30] (C1);
+                \draw [curved arrow={4pt}{2pt}] (db1b) to[bend left=60,looseness=2] (sb1);
+                \draw [curved arrow={3pt}{2pt}] (db1a) to[bend right=90,looseness=3] (O1);
+            }
+            \caption{\ce{LiAlH4}.}
+            \label{fig:alphaBetaReductionb}
+        \end{subfigure}
+        \caption{Reduction of $\alpha,\beta$ unsaturated compounds.}
+        \label{fig:alphaBetaReduction}
+    \end{figure}
+    \begin{itemize}
+        \item Levin's predictions basically line up with those from \textcite{bib:CHEM22100Notes}, although he has a different way of deriving them.
+        \item The 1,2-reduction product is the same in both. But for the \ce{NaBH4}, you get full reduction as the other major byproduct.
+        \item We will never be asked to use this reaction synthetically because it is not selective.
+        \item We're most likely to encounter alkyllithiums or cuprates. The thing to keep in mind with the messy ones is that they're messy. We're more just interested in introducing enolate chemistry with these.
+    \end{itemize}
+    \item Problem Set 1, Question 3a: We form one bond with the best stereochemistry and then do an S\textsubscript{N}2 to simultaneously form the epoxide and kick out \ce{SPh2}.
+    \item Problem Set 1, Question 2f: Cyclic systems are one of the only places you see hemi-acetals.
+    \item Problem Set 1, Question 3b: The transition state has too much ring strain, so show proton transfers as being mediated by solvent molecules.
+    \item n-butyl lithium stands for "normal"-butyl lithium; s-butyl lithium is sec-butyl lithium.
+\end{itemize}
+
+
+
 
 \end{document}
