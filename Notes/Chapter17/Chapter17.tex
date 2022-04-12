@@ -692,5 +692,121 @@
 
 
 
+\section{Discussion Section}
+\begin{itemize}
+    \item \marginnote{4/8:}We will be working with hot sand baths in the next lab, so just leave them to cool and do not dispose of the contents unless you're sure they're cool.
+    \item Practice problems.
+    \begin{enumerate}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{*4(--(-(=[::60]O)-[::-60]OEt)--)}
+                \arrow{->[\ce{NaOH}]}[,1.1]
+                \color{rex}
+                \chemfig{*4(--(-(=[::60]O)-[::-60]\charge{45:1pt=$\ominus$}{O})--)}
+            \schemestop
+        \end{center}
+        \begin{itemize}
+            \item We form a \ce{COO-} ion instead of the carboxylic acid because we are in basic solution.
+            \item The mechanism is a nucleophilic attack on the carbonyl, the oxygen electrons swinging back down and kicking out \ce{EtO-}, and then deprotonation of the acid.
+        \end{itemize}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{-[:-30]-[:30](=[2]O)-[:-30]H}
+                \arrow{->[\color{rex}1. \ce{CrO3, H2SO4, H2O}][\color{rex}2. \ce{NH3, DCC}\rule{1.1cm}{0pt}]}[,2.5]
+                \chemfig{-[:-30]-[:30](=[2]O)-[:-30]NH_2}
+            \schemestop
+        \end{center}
+        \begin{itemize}
+            \item The intermediate after step 1 is the carboxylic acid, as we have used aqueous Jones reagent.
+        \end{itemize}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{EtO-[:30](=[2]O)-[:-30]-[:30](=[2]O)-[:-30]OH}
+                \arrow{->[\ce{MeOH}][\ce{H2SO4}]}[,1.2]
+                \color{rex}
+                \chemfig{MeO-[:30](-[2]OH)-[:-30]-[:30](=[2]O)-[:-30]OMe}
+            \schemestop
+        \end{center}
+        \begin{itemize}
+            \item The reaction of the ester (left) is called \textbf{transesterification}; the reaction of the carboxylic acid (right) is called ether formation.
+            \item It's important to know that you can get ester formation in both of these cases.
+            \item This is a common problematic side reaction in synthetic chemistry.
+            \item Mechanism: Methanol attacks each carbonyl, the other group leaves, and then deprotonation.
+        \end{itemize}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{-[:-30](-[6])-[:30](=[2]O)-[:-30]}
+                \arrow{0}[,0.1]\+{,,1em}
+                \chemfig{[:18]*5(---\chemabove{N}{H}--)}
+                \arrow{->[\ce{H3O+}]}
+                \color{rex}
+                \chemfig{-[:-30](-[6])=_[:30](-[2]N*5(-----))-[:-30]}
+            \schemestop
+        \end{center}
+        \begin{itemize}
+            \item We choose this enamine as the major product by Zaitsev's rule.
+        \end{itemize}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{H-[:30](=[2]O)-[:-30]-[:30]-[:-30](=[6]O)-[:30]}
+                \arrow{->[\chemfig[atom sep=1.4em]{HO-[:30]-[:-30]-[:30]OH}][\ce{H3O+}]}[,1.8]
+                \color{rex}
+                \chemfig{H-[:30](-[2,0.01]*5(-O---O-))-[:-30]-[:30]-[:-30](=[6]O)-[:30]}
+                \color{black}
+                \arrow{->[1. \ce{MeLi}\rule{1.5mm}{0pt}][2. \ce{H3O+}]}[,1.3]
+                \color{rex}
+                \chemfig{H-[:30](=[2]O)-[:-30]-[:30]-[:-30](-[:-70]OH)(-[:-110])-[:30]}
+            \schemestop
+        \end{center}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{-[:30]*6(----(-OH)-(-)-)}
+                \arrow(R--P1){->[1. PCC\rule{8.5mm}{0pt}][2. \chemfig[atom sep=1.4em]{-[:30]=_[:-30]PPh_3}]}[,1.7]
+                \color{rex}
+                \chemfig{-[:30]*6(----(=_-[:30])-(-)-)}
+                \color{black}
+                \arrow(@R--P2){->[*{0.-90}\ce{H2SO4}]}[180,1.2]
+                \color{rex}
+                \chemfig{-[:30]*6(-----(-)=)}
+            \schemestop
+        \end{center}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{-[:-30](=[6])-[:30](=[2]O)-[:-30]}
+                \arrow{->[\ce{Me2CuLi}]}[,1.3]
+                \color{rex}
+                \chemfig{-[:-30](-[6]-[:-150])-[:30](=[2]O)-[:-30]}
+                \color{black}
+                \arrow{->[1. \ce{MeLi}\rule{1.5mm}{0pt}][2. \ce{H3O+}]}[,1.3]
+                \color{rex}
+                \chemfig{-[:-30](-[6]-[:-150])-[:30](-[:110])(-[:70]OH)-[:-30]}
+            \schemestop
+        \end{center}
+    \end{enumerate}
+\end{itemize}
+
+
+
 
 \end{document}
