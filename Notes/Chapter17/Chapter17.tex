@@ -686,7 +686,11 @@
     \item Acid chlorides, anhydrides, and esters all create the same product (an amide) when reacting with an amine.
     \begin{itemize}
         \item But, you need only one equivalent of the amine for esters while you need two equivalents for the first two.
-        \item This is because of the $\pKa$'s. The first two byproducts (\ce{HCl} and \ce{RCOOH}) protonate amines in solution, whereas \ce{ROH} does not (as much).
+        \item This is because of the $\pKa$'s.
+        \begin{itemize}
+            \item In order of increasing $\pKa$, we have $\ce{HCl}<\ce{RCOOH}<\ce{NR2H2+}<\ce{ROH}$.
+            \item Thus, the first two byproducts (\ce{HCl} and \ce{RCOOH}) protonate amines in solution, whereas \ce{ROH} does not.
+        \end{itemize}
     \end{itemize}
 \end{itemize}
 
@@ -868,6 +872,353 @@
     \item Problem Set 1, Question 2f: Cyclic systems are one of the only places you see hemi-acetals.
     \item Problem Set 1, Question 3b: The transition state has too much ring strain, so show proton transfers as being mediated by solvent molecules.
     \item n-butyl lithium stands for "normal"-butyl lithium; s-butyl lithium is sec-butyl lithium.
+\end{itemize}
+
+
+
+\section{Carboxylic Acids and Derivatives 2}
+\begin{itemize}
+    \item \marginnote{4/12:}Last time:
+    \begin{itemize}
+        \item We discussed the reactivity of compounds of the form \ce{RCOOXR$'$} where \ce{X} is a heteroatom.
+        \item We looked at nucleophilic addition to such compounds under acidic and basic conditions, which more often than not proceeds through a nucleophilic acyl substitution mechanism.
+        \item Certain classes can be taken to others by the addition of a nucleophile.
+        \item Reviews adding amines to acid chlorides, anhydrides, and esters, and the amount of amine needed for each.
+    \end{itemize}
+    \item Today: How carboxylic acid derivatives interact with hydrides and carbides.
+    \begin{itemize}
+        \item Most of the early lecture content is straight outta CHEM 221. Highlights will follow.
+    \end{itemize}
+    \item Carbide addition to\dots
+    \begin{enumerate}
+        \item Ketones and aldehydes.
+        \item Carboxylic acids.
+        \item Esters.
+    \end{enumerate}
+    \item Ketones and aldehydes.
+    \begin{equation*}
+        \ce{RCOR$'$ ->[1. R$''$Li][2. H3O+] CRR$'$R$''$(OH)}
+    \end{equation*}
+    \begin{itemize}
+        \item We can use lithiates or Grignards.
+    \end{itemize}
+    \item Carboxylic acids.
+    \begin{equation*}
+        \ce{RCOOH ->[R$'$Li] RCOOLi + R$'$H}
+    \end{equation*}
+    \begin{itemize}
+        \item We protonate the lithiate, yielding a carboxylate with a lithium countercation and an aliphatic species.
+    \end{itemize}
+    \item Esters.
+    \begin{equation*}
+        \ce{RCOOR$'$ ->[1. R$''$Li][2. H3O+] CR(R$''$)2(OH)}
+    \end{equation*}
+    \begin{itemize}
+        \item Two equivalents of the lithiate add in, the \ce{OR$'$} group leaves, and the alcohol is reduced.
+        \item See Figure 9.2 of \textcite{bib:CHEM22100Notes} for the mechanism.
+        \item The fact that we observe double addition means that the \textbf{overaddition product} is the major product. 
+        \item If you only add one equivalent of lithiate, the major products will be the overaddition product and unreacted ester; the ketone will only be a very minor product.
+        \begin{itemize}
+            \item This is because esters are less electrophilic due to donation from the ether oxygen, so the lithiate will selectively go for the ketone as soon as it becomes available.
+            \item Ester resonance essentially partially protects it from nucleophilic addition.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Overaddition product}: A nucleophilic addition product in which the nucleophile adds more than once.
+    \begin{itemize}
+        \item So named because we typically only want monoaddition.
+    \end{itemize}
+    \item Hydride addition to\dots
+    \begin{enumerate}
+        \item Esters (\ce{NaBH4}, \ce{LiAlH4}, and DIBAL-H).
+        \item Amides (\ce{LiAlH4} and DIBAL-H).
+    \end{enumerate}
+    \item Esters (\ce{NaBH4}).
+    \begin{itemize}
+        \item \ce{NaBH4 + MeOH} does not react with esters (for the purposes of this class).
+    \end{itemize}
+    \item Esters (\ce{LiAlH4}).
+    \begin{equation*}
+        \ce{RCOOR$'$ ->[1. LiAlH4][2. H3O+] RCOH + R$'$OH}
+    \end{equation*}
+    \begin{itemize}
+        \item See Figure 9.2 of \textcite{bib:CHEM22100Notes} for the mechanism.
+        \item Mechanistically, the aldehyde intermediate is much more reactive than the ester, once again.
+        \item Is it the lithium cation that bonds to the alkoxide or the \ce{AlH3} species?
+    \end{itemize}
+    \item Selecting for addition to the ester instead of addition to the aldehyde intermediate.
+    \begin{itemize}
+        \item We are going to change the structure of our reducing agent.
+        \item We want to continue using aluminum since \ce{NaBH4} is not strong enough, but we can play with the ligands.
+        \item Thus, we change from the tetracoordinate \ce{AlH4-} to \textbf{DIBAL-H}.
+    \end{itemize}
+    \item \textbf{DIBAL-H}: Diisobutylaluminum hydride, a neutral, tricoordinate aluminum species with an empty $p$ orbital that is useful for selecting the mono-hydride addition product in cases where overaddition is common. \emph{Also known as} \textbf{DIBAL}. \emph{Structure}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{Al(-[:60]-(-[:60])(-[:-60]))(-[:-60]-(-[:60])(-[:-60]))(-[4]H)}
+        \caption{Diisobutylaluminum hydride (DIBAL-H).}
+        \label{fig:DIBAL}
+    \end{figure}
+    \item Esters (DIBAL-H).
+    \item General form.
+    \begin{equation*}
+        \ce{RCOOR$'$ ->[1. DIBAL-H][2. H3O+] RCOH + R$'$OH}
+    \end{equation*}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{R-[:30](=[2]@{O1}\charge{90=\:}{O})-[:-30]OR'}
+            \arrow{->[\chemfig{H@{Al2}AlBu^\emph{i}{}_2}]}[,1.2]
+            \chemfig{R-[:30]@{C3}(=[@{db3}2]@{O3}\charge{135:1pt=$\oplus$}{O}-[:30]\charge{90:3pt=$\ominus$}{Al}Bu^\emph{i}{}_2-[@{sb3}:-60,,1]H)-[:-30]OR'}
+            \arrow
+            \chemfig{R-[:30](-[2]O-[:30]@{Al4}AlBu^\emph{i}{}_2)-[:-30]@{O4}\charge{90=\:}{O}R'}
+            \arrow
+            \chemname[-3em]{\chemfig{R-[:30](-[2]O-[@{sb5a}:5,1.1]\charge{90:3pt=$\ominus$}{Al}Bu^\emph{i}{}_2(-[@{sb5b}:-106]))-[:-10]@{O5}\charge{-90:3pt=$\oplus$}{O}R'}}{Chelate}
+            \arrow{->[*{0} {\chemfig[atom sep=1.4em]{@{H6}H-[@{sb6}]@{O6}\charge{90:3pt=$\oplus$}{O}H_2}}][*{0}-\ce{AlBu^{$i$}{}_2-}]}[-90]
+            \chemfig{R-[:30](-[2]OH)-[:-30]@{O7}\charge{90=\:}{O}R'}
+            \arrow{->[*{0.-90} {\chemfig[atom sep=1.4em]{@{H8}H-[@{sb8}]@{O8}\charge{90:3pt=$\oplus$}{O}H_2}}]}[180,1.3]
+            \chemfig{R-[:30](-[@{sb9a}2]@{O9a}\charge{180=\:}{O}H)-[@{sb9b}:-30]@{O9b}\charge{90:3pt=$\oplus$}{O}HR'}
+            \arrow{->[][*{0.90}-\ce{R$'$OH}]}[180,1.1]
+            \chemfig{R-[:30](=[2]@{O10}\charge{135:1pt=$\oplus$}{O}-[@{sb10}:30]@{H10}H)-[:-30]H}
+            \arrow{->[*{0.-90}\chemfig{H_2@{O11}\charge{90=\:}{O}}]}[180]
+            \chemfig{R-[:30](=[2]O)-[:-30]H}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={6pt}{2pt}] (O1) to[out=90,in=90,looseness=1.5] (Al2);
+            \draw [curved arrow={2pt}{3pt}] (sb3) to[out=-150,in=30] (C3);
+            \draw [curved arrow={3pt}{2pt}] (db3) to[bend left=90,looseness=3] (O3);
+            \filldraw [-,thick,draw=orx,fill=ory]
+                ([yshift=1mm]Al4.89) to[bend right=110,looseness=600] ([yshift=1mm]Al4.91)
+                ([yshift=-1mm]Al4.-89) to[bend left=110,looseness=600] ([yshift=-1mm]Al4.-91)
+            ;
+            \draw [curved arrow={6pt}{6pt}] (O4) to[out=90,in=-120,in looseness=1.5] ([yshift=-5mm]Al4.south);
+            \draw [curved arrow={2pt}{2pt}] (sb5a) to[out=95,in=90,looseness=1.5] ++(1.5,0) to[out=-90,in=65] (H6);
+            \draw [curved arrow={2pt}{2pt}] (sb6) to[bend right=90,looseness=4] (O6);
+            \draw [curved arrow={2pt}{2pt}] (sb5b) to[bend right=70,looseness=2.5] (O5);
+            \draw [curved arrow={6pt}{2pt}] (O7) to[out=90,in=-25,looseness=1] ++(-0.4,1.3) to[out=155,in=90] (H8);
+            \draw [curved arrow={2pt}{2pt}] (sb8) to[out=110,in=130,looseness=3] (O8);
+            \draw [curved arrow={6pt}{2pt}] (O9a) to[bend right=90,looseness=3] (sb9a);
+            \draw [curved arrow={2pt}{2pt}] (sb9b) to[bend right=90,looseness=3] (O9b);
+            \draw [curved arrow={6pt}{2pt}] (O11) to[out=90,in=90,looseness=1.3] (H10);
+            \draw [curved arrow={2pt}{2pt}] (sb10) to[bend left=70,looseness=2.5] (O10);
+        }
+        \caption{Monoreducton of esters mechanism.}
+        \label{fig:mechanismEsterDIBAL}
+    \end{figure}
+    \begin{itemize}
+        \item We might commonly expect to see the second intermediate (the zwitterion) decompose back into the initial reactants. However, it reacts to form a charge-neutral species that will not dissociate, as doing so would create an aluminum cation (highly unstable) in addition to the alkoxide.
+        \item Aluminum's empty $p$ orbital plays a key role in the third step as a Lewis acid/electron acceptor for the electrons of the ether oxygen.
+        \item The chelate is extra stable.
+        \begin{itemize}
+            \item Even though there are only four atoms in its ring (as opposed to five or six), aluminum is a \emph{third}-row main group element, meaning that it forms longer, more flexible bonds. Thus, aluminum-containing rings can tolerate smaller number of atoms than normal organic ring systems.
+            \item The implication is that it will not break down to kick out the alkoxide \ce{OR$'$-}. This stability is what most directly favors the monoaddition product.
+        \end{itemize}
+        \item The last several steps (after the addition of the acid) constitute the decomposition of a hemiacetal under acidic conditions.
+        \item In practice, this reaction is really difficult to pull off.
+        \begin{itemize}
+            \item The chelate is only stable at \SI{-78}{\celsius}. If it warms up much beyond that, it will decompose into the aldehyde.
+            \item The reaction of DIBAL-H with the ester is exothermic, so you have to keep it really cold and do the addition really slowly. Otherwise, the internal exotherm will raise the temperature and ruin the reaction.
+            \item Thus, you will often see in the literature chemists circumventing this reaction via a reduction (\ce{LiAlH4 + H3O+}) followed by PCC/Swern.
+            \item However, for the purposes of this class, we can treat the DIBAL-H method as if it works perfectly in every case, i.e., as if we're just laying out a synthetic plan and the person performing the reactions will do everything perfectly. In other words, we should definitely feel free to use this method (as written from a na\"{i}ve perspective) in any synthesis questions we encounter.
+        \end{itemize}
+    \end{itemize}
+    \item Amides (\ce{LiAlH4}).
+    \item General form.
+    \begin{equation*}
+        \ce{RCONR$'$R$''$ ->[LiAlH4] RCH2NR$'$R$''$}
+    \end{equation*}
+    \begin{itemize}
+        \item We don't \emph{need} an aqueous workup, but it's often performed anyway to remove excess alumina.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{R-[:30]@{C1}(=[@{db1}2]O)-[:-30]NR'R''}
+            \arrow{0}[,0.6]
+            \chemfig{H-[@{sb2}2]@{Al2}\charge{90:3pt=$\ominus$}{Al}H_3}
+            \arrow
+            \chemfig{R-[:30](-[@{sb3a}2]@{O3}O-[:30]\charge{90:3pt=$\ominus$}{Al}H_3)-[@{sb3b}:-30]@{N3}\charge{90=\:}{N}R'R''}
+            \arrow{->[][-\ce{AlH3O^2-}]}[,1.4]
+            \chemfig{R-[:30]@{C4}=_[@{db4}:-30]@{N4}\charge{90:3pt=$\oplus$}{N}R'R''}
+            \arrow{->[\chemfig[atom sep=1.4em]{H-[@{sb5}]\charge{90:3pt=$\ominus$}{Al}H_3}]}[,1.3]
+            \chemfig{R-[:30]-[:-30]NR'R''}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={2pt}{3pt}] (sb2) to[out=180,in=30] (C1);
+            \draw [curved arrow={3pt}{2pt}] (db1) to[bend left=20] (Al2);
+            \draw [curved arrow={6pt}{2pt}] (N3) to[out=90,in=60,looseness=3] (sb3b);
+            \draw [curved arrow={2pt}{2pt}] (sb3a) to[bend left=90,looseness=3] (O3);
+            \draw [curved arrow={2pt}{2pt}] (sb5) to[out=90,in=90,looseness=1.3] (C4);
+            \draw [curved arrow={4pt}{2pt}] (db4) to[bend right=90,looseness=3] (N4);
+        }
+        \caption{Reduction of amides mechanism.}
+        \label{fig:mechanismAmideReduction}
+    \end{figure}
+    \begin{itemize}
+        \item Unlike with esters, nitrogen is a stronger donor than the oxygen atom, so it will kick it out in the second step.
+    \end{itemize}
+    \item Amides (DIBAL-H).
+    \item General form.
+    \begin{equation*}
+        \ce{RCONR$'$R$''$ ->[1. DIBAL-H][2. H3O+] RCOH + NHR$'$R$''$}
+    \end{equation*}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]NR'R''}
+            \arrow{->[*{0}DIBAL-H]}[90]
+            \chemfig{R-[:30](-[2]O-[:30]@{Al2}AlBu^\emph{i}{}_2)-[:-30]@{N2}\charge{90=\:}{N}R'R''}
+            \arrow
+            \chemfig{R-[:30](-[2]O-[:5,1.1]\charge{90:3pt=$\ominus$}{Al}Bu^\emph{i}{}_2(-[:-106]))-[:-10]\charge{-90:3pt=$\oplus$}{N}R'R''}
+            \arrow{->[\ce{H3O+}][-\ce{AlH3O^2-}]}[,1.4]
+            \chemfig{R-[:30]=_[:-30]\charge{90:3pt=$\oplus$}{N}R'R''}
+            \arrow{->[*{0}\ce{H2O}]}[-90]
+            \subscheme{
+                \chemfig{R-[:30](=[2]O)-[:-30]H}
+                \arrow{0}[,0.1]\+{,,2em}
+                \chemfig{R'-[:30]N(-[2]H)-[:-30]R''}
+            }
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={6pt}{2pt}] (N2) to[out=90,in=-90] (Al2);
+        }
+        \caption{Monoreducton of amides mechanism.}
+        \label{fig:mechanismAmideDIBAL}
+    \end{figure}
+    \begin{itemize}
+        \item Amides coordinate with DIBAL much more easily than esters.
+        \item Note that in the last step, the acid destroys any remaining DIBAL-H and then reduces the final species.
+        \begin{itemize}
+            \item This likely proceeds analogously to the steps in the latter parts of Figure \ref{fig:mechanismNitrileHydrolysis}.
+        \end{itemize}
+    \end{itemize}
+    \item Note that the role, stability, and structure of the tetrahedral intermediates are what determines the reactivity of amines with both sets of reagents.
+    \item Reactions of nitriles.
+    \item Nitriles (\ce{R$'$Li}).
+    \item General form.
+    \begin{equation*}
+        \ce{RCN ->[1. R$'$Li][2. H3O+] RCOR$'$}
+    \end{equation*}
+    \begin{itemize}
+        \item Useful for generating a ketone from a carboxylic acid derivative.
+        \item No overaddition.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{R-@{C1}C~[@{tb1}]@{N1}N}
+            \arrow{->[\chemfig[atom sep=1.4em]{R'-[@{sb2}]Li}][-\ce{Li+}]}[,1.2]
+            \chemfig{R-[:30](=[2]@{N3}\charge{90=\:,45:1pt=$\ominus$}{N})-[:-30]R'}
+            \arrow{->[\chemfig[atom sep=1.4em]{@{H4}H-[@{sb4}]@{O4}\charge{90:3pt=$\oplus$}{O}H_2}][-\ce{H2O}]}[,1.3]
+            \chemfig{R-[:30](=[2]NH)-[:-30]R'}
+            \arrow{->[\ce{H3O+}]}
+            \chemfig{R-[:30](=[2]O)-[:-30]R'}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={2pt}{2pt}] (sb2) to[out=90,in=90,looseness=1.3] (C1);
+            \draw [curved arrow={4pt}{2pt}] (tb1) to[bend right=90,looseness=3] (N1);
+            \draw [curved arrow={6pt}{2pt}] (N3) to[out=90,in=90,looseness=1.5] (H4);
+            \draw [curved arrow={2pt}{2pt}] (sb4) to[out=120,in=130,looseness=3] (O4);
+        }
+        \caption{Nitrile alkylation mechanism.}
+        \label{fig:mechanismNitrileAlkylation}
+    \end{figure}
+    \begin{itemize}
+        \item Explaining the lack of overaddition.
+        \begin{itemize}
+            \item Unlike with esters, there is no good leaving group in the first intermediate.
+            \item Indeed, adding another lithiate would kick out an \ce{N^2-} species (highly unstable), but this would never happen.
+            \item Additionally, since the acid destroys the \ce{LiAlH4}, even though we end up producing a ketone (an electrophilic carbonyl), there is no further reactivity.
+        \end{itemize}
+        \item The last step is imine hydrolysis, which Levin mentioned in Lecture 2 is reactivity to which imines are prone.
+    \end{itemize}
+    \item Nitriles (DIBAL-H).
+    \item General form.
+    \begin{equation*}
+        \ce{RCN ->[1. DIBAL-H][2. H3O+] RCOH}
+    \end{equation*}
+    \item Mechanism.
+    \begin{itemize}
+        \item As in Figure \ref{fig:mechanismEsterDIBAL}, the heteroatom (nitrogen) attacks the aluminum of DIBAL-H to start. We then undergo the same proton rearrangement to get to a stable species. However, instead of forming a chelate, the acid takes us to the same imine as in Figure \ref{fig:mechanismNitrileAlkylation}, and then further to the aldehyde (also as in Figure \ref{fig:mechanismNitrileAlkylation}).
+    \end{itemize}
+    \item Nitriles (\ce{LiAlH4}).
+    \item General form.
+    \begin{equation*}
+        \ce{RCN ->[1. LiAlH4][2. H3O+] CH2RNH2}
+    \end{equation*}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{R-@{C1}C~[@{tb1}]@{N1}N}
+            \arrow{->[\chemfig[atom sep=1.4em]{H-[@{sb2}]\charge{90:3pt=$\ominus$}{Al}H_3}]}[,1.3]
+            \chemfig{R-[:30]@{C3}(=[@{db3}2]@{N3}N-[:30]\charge{90:3pt=$\ominus$}{Al}H_3)-[:-30]R'}
+            \arrow{->[\chemfig[atom sep=1.4em]{H-[@{sb4}]\charge{90:3pt=$\ominus$}{Al}H_3}]}[,1.3]
+            \chemfig{R-[:30](-[2]N(-[:30]\charge{90:3pt=$\ominus$}{Al}H_3)(-[:150]H_3\charge{90:3pt=$\ominus$}{Al}))(-[:-70]H)-[:-30]H}
+            \arrow{->[\ce{H3O+}]}
+            \chemfig{R-[:30]-[:-30]NH_2}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={2pt}{2pt}] (sb2) to[out=90,in=90,looseness=1.3] (C1);
+            \draw [curved arrow={4pt}{2pt}] (tb1) to[bend right=90,looseness=3] (N1);
+            \draw [curved arrow={2pt}{3pt}] (sb4) to[out=90,in=30,out looseness=1.2] (C3);
+            \draw [curved arrow={3pt}{2pt}] (db3) to[bend left=90,looseness=3] (N3);
+        }
+        \caption{Nitrile reduction mechanism.}
+        \label{fig:mechanismNitrileReduction}
+    \end{figure}
+    \begin{itemize}
+        \item Why does this work here but not with \ce{R$'$Li}?
+    \end{itemize}
+    \item This nitrile reactivity allows two important types of transformations.
+    \begin{itemize}
+        \item From an alkyl halide precursor, use \ce{KCN} to take it to a nitrile, and then transform it to your carboxylic acid derivative of choice.
+        \item From a ketone, use \ce{HCN} to take it to a cyanohydrin, and then move to a carboxylic acid derivative.
+        \begin{itemize}
+            \item Watch out for acidic protons on the alcohol here, though!
+            \item Because of it, we can reduce to an amine with \ce{LiAlH4} with ease, but we have to play with the concentrations to get the others to work (for example, by using a huge excess of the reagent in comparison to a lithiate).
+        \end{itemize}
+    \end{itemize}
+    \item Transforming carboxylates to ketones.
+    \item General form.
+    \begin{equation*}
+        \ce{RCOOH ->[1. R$'$Li, \Delta][2. H3O+, time] CORR$'$}
+    \end{equation*}
+    \begin{itemize}
+        \item Grignards won't work here; we do need the stronger lithiates.
+        \item We need an excess of \ce{R$'$Li} and high heat ($\sim\SI{100}{\celsius}$).
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]OH}
+            \arrow{->[\ce{R$'$Li}][-\ce{Li+, R$'$H}]}[,1.3]
+            \chemfig{R-[:30](=[2]O)-[:-30]\charge{45:1pt=$\ominus$}{O}}
+            \arrow{->[\ce{R$'$Li}, $\Delta$][-\ce{Li+}]}[,1.2]
+            \chemname[-3em]{\chemfig{R-[:30](-[:110]\charge{135:1pt=$\ominus$}{O})(-[:70]\charge{45:1pt=$\ominus$}{O})-[:-30]R'}}{Ketone diolate}
+            \arrow{->[\ce{H3O+}]}
+            \chemfig{R-[:30](-[:110]HO)(-[:70]OH)-[:-30]R'}
+            \arrow
+            \chemfig{R-[:30](=[2]O)-[:-30]R'}
+        \schemestop
+        \caption{Carboxylic acid to ketone mechanism.}
+        \label{fig:mechanismCarboxylicKetone}
+    \end{figure}
+    \begin{itemize}
+        \item The excess lithiate is used to both deprotonate the carboxylic acid and alkylate the carboxylate that gets formed.
+        \item The heat is used to overcome the low electrophilicity of the carboxylate.
+    \end{itemize}
 \end{itemize}
 
 
