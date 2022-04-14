@@ -1223,5 +1223,193 @@
 
 
 
+\section{Problem Session}
+\begin{itemize}
+    \item Practice problems.
+    \begin{enumerate}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{-[:30](=[2]O)-[:-30]-[:30](=[2]O)-[:-30]H}
+                \arrow{->[\color{rex}\begin{tabular}{l}
+                    1. \ce{NaBH4}, \ce{MeOH}\\
+                    2. acetone, \ce{H+}, $[-\ce{H2O}]$
+                \end{tabular}][\color{rex}]}[,2.6]
+                \chemfig{-[:30]*6(---O-(-[:70])(-[:110])-O-)}
+            \schemestop
+        \end{center}
+        \begin{itemize}
+            \item Sulfuric acid is a dehydrating acid.
+        \end{itemize}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{[:18]*5(--(-~)-(=O)--)}
+                \arrow{->[\color{rex}\begin{tabular}{l}
+                    1. 9-BBN-H\\
+                    2. \ce{H2O2, OH-}
+                \end{tabular}]}[,1.8]
+                \chemfig{[:18]*5(--(--[:-30](=[6]O)-[:30]H)-(=O)--)}
+            \schemestop
+        \end{center}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{**6(--(*5(-(=O)-O-(=O)-))---(-)-)}
+                \arrow{->[\begin{tabular}{l}
+                    1. \ce{NaOMe + MeOH}\\
+                    2. \ce{H3O+}
+                \end{tabular}]}[,2.2]
+                \color{rex}
+                \chemfig{**6(--(*6(-(=O)-OH-[,,,,white]OMe-(=O)-))---(-)-)}
+                \arrow{0}[,0.1]\+
+                \color{rex}
+                \chemfig{**6(--(*6(-(=O)-OMe-[,,,,white]OH-(=O)-))---(-)-)}
+            \schemestop
+        \end{center}
+        \begin{itemize}
+            \item Notice that this is an asymmetric anhydride, so there are multiple possible products.
+            \item Regioselectivity goes out the window a bit due to the high temperatures, so don't worry about major and minor products
+        \end{itemize}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{-[:-30](-[6])-[:30](=[2]O)-[:-30]OH}
+                \arrow{0}[,0.1]\+
+                \chemfig{HO-[:30](=[2]O)-[:-30]}
+                \arrow{->[$\Delta$]}
+                \color{rex}
+                \text{products}
+            \schemestop
+        \end{center}
+        \begin{itemize}
+            \item The products are a whole variety of coupled anhydrides.
+            \item We can do this selectively by transforming one of the carboxylic acids into an acid chloride with \ce{SOCl2}.
+            \begin{itemize}
+                \item Note that we don't \emph{have} to turn the other carboxylic acid into a carboxylate, but we can catalyze/accelerate the reaction by doing so with the addition of catalytic pyridine.
+            \end{itemize}
+        \end{itemize}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{*6(=-=(-C~N)-=-)}
+                \arrow{->[\begin{tabular}{l}
+                    1. DIBAL-H\\
+                    2. \ce{H3O+}
+                \end{tabular}]}[,1.5]
+                \color{rex}
+                \chemfig{*6(=-=(-(=[2]O)-[:-30]H)-=-)}
+            \schemestop
+        \end{center}
+        \begin{itemize}
+            \item We can also buy DIBAL-D.
+            \item We're assuming that we're running this for only 15 mins, and thus stopping at the aldehyde. Running for longer will eventually take us down to the alcohol.
+            \item To protonate a nitrile, we need a very strong acid (e.g., concentrated sulfuric acid).
+            \item Goes over the mechanism, but in less depth than lecture.
+        \end{itemize}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{HO-[:30](=[2]O)-[:-30]-[:30]-[:-30]-[:30]OH}
+                \arrow{->[\begin{tabular}{l}
+                    1. \ce{H+}, $[-\ce{H2O}]$\\
+                    2. DIBAL-H
+                \end{tabular}]}[,1.8]
+                \color{rex}
+                \chemfig{[:18]*5(--O-(-OH)--)}
+            \schemestop
+        \end{center}
+        \begin{itemize}
+            \item We first protonate the carboxylic acid oxygen, and then the alcohol at the end attacks the carbonyl.
+            \item Water leaves, yielding a 5-membered cyclic lactone.
+            \begin{itemize}
+                \item Cyclic lactones are more stable as 5-membered rings than 6-membered rings.
+            \end{itemize}
+            \item DIBAL-H reduces the carbonyl to an alcohol.
+        \end{itemize}
+        \item Rank the following in order of rate of nucleophilic acyl substitution with an alkoxide nucleophile.
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \begin{tikzpicture}
+                \node at (0,0) {\chemfig{**6(---(-(=[2]O)-[:-30]Cl)---)}};
+                \node at (3,0) {\chemfig{**6(---(-(=[2]O)-[:-30]I)---)}};
+                \node at (6,0) {\chemfig{**6(---(-(=[2]O)-[:-30]OCF_3)---)}};
+                \node at (9,0) {\chemfig{**6(---(-(=[2]O)-[:-30]OMe)---)}};
+                \node at (12,0) {\chemfig{**6(---(-(=[2]O)-[:-30]OH)---)}};
+
+                \small
+                \node [draw,inner sep=5pt] at (0,-1.5) {\textcolor{rex}{2}};
+                \node [draw,inner sep=5pt] at (3,-1.5) {\textcolor{rex}{1}};
+                \node [draw,inner sep=5pt] at (6,-1.5) {\textcolor{rex}{3}};
+                \node [draw,inner sep=5pt] at (9,-1.5) {\textcolor{rex}{4}};
+                \node [draw,inner sep=5pt] at (12,-1.5) {\textcolor{rex}{5}};
+            \end{tikzpicture}
+        \end{center}
+        \begin{itemize}
+            \item The determining factor is the stability of the leaving group.
+        \end{itemize}
+        \item A long "propose a synthesis" question.
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \color{rex}
+            \schemestart
+                \chemfig{[:18]*5(--(-=_[:-30])---)}
+                \arrow{->[\begin{tabular}{l}
+                    1. \ce{O3}\\
+                    2. \ce{Me2S}
+                \end{tabular}]}[,1.2]
+                \chemfig{[:18]*5(--(-(=[2]O)-[:-30]H)---)}
+                \arrow{->[\begin{tabular}{l}
+                    1. \ce{CrO3}\\
+                    2. \ce{H2SO4 + H2O}
+                \end{tabular}]}[,2]
+                \chemfig{[:18]*5(--(-(=[2]O)-[:-30]OH)---)}
+                \arrow{->[\begin{tabular}{l}
+                    1. \ce{K2CO3}\\
+                    2. \ce{EtI}
+                \end{tabular}]}[,1.4]
+                \chemfig{[:18]*5(--(-(=[2]O)-[:-30]OEt)---)}
+                \arrow{->[*{0}DIBAL-D]}[-90]
+                \chemfig{[:18]*5(--(-(=[2]O)-[:-30]D)---)}
+                \arrow{->[*{0.-90}\setchemfig{atom sep=1.3em}\chemfig{Ph_3P=}]}[180,1.3]
+                \chemfig{[:18]*5(--(-(-[2]D)=_[:-30])---)}
+                \arrow{->[*{0.-90}\begin{tabular}{l}
+                    1. \ce{OsO4}\\
+                    2. \ce{NaHSO3}
+                \end{tabular}]}[180,1.5]
+                \chemfig{[:18]*5(--(-(-[:110]D)(-[:70]OH)-[:-30]-[:30]OH)---)}
+            \schemestop
+        \end{center}
+        \begin{itemize}
+            \item First thought: Dihydroxylation. But this doesn't provide a good way to incorporate deuterium. So we want our next-to-last intermediate to be like our reactant except with a deuterium in the right place.
+            \item Knowing that DIBAL-D is a good way to incorporate a single equivalent of deuterium, we can backtrack through a Wittig to a deuterated aldehyde.
+            \item If we want to follow the DIBAL-D route, we backtrack even further to an ester.
+            \item Then to a carboxylic acid, which we can create from the initial alkene via ozonolysis.
+            \begin{itemize}
+                \item Note that we can get directly from an alkene to a carboxylic acid with 1. \ce{O3}, 2. \ce{Me2S, H2O2}, where the peroxide attacks either the molozonide or the ozonide.
+            \end{itemize}
+            \item This is a greater than exam strength question.
+        \end{itemize}
+    \end{enumerate}
+    \item We will not get "no reaction" questions on the exam.
+    \item For any mechanism questions, we will get a complete acid (i.e., one with a defined conjugate base and not just \ce{H+}).
+\end{itemize}
+
+
+
 
 \end{document}
