@@ -130,7 +130,7 @@
         \schemestart
             \chemfig{R-[@{sb1}]Li}
             \arrow{->[\chemfig[atom sep=1.4em]{O=@{C2}C=[@{db2}]@{O2}O}]}[,1.5]
-            \chemname{\chemfig{R-[:30](=[2]O)-[:-30]\charge{45:1pt=$\ominus$}{O}-[,0.6,,,white]\charge{45:1pt=$\oplus$}{Li}}}{Carboxylate salt}
+            \chemname[-3em]{\chemfig{R-[:30](=[2]O)-[:-30]\charge{45:1pt=$\ominus$}{O}-[,0.6,,,white]\charge{45:1pt=$\oplus$}{Li}}}{Carboxylate salt}
             \arrow{->[\ce{H3O+}]}
             \chemfig{R-[:30](=[2]O)-[:-30]OH}
         \schemestop
@@ -517,7 +517,7 @@
     \item Anhydride synthesis.
     \item General form (standard).
     \begin{equation*}
-        \ce{RCOOH ->[\Delta][{[-H2O]}] RCOOCOR}
+        \ce{2RCOOH ->[\Delta][{[-H2O]}] RCOOCOR}
     \end{equation*}
     \begin{itemize}
         \item High heat is required.
@@ -938,7 +938,7 @@
     \end{itemize}
     \item Esters (\ce{LiAlH4}).
     \begin{equation*}
-        \ce{RCOOR$'$ ->[1. LiAlH4][2. H3O+] RCOH + R$'$OH}
+        \ce{RCOOR$'$ ->[1. LiAlH4][2. H3O+] RCH2OH + R$'$OH}
     \end{equation*}
     \begin{itemize}
         \item See Figure 9.2 of \textcite{bib:CHEM22100Notes} for the mechanism.
@@ -1138,7 +1138,7 @@
             \item Indeed, adding another lithiate would kick out an \ce{N^2-} species (highly unstable), but this would never happen.
             \item Additionally, since the acid destroys the \ce{LiAlH4}, even though we end up producing a ketone (an electrophilic carbonyl), there is no further reactivity.
         \end{itemize}
-        \item The last step is imine hydrolysis, which Levin mentioned in Lecture 2 is reactivity to which imines are prone.
+        \item The last step is imine hydrolysis, which Levin mentioned in Aldehydes and Ketones 1 is reactivity to which imines are prone.
     \end{itemize}
     \item Nitriles (DIBAL-H).
     \item General form.
@@ -1407,6 +1407,465 @@
     \end{enumerate}
     \item We will not get "no reaction" questions on the exam.
     \item For any mechanism questions, we will get a complete acid (i.e., one with a defined conjugate base and not just \ce{H+}).
+\end{itemize}
+
+
+
+\section{Carboxylic Acids and Derivatives 3}
+\begin{itemize}
+    \item \marginnote{4/14:}Announcements:
+    \begin{itemize}
+        \item Lecture 5 has now been posted on Canvas $>$ Panopto.
+        \item CHEM 23500, Fridays at 12:30 PM, Kent 107.
+        \begin{itemize}
+            \item A new pilot course consisting of chem professors giving a single lecture on their research.
+            \item Levin goes tomorrow.
+        \end{itemize}
+        \item PSet 2 due Tuesday.
+        \item Midterm next Thursday.
+        \begin{itemize}
+            \item Both PSet 2 and the midterm only cover through today's lecture.
+            \item How to study for the exam: For each reaction we've learned, we need to know the products, conditions, and mechanism.
+            \item The best way to master the information is to take the above information and connect it from one reaction to the next.
+            \item Start from a generic carbonyl compound and make a web of everywhere you can convert and what gets you where.
+            \item Still make a study sheet even if you don't use it because it's great preparation.
+        \end{itemize}
+    \end{itemize}
+    \item Last time: Levin introduced a number of reactions to convert from carboxylic acid derivatives to aldehydes/ketones.
+    \item Today: Reactions that convert from aldehydes/ketones to carboxylic acid derivatives.
+    \begin{itemize}
+        \item Currently, we only know how to get a carboxylic acid, and the only way we know how to do that is using Jones reagent.
+        \item What we want to develop are insertion reactions, i.e., reactions that can stick a heteroatom into a \ce{C-H} or \ce{C-R$'$} bond.
+        \item This is Levin's favorite lecture of the course because it's very similar to what he works on; the reactions we talk about are what inspired his research.
+    \end{itemize}
+    \item Four insertion reactions.
+    \begin{enumerate}
+        \item Baeyer-Villiger oxidation.
+        \item Schmidt reaction.
+        \item Curtius rearrangement.
+        \item Beckmann rearrangement.
+    \end{enumerate}
+    \item The Baeyer-Villiger oxidation.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{*6(----(=O)--)}
+            \arrow{->[mCPBA]}[,1.2]
+            \chemfig{[:-12.86]*7(----O-(=O)--)}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item Transforms a ketone into an ester; the general form above transforms a ketone into a \textbf{lactone}.
+        \item This is one of the most intuitive reactions to reverse engineer in a synthesis problem.
+        \item Important acidity properties of mCPBA.
+        \begin{itemize}
+            \item The $\pKa$ of benzoic acid is -4; benzyl alcohol is 15; mCPBA is 8. mCPBA is of intermediate acidity because there's no conjugation but the ketone is a strong EWG.
+            \item It's acidity means we don't need to add an external acid catalyst.
+        \end{itemize}
+        \item Other reasons to use mCPBA.
+        \begin{itemize}
+            \item In layman's terms, the active part of the molecule is the peracid functional group, but we use a chlorinated benzene ring to make the molecule both more reactive and less explosive.
+            \item More specifically, peracids are explosive. However, chlorine burns endothermically, by which we mean that making \ce{HCl} from water requires heat. Thus, if the peracid were to begin combusting, a lot of the energy would go toward making \ce{HCl} and not toward the explosive chain reaction. Additionally, chlorine is electron withdrawing from the meta position, meaning that the initial deprotonation is favored by having a more stable conjugate base.
+            \item Note that adding chlorine atoms to compounds is actually an oft-used trick to reduce their explosivity.
+        \end{itemize}
+        \item In sum, other peracids can work, but mCPBA is the most practical.
+    \end{itemize}
+    \item \textbf{Lactone}: A cyclic ester.
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{*6(----(=@{O1}\charge{90=\:}{O})--)}
+            % \arrow{->[\chemfig[atom sep=1.4em]{*6(=-=(-(=[2]O)-[:-30]O-[:30]O-[:-30]H)-=(-Cl)-)}]}[,2.9]
+            \arrow{->[\chemfig[atom sep=1.4em]{@{H2}H-[@{sb2}:120]@{O2}O-[:60]O-[:120](=[4]O)-[:60]*6(-=(-Cl)-=-=)}]}[,2]
+            \chemfig{*6(----@{C3}(=[@{db3}]@{O3}\charge{90:3pt=$\oplus$}{O}-[:30]H)--)}
+            % \arrow{0}[,0.1]\+{,1em,2em}
+            \arrow{0}[,0.1]\+{,1em,4.5em}
+            \chemfig{@{O4}\charge{180=\:,-135:1pt=$\oplus$}{O}-[:60]O-[:120](=[4]O)-[:60]*6(-=(-Cl)-=-=)}
+            % \chemfig{*6(=-=(-(=[2]O)-[:-30]O-[:30]\charge{90=\:,45:1pt=$\ominus$}{O})-=(-Cl)-)}
+            \arrow
+            \chemname[-3em]{\chemfig{*6(----[@{sb5a}]([:93.21]*7(-@{O5}O-[@{sb5b}]O-[@{sb5c}](-*6(-=(-Cl)-=-=))=[@{db5}]O-[,,,,white]@{H5}H-[@{sb5d}]O-[@{sb5e}]))--)}}{Criegee intermediate}
+            \arrow{->[][-\ce{mCBA}]}[,1.2]
+            \chemfig{[:-12.86]*7(----O-(=O)--)}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={6pt}{2pt}] (O1) to[out=90,in=180,out looseness=2] (H2);
+            \draw [curved arrow={2pt}{2pt}] (sb2) to[bend right=80,looseness=3] (O2);
+            \draw [curved arrow={6pt}{3pt}] (O4) to[out=180,in=30,out looseness=1] (C3);
+            \draw [curved arrow={3pt}{2pt}] (db3) to[bend left=90,looseness=3] (O3);
+            \draw [curved arrow={2pt}{2pt}] (sb5a) to[out=60,in=-127] (O5);
+            \draw [curved arrow={2pt}{2pt}] (sb5b) to[bend left=60,looseness=1.5] (sb5c);
+            \draw [curved arrow={4pt}{2pt}] (db5) to[bend left=40,looseness=1.3] (H5);
+            \draw [curved arrow={2pt}{2pt}] (sb5d) to[bend left=60,looseness=1.5] (sb5e);
+        }
+        \caption{Baeyer-Villiger mechanism.}
+        \label{fig:mechanismBaeyerVilliger}
+    \end{figure}
+    \begin{itemize}
+        \item Criegee made his fame for studying this reaction. He was the one who actually first proposed the existence of the intermediate that now bears his name.
+        \item In the Criegee intermediate, one of the neighboring \ce{C-C} bonds can slide over in a \textbf{migration}.
+        \begin{itemize}
+            \item Think about the parallel to hydroboration/oxidation (Figure \ref{fig:mechanismAlkyneHydroboration}) and the formation of the enol boronate.
+        \end{itemize}
+        \item Additionally, the \ce{O-O} bond is pretty weak and can be displaced.
+        \begin{itemize}
+            \item However, because this is mCPBA (with its electron withdrawing carbonyl), the \ce{O-O} electrons can swing around and facilitate the attack of the carbonyl electrons on the substrate's acidic proton.
+        \end{itemize}
+        \item Last step arrow pushing chronology: The \ce{O-H} electrons swinging down. Reforming the carbonyl provides the oomph that breaks the \ce{C-C} bond. The \ce{C-C} electrons migrate. This makes everything else just swing around.
+        \begin{itemize}
+            \item Note that this chronology is not technically accurate; curved arrows are a human invention we assert overtop a concerted step. However, this is a good trick to think of for memorization purposes.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Migratory aptitude}: How likely a group is to shift, or migrate.
+    \begin{itemize}
+        \item Discussing the migratory aptitude of different \ce{R} groups we might see on either side of the ketone (in a Baeyer-Villiger, for instance) allows us to predict the products of the reaction in ambiguous cases, such as with asymmetric ketones.
+    \end{itemize}
+    \item Asymmetric ketones in the Baeyer-Villiger.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{-[:-30](-[:-70])(-[:-110])-[:30](=[2]O)-[:-30]}
+                \arrow{->[mCPBA]}[,1.2]
+                \chemfig{-[:-30](-[:-70])(-[:-110])-[:30]O-[:-30](=[6]O)-[:30]}
+            \schemestop
+            \caption{A selective case.}
+            \label{fig:baeyerVilligerAsymmetrica}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{(-[:-150]*6(-=-=-=))(-[:-30](-[::60])(-[::-60]))(=[2]O)}
+                \arrow{->[mCPBA]}[,1.2]
+                \chemname{\chemfig{(-[:-150]O-[:150]*6(-=-=-=))(-[:-30](-[::60])(-[::-60]))(=[2]O)}}{50\%}
+                \+{,,-1.5em}
+                \chemname{\chemfig{(-[:-150]*6(-=-=-=))(-[:-30]O-[:30](-[::60])(-[::-60]))(=[2]O)}}{50\%}
+            \schemestop
+            \caption{An unselective case.}
+            \label{fig:baeyerVilligerAsymmetricb}
+        \end{subfigure}
+        \caption{Asymmetric ketones in the Baeyer-Villiger.}
+        \label{fig:baeyerVilligerAsymmetric}
+    \end{figure}
+    \begin{itemize}
+        \item How likely a \ce{C-C} bond is to move depends on what's attached to the $\alpha$-carbon.
+        \item Selectivity for this reaction (not the same for all reactions):
+        \begin{equation*}
+            3^\circ\text{ alkyls} > 2^\circ\text{ alkyls}
+            \approx \text{aromatics}
+            > 1^\circ\text{ alkyls}
+            > \text{methyl}
+        \end{equation*}
+        where the $\alpha$-carbon being $3^\circ$ promotes the reaction the most and it being a methyl group promotes it the least.
+        \begin{itemize}
+            \item This does work with aldehydes; hydrogen will migrate faster than anything else (i.e., forming carboxylic acids).
+            \item Jones is a cheat to do the same thing, though.
+        \end{itemize}
+        \item Because of differing migratory aptitudes, the Baeyer-Villiger is not always useful synthetically.
+        \item Always think about a precursor being asymmetric when doing a retrosynthetic analysis!
+    \end{itemize}
+    \item Note that epoxidation is usually faster than the Baeyer-Villiger. Thus, compounds with both an alkene and a ketone that react with mCPBA will form epoxides and the carbonyls will be untouched.
+    \item Schmidt reaction.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{[:18]*5(---(=O)--)}
+            \arrow{->[\ce{HN3}]}
+            \chemfig{*6(---NH-(=O)--)}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item You can use catalytic acid, but you don't need it.
+    \end{itemize}
+    \item \textbf{Hydrazoic acid}: A toxic, volatile, and explosive substance. \emph{Structure} \ce{HN=N+=N-}
+    \begin{itemize}
+        \item This is useful industrially, but less useful in the lab (because of all the associated hazards).
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{[:18]*5(---(=@{O1}\charge{90=\:}{O})--)}
+            \arrow{->[\chemfig[atom sep=1.4em]{@{H2}H-[@{sb2}:-60]@{N2}N=\charge{90:3pt=$\oplus$}{N}=\charge{90:3pt=$\ominus$}{N}}]}[,1.8]
+            \chemfig{[:18]*5(---@{C3}(=[@{db3}]@{O3}\charge{90:3pt=$\oplus$}{O}-[:30]H)--)}
+            \arrow{0}[,0.5]
+            \chemfig{@{N4}\charge{180=\:,90:3pt=$\ominus$}{N}=\charge{90:3pt=$\oplus$}{N}=\charge{90:3pt=$\ominus$}{N}}
+            \arrow
+            \chemfig{[:18]*5(---(-[:70]N=[@{db5a}:10]\charge{90:3pt=$\oplus$}{N}=[@{db5b}:10]@{N5}\charge{-90=\:,90:3pt=$\ominus$}{N})(-[:110]O-[:170]H)--)}
+            \arrow{->[*{0} {\chemfig[atom sep=1.4em]{@{H6}H-[@{sb6}]@{N6}N_3}}]}[-90]
+            \subscheme{
+                \chemfig{[:18]*5(---[@{sb7a}](-[:70]@{N7a}N(-[2]H)-[@{sb7b}0]@{N7b}\charge{90:3pt=$\oplus$}{N}~[0]N)(-[@{sb7c}:110]H@{O7}\charge{90=\:}{O})--)}
+                \arrow{0}[,0.1]\+
+                \chemfig{\charge{45:1pt=$\ominus$}{N}_3}
+            }
+            \arrow{->[][*{0.90}-\ce{N2}]}[180]
+            \subscheme{
+                \chemfig{*6(---NH-(=@{O9}\charge{90:3pt=$\oplus$}{O}-[@{sb9}:30]@{H9}H)--)}
+                \arrow{0}[,0.1]\+
+                \chemfig{@{N10}\charge{90=\:,45:1pt=$\ominus$}{N}_3}
+            }
+            \arrow{->[][*{0.90}-\ce{HN3}]}[180]
+            \chemfig{*6(---NH-(=O)--)}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={6pt}{2pt}] (O1) to[out=90,in=90,looseness=1.8] (H2);
+            \draw [curved arrow={2pt}{2pt}] (sb2) to[bend right=80,looseness=3] (N2);
+            \draw [curved arrow={6pt}{3pt}] (N4) to[out=180,in=30] (C3);
+            \draw [curved arrow={3pt}{2pt}] (db3) to[bend left=90,looseness=3] (O3);
+            \draw [curved arrow={3pt}{2pt}] (db5a) to[out=-80,in=90] (H6);
+            \draw [curved arrow={2pt}{2pt}] (sb6) to[bend right=90,looseness=3] (N6);
+            \draw [curved arrow={6pt}{3pt}] (N5) to[bend left=90,looseness=3] (db5b);
+            \draw [curved arrow={6pt}{2pt}] (O7) to[out=90,in=-150,looseness=7] (sb7c);
+            \draw [curved arrow={2pt}{2pt}] (sb7a) to[out=54,in=-60,looseness=1.1] (N7a);
+            \draw [curved arrow={2pt}{2pt}] (sb7b) to[bend right=90,looseness=3] (N7b);
+            \draw [curved arrow={6pt}{2pt}] (N10) to[out=90,in=0,looseness=1.2] (H9);
+            \draw [curved arrow={2pt}{2pt}] (sb9) to[bend left=80,looseness=2.5] (O9);
+        }
+        \caption{Schmidt reaction mechanism.}
+        \label{fig:mechanismSchmidt}
+    \end{figure}
+    \begin{itemize}
+        \item Getting rid of nitrogen is a massive thermodynamic sink/driving force.
+        \item One of the molecules of hydrazoic acid is being incorporated, and the other is a catalyst (which we can supplement with external acid catalyst). It will go faster with an acid catalyst if the acid used is stronger than hydrazoic acid, but the acid is not necessary.
+        \item Again, the arrow pushing chronology starts at the alcohol oxygen for the final step.
+    \end{itemize}
+    \item Migratory aptitude is the same for Schmidt as for the Baeyer-Villiger.
+    \item The Schmidt does work with aldehydes; hydrogen will migrate faster than anything else.
+    \begin{itemize}
+        \item You would form an amide in this case.
+        \item It's rare to see this in the literature, though.
+    \end{itemize}
+    \item Using an alkyl group in place of the hydrogen on the hydrazoic acid \emph{requires} catalytic acid (the new acid isn't strong enough to catalyze its own chemistry). The alkyl group just gets added to the nitrogen in the product.
+    \item The Schmidt reaction also works intramolecularly.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{*6(---(--[2]--[2]N=[0]\charge{90:3pt=$\oplus$}{N}=[0]\charge{90:3pt=$\ominus$}{N})-(=O)--)}
+            \arrow{->[\ce{H+}]}
+            \chemname{\chemfig{[:{-360/28}]*7(---(*5(---?))-N?-(=O)--)}}{Major product}
+            \+{,,1.5em}
+            \chemname{\chemfig{*6(---([:72,1.7]--[::72,1.7]-[::72,1.7]?)-(=O)-N?-)}}{Minor product}
+        \schemestop
+        \caption{Intramolecular Schmidt reaction.}
+        \label{fig:intramolecularSchmidt}
+    \end{figure}
+    \begin{itemize}
+        \item The intramolecular Schmidt builds complexity really quickly.
+        \item When you're building natural molecules, it allows you to get up from simple cheap starting materials to complex polycycles quite quickly, which you want.
+    \end{itemize}
+    \item The Curtius rearrangement.
+    \item General form.
+    \begin{equation*}
+        \ce{RCOCl ->[NaN3][\Delta] RNCO ->[NaOH][H2O] RNH2}
+    \end{equation*}
+    \begin{itemize}
+        \item The product of the first step is an \textbf{isocyanate}.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30]@{C1}(=[@{db1}2]@{O1}O)-[:-30]Cl}
+                \arrow{->[*{0} {\chemfig[atom sep=1.4em]{\charge{90:3pt=$\oplus$}{Na}-[,0.3,,,white]@{N2}\charge{90:3pt=$\ominus$}{N}=\charge{90:3pt=$\oplus$}{N}=\charge{90:3pt=$\ominus$}{N}}}]}[-90]
+                \chemfig{R-[:30](-[@{sb3a}:110]@{O3}\charge{180=\:,90:3pt=$\ominus$}{O})(-[:70]N=\charge{90:3pt=$\oplus$}{N}=\charge{90:3pt=$\ominus$}{N})-[@{sb3b}:-30]@{Cl3}Cl}
+                \arrow{->[][-\ce{Cl-}]}
+                \chemleft{[}
+                    \subscheme{
+                        \chemfig{R-[:30](=[@{db4a}2]@{O4}O)-[@{sb4}:-30]N=[@{db4b}:30]\charge{90:3pt=$\oplus$}{N}=[@{db4c}:30]@{N4}\charge{90:3pt=$\ominus$}{N}}
+                        \arrow{<->}
+                        \chemfig{R-[@{sb5a}:30](-[@{sb5b}2]@{O5}\charge{180=\:,45:1pt=$\ominus$}{O})=^[:-30]@{N5a}N-[@{sb5c}:30]@{N5b}\charge{90:3pt=$\oplus$}{N}~[:30]N}
+                    }
+                \chemright{]}
+                \arrow{->[][-\ce{N2}]}
+                \chemfig{R-[:30]N=[:-30]C=[:-30]O}
+            \schemestop
+            \chemmove{
+                \draw [curved arrow={11pt}{2pt}] (N2) to[out=90,in=-90] (C1);
+                \draw [curved arrow={3pt}{2pt}] (db1) to[bend left=90,looseness=3] (O1);
+                \draw [curved arrow={6pt}{2pt}] (O3) to[out=180,in=-150,looseness=4] (sb3a);
+                \draw [curved arrow={2pt}{2pt}] (sb3b) to[bend right=90,looseness=3] (Cl3);
+                \draw [curved arrow={5pt}{3pt},blx] ([yshift=2mm]N4.north) to[bend right=80,looseness=2.5] (db4c);
+                \draw [curved arrow={3pt}{2pt},blx] (db4b) to[bend right=60,looseness=1.5] (sb4);
+                \draw [curved arrow={3pt}{2pt},blx] (db4a) to[bend left=90,looseness=3] (O4);
+                \draw [curved arrow={2pt}{2pt}] (sb5a) to[bend right=40,looseness=1.2] (N5a);
+                \draw [curved arrow={6pt}{2pt}] (O5) to[bend right=90,looseness=3] (sb5b);
+                \draw [curved arrow={2pt}{2pt}] (sb5c) to[bend right=90,looseness=3] (N5b);
+            }
+            \caption{Step 1.}
+            \label{fig:mechanismCurtiusa}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30]N=[:-30]@{C1}C=[@{db1}:-30]@{O1}O}
+                \arrow{->[*{0} {\chemfig[atom sep=1.4em]{-[,0.5,,,white]@{O2}\charge{90=\:,135:1pt=$\ominus$}{O}H}}]}[-90]
+                \chemfig{R-[:30]N(-[2,0.8,,,white])=[@{db3}:-30](-[6]OH)-[@{sb3}:30]@{O3}\charge{90=\:,45:1pt=$\ominus$}{O}}
+                \arrow{->[\chemfig[atom sep=1.4em]{@{H4}H-[@{sb4}]@{O4}OH}][-\ce{OH-}]}[,1.2]
+                \chemfig{R-[:30]N(-[2]H)-[:-30](-[6]@{O5}O-[@{sb5}:-30]@{H5}H)=[:30]O}
+                \arrow{->[\chemfig[atom sep=1.4em]{@{O6}\charge{180=\:,135:1pt=$\ominus$}{O}H}][-\ce{H2O}]}
+                \chemfig{R-[:30]@{N7}N(-[2]H)-[@{sb7a}:-30](-[@{sb7b}6]@{O7}\charge{180=\:,0:3pt=$\ominus$}{O})=[:30]O}
+                \arrow{->[][-\ce{CO2}]}
+                \chemfig{R-[:30]@{N8}\charge{90:3pt=$\ominus$}{N}-[:-30]H}
+                \arrow{->[\chemfig[atom sep=1.4em]{@{H9}H-[@{sb9}]@{O9}OH}][-\ce{OH-}]}[,1.2]
+                \chemfig{R-NH_2}
+            \schemestop
+            \chemmove{
+                \draw [curved arrow={6pt}{2pt}] (O2) to[out=90,in=-120,in looseness=1.2] (C1);
+                \draw [curved arrow={3pt}{2pt}] (db1) to[bend left=90,looseness=3] (O1);
+                \draw [curved arrow={6pt}{2pt}] (O3) to[out=90,in=120,looseness=4] (sb3);
+                \draw [curved arrow={3pt}{2pt}] (db3) to[out=80,in=90,out looseness=3,in looseness=1.7] (H4);
+                \draw [curved arrow={2pt}{2pt}] (sb4) to[bend left=90,looseness=3] (O4);
+                \draw [curved arrow={6pt}{2pt}] (O6) to[out=180,in=90] (H5);
+                \draw [curved arrow={2pt}{2pt}] (sb5) to[bend left=90,looseness=3] (O5);
+                \draw [curved arrow={6pt}{2pt}] (O7) to[bend left=90,looseness=3] (sb7b);
+                \draw [curved arrow={2pt}{2pt}] (sb7a) to[bend right=90,looseness=3] (N7);
+                \draw [curved arrow={11pt}{2pt}] (N8) to[out=90,in=90,looseness=2] (H9);
+                \draw [curved arrow={2pt}{2pt}] (sb9) to[bend left=90,looseness=3] (O9);
+            }
+            \caption{Step 2.}
+            \label{fig:mechanismCurtiusb}
+        \end{subfigure}
+        \caption{Curtius rearrangement mechanism.}
+        \label{fig:mechanismCurtius}
+    \end{figure}
+    \begin{itemize}
+        \item Acyl azides are sometimes isolable. Heating one up will always cause it to convert, though.
+    \end{itemize}
+    \item Isocyanates can also be trapped to form carbamates.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{RN=C=O}
+            \arrow{->[\ce{R$'$OH}][cat. base]}[,1.3]
+            \chemfig{HRN-[:30](=[2]O)-[:-30]OR'}
+        \schemestop
+        \caption{Carbamate formation.}
+        \label{fig:carbamates}
+    \end{figure}
+    \begin{itemize}
+        \item Use an alcohol and catalytic base.
+    \end{itemize}
+    \item This is the reaction behind guys on YouTube spraying insulation/fire retardant foam and it expanding on the wall behind them.
+    \begin{itemize}
+        \item You have one diisocyanate and add ethylene glycol at the last second; the foaming up is the polymerization resulting in polyurethane.
+        \item We will not be asked about the foam thing specifically, but we may be asked to draw the product of a compound with two isocyanates at each end.
+        \item Levin disses Snyder lol -- "not gonna ask you what color tie I'm wearing either."
+    \end{itemize}
+    \item Converting from a carboxylic acid to an isocyanate without going through an acid chloride intermediate.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]OH}
+            \arrow{->[DPPA]}
+            \chemfig{RN=C=O}
+        \schemestop
+    \end{center}
+    \item \textbf{DPPA}: Diphenylphosphoryl azide. \emph{Structure}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{P(=[2]O)(-[:-30]N_3)(-[:-110]PhO)(-[:-150]PhO)}
+        \caption{Diphenylphosphoryl azide (DPPA).}
+        \label{fig:DPPA}
+    \end{figure}
+    \begin{itemize}
+        \item Just like \ce{SOCl2} and \ce{POCl3} work as dehydrating agents (with chloride), DPPA works as a dehydrating agent (with azide).
+    \end{itemize}
+    \item Beckmann rearrangement.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{*6(----(=O)--)}
+            \arrow{->[\ce{H2NOH}][\ce{H3O+}]}[,1.2]
+            \chemfig{[:-12.86]*7(----[,,,1]NH-(=O)--)}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item You can do this all in one go, or you can isolate the oximes from the first reagent and removing water, and then add in acid to finish it off.
+        \item Quite similar to the Schmidt, but hydroxyl amine is not as toxic, volatile, or explosive, so this is the preferred one.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \vspace{2em}
+        \footnotesize
+        \schemestart
+            % \chemfig{*6(----(=O)--)}
+            % \arrow{->[\ce{H2NOH}][-\ce{H2O}]}[,1.2]
+            \chemfig{*6(----(=N-[:30]@{O1}\charge{90=\:}{O}H)--)}
+            \arrow{->[\chemfig[atom sep=1.4em]{@{H2}H-[@{sb2}]@{O2}\charge{90:3pt=$\oplus$}{O}H_2}][-\ce{H2O}]}[,1.3]
+            \chemfig{*6(----(=@{N3}N-[@{sb3a}:30]@{O3}\charge{90:3pt=$\oplus$}{O}H_2)-[@{sb3b}]-)}
+            \arrow{->[][-\ce{H2O}]}
+            \chemleft{[}
+                \subscheme{
+                    \chemfig{[:{-360/28}]*7(----@{C4}\charge{45:1pt=$\oplus$}{}=[@{db4}]@{N4}\charge{90=\:}{N}--)}
+                    \arrow{<->}
+                    \chemfig{[:{-360/28}]*7(----~\charge{90:3pt=$\oplus$}{N}--)}
+                }
+            \chemright{]}
+            \arrow{->[\chemfig{H_2@{O6}\charge{90=\:}{O}}]}
+            \chemfig{[:{-360/28}]*7(----(-[@{sb7a}]\charge{45:1pt=$\oplus$}{O}(-[2]H)-[@{sb7b}0]@{H7}H)=[@{db7}]@{N7}N--)}
+            \arrow{->[*{0}\chemfig{H_2@{O8}\charge{90=\:}{O}}][*{0}-\ce{H3O+}]}[-90]
+            \chemfig{[:{-360/28}]*7(----(=\charge{90:3pt=$\oplus$}{O}-[::-60]H)-@{N9}\charge{90:3pt=$\ominus$}{N}--)}
+            \arrow{->[*{0.-90} {\chemfig[atom sep=1.4em]{@{H10}H-[@{sb10}]@{O10}\charge{90:3pt=$\oplus$}{O}H_2}}][*{0.90}-\ce{H2O}]}[180,1.3]
+            \chemfig{[:{-360/28}]*7(----(=@{O11}\charge{90:3pt=$\oplus$}{O}-[@{sb11}::-60]@{H11}H)-\chemabove{N}{H}--)}
+            \arrow{->[*{0.-90} \chemfig{H_2@{O12}\charge{90=\:}{O}}][*{0.90}-\ce{H3O+}]}[180]
+            \chemfig{[:{-360/28}]*7(----(=O)-\chemabove{N}{H}--)}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={6pt}{2pt}] (O1) to[out=90,in=90,looseness=2] (H2);
+            \draw [curved arrow={2pt}{2pt}] (sb2) to[out=110,in=130,looseness=3] (O2);
+            \draw [curved arrow={2pt}{2pt}] (sb3b) to[out=120,in=-150,looseness=1.2] (N3);
+            \draw [curved arrow={2pt}{2pt}] (sb3a) to[bend right=90,looseness=3] (O3);
+            \draw [curved arrow={6pt}{2pt},blx] (N4) to[out=90,in=60,looseness=4] (db4);
+            \draw [curved arrow={6pt}{11pt}] (O6) to[out=90,in=45] (C4);
+            \draw [curved arrow={6pt}{2pt}] (O8) to[out=90,in=-90] (H7);
+            \draw [curved arrow={2pt}{2pt}] (sb7b) to[bend left=60,looseness=1.5] (sb7a);
+            \draw [curved arrow={4pt}{2pt}] (db7) to[bend left=90,looseness=3] (N7);
+            \draw [curved arrow={11pt}{2pt}] (N9) to[out=90,in=90,looseness=1.2] (H10);
+            \draw [curved arrow={2pt}{2pt}] (sb10) to[out=110,in=130,looseness=3] (O10);
+            \draw [curved arrow={6pt}{2pt}] (O12) to[out=90,in=90,looseness=1.2] (H11);
+            \draw [curved arrow={2pt}{2pt}] (sb11) to[bend left=90,looseness=3] (O11);
+        }
+        \caption{Beckmann rearrangement mechanism.}
+        \label{fig:mechanismBeckmann}
+    \end{figure}
+    \begin{itemize}
+        \item The first part of the mechanism proceeds just like oxime formation (see Aldehydes and Ketones 1). This is why we show the mechanism beginning from an oxime.
+        \item There is debate over the mechanism. We are only responsible for the one above, though.
+        \item The triple-bonded nitrogen resonance form is quite strained, and thus the carbocation species is the major contributor.
+    \end{itemize}
+    \item Caperlactam (the end product in Figure \ref{fig:mechanismBeckmann}) is made from cyclohexanone in quantites of millions of tons per year because it is a precursor to nylon, which is just caperlactam following a ring opening.
+    \item Migratory aptitude (same as for Baeyer-Villiger and Schmidt).
+    \item An orbital explanation of the migratory aptitude in this case.
+    \begin{itemize}
+        \item The step 2 migration is an S\textsubscript{N}2 process.
+        \item As such, we want to see donation into the antibonding $\sigma$ orbital of the \ce{N-O} bond to make this proceed. This is why the carbon "behind" the oxime selectively migrates.
+        \item However, in acidic solution, oximes exist in equilibrium with their \emph{cis}/\emph{trans} counterpart.
+        \item As such, since sterics disfavor the \ce{OH} being on the same side as a bulky group, we will more commonly observe the oxime in solution where the \ce{OH} points away from the bulky group, thus forming more of this product.
+    \end{itemize}
+    \item The Beckmann rearrangement also helps create azithromycin, the active ingredient in the common Z-pak antibiotics.
+    \begin{itemize}
+        \item Erythromycin is produced by some bacteria to defend against other bacteria.
+        \item You need a big dose of it because it's half-life in your body is 1.5 hours. It also is really tough on your body because it kills all your gut bacteria.
+        \item A couple of chemical steps including the Beckmann rearrangement takes it to azithromycin, which has a half-life of 68 hours.
+    \end{itemize}
 \end{itemize}
 
 
