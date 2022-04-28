@@ -2043,6 +2043,621 @@
     \item For mechanism questions, if we're struggling, think back to the sentence trick from the very beginning of the course.
     \item For synthesis questions, just throw as many reactions out there as we can think of.
 \end{itemize}
+\newpage
+
+
+
+\section{Midterm 1 Review Sheet}
+\subsection*{Reactions}
+\subsubsection*{Carbonyl Synthesis}
+\begin{enumerate}
+    \footnotesize
+    \setchemfig{atom sep=1.4em}
+    \item \marginnote{4/20:}
+        \schemestart
+            \chemfig{R-[:30]-[2]OH}
+            \arrow{->[PCC]}
+            \chemfig{R-[:30](=[2]O)-[:-30]H}
+        \schemestop
+    \item 
+        \schemestart
+            \chemfig{MeO-[:30]*6(=-=-=-)}
+            \arrow{0}[,0.1]\+{,,1.6em}
+            \chemfig{Cl-[:30](=[2]O)-[:-30]}
+            \arrow{->[\ce{AlCl3}]}[,1.1]
+            \chemfig{MeO-[:30]*6(=-(-[,,,,white]-[6,,,,white]\phantom{O})=(-(=[2]O)-[:-30])-=-)}
+        \schemestop
+    \begin{itemize}[label={--}]
+        \item Recall ortho/para selectivity.
+    \end{itemize}
+    \item 
+        \schemestart
+            \chemfig{-[:30]=_[:-30]-[:30]}
+            \arrow{->[1. \ce{O3}\rule{3.4mm}{0pt}][2. \ce{Me2S}]}[,1.3]
+            \chemfig{O=[4](-[::60]H)(-[::-60])}
+            \+
+            \chemfig{O=(-[::60]H)(-[::-60])}
+            \arrow{0}[,0.1]\+{,,0.8em}
+            \chemfig{S(=[2]O)(-[:-30])(-[:-150])}
+        \schemestop
+    \begin{itemize}[label={--}]
+        \item Not adding \ce{Me2S} traps the ozonide intermediate.
+    \end{itemize}
+    \item 
+        \schemestart
+            \chemfig{[:30]*6(---(<OH)-(<HO)--)}
+            \arrow{->[\ce{HIO4}]}
+            \chemfig{H-[:30](=[2]O)-[:-30]-[:30]-[:-30]-[:30]-[:-30](=[6]O)-[:30]H}
+        \schemestop
+    \begin{itemize}[label={--}]
+        \item \emph{cis}-diols react faster, but are not required.
+    \end{itemize}
+    \item 
+        \schemestart
+            \chemfig{R-~-H}
+            \arrow{->[\ce{Ph3PAu+}][\ce{H2O}]}[,1.3]
+            \chemfig{R-[:30](=[2]O)-[:-30](-[:-70]H)(-[:-110]H)-[:30]H}
+        \schemestop
+    \item 
+        \schemestart
+            \chemfig{R-~-H}
+            \arrow{->[1. 9-BBN-H\rule{3.3mm}{0pt}][2. \ce{H2O2, HO-}]}[,1.8]
+            \chemfig{R-[:30](-[:70]H)(-[:110]H)-[:-30](=[6]O)-[:30]H}
+        \schemestop
+\end{enumerate}
+
+\subsubsection*{Nucleophilic Addition to Carbonyls}
+\textbf{General}
+\begin{enumerate}
+    \footnotesize
+    \setchemfig{atom sep=1.4em}
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]R'}
+            \arrow{0}[,0.1]\+
+            \chemfig{NuH}
+            \arrow{<=>[acid or][base]}[,1.1]
+            \chemfig{R-[:30](-[:70]Nu)(-[:110]HO)-[:-30]R'}
+        \schemestop
+\end{enumerate}
+\textbf{Oxygen Nucleophiles}
+\begin{enumerate}
+    \footnotesize
+    \setchemfig{atom sep=1.4em}
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]R'}
+            \arrow{0}[,0.1]\+
+            \chemfig{H_2O}
+            \arrow{<=>[reagents]}[,1.3]
+            \chemfig{R-[:30](-[:70]OH)(-[:110]HO)-[:-30]R'}
+        \schemestop
+    \begin{itemize}[label={--}]
+        \item Reagents is either \ce{H3O+} or \ce{OH-}.
+        \item Proceeds faster for carbonyls with less bulky, more electron withdrawing substituents.
+    \end{itemize}
+    \item 
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30]}
+            \arrow{0}[,0.1]\+
+            2 \chemfig{MeOH}
+            \arrow{->[\ce{H+}][$[-\ce{H2O}]$]}[,1.2]
+            \chemfig{-[:30](-[:70]OMe)(-[:110]MeO)-[:-30]}
+        \schemestop
+    \begin{itemize}[label={--}]
+        \item Remove water with a Dean-Stark apparatus (and toluene) or \SI{3}{\angstrom} aluminosilicates.
+        \item Will not work in basic conditions (will get stuck at the hemiketal). \ce{OH-} is not a good enough leaving group and needs an acid to protonate it.
+    \end{itemize}
+    \item 
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30]}
+            \arrow{->[\chemfig[atom sep=1.4em]{HO-[:60]--[:-60]OH}][\ce{H+} $[-\ce{H2O}]$]}[,1.6]
+            \chemfig{-[:30](-[:60,1.2]O-[:104,0.75]-[4]?)(-[:120,1.2]O?)-[:-30]}
+            \arrow{->[\ce{H3O+}]}
+            \chemfig{-[:30](=[2]O)-[:-30]}
+        \schemestop
+    \begin{itemize}[label={--}]
+        \item We use ketals as protecting groups when we want our ketone to be able to withstand basic conditions (remember, ketals need acid to form and be unformed).
+        \item We can also protect 1,2- and 1,3-diols from basic conditions with acetone.
+    \end{itemize}
+\end{enumerate}
+\textbf{Nitrogen Nucleophiles}
+\begin{enumerate}
+    \footnotesize
+    \setchemfig{atom sep=1.4em}
+    \item 
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30]}
+            \arrow{0}[,0.1]\+
+            \chemfig{MeNH_2}
+            \arrow
+            \chemfig{-[:30](=[2]N-[:30])-[:-30]}
+        \schemestop
+    \begin{itemize}[label={--}]
+        \item Acidic, basic, or neutral conditions.
+        \item We have only been taught the acidic mechanism, though, which is analogous to the other nucleophilic addition to carbonyl mechanisms we've been working with.
+    \end{itemize}
+    \item 
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30]}
+            \arrow{0}[,0.1]\+
+            \chemfig{H_2N-OH}
+            \arrow{->[cat. \ce{H+}]}[,1.2]
+            \chemfig{-[:30](=[2]N-[:30]OH)-[:-30]}
+        \schemestop
+    \item 
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30]}
+            \arrow{0}[,0.1]\+
+            \chemfig{H_2N-NH_2}
+            \arrow{->[cat. \ce{H+}]}[,1.2]
+            \chemfig{-[:30](=[2]N-[:30]NH_2)-[:-30]}
+        \schemestop
+    \item 
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30]}
+            \arrow{0}[,0.1]\+{,,-1em}
+            \chemfig{-[:-30]\chembelow{N}{H}-[:30]}
+            \arrow{->[cat. \ce{H+}]}[,1.2]
+            \chemfig{-[:30](-[2]N(-[:150])(-[:30]))=[:-30]}
+        \schemestop
+    \item 
+        \schemestart
+            \chemfig{-[:30](=[2]N-[:30]NH_2)-[:-30]}
+            \arrow{->[\ce{NaOH, H2O}][$\Delta$ ($\SI{200}{\celsius}\,+$)]}[,1.6]
+            \chemfig{-[:30](-[:110]H)(-[:70]H)-[:-30]}
+            \arrow{0}[,0.1]\+
+            \chemfig{N~N}
+        \schemestop
+\end{enumerate}
+\textbf{Hydride Nucleophiles}
+\begin{enumerate}
+    \footnotesize
+    \setchemfig{atom sep=1.4em}
+    \item \ce{NaBH4 + MeOH} reduces aldehydes and ketones to alcohols.
+    \item \ce{LiAlH4} followed by \ce{H3O+} reduces an ester to its two component alcohols.
+\end{enumerate}
+\textbf{Carbide Nucleophiles}
+\begin{enumerate}
+    \footnotesize
+    \setchemfig{atom sep=1.4em}
+    \item \ce{RBr ->[Mg${}^\circ$][Et2O] RMgBr}
+    \item \ce{RBr ->[2Li${}^\circ$][Et2O] RLi + LiBr}
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]H}
+            \arrow{->[1. \ce{R$'$MgBr}][2. \ce{H3O+}\rule{3mm}{0pt}]}[,1.4]
+            \chemfig{R-[:30](-[2]OH)-[:-30]R'}
+        \schemestop
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]R'}
+            \arrow{->[1. \ce{R$''$MgBr}][2. \ce{H3O+}\rule{3mm}{0pt}]}[,1.4]
+            \chemfig{R-[:30](-[2]OH)(-[:-70]R'')-[:-30]R'}
+        \schemestop
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]OR'}
+            \arrow{->[1. \ce{R$''$MgBr}][2. \ce{H3O+}\rule{3mm}{0pt}]}[,1.4]
+            \chemfig{R-[:30](-[2]OH)(-[:-70]R'')-[:-30]R''}
+            \arrow{0}[,0.1]\+
+            \chemfig{R'OH}
+        \schemestop
+    \item 
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30]}
+            \arrow{->[\ce{HCN}]}
+            \chemfig{-[:30](-[:110]HO)(-[:70]CN)-[:-30]}
+        \schemestop
+    \begin{itemize}[label={--}]
+        \item Can be accelerated by an acid/base catalyst, but no catalyst is necessary. Acid catalysts are more common.
+    \end{itemize}
+\end{enumerate}
+\textbf{Ylide Nucleophiles}
+\begin{enumerate}
+    \footnotesize
+    \setchemfig{atom sep=1.4em}
+    \item \ce{Ph3P ->[MeBr] Ph3BrP-CH3 ->[KO^{$t$}Bu] Ph3P=CH2}
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]H}
+            \arrow{0}[,0.1]\+
+            \chemfig{Ph_3\charge{90:3pt=$\oplus$}{P}-\charge{90:3pt=$\ominus$}{C}H_2}
+            \arrow
+            \chemfig{R-[:30](=[2]CH_2)-[:-30]H}
+            \arrow{0}[,0.1]\+
+            \chemfig{Ph_3P=O}
+        \schemestop
+    \begin{itemize}[label={--}]
+        \item Presence or lack thereof of a betaine in the mechanism.
+        \item We need at least one hydrogen on the carbon portion of the ylide.
+        \item Stereoselective for the \emph{cis} product.
+        \begin{itemize}
+            \item Except if there's an EWG on the ylide; then we form the \emph{trans} product.
+        \end{itemize}
+        \item Ketone Wittigs still proceed, but slower. Biggest groups end up \emph{cis} (except, once again, in the case of ylide EWGs).
+    \end{itemize}
+\end{enumerate}
+\textbf{$\bm{\alpha}$,$\bm{\beta}$-Unsaturated Carbonyls}
+\begin{figure}[h!]
+    \centering
+    \footnotesize
+    \begin{subfigure}[b]{\linewidth}
+        \centering
+        \schemestart
+            \chemfig{-[:30](=[@{db1a}2]O)-[@{sb1}:-30]=_[@{db1b}6]@{C1}}
+            \arrow{->[\chemfig[atom sep=1.4em]{@{H2}H-[@{sb2}]@{O2}OMe}][\chemfig[atom sep=1.4em]{\charge{45:1pt=$\oplus$}{Na}-[,0.6,,,white]H-[@{sb3}]\charge{90:3pt=$\ominus$}{B}H_3-[2,0.6,,,opacity=0]}]}[,1.7]
+            \chemfig{-[:30](-[2]OH)=_[:-30]-[6]}
+            \arrow
+            \chemfig{-[:30](=[2]O)-[:-30]-[6]}
+            \arrow{->[\ce{NaBH4}][\ce{MeOH}]}[,1.2]
+            \chemname{\chemfig{-[:30](-[2]OH)-[:-30]=_[6]}}{50\%}
+            \arrow{0}[,0.1]\+
+            \chemname{\chemfig{-[:30](-[2]OH)-[:-30]-[6]}}{50\%}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={2pt}{2pt}] (sb3) to[out=-90,in=-30] (C1);
+            \draw [curved arrow={4pt}{2pt}] (db1b) to[bend left=60,looseness=2] (sb1);
+            \draw [curved arrow={3pt}{2pt}] (db1a) to[bend left=30] (H2);
+            \draw [curved arrow={2pt}{2pt}] (sb2) to[bend left=90,looseness=4] (O2);
+        }
+        \caption*{\ce{NaBH4}.}
+    \end{subfigure}\\[2em]
+    \begin{subfigure}[b]{\linewidth}
+        \centering
+        \schemestart
+            \chemfig{-[:30](=[@{db1a}2]@{O1}O)-[@{sb1}:-30]=_[@{db1b}6]@{C1}}
+            \arrow{->[][\chemfig[atom sep=1.4em]{\charge{45:1pt=$\oplus$}{Li}-[,0.6,,,white]H-[@{sb2}]\charge{90:3pt=$\ominus$}{Al}H_3-[2,0.6,,,opacity=0]}]}[,1.7]
+            \chemfig{-[:30](-[2]O-[:30]\charge{90:3pt=$\ominus$}{Al}H_3)=_[:-30]-[6]}
+            \arrow{->[\ce{H3O+}]}
+            \chemname{\chemfig{-[:30](-[2]OH)-[:-30]=_[6]}}{Major}
+            \arrow{0}[,0.1]\+
+            \chemname{\chemfig{-[:30](=[2]O)-[:-30]-[6]}}{Minor}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={2pt}{2pt}] (sb2) to[out=-90,in=-30] (C1);
+            \draw [curved arrow={4pt}{2pt}] (db1b) to[bend left=60,looseness=2] (sb1);
+            \draw [curved arrow={3pt}{2pt}] (db1a) to[bend right=90,looseness=3] (O1);
+        }
+        \caption*{\ce{LiAlH4}.}
+    \end{subfigure}
+    \caption*{Reduction of $\alpha,\beta$ unsaturated compounds.}
+\end{figure}
+\begin{enumerate}
+    \footnotesize
+    \setchemfig{atom sep=1.4em}
+    \item Organolithiums select for 1,2-addition.
+    \item Grignards are intermediate.
+    \item Cuprates select for 1,4-addition.
+    \begin{itemize}[label={--}]
+        \item \ce{2MeLi ->[CuI] LiCuMe2}
+    \end{itemize}
+\end{enumerate}
+
+\subsubsection*{Carboxylic Acid Synthesis}
+\begin{enumerate}
+    \footnotesize
+    \setchemfig{atom sep=1.4em}
+    \item 
+        \schemestart
+            \chemfig{R-[:30]-[2]OH}
+            \arrow{->[\ce{CrO3, H2SO4}][\ce{H2O}]}[,1.7]
+            \chemfig{R-[:30](=[2]O)-[:-30]OH}
+        \schemestop
+    \item 
+        \schemestart
+            \chemfig{RMgBr}
+            \arrow{->[1. \ce{CO2}\rule{2.5mm}{0pt}][2. \ce{H3O+}]}[,1.2]
+            \chemfig{R-[:30](=[2]O)-[:-30]OH}
+        \schemestop
+    \begin{itemize}[label={--}]
+        \item Either lithiates or Grignards will suffice.
+    \end{itemize}
+    \item 
+        \schemestart
+            \chemfig{RCN}
+            \arrow{->[\ce{H3O+}]}
+            \chemfig{R-[:30](=[2]O)-[:-30]OH}
+        \schemestop
+\end{enumerate}
+
+\subsubsection*{Nucleophilic Acyl Substitution}
+\textbf{General}
+\begin{enumerate}
+    \footnotesize
+    \setchemfig{atom sep=1.4em}
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]LG}
+            \arrow{0}[,0.1]\+
+            \chemfig{Nu-H}
+            \arrow{->[acid or][base]}[,1.1]
+            \chemfig{R-[:30](=[2]O)-[:-30]Nu}
+            \arrow{0}[,0.1]\+
+            \chemfig{LG-H}
+        \schemestop
+\end{enumerate}
+\textbf{Dehydration of Amides}
+\begin{enumerate}
+    \footnotesize
+    \setchemfig{atom sep=1.4em}
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]NH_2}
+            \arrow{->[reagents][$\Delta$]}[,1.2]
+            \chemfig{RCN}
+        \schemestop
+    \begin{itemize}[label={--}]
+        \item Reagents are either \ce{SOCl2} or \ce{POCl3}.
+        \item We need an amide with two hydrogens to run this.
+    \end{itemize}
+\end{enumerate}
+\textbf{S\textsubscript{N}2 Nitrile Formation}
+\begin{enumerate}
+    \footnotesize
+    \setchemfig{atom sep=1.4em}
+    \item 
+        \schemestart
+            \chemfig{-[:-30]-[:30](<[2]Br)-[:-30]}
+            \arrow{->[\ce{KCN}]}
+            \chemfig{-[:-30]-[:30](<:[2]CN)-[:-30]}
+        \schemestop
+\end{enumerate}
+\textbf{Ester Synthesis}
+\begin{enumerate}
+    \footnotesize
+    \setchemfig{atom sep=1.4em}
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]OH}
+            \arrow{->[\ce{K2CO3}]}[,1.2]
+            \chemfig{R-[:30](=[2]\textcolor{grx}{O})-[:-30]\charge{45:1pt=$\ominus$}{\textcolor{grx}{O}}-[,0.6,,,white]\charge{45:1pt=$\oplus$}{K}}
+            \arrow{->[\ce{R$'$I}]}
+            \chemfig{R-[:30](=[2]\textcolor{grx}{O})-[:-30]\textcolor{grx}{O}-[:30]R'}
+        \schemestop
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]\textcolor{grx}{O})-[:-30]\textcolor{grx}{O}H}
+            \arrow{->[\ce{H+}][\ce{R$'${\color{blx}O}H}]}
+            \chemfig{R-[:30](=[2]\textcolor{grx}{O})-[:-30]\textcolor{blx}{O}-[:30]R'}
+        \schemestop
+    \begin{itemize}[label={--}]
+        \item The acid is a catalyst.
+        \item The alcohol usually doubles as the solvent, esp. since we need it in excess.
+        \item Removing water can drive the forward reaction; excess \ce{H3O+} reverses it.
+    \end{itemize}
+\end{enumerate}
+\textbf{Ester Reactions}
+\begin{enumerate}
+    \footnotesize
+    \setchemfig{atom sep=1.4em}
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]OR'}
+            \arrow{->[\ce{KOH}]}
+            \chemfig{R-[:30](=[2]O)-[:-30]OK}
+            \arrow{0}[,0.1]\+
+            \chemfig{R'OH}
+        \schemestop
+\end{enumerate}
+\textbf{Acid Chloride Synthesis}
+\begin{enumerate}
+    \footnotesize
+    \setchemfig{atom sep=1.4em}
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]OH}
+            \arrow{->[\ce{SOCl2}][\ce{Py}]}
+            \chemfig{R-[:30](=[2]O)-[:-30]Cl}
+            \arrow{0}[,0.1]\+
+            \chemfig{\ce{[PyH]Cl}}
+            \arrow{0}[,0.1]\+
+            \chemfig{SO_2}
+        \schemestop
+\end{enumerate}
+\textbf{Anhydride Synthesis}
+\begin{enumerate}
+    \footnotesize
+    \setchemfig{atom sep=1.4em}
+    \item 
+        \schemestart
+            \chemfig{2}\arrow{0}[,0.1]\chemfig{R-[:30](=[2]O)-[:-30]OH}
+            \arrow{->[$\Delta$][$[-\ce{H2O}]$]}[,1.2]
+            \chemfig{R-[:30](=[2]O)-[:-30]O-[:30](=[2]O)-[:-30]R}
+        \schemestop
+    \begin{itemize}[label={--}]
+        \item Also works intramolecularly.
+        \item Combining different carboxylic acids leads to a statistical mixture of products.
+    \end{itemize}
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]Cl}
+            \arrow{0}[,0.1]\+{,,1.5em}
+            \chemfig{R'-[:30](=[2]O)-[:-30]\charge{45:1pt=$\ominus$}{O}-[,0.6,,,white]\charge{45:1pt=$\oplus$}{Na}}
+            \arrow
+            \chemfig{R-[:30](=[2]O)-[:-30]O-[:30](=[2]O)-[:-30]R'}
+            \arrow{0}[,0.1]\+
+            \chemfig{NaCl}
+        \schemestop
+\end{enumerate}
+\textbf{Amide Synthesis}
+\begin{enumerate}
+    \footnotesize
+    \setchemfig{atom sep=1.4em}
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]OH}
+            \arrow{0}[,0.1]\+
+            \chemfig{HN(-[:30]R')(-[6,,2]R'')}
+            \arrow{->[DCC][Py]}
+            \chemfig{R-[:30](=[2]O)-[:-30]N(-[:30]R')(-[6]R'')}
+        \schemestop
+\end{enumerate}
+\textbf{Carbide Nucleophiles}
+\begin{enumerate}
+    \footnotesize
+    \setchemfig{atom sep=1.4em}
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]R'}
+            \arrow{->[1. \ce{R$''$Li}\rule{1.5mm}{0pt}][2. \ce{H3O+}]}[,1.3]
+            \chemfig{R-[:30](-[2]OH)(-[:-70]R'')-[:-30]R'}
+        \schemestop
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]OH}
+            \arrow{->[\ce{R$''$Li}]}
+            \chemfig{R-[:30](=[2]O)-[:-30]OLi}
+            \arrow{0}[,0.1]\+
+            \chemfig{R'H}
+        \schemestop
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]OR'}
+            \arrow{->[1. \ce{R$''$Li}\rule{1.5mm}{0pt}][2. \ce{H3O+}]}[,1.3]
+            \chemfig{R-[:30](-[2]OH)(-[:-70]R'')-[:-30]R''}
+            \arrow{0}[,0.1]\+
+            \chemfig{R'OH}
+        \schemestop
+\end{enumerate}
+\textbf{Hydride Nucleophiles}
+\begin{enumerate}
+    \footnotesize
+    \setchemfig{atom sep=1.4em}
+    \item Esters and \ce{NaBH4} do not react.
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]OR'}
+            \arrow{->[1. \ce{LiAlH4}][2. \ce{H3O+}\rule{1mm}{0pt}]}[,1.3]
+            \chemfig{R-[:30]-[2]OH}
+            \arrow{0}[,0.1]\+
+            \chemfig{R'OH}
+        \schemestop
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]OR'}
+            \arrow{->[1. DIBAL-H][2. \ce{H3O+}\rule{4.5mm}{0pt}]}[,1.6]
+            \chemfig{R-[:30](=[2]O)-[:-30]H}
+            \arrow{0}[,0.1]\+
+            \chemfig{R'OH}
+        \schemestop
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]NR'R''}
+            \arrow{->[\ce{LiAlH4}]}[,1.2]
+            \chemfig{R-[:30]-[:-30]NR'R''}
+        \schemestop
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]NR'R''}
+            \arrow{->[1. DIBAL-H][2. \ce{H3O+}\rule{4.5mm}{0pt}]}[,1.6]
+            \chemfig{R-[:30](=[2]O)-[:-30]H}
+            \arrow{0}[,0.1]\+
+            \chemfig{HNR'R''}
+        \schemestop
+\end{enumerate}
+\textbf{Nitrile Reactions}
+\begin{enumerate}
+    \footnotesize
+    \setchemfig{atom sep=1.4em}
+    \item 
+        \schemestart
+            \chemfig{RCN}
+            \arrow{->[1. \ce{R$'$Li}\rule{2.5mm}{0pt}][2. \ce{H3O+}]}[,1.3]
+            \chemfig{R-[:30](=[2]O)-[:-30]R'}
+        \schemestop
+    \item 
+        \schemestart
+            \chemfig{RCN}
+            \arrow{->[1. DIBAL-H][2. \ce{H3O+}\rule{4.5mm}{0pt}]}[,1.6]
+            \chemfig{R-[:30](=[2]O)-[:-30]H}
+        \schemestop
+    \item 
+        \schemestart
+            \chemfig{RCN}
+            \arrow{->[1. \ce{LiAlH4}][2. \ce{H3O+}\rule{1mm}{0pt}]}[,1.3]
+            \chemfig{R-[:30]-[:-30]NH_2}
+        \schemestop
+\end{enumerate}
+\textbf{Acid to Ketone}
+\begin{enumerate}
+    \footnotesize
+    \setchemfig{atom sep=1.4em}
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]OH}
+            \arrow{->[1. \ce{R$'$Li}, $\Delta$\rule{6mm}{0pt}][2. \ce{H3O+}, time]}[,1.8]
+            \chemfig{R-[:30](=[2]O)-[:-30]R'}
+        \schemestop
+    \begin{itemize}[label={--}]
+        \item We need excess lithiate here.
+        \item Grignards won't work.
+    \end{itemize}
+\end{enumerate}
+\textbf{Insertion Reactions}
+\begin{enumerate}
+    \footnotesize
+    \setchemfig{atom sep=1.4em}
+    \item 
+        \schemestart
+            \chemfig{*6(----(=O)--)}
+            \arrow{->[mCPBA]}[,1.2]
+            \chemfig{[:-12.86]*7(----O-(=O)--)}
+        \schemestop
+    \begin{itemize}[label={--}]
+        \item Migratory aptitude favors bulkier groups.
+    \end{itemize}
+    \item 
+        \schemestart
+            \chemfig{[:18]*5(---(=O)--)}
+            \arrow{->[\ce{HN3}]}
+            \chemfig{*6(---NH-(=O)--)}
+        \schemestop
+    \begin{itemize}[label={--}]
+        \item Can be supplemented by external acid catalyst (some acid stronger than hydrazoic acid).
+    \end{itemize}
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]Cl}
+            \arrow{->[\ce{NaN3}][$\Delta$]}
+            \chemfig{RN=C=O}
+            \arrow{->[\ce{NaOH}][\ce{H2O}]}
+            \chemfig{RNH_2}
+        \schemestop
+    \item 
+        \schemestart
+            \chemfig{RN=C=O}
+            \arrow{->[\ce{R$'$OH}][cat. base]}[,1.3]
+            \chemfig{HRN-[:30](=[2]O)-[:-30]OR'}
+        \schemestop
+    \item 
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]OH}
+            \arrow{->[DPPA]}
+            \chemfig{RN=C=O}
+        \schemestop
+    \item 
+        \schemestart
+            \chemfig{*6(----(=O)--)}
+            \arrow{->[\ce{H2NOH}][\ce{H3O+}]}[,1.2]
+            \chemfig{[:-12.86]*7(----[,,,1]NH-(=O)--)}
+        \schemestop
+\end{enumerate}
+
+
+\subsection*{Reminders}
+\begin{itemize}
+    \item Carbonyl electrophilicity has to do with sterics (the primary factor) and electronics.
+    \item Reactivity scale.
+    \begin{equation*}
+        \text{acid chloride} > \text{anhydride}
+        > \text{ester}
+        > \text{amide}
+        > \text{carboxylate}
+    \end{equation*}
+    \item DMAP is one of the best catalysts for nucleophilic acyl substitutions.
+\end{itemize}
+\newpage
 
 
 
