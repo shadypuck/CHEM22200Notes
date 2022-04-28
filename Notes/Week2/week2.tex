@@ -1,0 +1,1412 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\stepcounter{chapter}
+
+\begin{document}
+
+
+
+
+\chapter{More Nucleophiles and Carboxylic Acid Derivative Synthesis}
+\section{Aldehydes and Ketones 2}
+\begin{itemize}
+    \item \marginnote{4/5:}Announcements:
+    \begin{itemize}
+        \item PSet 1 is due Thursday 4/7.
+        \begin{itemize}
+            \item Covers through today's content.
+        \end{itemize}
+        \item Midterm 4/21 during class.
+        \begin{itemize}
+            \item No notes, no cheat sheets.
+            \item Shouldn't require stuff from last quarter.
+            \item Exams should be like problem sets but shorter and easier.
+            \item The practice exam and midterm are of identical structure.
+            \item PSet 1-2 material will be tested.
+        \end{itemize}
+    \end{itemize}
+    \item Plan for today:
+    \begin{itemize}
+        \item Hydride and carbide nucleophiles.
+        \item Finish Unit 1.
+    \end{itemize}
+    \item You can't use acidic conditions in reactions with hydride and carbide nucleophiles.
+    \begin{itemize}
+        \item The reason for this restriction is that hydrides and carbides are both strong bases and will preferentially react with any acids in solution instead of performing the chemistry that we want them to.
+    \end{itemize}
+    \item Hydrogen nucleophiles.
+    \item Levin reviews the reduction of carbonyls with \ce{NaBH4} and \ce{LiAlH4}.
+    \item Misc. notes.
+    \begin{itemize}
+        \item The solvent for \ce{NaBH4} is methanol, while adding \ce{LiAlH4} requires a subsequent acidic workup.
+        \item \ce{BH4-} is less reactive than \ce{AlH4-} because boron is more electronegative than aluminum.
+        \item Mixing \ce{LiAlH4} with methanol will cause an explosion, but \ce{NaBH4} is mild enough that methanol is a feasible solvent.
+    \end{itemize}
+    \item Mechanism (\ce{NaBH4}).
+    \begin{itemize}
+        \item A concerted mechanism.
+        \item Herein, the \ce{H-BH3-} single-bond electrons attack the carbonyl carbon, the \ce{C=O} $\pi$ electrons attack the hydroxyl hydrogen on methanol, and the \ce{H-OCH3} single-bond electrons retreat onto methanol's oxygen.
+    \end{itemize}
+    \item Mechanism (\ce{LiAlH4}).
+    \begin{itemize}
+        \item A stepwise mechanism.
+        \item \ce{AlH4-} is a strong enough nucleophile to add into a carbonyl directly without needing the thermodynamic help of the methanol proton as in the \ce{NaBH4} mechanism.
+        \item The alkoxide is then protonated by acid.
+        \item However, we have to beware of the alkoxide attacking \ce{AlH3} in an unwanted side reaction.
+        \begin{itemize}
+            \item The trapped form is the dominant form in solution, but overtime the alkoxide form protonates off.
+            \item \ce{AlH3} also eventually reacts with enough acid to become \textbf{alumina}.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Alumina}: The complex ion \ce{Al(OH)4-}.
+    \item Carbon nucleophiles.
+    \item \textbf{Lithiate}: An organolithium compound.
+    \item Levin reviews the syntheses of both lithiates and Grigards.
+    \item Recall that both of these can also only work in basic solution.
+    \item Levin reviews the mechanism of a lithiate/Grignard attack on a ketone/aldehyde.
+    \item Cyanide is another important carbon nucleophile.
+    \begin{itemize}
+        \item It is formed from the reaction \ce{H-CN <=> H+ + CN-}.
+        \item This is important because it's a rare carbanion with a reasonably acidic conjugate acid.
+        \begin{itemize}
+            \item For instance, the \ce{H} in \ce{H-CR3} has $\pKa>50$.
+            \item However, \ce{HCN} has $\pKa\approx 9$.
+            \item The acidity arises from the \ce{C#N} triple bond and nitrogen functioning as an EWG.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Cyanohydrin}: The class of molecules resulting from the nucleophilic addition of \ce{HCN} to a ketone or aldehyde. \emph{Structure}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{R-[:30](-[:110]HO)(-[:70]CN)-[:-30]R'}
+        \caption{Cyanohydrin.}
+        \label{fig:cyanohydrin}
+    \end{figure}
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30]}
+            \arrow{0}[,0.1]\+
+            \chemfig{HCN}
+            \arrow{->[reagents?]}[,1.3]
+            \chemfig{R-[:30](-[:110]HO)(-[:70]CN)-[:-30]R'}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item The "reagents?" refers to the fact that this reaction \emph{can} be accelerated by an acid or base catalyst, but no catalyst is necessary.
+        \item Acid catalysts are the most common, but anything works.
+    \end{itemize}
+    \item Mechanism (neutral).
+    \begin{itemize}
+        \item Similar to Figure \ref{fig:acidPromotedNua}, but with no final deprotonation step necessary.
+    \end{itemize}
+    \item We now transition to the problem of replacing carbonyls with vinyl groups.
+    \begin{itemize}
+        \item We could do this by alkylating the carbonyl and then dehydrating. However, this leads to several possible products since acid-catalyzed dehydration does not select any alkene in particular.
+        \item A cleaner form exists using a new carbon nucleophile, a \textbf{phosphorous ylide}.
+    \end{itemize}
+    \item \textbf{Phosphorus ylide}: The class of molecules having a \ce{P-C} bond with a negative charge on \ce{C} and a positive charge on \ce{P}. \emph{Structure}
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{\charge{90:3pt=$\oplus$}{P}(-[:120]**6(------))(-[:180]**6(------))(-[:240]**6(------))-\charge{90:3pt=$\ominus$}{C}(-[:60]R')(-[:-60]R)}
+            \arrow{<->}
+            \chemfig{Ph_3P=C(-[:60]R')(-[:-60]R)}
+        \schemestop
+        \caption{Phosphorous ylide.}
+        \label{fig:Pylide}
+    \end{figure}
+    \begin{itemize}
+        \item The reactivity of phosphorous ylides is dominated by the left resonance structure in Figure \ref{fig:Pylide}.
+    \end{itemize}
+    \item Synthesis of phosphorous ylides.
+    \begin{figure}[h!]
+        \centering
+        \vspace{1em}
+        \footnotesize
+        \schemestart
+            \chemfig{@{P1}\charge{90=\:}{P}Ph_3}
+            \+
+            \chemfig{H_3@{C2}C-[@{sb2}]@{Br2}Br}
+            \arrow
+            \chemname{\chemfig{Ph_3\charge{90:3pt=$\oplus$}{P}(-[:70,0.7,,,white]\charge{45:1pt=$\ominus$}{Br})-@{C3}CH_2-[@{sb3}2]@{H3}H}}{Phosphonium salt}
+            \arrow{->[\chemfig[atom sep=1.4em]{K@{O4}\charge{90=\:}{O}^{\emph{t}}Bu}][-\ce{HO^{$t$}Bu, KBr}]}[,1.6]
+            \chemfig{Ph_3\charge{90:3pt=$\oplus$}{P}-\charge{90:3pt=$\ominus$}{C}H_2}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={6pt}{2pt}] (P1) to[bend left=90,looseness=1.5] (C2);
+            \draw [curved arrow={2pt}{2pt}] (sb2) to[bend left=90,looseness=3] (Br2);
+            \draw [curved arrow={6pt}{2pt}] (O4) to[out=90,in=90,looseness=1.5] (H3);
+            \draw [curved arrow={2pt}{2pt}] (sb3) to[bend right=70,looseness=2.5] (C3);
+        }
+        \caption{Synthesizing phosphorous ylides.}
+        \label{fig:PylideSynthesis}
+    \end{figure}
+    \begin{itemize}
+        \item The first step is proceeds through an S\textsubscript{N}2 mechanism.
+        \item The second step is aided by the fact that there is only one site with $\alpha$-hydrogens. Additionally, the protons are mildly acidic because of the positive charge.
+        \item Note that we can use $n$-butyl lithium in place of \ce{KO^{$t$}Bu} if we want.
+    \end{itemize}
+    \item A nice thing about \ce{PPh3} is that it's air stable, so we can measure it out on the lab bench. (\ce{PMe3} is pyrophoric, for instance).
+    \item The Wittig\footnote{"VIT-tig"} olefination.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]R'}
+            \arrow{0}[,0.1]\+
+            \chemfig{Ph_3\charge{90:3pt=$\oplus$}{P}-\charge{90:3pt=$\ominus$}{C}H_2}
+            \arrow
+            \chemfig{R-[:30](=[2]CH_2)-[:-30]R'}
+            \arrow{0}[,0.1]\+
+            \chemfig{Ph_3P=O}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item The creation of \ce{Ph3P=O} (a very stable compound) is the thermodynamic driving force for the reaction.
+        \begin{itemize}
+            \item Making this compound as a driving force is actually a common trick in organic chemistry.
+        \end{itemize}
+    \end{itemize}
+    \item Mechanism (wrong).
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{R-[:30]@{C1}(=[@{db1}2]@{O1}O)-[:-30]R'}
+            \arrow{0}[,0.1]\+
+            \chemfig{Ph_3\charge{90:3pt=$\oplus$}{P}-@{C2}\charge{90:3pt=$\ominus$}{C}H_2}
+            \arrow
+            \chemname[0.9em]{\chemfig{@{O3}\charge{90:3pt=$\ominus$}{O}-[:-60](-[:-140]R')(-[:-100]R)--[:60]@{P3}\charge{90:3pt=$\oplus$}{P}Ph_3}}{Betaine}
+            \arrow
+            \chemname[-1em]{\chemfig[atom sep=2.5em]{*4((-[:-155,0.8]R)(-[:-115,0.8]R')-[@{sb4a}]-[@{sb4b,0.6}]PPh_3-[@{sb4c}]O-[@{sb4d}])}}{Oxaphosphetane}
+            \arrow
+            \chemfig{R-[:30](=[2]CH_2)-[:-30]R'}
+            \arrow{0}[,0.1]\+
+            \chemfig{Ph_3P=O}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={10pt}{3pt}] (C2) to[out=90,in=30] (C1);
+            \draw [curved arrow={3pt}{2pt}] (db1) to[bend left=90,looseness=3] (O1);
+            \draw [curved arrow={4pt}{2pt}] ([yshift=6pt]O3.north) to[bend left=30] (P3);
+            \draw [curved arrow={2pt}{2pt}] (sb4b) to[bend right=50,looseness=1.5] (sb4a);
+            \draw [curved arrow={2pt}{2pt}] (sb4d) to[bend right=40,looseness=1.2] (sb4c);
+        }
+        \caption{Wittig olefination mechanism (stepwise).}
+        \label{fig:mechanismWittigStepwise}
+    \end{figure}
+    \begin{itemize}
+        \item Follows the model we've been using. Only recently disproven. We may use either this one or the correct one on exams.
+        \begin{itemize}
+            \item The Newtonian mechanics of OChem; we can get the right answer by using the wrong model.
+            \item The modern understanding is that the betaine never forms.
+        \end{itemize}
+        \item This is a \textbf{retro-pericyclic mechanism}.
+        \item The last step is a \textbf{retro-[$\bm{2+2}$]}.
+        \begin{itemize}
+            \item Note that the arrows may be drawn either of the two ways between adjacent bonds.
+        \end{itemize}
+    \end{itemize}
+    \item The Wittig olefination is stereoselective for the \emph{cis}-product.
+    \begin{itemize}
+        \item This is strange since the \emph{cis}-product is the less thermodynamically stable one.
+    \end{itemize}
+    \item Three-dimensional intuition for the stereoselectivity.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemleft{[}
+                    \subscheme{
+                        \chemfig{@{O1}O(-[4,1.5,,,white])=_[6]@{C1}(<[:-110]R)(<:[:-70]H)}
+                        \arrow{0}[,1]
+                        \chemfig{PPh_3-[2]@{C2}\charge{45:1pt=$\ominus$}{C}(<[:110]R')(<:[:70]H)(-[2,1.45,,,white])(-[,1.5,,,white])}
+                        \arrow{<->}
+                        \chemfig{\tikz{
+                            \draw (0,0) -- (30:0.8) node[xshift=6pt,yshift=1pt]{H};
+                            \draw (0,0) -- (150:0.8) node(R1)[xshift=-6pt,yshift=1pt]{R$'$} ([yshift=-1mm]R1.south west) edge[blx,thick,bend right=45] ([yshift=-1mm]R1.south east);
+                            \draw (0,0) -- (-90:0.8) node[xshift=4pt,yshift=-9pt]{\ce{{}^{$\oplus$}PPh_3}};
+                            \draw (-30:0.5) -- (-30:0.8) node[xshift=6pt,yshift=-5pt]{H};
+                            \draw (-150:0.5) -- (-150:0.8) node(R)[xshift=-6pt,yshift=-5pt]{R} ([yshift=1mm]R.north west) edge[blx,thick,bend left=45] ([yshift=1mm]R.north east);
+                            \draw [double=white,double distance=2pt] (90:0.5) -- (90:0.8) node[yshift=3pt]{O};
+                            \draw [white,line width=2pt] (90:0.5) -- (90:0.85);
+                            \draw circle (5mm);
+                            \node {\ce{{}^{$\ominus$}}};
+                        }}
+                    }
+                \chemright{]^\ddagger}
+                \arrow{-/>}
+                \chemfig{\phantom{H}-[:30,,,,white]-[,,,,white]-[:30,,,,white]\phantom{R'}}
+            \schemestop
+            \chemmove{
+                \filldraw [-,thick,draw=orx,fill=ory] ([xshift=1.5mm]C1.east) to[bend right=110,looseness=600] ([xshift=1.5mm,yshift=0.15pt]C1.east);
+                \draw [-,thick,orx] ([xshift=-1.5mm]C1.west) to[bend left=110,looseness=600] ([xshift=-1.5mm,yshift=0.15pt]C1.west);
+                \draw [-,thick,orx] ([xshift=0.5mm]O1.east) to[bend right=110,looseness=600] ([xshift=0.5mm,yshift=0.15pt]O1.east);
+                \filldraw [-,thick,draw=orx,fill=ory] ([xshift=-0.5mm]O1.west) to[bend left=110,looseness=600] ([xshift=-0.5mm,yshift=0.15pt]O1.west);
+                \filldraw [-,thick,draw=orx,fill=ory] ([xshift=-1.5mm]C2.west) to[bend left=110,looseness=600] ([xshift=-1.5mm,yshift=0.15pt]C2.west);
+                \draw [-,thick,orx] ([xshift=0.5mm]C2.east) to[bend right=110,looseness=600] ([xshift=0.5mm,yshift=0.15pt]C2.east);
+            }
+            \caption{Unsuccessful collision.}
+            \label{fig:wittigStereob}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemleft{[}
+                    \subscheme{
+                        \chemfig{@{O1}O(-[4,1.5,,,white])=_[6]@{C1}(<[:-110]R)(<:[:-70]H)}
+                        \arrow{0}[,1]
+                        \chemfig{PPh_3-[2]@{C2}\charge{45:1pt=$\ominus$}{C}(<[:110]H)(<:[:70]R')(-[2,1.45,,,white])(-[,1.5,,,white])}
+                        \arrow{<->}
+                        \chemfig{\tikz{
+                            \draw (0,0) -- (30:0.8) node[xshift=6pt,yshift=1pt]{R$'$};
+                            \draw (0,0) -- (150:0.8) node[xshift=-6pt,yshift=1pt]{H};
+                            \draw (0,0) -- (-90:0.8) node[xshift=4pt,yshift=-9pt]{\ce{{}^{$\oplus$}PPh_3}};
+                            \draw (-30:0.5) -- (-30:0.8) node[xshift=6pt,yshift=-5pt]{H};
+                            \draw (-150:0.5) -- (-150:0.8) node[xshift=-6pt,yshift=-5pt]{R};
+                            \draw [double=white,double distance=2pt] (90:0.5) -- (90:0.8) node[yshift=3pt]{O};
+                            \draw [white,line width=2pt] (90:0.5) -- (90:0.85);
+                            \draw circle (5mm);
+                            \node {\ce{{}^{$\ominus$}}};
+                        }}
+                    }
+                \chemright{]^\ddagger}
+                \arrow
+                \chemfig{\charge{45:1pt=$\ominus$}{O}-[6](<:[:-155]H)(<[:-115]R)-[@{sb3}](<:[:25]R')(<[:65]H)-[6]\charge{135:1pt=$\oplus$}{P}Ph_3}
+                \arrow[-90]
+                \chemfig{\charge{90:3pt=$\ominus$}{O}-[6](<[5]R)-(<[7]R')-[2]\charge{90:3pt=$\oplus$}{P}Ph_3}
+                \arrow[180]
+                \chemfig{R>[1]*4(-(<R')-PPh_3-O-)}
+                \arrow{->[][*{0.90}-\ce{Ph3PO}]}[180,1.2]
+                \chemfig{R-[:60]=_-[:-60]R'}
+            \schemestop
+            \chemmove{
+                \filldraw [-,thick,draw=orx,fill=ory] ([xshift=1.5mm]C1.east) to[bend right=110,looseness=600] ([xshift=1.5mm,yshift=0.15pt]C1.east);
+                \draw [-,thick,orx] ([xshift=-1.5mm]C1.west) to[bend left=110,looseness=600] ([xshift=-1.5mm,yshift=0.15pt]C1.west);
+                \draw [-,thick,orx] ([xshift=0.5mm]O1.east) to[bend right=110,looseness=600] ([xshift=0.5mm,yshift=0.15pt]O1.east);
+                \filldraw [-,thick,draw=orx,fill=ory] ([xshift=-0.5mm]O1.west) to[bend left=110,looseness=600] ([xshift=-0.5mm,yshift=0.15pt]O1.west);
+                \filldraw [-,thick,draw=orx,fill=ory] ([xshift=-1.5mm]C2.west) to[bend left=110,looseness=600] ([xshift=-1.5mm,yshift=0.15pt]C2.west);
+                \draw [-,thick,orx] ([xshift=0.5mm]C2.east) to[bend right=110,looseness=600] ([xshift=0.5mm,yshift=0.15pt]C2.east);
+                \draw [curved arrow={0pt}{0pt},blx] ([yshift=-2mm]sb3) to[bend left=45,looseness=1.3] ([yshift=2mm]sb3);
+            }
+            \caption{Successful collision.}
+            \label{fig:wittigStereoa}
+        \end{subfigure}
+        \caption{Wittig olefination stereoselectivity.}
+        \label{fig:wittigStereo}
+    \end{figure}
+    \begin{itemize}
+        \item We break the $\pi$ \ce{C=O} bond by filling the $\pi^*$ \ce{C=O} orbital. Thus, our carbanion $p$ orbital collides end-on with the \ce{C=O} $\pi^*$ orbital.
+        \item A gauche clash (as in Figure \ref{fig:wittigStereoa}) is higher energy and is not the favored collision.
+        \item Thus, Figure \ref{fig:wittigStereob} is the transition state that forms.
+        \begin{itemize}
+            \item But we need to form a \ce{P-O} bond, so after forming the \emph{trans} imtermediate, we need to rotate the bond.
+            \item Once you form the \emph{cis} product, you can't go back, so we'll go ahead and rotate to get the \ce{P-O} bond.
+        \end{itemize}
+    \end{itemize}
+    \item Stabilized ylides.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30](=[2]O)-[:-30]H}
+                \+{,,2em}
+                \chemfig{PPh_3=_[2]-[:30]EWG}
+                \arrow
+                \chemfig{R-[:30]=_[:-30]-[:30]EWG}
+            \schemestop
+            \caption{General form.}
+            \label{fig:ylideStablea}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig[atom sep=2.5em]{R>[1,0.8]*4(-@{C1}(<[,0.8](=[0,0.8]O)(-[:-120,0.8]MeO))-[@{sb1a}]PPh_3-[@{sb1b}]@{O1}\charge{90=\:}{O}-)}
+                \arrow
+                \chemfig[atom sep=2.5em]{R>[1,0.8]*4(-[@{sb2}]\charge{90:3pt=$\ominus$}{}(<[,0.8](=[0,0.8]O)(-[:-120,0.8]MeO))-[,,,,opacity=0]PPh_3=\charge{135:1pt=$\oplus$}{O}-)}
+                \arrow
+                \chemfig[atom sep=2.5em]{R>[1,0.8]*4(-@{C3}\charge{90:3pt=$\ominus$}{}(<:[,0.8](=[0,0.8]O)(-[:-120,0.8]MeO))-[,,,,opacity=0]@{P3}PPh_3=[@{db3}]@{O3}\charge{135:1pt=$\oplus$}{O}-)}
+                \arrow
+                \chemfig[atom sep=2.5em]{R>[1,0.8]*4(-(<:[,0.8](=[0,0.8]O)(-[:-120,0.8]MeO))-PPh_3-O-)}
+            \schemestop
+            \chemmove{
+                \draw [curved arrow={6pt}{2pt}] (O1) to[bend left=90,looseness=3] (sb1b);
+                \draw [curved arrow={2pt}{2pt}] (sb1a) to[out=20,in=20,looseness=4] (C1);
+                \draw [curved arrow={0pt}{0pt},blx] ([yshift=2mm]sb2) to[bend right=45,looseness=1.3] ([yshift=-2mm]sb2);
+                \draw [curved arrow={12pt}{2pt}] (C3) to[bend left=10] (P3);
+                \draw [curved arrow={2pt}{2pt}] (db3) to[bend right=90,looseness=3] (O3);
+            }
+            \caption{Intermediate rearrangement.}
+            \label{fig:ylideStableb}
+        \end{subfigure}
+        \caption{Stabilized ylides.}
+        \label{fig:ylideStable}
+    \end{figure}
+    \begin{itemize}
+        \item If the ylide has an EWG, the \emph{trans} alkene will be formed.
+        \item In particular, the EWG stabilizes a carbocation formed from the oxaphosphetane EWG. We can then rotate and rebond before proceeding to the trans product.
+        \item Note that if the EWG on the aldehyde, we still form the \emph{cis} product..
+    \end{itemize}
+    \item Mechanism (correct).
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{R-[:30]@{C1}=^[@{db1}2]O}
+            \arrow{0}[,0.6]
+            \chemfig{R'-[:150]=_[@{db2}2]@{P2}PPh_3}
+            \arrow
+            \chemleft{[}
+                \chemfig{R-[:30]?(-[:-30]H)=[2,2]O>:[7,1.3]PPh_3=[4,2]?[,6](-[:120]R')(-[:-120]H)}
+            \chemright{]^\ddagger}
+            \arrow
+            \chemfig[atom sep=2.5em]{*4((<[,0.8]R)-(<[,0.8]R')-O-Ph_3P-[,,2])}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={3pt}{2pt}] (db1) to[bend left=30] (P2);
+            \draw [curved arrow={3pt}{2pt}] (db2) to[bend left=30] (C1);
+        }
+        \caption{Wittig olefination mechanism (modern).}
+        \label{fig:mechanismWittigModern}
+    \end{figure}
+    \begin{itemize}
+        \item A [$2+2$] followed by a retro [$2+2$]. We also have a T-shaped transition state that puts them far away. Then they rotate into cis position for the oxyphosphatane.
+    \end{itemize}
+    \item Ketone Wittigs.
+    \begin{itemize}
+        \item Slower but still proceed.
+        \item The biggest groups always end up cis.
+    \end{itemize}
+    \item \textbf{$\bm{\alpha,\beta}$ unsaturated carbonyl}: A carbonyl conjugated with an alkene spanning the $\alpha$ to $\beta$ positions.
+    \item The two possible nucleophilic additions to $\alpha,\beta$ unsaturated carbonyls are \textbf{1,2-additions} and \textbf{1,4-additions}.
+    \item \textbf{1,2-addition}: A nucleophilic addition to the $\beta$ position (numbered $4^\text{th}$ atom from the carbonyl oxygen, which is 1 in turn).
+    \item \textbf{1,4-addition}: A nucleophilic addition to the carbonyl carbon (numbered $2^\text{nd}$ atom from the carbonyl oxygen, which is 1 in turn).
+    \item \ce{NaBH4}.
+    \begin{itemize}
+        \item The mechanism is similar to that in Figure 9.3a of \textcite{bib:CHEM22100Notes}. However, Levin shows the the complete formation of an enol (after 1,2-addition) that then tautomerizes to a normal carbonyl before being attacked again.
+    \end{itemize}
+    \item \ce{LiAlH4}.
+    \begin{itemize}
+        \item The mechanism is similar to that in Figure 9.3b of \textcite{bib:CHEM22100Notes}. However, Levin shows a single nucleophilic attack that can't proceed to a second until reductant is added into solution, but this inactivates the \ce{LiAlH4}.
+    \end{itemize}
+    \item The pure 1,2-addition product is the major product for both \ce{NaBH4} and \ce{LiAlH4}, but you get a mix of products?
+    \item Organolithiums are highly selective for the 1,2-addition product, however.
+    \begin{itemize}
+        \item Lithium is small and hard and favors bonding with the oxygen.
+    \end{itemize}
+    \item Grignards still give a mixture.
+    \begin{itemize}
+        \item Magnesium is happy to coordinate both the oxygen and the alkene (it's of intermediate hardness/softness).
+    \end{itemize}
+    \item Hard-hard interactions are preferred because of Coulombic attraction; soft-soft interactions are preferred because of van der Waals forces.
+    \item \textbf{Cuprate}: A compound containing an anionic copper complex.
+    \begin{itemize}
+        \item The cuprates relevant to us are dialkyl cuprates, which have the form \ce{LiCuMe2}.
+        \item These are formed via the reaction
+        \begin{equation*}
+            \ce{2MeLi ->[CuI][-LiI] LiCuMe2}
+        \end{equation*}
+        \item Cuprates are soft and yield exclusively 1,4-addition.
+    \end{itemize}
+    \item Levin goes over some practice problems.
+\end{itemize}
+
+
+
+\section{Carboxylic Acids and Derivatives 1}
+\begin{itemize}
+    \item \marginnote{4/7:}We now consider compounds that have heteroatoms where the $\alpha$ carbon of the carbonyl used to be.
+    \begin{itemize}
+        \item The heteroatoms can be oxygen (esters), nitrogen, etc.
+    \end{itemize}
+    \item Today, we will do oxygen and nitrogen nucleophiles but in this context.
+    \begin{itemize}
+        \item Next Tuesday, we will do carbon and hydrogen nucleophiles in this context.
+    \end{itemize}
+    \item Carboxylic acid derivatives.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{0.19\linewidth}
+            \centering
+            \chemfig{R-[:30](=[2]O)-[:-30]OH}
+            \caption{Carboxylic acid.}
+            \label{fig:carboxylicAcidDerivativesa}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.19\linewidth}
+            \centering
+            \chemfig{R-[:30](=[2]O)-[:-30]O-[:30]R'}
+            \caption{Ester.}
+            \label{fig:carboxylicAcidDerivativesb}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.19\linewidth}
+            \centering
+            \chemfig{R-[:30](=[2]O)-[:-30]X}
+            \caption{Acid halide.}
+            \label{fig:carboxylicAcidDerivativesc}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.19\linewidth}
+            \centering
+            \chemfig{R-[:30](=[2]O)-[:-30]O-[:30](=[2]O)-[:-30]R'}
+            \caption{Acid anhydride.}
+            \label{fig:carboxylicAcidDerivativesd}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.19\linewidth}
+            \centering
+            \chemfig{R-[:30](=[2]O)-[:-30]N(-[6]R'')-[:30]R'}
+            \caption{Amide.}
+            \label{fig:carboxylicAcidDerivativese}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{0.22\linewidth}
+            \centering
+            \chemfig{R-C~N}
+            \caption{Nitrile.}
+            \label{fig:carboxylicAcidDerivativesf}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.22\linewidth}
+            \centering
+            \chemfig{R-[:-30]O-[:30](=[2]O)-[:-30]O-[:30]R'}
+            \caption{Carbonate.}
+            \label{fig:carboxylicAcidDerivativesg}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.22\linewidth}
+            \centering
+            \chemfig{R-[:-30]O-[:30](=[2]O)-[:-30]N(-[6]R'')-[:30]R'}
+            \caption{Carbamate.}
+            \label{fig:carboxylicAcidDerivativesh}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.22\linewidth}
+            \centering
+            \chemfig{R-[:-30]N(-[6]R')-[:30](=[2]O)-[:-30]N(-[6]R''')-[:30]R''}
+            \caption{Urea.}
+            \label{fig:carboxylicAcidDerivativesi}
+        \end{subfigure}
+        \caption{Carboxylic acid derivatives.}
+        \label{fig:carboxylicAcidDerivatives}
+    \end{figure}
+    \begin{itemize}
+        \item Once again, we will not be tested on nomenclature, but it's good to know.
+        \item Acid anhydrides are so named because it is two carboxylic acids, minus a water molecule.
+        \item Nitriles are still a carbon bonded to three heteroatoms; it's just the same heteroatom.
+    \end{itemize}
+    \item A key property of carboxylic acids is that they're\dots acidic.
+    \item Acidity.
+    \begin{itemize}
+        \item Gives the $\pKa$'s of benzoic acid, benzyl alcohol, and phenol to demonstrate that resonance is king in determining acidity.
+        \begin{itemize}
+            \item Benzoic acid is more acidic than phenol, which is more acidic than benzyl alcohol.
+        \end{itemize}
+        \item Inductive effects (changes to the $\alpha$ carbon) play a smaller role.
+        \item EWGs on arene rings when present play an even smaller role.
+        \item These latter two effects allow us to fine-tune acidity.
+    \end{itemize}
+    \item Methods of carboxylic acid synthesis.
+    \begin{enumerate}
+        \item Overoxidation.
+        \item Carboxylation of Grignards or lithiates.
+        \item Nitrile hydrolysis.
+    \end{enumerate}
+    \item Overoxidation.
+    \item General form.
+    \begin{equation*}
+        \ce{CRH(OH) ->[CrO3, H2SO4][H2O] RCOOH}
+    \end{equation*}
+    \begin{itemize}
+        \item Note that the reagents constitute Jones reagent.
+    \end{itemize}
+    \item Mechanism.
+    \begin{itemize}
+        \item Virtually identical to that from \textcite{bib:CHEM22100Notes}.
+    \end{itemize}
+    \item Carboxyliation of Grignards and lithiates.
+    \item General form.
+    \begin{equation*}
+        \ce{RLi ->[1. CO2][2. H3O+] RCOOH}
+    \end{equation*}
+    \begin{itemize}
+        \item Note that we may use either lithiates (\ce{RLi}) or Grignards (\ce{RMgBr}), even though only an organolithium compound is shown above.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{R-[@{sb1}]Li}
+            \arrow{->[\chemfig[atom sep=1.4em]{O=@{C2}C=[@{db2}]@{O2}O}]}[,1.5]
+            \chemname[-3em]{\chemfig{R-[:30](=[2]O)-[:-30]\charge{45:1pt=$\ominus$}{O}-[,0.6,,,white]\charge{45:1pt=$\oplus$}{Li}}}{Carboxylate salt}
+            \arrow{->[\ce{H3O+}]}
+            \chemfig{R-[:30](=[2]O)-[:-30]OH}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={2pt}{2pt}] (sb1) to[bend left=90,looseness=1.5] (C2);
+            \draw [curved arrow={3pt}{2pt}] (db2) to[bend left=90,looseness=3] (O2);
+        }
+        \caption{Carboxylation of lithiates mechanism.}
+        \label{fig:mechanismLithiateCarboxylation}
+    \end{figure}
+    \item Mechanistic interlude: Nucleophilic acyl substitution.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30](=[2]O)-[:-30]LG}
+                \arrow{0}[,0.1]\+
+                \chemfig{Nu-H}
+                \arrow{->[cat. \ce{HX}]}[,1.2]
+                \chemfig{R-[:30](-[:110]HO)(-[:70]Nu)-[:-30]LG}
+                \arrow{->[cat. \ce{HX}]}[,1.2]
+                \chemfig{R-[:30](=[2]O)-[:-30]Nu}
+                \arrow{0}[,0.1]\+
+                \chemfig{LG-H}
+            \schemestop
+            \caption{Acid-catalyzed reactivity.}
+            \label{fig:acidCarboxylica}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{@{Nu1}Nu-[@{sb1}]@{H1}H}
+                \arrow{->[\chemfig{@{B2}\charge{90=\:}{B}}]}
+                \chemfig{@{Nu3}\charge{90=\:,45:1pt=$\ominus$}{Nu}}
+                \+
+                \chemfig{H\charge{90:3pt=$\oplus$}{B}}
+                \arrow{-U>[\chemfig[atom sep=1.4em]{R-[:30]@{C5}(=[@{db5}2]@{O5}O)-[:-30]LG}][][][][80]}[,1.5]
+                \chemfig{R-[:30](-[@{sb6a}:110]@{O6}\charge{180=\:,90:3pt=$\ominus$}{O})(-[:70]Nu)-[@{sb6b}:-30]@{LG6}LG}
+                \arrow{0}[,0.1]\+
+                \chemfig{H\charge{90:3pt=$\oplus$}{B}}
+                \arrow{-U>[][\chemfig[atom sep=1.4em]{R-[:30](=[2]O)-[:-30]Nu}][][][80]}[,1.3]
+                \chemfig{@{LG9}\charge{45:1pt=$\ominus$}{LG}}
+                \arrow{0}[,0.1]\+
+                \chemfig{@{H10}H-[@{sb10}]@{B10}\charge{90:3pt=$\oplus$}{B}}
+                \arrow{->[][-\ce{B}]}
+                \chemfig{LG-H}
+            \schemestop
+            \chemmove{
+                \draw [curved arrow={6pt}{2pt}] (B2) to[out=90,in=90,looseness=2] (H1);
+                \draw [curved arrow={2pt}{2pt}] (sb1) to[bend right=90,looseness=3] (Nu1);
+                \draw [curved arrow={6pt}{3pt}] (Nu3) to[out=90,in=150] (C5);
+                \draw [curved arrow={3pt}{2pt}] (db5) to[bend right=90,looseness=3] (O5);
+                \draw [curved arrow={6pt}{2pt}] (O6) to[out=180,in=-150,in looseness=4,out looseness=3] (sb6a);
+                \draw [curved arrow={2pt}{2pt}] (sb6b) to[bend left=90,looseness=3] (LG6);
+                \draw [curved arrow={10pt}{2pt}] (LG9) to[bend left=50,looseness=1.5] (H10);
+                \draw [curved arrow={2pt}{2pt}] (sb10) to[bend right=90,looseness=3] (B10);
+            }
+            \caption{Base-catalyzed reactivity.}
+            \label{fig:acidCarboxylicb}
+        \end{subfigure}
+        \caption{The typical reactivity of carboxylic acid derivatives.}
+        \label{fig:acidCarboxylic}
+    \end{figure}
+    \begin{itemize}
+        \item This mode of reactivity is the one that is most typical of carboxylic acid derivatives.
+        \begin{itemize}
+            \item It is so-named because the portion of a carboxylic acid derivative that is not the leaving group is called an acyl group, and we are substituting one group on the acyl for another.
+        \end{itemize}
+        \item Think of all of the carboxylic acid derivatives (see Figure \ref{fig:carboxylicAcidDerivatives}) as containing a leaving group on one of their sides.
+        \begin{itemize}
+            \item When these compounds react nucleophiles, the nucleophile replaces the leaving group.
+        \end{itemize}
+        \item These reactions are either acid- or base-catalyzed.
+        \begin{itemize}
+            \item In the acid-catalyzed version (Figure \ref{fig:acidCarboxylica}), the first step proceeds exactly as in Figure \ref{fig:acidPromotedNua}, except that $\ce{R$'$}=\ce{LG}$. The second step proceeds exactly as in Figure \ref{fig:acidPromotedNub}, except that it is the leaving group that is protonated and kicked out instead of the nucleophile we just added in.
+            \item The basic mechanism is related to Figure \ref{fig:basePromotedNu}, but rather than being a straight replication, the alkoxide species produced in Figure \ref{fig:basePromotedNua} proceeds straight to the reactivity of the alkoxide in Figure \ref{fig:basePromotedNub} (see Figure \ref{fig:acidCarboxylicb}).
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Tetrahedral intermediates}: The nucleophilic acyl substitution intermediates (of both the acidic and basic pathways) that have four groups attached to the central carbon.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \chemfig{R-[:30](-[:110]HO)(-[:70]Nu)-[:-30]LG}
+            \caption{Acidic intermediate.}
+            \label{fig:tetrahedralIntermediatesa}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \chemfig{R-[:30](-[:110]\charge{135:1pt=$\ominus$}{O})(-[:70]Nu)-[:-30]LG}
+            \caption{Basic intermediate.}
+            \label{fig:tetrahedralIntermediatesb}
+        \end{subfigure}
+        \caption{The tetrahedral intermediates.}
+        \label{fig:tetrahedralIntermediates}
+    \end{figure}
+    \begin{itemize}
+        \item Historically, the name arose when scientists were arguing about whether or not an $sp^3$ carbon could be in this reaction. Some scientists supported the theory that these tetrahedral intermediates existed, while others disagreed.
+    \end{itemize}
+    \item Nitrile hydrolysis.
+    \item General form.
+    \begin{equation*}
+        \ce{RCN + H3O+ -> RCOOH + NH4+}
+    \end{equation*}
+    \begin{itemize}
+        \item Note that here we're using a stoichiometric full equivalent of acid, not just catalytic acid, because we are liberating ammonia which mops up our acid, forming \ce{NH4+} as a byproduct.
+        \item The existence of this reaction is the reason we consider nitriles to be carboxylic acid derivatives (i.e., because we can interconvert them with carboxylic acids). 
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{R-C~@{N1}\charge{90=\:}{N}}
+            \arrow{->[\chemfig[atom sep=1.4em]{@{H2}H-[@{sb2}]@{O2}\charge{90:3pt=$\oplus$}{O}H_2}][-\ce{H2O}]}[,1.3]
+            \chemfig{R-@{C3}C~[@{tb3}]@{N3}\charge{90:3pt=$\oplus$}{N}-H}
+            \arrow{->[\chemfig{H_2@{O4}\charge{90=\:}{O}}]}
+            \chemfig{R-[:30](-[2]@{O5}\charge{90:3pt=$\oplus$}{O}(-[@{sb5}:30]@{H5}H)(-[:150]H))=[:-30]N-[:30]H}
+            \arrow{->[\chemfig{H_2@{O6}\charge{90=\:}{O}}][-\ce{H3O+}]}
+            \chemleft{[}
+                \subscheme{
+                    \chemfig{R-[:30](-[@{sb7}2]@{O7}\charge{0=\:}{O}-[:150]H)=[@{db7}:-30]@{N7}N-[:30]H}
+                    \arrow{<->}[-90]
+                    \chemfig{R-[:30](=[2]\charge{45:1pt=$\oplus$}{O}-[:150]H)-[:-30]@{N8}\charge{-90:3pt=$\ominus$}{N}-[:30]H}
+                }
+            \chemright{]}
+            \arrow{->[*{0}\setchemfig{atom sep=1.4em}\chemfig{@{H9}H-[@{sb9}]@{O9}\charge{90:3pt=$\oplus$}{O}H_2}]}[-90]
+            \chemfig{R-[:30]@{C10}(=[@{db10}2]@{O10}\charge{45:1pt=$\oplus$}{O}-[:150]H)-[:-30]N(-[6]H)-[:30]H}
+            \arrow{->[*{0.-90}\chemfig{H_2@{O11}\charge{90=\:}{O}}]}[180]
+            \chemfig{R-[:30](-[:110]HO)(-[:70]@{O12}\charge{-70:2pt=$\oplus$}{O}H-[@{sb12}2]@{H12}H)-[:-30]NH_2}
+            \arrow{->[*{0.-90}\chemfig{H_2@{O13}\charge{90=\:}{O}}][-\ce{H3O+}]}[180]
+            \chemfig{R-[:30](-[:110]HO)(-[:70]OH)-[:-30]@{N14}\charge{90=\:}{N}H_2}
+            \arrow{->[\chemfig[atom sep=1.4em]{@{H15}H-[@{sb15}]@{O15}\charge{90:3pt=$\oplus$}{O}H_2}][-\ce{H2O}]}[180,1.3]
+            \chemfig{R-[:30](-[@{sb16a}:110]H@{O16}\charge{90=\:}{O})(-[:70]OH)-[@{sb16b}:-30]@{N16}\charge{-90:3pt=$\oplus$}{N}H_3}
+            \arrow[-90]
+            \subscheme{
+                \chemfig{R-[:30](=[2]@{O17}\charge{90:3pt=$\oplus$}{O}-[@{sb17}:30]@{H17}H)-[:-30]OH}
+                \arrow{0}[,0.1]\+
+                \chemfig{@{N18}\charge{90=\:}{N}H_3}
+            }
+            \arrow{->[][-\ce{NH4+}]}
+            \chemfig{R-[:30](=[2]O)-[:-30]OH}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={6pt}{2pt}] (N1) to[out=90,in=90,looseness=3] (H2);
+            \draw [curved arrow={2pt}{2pt}] (sb2) to[out=110,in=130,looseness=3] (O2);
+            \draw [curved arrow={6pt}{2pt}] (O4) to[out=90,in=90,looseness=1.2] (C3);
+            \draw [curved arrow={4pt}{2pt}] (tb3) to[bend right=90,looseness=3] (N3);
+            \draw [curved arrow={6pt}{2pt}] (O6) to[out=90,in=0] (H5);
+            \draw [curved arrow={2pt}{2pt}] (sb5) to[bend left=90,looseness=3] (O5);
+            \draw [curved arrow={6pt}{2pt},blx] (O7) to[bend left=90,looseness=3] (sb7);
+            \draw [curved arrow={3pt}{2pt},blx] (db7) to[bend right=90,looseness=3] (N7);
+            \draw [curved arrow={0pt}{2pt}] ([yshift=-10pt]N8.south) to[out=-90,in=75] (H9);
+            \draw [curved arrow={2pt}{2pt}] (sb9) to[bend right=90,looseness=4] (O9);
+            \draw [curved arrow={6pt}{3pt}] (O11) to[out=90,in=150,looseness=1.5] (C10);
+            \draw [curved arrow={3pt}{2pt}] (db10) to[bend right=90,looseness=3] (O10);
+            \draw [curved arrow={6pt}{2pt}] (O13) to[out=90,in=180,looseness=1.1] (H12);
+            \draw [curved arrow={2pt}{2pt}] (sb12) to[bend right=70,looseness=2.5] (O12);
+            \draw [curved arrow={6pt}{3pt}] (N14) to[out=75,in=90,out looseness=2] (H15);
+            \draw [curved arrow={2pt}{2pt}] (sb15) to[out=110,in=130,looseness=3] (O15);
+            \draw [curved arrow={6pt}{2pt}] (O16) to[out=90,in=-150,looseness=7.5] (sb16a);
+            \draw [curved arrow={2pt}{2pt}] (sb16b) to[bend left=90,looseness=3] (N16);
+            \draw [curved arrow={6pt}{2pt}] (N18) to[out=90,in=0,looseness=1.1] (H17);
+            \draw [curved arrow={2pt}{2pt}] (sb17) to[bend left=90,looseness=3] (O17);
+        }
+        \caption{Nitrile hydrolysis mechanism.}
+        \label{fig:mechanismNitrileHydrolysis}
+    \end{figure}
+    \begin{itemize}
+        \item Note that the fourth intermediate is one deprotonation away from being an amide.
+        \begin{itemize}
+            \item However, the reaction conditions do not produce an amide but continue as drawn to a carboxylic acid.
+            \item This is because in general, the amide oxygen is more basic than the nitrile nitrogen, so if the conditions are such that the nitrile will begin the reaction, the amide will certainly finish it.
+        \end{itemize}
+        \item Note that there are some enzymes that can stop at the amide through various mechanisms that recognize one species as substrate but not another.
+        \item Every once in a while, people will claim that they've isolated the amide in this mechanism, but these results are hard to reproduce because of the above facts.
+        \item If we do add up all of the equivalents of water and acid added, we can see that only one equivalent of acid is added, overall (and two equivalents of water).
+    \end{itemize}
+    \item Dehydration of amides.
+    \item General form.
+    \begin{equation*}
+        \ce{RCONH2 ->[reagents][\Delta] RCN}
+    \end{equation*}
+    \begin{itemize}
+        \item This is the reverse reaction to nitrile hydrolysis.
+        \item Reagents is either \ce{SOCl2} or \ce{POCl3}.
+        \item \ce{SOCl2} and \ce{POCl3} are \textbf{dehydrating agents}.
+    \end{itemize}
+    \item \textbf{Dehydrating agent}: A chemical that drives conversions in which water is lost from a molecule.
+    \begin{itemize}
+        \item Notice how the amide overall loses two hydrogens and an oxygen (i.e., a water molecule overall) in Figure \ref{fig:mechanismAmideDehydration}.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{R-[:30](=[@{db1}2]O)-[@{sb1}:-30]@{N1}\charge{90=\:}{N}H_2}
+            \arrow{->[\chemfig[atom sep=1.4em]{@{S2}S(=[2]O)(-[@{sb2}:-30]@{Cl2}Cl)(-[:-150]Cl)}]}[,1.5]
+            \chemfig{R-[:30](-[2]O-[:30]S(=[2]O)-[:-30]Cl)=[:-30]@{N3}\charge{90:3pt=$\oplus$}{N}(-[@{sb3}6]@{H3}H)(-[:30]H)}
+            \arrow{0}[,0.1]\+
+            \chemfig{@{Cl4}\charge{-90=\:,45:1pt=$\ominus$}{Cl}}
+            \arrow{->[][-\ce{HCl}]}
+            \chemfig{R-[:30](-[@{sb5a}2]O-[@{sb5b}:30]S(=[2]O)-[@{sb5c}:-30]@{Cl5}Cl)=[@{db5}:-30]@{N5}\charge{-90=\:}{N}H}
+            \arrow{->[][*{0}-\ce{SO2}]}[-90,1.5,shorten <=5mm,shorten >=3mm]
+            \subscheme{
+                \chemfig{R-C~@{N6}\charge{90:3pt=$\oplus$}{N}-[@{sb6}]@{H6}H}
+                \arrow{0}[,0.1]\+
+                \chemfig{@{Cl7}\charge{90=\:,45:1pt=$\ominus$}{Cl}}
+            }
+            \arrow{->[][*{0.90}-\ce{HCl}]}[180]
+            \chemfig{R-C~N}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={6pt}{2pt}] (N1) to[bend right=70,looseness=2.5] (sb1);
+            \draw [curved arrow={3pt}{2pt}] (db1) to[out=10,in=150] (S2);
+            \draw [curved arrow={2pt}{2pt}] (sb2) to[bend left=90,looseness=3] (Cl2);
+            \draw [curved arrow={6pt}{2pt}] (Cl4) to[out=-90,in=0,looseness=1.1] (H3);
+            \draw [curved arrow={2pt}{2pt}] (sb3) to[bend left=90,looseness=3] (N3);
+            \draw [curved arrow={6pt}{3pt}] (N5) to[out=-90,in=-120,looseness=4] (db5);
+            \draw [curved arrow={2pt}{2pt}] (sb5a) to[bend right=60,looseness=1.5] (sb5b);
+            \draw [curved arrow={2pt}{2pt}] (sb5c) to[bend left=90,looseness=3] (Cl5);
+            \draw [curved arrow={6pt}{2pt}] (Cl7) to[out=90,in=90,looseness=2] (H6);
+            \draw [curved arrow={2pt}{2pt}] (sb6) to[bend left=90,looseness=3] (N6);
+        }
+        \caption{Dehydration of amides mechanism.}
+        \label{fig:mechanismAmideDehydration}
+    \end{figure}
+    \begin{itemize}
+        \item Part of the reason the amide oxygen is such a good nucleophile is because the nitrogen can participate, as in step 1 above.
+        \item Driving force: Kicking out a gas (\ce{SO2}) and chloride.
+        \item Note that the mechanism implies that we must have an amide with two \ce{H}'s (esp., we cannot have one or two \ce{R} groups in their place).
+        \item Although only the mechanism for \ce{SOCl2} is illustrated, the mechanism is virtually identical for \ce{POCl3}.
+    \end{itemize}
+    \item Comparing methods 2 and 3 of synthesizing carboxylic acids.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \begin{tikzpicture}
+            \node{\chemfig{*6(---(-Br)---)}};
+            \draw (1.5,0) -- ++(1,0);
+            \draw [CF-CF] (3.5,1.5) -- node[above]{\ce{KCN}} ++(-1,0) -- ++(0,-3) -- node[above]{\ce{Mg${}^\circ$}} ++(1,0);
+            
+            \node at (5,1.5)  {\chemfig{*6(---(-[,,,,white]\phantom{MgBr})(-CN)---)}};
+            \node at (5,-1.5) {\chemfig{*6(---(-MgBr)---)}};
+            \draw (6.5,1.5) -- node[above]{\ce{H3O+}} ++(1.5,0) -- ++(0,-3) -- node[above]{1. \ce{CO2}\rule{2mm}{0pt}} node[below]{2. \ce{H3O+}} ++(-1.5,0);
+            \draw [-CF] (8,0) -- ++(1,0);
+    
+            \node at (11,0) {\chemfig{*6(---(-(=[2]O)-[:-30]OH)---)}};
+        \end{tikzpicture}
+        \caption{Two ways to synthesize a carboxylic acid from an alkyl halide.}
+        \label{fig:2and3}
+    \end{figure}
+    \begin{itemize}
+        \item Both carboxylation and nitrile hydrolysis achieve the same end result from the same starting material, begging the question of why both are necessary.
+        \item The answer lies in the fact that both suit different types of reaction conditions.
+        \item Carboxylation is strongly basic, so we can't use molecules with free \ce{H}'s.
+        \item Nitrile hydrolysis proceeds through S\textsubscript{N}2 to start, so we can't use tertiary bromides.
+        \begin{itemize}
+            \item This is important on part of PSet 1!
+        \end{itemize}
+    \end{itemize}
+    \item Methods of ester synthesis.
+    \begin{enumerate}
+        \item Nucleophilic.
+        \item Fischer esterification.
+    \end{enumerate}
+    \item Nucleophilic.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]OH}
+            \arrow{->[\ce{K2CO3}][-\ce{KHCO3}]}[,1.3]
+            \chemfig{R-[:30](=[2]\textcolor{grx}{O})-[:-30]\charge{45:1pt=$\ominus$}{\textcolor{grx}{O}}-[,0.6,,,white]\charge{45:1pt=$\oplus$}{K}}
+            \arrow{->[\ce{R$'$I}]}
+            \chemfig{R-[:30](=[2]\textcolor{grx}{O})-[:-30]\textcolor{grx}{O}-[:30]R'}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item We deprotonate the carboxylic acid using a relatively weak base.
+        \begin{itemize}
+            \item \ce{K2CO3} is often the weak base of choice because it's insoluble in most solvents but will react in a biphasic mixture.
+            \item Additionally, since \ce{KHCO3} is usually insoluble and the carboxylate is typically soluble in the organic solvent in which the reaction is being carried out, it's really easy to separate the two.
+        \end{itemize}
+        \item The second step proceeds via an S\textsubscript{N}2 mechanism, so methyl or primary alkyl halides are best.
+        \item Note that the two initial oxygens (green) proceed through the whole of the process and end up in the product.
+    \end{itemize}
+    \item Fischer esterification.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{R-[:30](=[2]\textcolor{grx}{O})-[:-30]\textcolor{grx}{O}H}
+            \arrow{->[\ce{H+}][\ce{R$'${\color{blx}O}H}]}
+            \chemfig{R-[:30](=[2]\textcolor{grx}{O})-[:-30]\textcolor{blx}{O}-[:30]R'}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item The acid is a catalyst, and we need an excess of the alcohol, which we typically just use as our solvent.
+        \item Reasons we need an excess of the alcohol.
+        \begin{itemize}
+            \item This is essentially a thermoneutral reaction; there's not a great thermodynamic driving force between the carboxylic acid and ester.
+            \item Thus, the only way to get the reaction to go forward is to overwhelm it with an excess of the alcohol so that Le Ch\^{a}telier's principle comes into play.
+        \end{itemize}
+        \item Removing water can also help drive the reaction.
+        \item \ce{H3O+} (i.e., excess water) reverses the reaction.
+        \item Note that the mechanism here is a nucleophilic attack, and it is the \emph{methanol} oxygen (blue) that gets incorporated into the final ester (whose initial oxygens are colored green).
+    \end{itemize}
+    \item \textbf{Saponification}: Subjecting an ester to a single equivalent of \ce{KOH} (or any other hydroxide base) to form the carboxylate and the alcohol.
+    \begin{itemize}
+        \item This is very old chemistry.
+        \item Sapon- is the Latin prefix for soap.
+        \item Ancient peoples discovered that combining and heating animal fat, wood ash, and a bit of water creates soap.
+        \item Combining triglycerides with pot ash yields glycerol soap and long-chain fatty acid carboxylates.
+        \begin{itemize}
+            \item Pot ash is where we get the name for potassium, because the ashes from a wood stove are rich in potassium hydroxide.
+            \item Fatty acid carboxylates serve to solublize grease in water because the lipid end interacts with the grease and the carboxylate end interacts with the water. This is how all soaps work!
+        \end{itemize}
+    \end{itemize}
+    \item General form.
+    \begin{equation*}
+        \ce{RCOOR$'$ ->[KOH] RCOOK + R$'$OH}
+    \end{equation*}
+    \begin{itemize}
+        \item The carboxylate is an end-stage product. Resonance delocalizes the negative charge over the carbon atom, significantly decreasing its electrophilicity and hence its capacity to participate in future reactions.
+        \item The presence of basic conditions make it so that this reaction is not reversible. Indeed, if we mix a base with \ce{RCOOH}, we will just deprotonate the acid and return to the carboxylate form.
+    \end{itemize}
+    \item Mechanism.
+    \begin{itemize}
+        \item Hydroxide attacks the ester as a nucleophile, and \ce{OR-} leaves to form a carboxylic acid. But \ce{OR-} (a strong base) will then deprotonate \ce{RCOOH} (a strong acid) to form the carboxylate and alcohol.
+    \end{itemize}
+    \item Acid chloride synthesis.
+    \item General form.
+    \begin{equation*}
+        \ce{RCOOH ->[SOCl2][Py] RCOCl + [PyH]Cl + SO2}
+    \end{equation*}
+    \begin{itemize}
+        \item Pyridine is not strictly necessary, but it greatly increases the reaction rate.
+        \item Driven in a similar way to the dehydration of amides; we release \ce{SO2} gas, expel a water molecule, and mop up the extra \ce{Cl-} with pyridine.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]@{O1}O-[@{sb1}:30]@{H1}H}
+            \arrow{->[*{0}\chemfig{@{Py2}\charge{0=\:}{Py}}][*{0}-\ce{PyH+}]}[-90]
+            \chemfig{R-[:30](=[2]O)-[:-30]@{O3}\charge{90=\:,45:1pt=$\ominus$}{O}}
+            \arrow{->[\chemfig[atom sep=1.4em]{@{S4}S(=[2]O)(-[@{sb4}:-30]@{Cl4}Cl)(-[:-150]Cl)}]}[,1.5]
+            \chemfig{R-[:30]@{C5}(=[@{db5}2]@{O5}O)-[:-30]O-[:30]S(=[2]O)-[:-30]Cl}
+            \arrow{0}[,0.1]\+
+            \chemfig{@{Cl6}\charge{90=\:,45:1pt=$\ominus$}{Cl}}
+            \arrow
+            \chemfig{R-[:30](-[@{sb7a}:110]@{O7}\charge{180=\:,135:1pt=$\ominus$}{O})(-[:70]Cl)-[@{sb7b}:-30]O-[@{sb7c}:30]S(=[2]O)-[@{sb7d}:-30]@{Cl7}Cl}
+            \arrow{->[][-\ce{SO2, Cl-}]}[,1.3]
+            \chemfig{R-[:30](=[2]O)-[:-30]Cl}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={6pt}{2pt}] (Py2) to[out=0,in=-90] (H1);
+            \draw [curved arrow={2pt}{2pt}] (sb1) to[bend right=90,looseness=3] (O1);
+            \draw [curved arrow={6pt}{2pt}] (O3) to[out=90,in=150,looseness=1.5] (S4);
+            \draw [curved arrow={2pt}{2pt}] (sb4) to[bend left=90,looseness=3] (Cl4);
+            \draw [curved arrow={6pt}{3pt}] (Cl6) to[out=100,in=50,out looseness=2] (C5);
+            \draw [curved arrow={3pt}{2pt}] (db5) to[bend left=90,looseness=3] (O5);
+            \draw [curved arrow={6pt}{3pt}] (O7) to[out=180,in=-150,looseness=4] (sb7a);
+            \draw [curved arrow={2pt}{2pt}] (sb7b) to[bend left=60,looseness=1.5] (sb7c);
+            \draw [curved arrow={2pt}{2pt}] (sb7d) to[bend left=90,looseness=3] (Cl7);
+        }
+        \caption{Acid chloride synthesis mechanism.}
+        \label{fig:mechanismAcidChloride}
+    \end{figure}
+    \begin{itemize}
+        \item Since chloride is a fairly week nucleophile, it's addition in step 3 takes a while and is reversible.
+        \begin{itemize}
+            \item However, this step is driven in the forward direction by releasing \ce{SO2} gas from the resulting tetrahedral intermediate (Le Ch\^{a}telier's principle).
+        \end{itemize}
+    \end{itemize}
+    \item Anhydride synthesis.
+    \item General form (standard).
+    \begin{equation*}
+        \ce{2RCOOH ->[\Delta][{[-H2O]}] RCOOCOR}
+    \end{equation*}
+    \begin{itemize}
+        \item High heat is required.
+        \item If you use two different carboxylic acids, you will get a statistical mixture (no real selectivity).
+    \end{itemize}
+    \item You can selectively create 5-6 membered rings containing anhydrides because this reaction proceeds intramolecularly as well as intramolecularly.
+    \item General form (intramolecular).
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{[4]*6(OH-(=O)--(-[:-170])(-[:-130])-(=O)-OH)}
+            \arrow{->[$\Delta$][$[-\ce{H2O}]$]}[,1.2]
+            \chemfig{*5((-[:-164])(-[:-124])-(=O)-O-(=O)--)}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item In particular, if you have a single molecule with two different carboxylic acid groups 2-3 carbons apart, then heating a sample of said molecule while removing water will result in a ring-closing anhydridization.
+        \item If we want to make a ring with another number of carbons, we should go through acid chlorides (see below).
+    \end{itemize}
+    \item A way to selectively create anhydrides is via acid chlorides and sodium carboxylates.
+    \item Mixed anhydride synthesis.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]Cl}
+            \arrow{0}[,0.1]\+{,,1.5em}
+            \chemfig{R'-[:30](=[2]O)-[:-30]\charge{45:1pt=$\ominus$}{O}-[,0.6,,,white]\charge{45:1pt=$\oplus$}{Na}}
+            \arrow
+            \chemfig{R-[:30](=[2]O)-[:-30]O-[:30](=[2]O)-[:-30]R'}
+            \arrow{0}[,0.1]\+
+            \chemfig{NaCl}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item This reaction proceeds via nucleophilic substitution.
+    \end{itemize}
+    \item Amide synthesis.
+    \item General form.
+    \begin{equation*}
+        \ce{RCOOH + NHR$'$R$''$ ->[DCC][Py] RCONR$'$R$''$}
+    \end{equation*}
+    \item Mechanism.
+    \begin{figure}[H]
+        \centering
+        \vspace{1em}
+        \footnotesize
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]@{O1}O-[@{sb1}:30]@{H1}H}
+            \arrow{->[\chemfig{@{Py2}\charge{90=\:}{Py}}]}
+            \chemfig{R-[:30](=[2]O)-[:-30]@{O3}\charge{90=\:,45:1pt=$\ominus$}{O}}
+            \arrow{0}[,0.1]\+
+            \chemfig{\charge{90:3pt=$\oplus$}{Py}H}
+            \arrow{->[\chemfig[atom sep=1.4em]{CyN=@{C5}C=[@{db5}]@{N5}NCy}]}[,2]
+            \subscheme{
+                \chemfig{R-[:30](=[2]O)-[:-30]O-[:30](-[2]@{N6}\charge{90=\:,135:3pt=$\ominus$}{N}Cy)(=[:-30]NCy)}
+                \arrow{0}[,0.1]\+
+                \chemfig{@{H7}H-[@{sb7}]@{Py7}\charge{90:3pt=$\oplus$}{Py}}
+            }
+            \arrow{->[][*{0}-\ce{Py}]}[-90]
+            \chemfig{R-[:30]@{C8}(=[@{db8}2]@{O8}O)-[:-30]O-[:30](-[2]NHCy)(=[:-30]NCy)}
+            \arrow{->[*{0.-90}\setchemfig{atom sep=1.4em}\chemfig{@{N9}\charge{90=\:}{N}HR'R''}]}[180,1.3]
+            \chemfig[atom sep=2.5em]{[:120]*6(@{N10a}\charge{[extra sep=1.5pt]-135=\:}{N}Cy=(-[,0.8]NHCy)-O-(-[:130,0.8]\charge{135:1pt=$\ominus$}{O})(-[:170,0.8]R)-@{N10b}\charge{45:1pt=$\oplus$}{N}(-[:-170,0.8]R')(-[:-130,0.8]R'')-[@{sb10}]@{H10}H)}
+            \arrow[180]
+            \chemfig[atom sep=2.5em]{[:120]*6(@{N11}\charge{-90:3pt=$\oplus$}{N}HCy=[@{db11}](-[,0.8]NHCy)-[@{sb11a}]O-[@{sb11b}](-[@{sb11c}:130,0.8]@{O11}\charge{90=\:,135:1pt=$\ominus$}{O})(-[:170,0.8]R)-N(-[,0.8]R'')-R')}
+            \arrow{->[][*{0}-\ce{DCU}]}[-90]
+            \chemfig{R-[:30](=[2]O)-[:-30]N(-[6]R'')-[:30]R'}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={6pt}{2pt}] (Py2) to[out=90,in=90,looseness=2] (H1);
+            \draw [curved arrow={2pt}{2pt}] (sb1) to[bend right=90,looseness=3] (O1);
+            \draw [curved arrow={6pt}{2pt}] (O3) to[out=90,in=90,looseness=1.3] (C5);
+            \draw [curved arrow={3pt}{2pt}] (db5) to[bend left=90,looseness=4] (N5);
+            \draw [curved arrow={6pt}{2pt}] (N6) to[out=90,in=90,looseness=1.3] (H7);
+            \draw [curved arrow={2pt}{2pt}] (sb7) to[bend right=90,looseness=3] (Py7);
+            \draw [curved arrow={6pt}{3pt}] (N9) to[out=90,in=150] (C8);
+            \draw [curved arrow={3pt}{2pt}] (db8) to[bend right=90,looseness=3] (O8);
+            \draw [curved arrow={6pt}{2pt}] (N10a) to[bend left=20,looseness=1] (H10);
+            \draw [curved arrow={2pt}{2pt}] (sb10) to[bend left=70,looseness=2.5] (N10b);
+            \draw [curved arrow={6pt}{2pt}] (O11) to[out=90,in=40,looseness=4] (sb11c);
+            \draw [curved arrow={2pt}{2pt}] (sb11b) to[bend right=60,looseness=1.3] (sb11a);
+            \draw [curved arrow={3pt}{2pt}] (db11) to[bend right=90,looseness=3] (N11);
+        }
+        \caption{Amide synthesis mechanism.}
+        \label{fig:mechanismAmide}
+    \end{figure}
+    \begin{itemize}
+        \item Note that as in other mechanisms, DCC eventually transforms into a type of leaving group.
+        \item Normally, we use external reagents for proton transfers because doing an internal one would in most cases involve a transition state with a 4-membered ring, which is highly strained.
+        \begin{itemize}
+            \item However, in step 5 here, we can do an internal proton transfer because the transition state's conformation is that of a 6-membered ring.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{DCC}: Dicyclohexylcarbodiimide, a dehydrating reagent key to amide synthesis. \emph{Structure}
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \chemfig{C(=[:30]N-[::-60]*6(------))(=[:-150]N-[::-60]*6(------))}
+        \caption{Dicyclohexylcarbodiimide (DCC).}
+        \label{fig:DCC}
+    \end{figure}
+    \item DCC reacts with water as follows.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{C(=[:30]N-[::-60]*6(------))(=[:-150]N-[::-60]*6(------))}
+            \arrow{->[\ce{H2O}]}
+            \chemname{\chemfig{(-[:-30]N(-[6]H)-[:30]*6(------))(-[:-150]N(-[6]H)-[:150]*6(------))(=[2]O)}}{Dicyclohexylurea}
+        \schemestop
+        \caption{DCC and water.}
+        \label{fig:DCCH2O}
+    \end{figure}
+    \item \textbf{DCU}: Dicyclohexylurea, the product of the reaction of DCC and water.
+    \item Reactivity scale.
+    \begin{equation*}
+        \text{acid chloride} > \text{anhydride}
+        > \text{ester}
+        > \text{amide}
+        > \text{carboxylate}
+    \end{equation*}
+    \begin{itemize}
+        \item It should make intuitive sense that acid chlorides are the most reactive carboxylic acid derivatives and carboxylates are the least.
+        \begin{itemize}
+            \item Acid chlorides have an electronegative group on the already electrophilic carbon, exacerbating the molecular dipole.
+            \item Carboxylates delocalize their negative charge over the carbon (as discussed earlier), greatly reducing or eliminating the molecular dipole.
+            \item A good rule of thumb is that the compound with the best leaving group and worst nucleophile (an acid chloride) is the most reactive, and vice versa in that the compound with the worst leaving group and the best nucleophile (a carboxylate) is the most reactive.
+        \end{itemize}
+        \item What we mean by "reactivity" is that compounds higher on the reactive scale can react with an appropriate nucleophile to become compounds lower on the scale.
+        \begin{itemize}
+            \item For instance, we can take an acid chloride to an anhydride, ester, amide, or carboxylate (and we have reactions to do that), but we cannot take all (or any) of these molecules back to an acid chloride without forcing conditions.
+            \item Some things that qualify as forcing conditions are the use of acidic conditions and dehydrating reagents.
+            \item In other words, this reactivity scale is for the compounds in basic media with no dehydrating reagents present.
+        \end{itemize}
+    \end{itemize}
+    \item MCAT comments.
+    \item Trialkyl amines and pyridines.
+    \begin{itemize}
+        \item According to our reactivity scale, we should be able to react \ce{NEt3} with \ce{RCOCl} to yield an amine, for example.
+        \begin{itemize}
+            \item However, this leads to a positively charged nitrogen in the amine that cannot be quenched (e.g., by deprotonation). Thus, this is a highly reversible reaction that favors the reactants.
+        \end{itemize}
+        \item Similarly, we should be able to react an anhydride with pyridine.
+        \begin{itemize}
+            \item But since pyridine cannot be deprotonated either, the reactants are favored in this reversible reaction once again.
+        \end{itemize}
+    \end{itemize}
+    \item However, this implies that pyridines can be used to catalyze nucleophilic acyl substitutions.
+    \item \textbf{DMAP}: Dimethylaminopyridine, which is one of the best catalysts for nucleophilic acyl substitutions. \emph{Structure}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{[:30]**6(--(-N(-[:60])(-[:-60]))---N-)}
+        \caption{Dimethylaminopyridine (DMAP).}
+        \label{fig:DMAP}
+    \end{figure}
+    \begin{itemize}
+        \item Levin gives an example synthesis using DMAP, namely nucleophilic addition to an anhydride.
+        \begin{itemize}
+            \item In essence, DMAP adds to the carbonyl, kicks out the leaving group, and then the nucleophile adds to the carbonyl and kicks out DMAP.
+        \end{itemize}
+        \item Adding DMAP can accelerate a reaction that would take overnight to taking only a few minutes.
+    \end{itemize}
+    \item Acid chlorides, anhydrides, and esters all create the same product (an amide) when reacting with an amine.
+    \begin{itemize}
+        \item But, you need only one equivalent of the amine for esters while you need two equivalents for the first two.
+        \item This is because of the $\pKa$'s.
+        \begin{itemize}
+            \item In order of increasing $\pKa$, we have $\ce{HCl}<\ce{RCOOH}<\ce{NR2H2+}<\ce{ROH}$.
+            \item Thus, the first two byproducts (\ce{HCl} and \ce{RCOOH}) protonate amines in solution, whereas \ce{ROH} does not.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{Discussion Section}
+\begin{itemize}
+    \item \marginnote{4/8:}We will be working with hot sand baths in the next lab, so just leave them to cool and do not dispose of the contents unless you're sure they're cool.
+    \item Practice problems.
+    \begin{enumerate}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{*4(--(-(=[::60]O)-[::-60]OEt)--)}
+                \arrow{->[\ce{NaOH}]}[,1.1]
+                \color{rex}
+                \chemfig{*4(--(-(=[::60]O)-[::-60]\charge{45:1pt=$\ominus$}{O})--)}
+            \schemestop
+        \end{center}
+        \begin{itemize}
+            \item We form a \ce{COO-} ion instead of the carboxylic acid because we are in basic solution.
+            \item The mechanism is a nucleophilic attack on the carbonyl, the oxygen electrons swinging back down and kicking out \ce{EtO-}, and then deprotonation of the acid.
+        \end{itemize}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{-[:-30]-[:30](=[2]O)-[:-30]H}
+                \arrow{->[\color{rex}1. \ce{CrO3, H2SO4, H2O}][\color{rex}2. \ce{NH3, DCC}\rule{1.1cm}{0pt}]}[,2.5]
+                \chemfig{-[:-30]-[:30](=[2]O)-[:-30]NH_2}
+            \schemestop
+        \end{center}
+        \begin{itemize}
+            \item The intermediate after step 1 is the carboxylic acid, as we have used aqueous Jones reagent.
+        \end{itemize}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{EtO-[:30](=[2]O)-[:-30]-[:30](=[2]O)-[:-30]OH}
+                \arrow{->[\ce{MeOH}][\ce{H2SO4}]}[,1.2]
+                \color{rex}
+                \chemfig{MeO-[:30](-[2]OH)-[:-30]-[:30](=[2]O)-[:-30]OMe}
+            \schemestop
+        \end{center}
+        \begin{itemize}
+            \item The reaction of the ester (left) is called \textbf{transesterification}; the reaction of the carboxylic acid (right) is called ether formation.
+            \item It's important to know that you can get ester formation in both of these cases.
+            \item This is a common problematic side reaction in synthetic chemistry.
+            \item Mechanism: Methanol attacks each carbonyl, the other group leaves, and then deprotonation.
+        \end{itemize}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{-[:-30](-[6])-[:30](=[2]O)-[:-30]}
+                \arrow{0}[,0.1]\+{,,1em}
+                \chemfig{[:18]*5(---\chemabove{N}{H}--)}
+                \arrow{->[\ce{H3O+}]}
+                \color{rex}
+                \chemfig{-[:-30](-[6])=_[:30](-[2]N*5(-----))-[:-30]}
+            \schemestop
+        \end{center}
+        \begin{itemize}
+            \item We choose this enamine as the major product by Zaitsev's rule.
+        \end{itemize}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{H-[:30](=[2]O)-[:-30]-[:30]-[:-30](=[6]O)-[:30]}
+                \arrow{->[\chemfig[atom sep=1.4em]{HO-[:30]-[:-30]-[:30]OH}][\ce{H3O+}]}[,1.8]
+                \color{rex}
+                \chemfig{H-[:30](-[2,0.01]*5(-O---O-))-[:-30]-[:30]-[:-30](=[6]O)-[:30]}
+                \color{black}
+                \arrow{->[1. \ce{MeLi}\rule{1.5mm}{0pt}][2. \ce{H3O+}]}[,1.3]
+                \color{rex}
+                \chemfig{H-[:30](=[2]O)-[:-30]-[:30]-[:-30](-[:-70]OH)(-[:-110])-[:30]}
+            \schemestop
+        \end{center}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{-[:30]*6(----(-OH)-(-)-)}
+                \arrow(R--P1){->[1. PCC\rule{8.5mm}{0pt}][2. \chemfig[atom sep=1.4em]{-[:30]=_[:-30]PPh_3}]}[,1.7]
+                \color{rex}
+                \chemfig{-[:30]*6(----(=_-[:30])-(-)-)}
+                \color{black}
+                \arrow(@R--P2){->[*{0.-90}\ce{H2SO4}]}[180,1.2]
+                \color{rex}
+                \chemfig{-[:30]*6(-----(-)=)}
+            \schemestop
+        \end{center}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{-[:-30](=[6])-[:30](=[2]O)-[:-30]}
+                \arrow{->[\ce{Me2CuLi}]}[,1.3]
+                \color{rex}
+                \chemfig{-[:-30](-[6]-[:-150])-[:30](=[2]O)-[:-30]}
+                \color{black}
+                \arrow{->[1. \ce{MeLi}\rule{1.5mm}{0pt}][2. \ce{H3O+}]}[,1.3]
+                \color{rex}
+                \chemfig{-[:-30](-[6]-[:-150])-[:30](-[:110])(-[:70]OH)-[:-30]}
+            \schemestop
+        \end{center}
+    \end{enumerate}
+\end{itemize}
+
+
+
+\section{Chapter 17: Carboxylic Acids and Their Derivatives}
+\emph{From \textcite{bib:SolomonsEtAl}.}
+\begin{itemize}
+    \item Naming carboxylic acids.
+    \begin{itemize}
+        \item Drop the final -e of the name of the alkane corresponding to the longest chain in the acid and add -oic acid.
+        \begin{itemize}
+            \item Common names include formic acid (methanoic acid), acetic acid (ethanoic acid), butyric acid (butanoic acid), valeric acid (pentanoic acid), caproic acid (hexanoic acid), stearic acid (octadecanoic acid)\footnote{\textcite{bib:SolomonsEtAl} discusses the origins of these names, too.}.
+        \end{itemize}
+        \item The carboxyl carbon is numbered 1.
+    \end{itemize}
+    \item Naming esters.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \captionsetup{justification=centering}
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \color{blx}
+            \chemfig{-[:30](=[2]O)-[:-30]O-[:30,,,,rex]-[:-30,,,,rex]}
+            \caption*{\textcolor{rex}{Ethyl} \textcolor{blx}{acetate} or\\\textcolor{rex}{ethyl} \textcolor{blx}{ethanoate}}
+            \label{fig:esterNomenclaturea}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \color{blx}
+            \chemfig{\textcolor{grx}{Cl}-[:30,,,,grx]*6(-=-(-(=[2]O)-[:-30]O|\textcolor{rex}{Me})=-=)}
+            \caption*{\textcolor{rex}{Methyl} \textcolor{grx}{$p$-chloro}\textcolor{blx}{acetate}\\${\color{white}hi}$}
+            \label{fig:esterNomenclatureb}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \color{blx}
+            \chemfig{-[:30,,,,rex]-[:-30,,,,rex]O-[:30](=[2]O)-[:-30]-[:30](=[2]O)-[:-30]O-[:30,,,,rex]-[:-30,,,,rex]}
+            \caption*{\textcolor{rex}{Diethyl} \textcolor{blx}{malonate}\\${\color{white}hi}$}
+            \label{fig:esterNomenclaturec}
+        \end{subfigure}
+        \caption{Ester nomenclature.}
+        \label{fig:esterNomenclature}
+    \end{figure}
+    \begin{itemize}
+        \item Take the name of the alcohol (ending with -yl) and the name of the carboxylic acid (ending with -ate or -oate).
+    \end{itemize}
+    \item Naming anhydrides.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \captionsetup{justification=centering}
+        \begin{subfigure}[b]{0.24\linewidth}
+            \centering
+            \chemfig{-[:30](=[2]O)-[:-30]O-[:30](=[2]O)-[:-30]}
+            \caption*{Acetic anhydride\\(ethanoic anhydride)}
+            \label{fig:anhydrideNomenclaturea}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.24\linewidth}
+            \centering
+            \chemfig{[:18]*5(--(=O)-O-(=O)-)}
+            \caption*{Succinic anhydride\\${\color{white}hi}$}
+            \label{fig:anhydrideNomenclatureb}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.24\linewidth}
+            \centering
+            \chemfig{*6(=-(*5(-(=O)-O-(=O)-))=-=-)}
+            \caption*{Phthalic anhydride\\${\color{white}hi}$}
+            \label{fig:anhydrideNomenclaturec}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.24\linewidth}
+            \centering
+            \chemfig{[:18]*5(=-(=O)-O-(=O)-)}
+            \caption*{Maleic anhydride\\${\color{white}hi}$}
+            \label{fig:anhydrideNomenclatured}
+        \end{subfigure}
+        \caption{Special anhydrides.}
+        \label{fig:anhydrideNomenclature}
+    \end{figure}
+    \begin{itemize}
+        \item "Most anhydrides are named by dropping the word acid from the name of the carboxylic acid and adding the word anhydride" \parencite[766]{bib:SolomonsEtAl}.
+    \end{itemize}
+    \item Naming acyl chlorides.
+    \begin{itemize}
+        \item Drop -ic acid from the name of the acid and then add -yl chloride.
+        \begin{itemize}
+            \item Examples include acetyl chloride (ethanoyl chloride), propanoyl chloride, and benzoyl chloride.
+        \end{itemize}
+    \end{itemize}
+    \item Naming amides.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \captionsetup{justification=centering}
+        \begin{subfigure}[b]{0.24\linewidth}
+            \centering
+            \chemfig{-[:30](=[2]O)-[:-30]NH_2}
+            \caption*{Acetamide\\(ethanamide)}
+            \label{fig:amideNomenclaturea}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.24\linewidth}
+            \centering
+            \chemfig{-[:30](=[2]O)-[:-30]N(-[6,,,,rex])-[:30,,,,rex]}
+            \caption*{$N,N$-\textcolor{rex}{Dimethyl}acetamide\\${\color{white}hi}$}
+            \label{fig:amideNomenclatureb}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.24\linewidth}
+            \centering
+            \chemfig{-[:30](=[2]O)-[:-30]\chembelow{N}{H}-[:30,,,,rex]-[:-30,,,,rex]}
+            \vspace{2mm}
+            \caption*{$N$-\textcolor{rex}{Ethyl}acetamide\\${\color{white}hi}$}
+            \label{fig:amideNomenclaturec}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.26\linewidth}
+            \centering
+            \chemfig{-[:30](=[2]O)-[:-30]N(-[6,,,,rex]\textcolor{rex}{Ph})-[:30,,,,grx]-[:-30,,,,grx]-[:30,,,,grx]}
+            \caption*{$N$-\textcolor{rex}{Phenyl}-$N$-\textcolor{grx}{propyl}acetamide\\${\color{white}hi}$}
+            \label{fig:amideNomenclatured}
+        \end{subfigure}
+        \caption{Amide nomenclature.}
+        \label{fig:amideNomenclature}
+    \end{figure}
+    \begin{itemize}
+        \item Drop -ic acid from the name of the acid and then add -amide.
+        \item "Alkyl groups on the nitrogen atom of amides are named as substituents, and the named substituent is prefaced by $N$- or $N,N$-" \parencite[767]{bib:SolomonsEtAl}.
+    \end{itemize}
+    \item Amides with nitrogen atoms bearing one or two hydrogen atoms are able to form strong intermolecular bonds.
+    \item Nitrile nomenclature.
+    \begin{itemize}
+        \item Add the suffix -nitrile to the name of the corresponding hydrocarbon.
+        \begin{itemize}
+            \item Examples include ethanenitrile (acetonitrile [abbrev. ACN]) and propenenitrile (acrylonitrile).
+        \end{itemize}
+    \end{itemize}
+    \item New methods of carboxylic acid synthesis.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30]=_[:-30]-[:30,,,,decorate,decoration={snake,segment length=4pt,amplitude=1pt}]R'}
+                \arrow{->[1. \ce{KMnO4}, \ce{OH-}, $\Delta$][2. \ce{H3O+}\rule{1.5cm}{0pt}]}[,2.3]
+                \chemfig{R-[:30](=[2]O)-[:-30]OH}
+                \+{,,2em}
+                \chemfig{R'-[:30](=[2]O)-[:-30]OH}
+            \schemestop
+            \caption{Oxidation of alkenes 1.}
+            \label{fig:carboxylicAcidSynthesis2a}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30]=_[:-30]-[:30,,,,decorate,decoration={snake,segment length=4pt,amplitude=1pt}]R'}
+                \arrow{->[1. \ce{O3}\rule{4mm}{0pt}][2. \ce{H2O2}]}[,1.2]
+                \chemfig{R-[:30](=[2]O)-[:-30]OH}
+                \+{,,2em}
+                \chemfig{R'-[:30](=[2]O)-[:-30]OH}
+            \schemestop
+            \caption{Oxidation of alkenes 2.}
+            \label{fig:carboxylicAcidSynthesis2b}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-Ph}
+                \arrow{->[1. \ce{O3}, \ce{AcOH}][2. \ce{H2O2}\rule{6mm}{0pt}]}[,1.7]
+                \chemfig{R-[:30](=[2]O)-[:-30]OH}
+            \schemestop
+            \caption{Oxidation of benzene.}
+            \label{fig:carboxylicAcidSynthesis2c}
+        \end{subfigure}
+        \caption{More methods of carboxylic acid synthesis.}
+        \label{fig:carboxylicAcidSynthesis2}
+    \end{figure}
+    \item The ordering of carbons away from a carbon of interest is $\alpha$, $\beta$, $\gamma$, $\delta$, and continuing on in Greek alphabetic order.
+    \item We can open a lactone with base and water, followed by an acidic workup.
+    \begin{itemize}
+        \item We can close a $\gamma$- or $\delta$-lactone from a $\gamma$- or $\delta$-alcohol carboxylic acid and acid.
+    \end{itemize}
+    \item \textcite{bib:SolomonsEtAl} discusses lactams and alkyl chloroformates.
+    \item Carbamates are also known as urethanes.
+    \item \textcite{bib:SolomonsEtAl} discusses decarboxylatoin, polyesters, polyamides.
+\end{itemize}
+
+
+
+
+\end{document}

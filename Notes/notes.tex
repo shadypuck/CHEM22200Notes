@@ -2,10 +2,13 @@
 
 \input{../preamble.tex}
 
+\externaldocument{notes}
+
+\renewcommand{\contentsname}{Weeks}
+\renewcommand{\chaptername}{Week}
+
 \title{CHEM 22200 (Organic Chemistry III) Notes}
 \author{Steven Labalme}
-
-\externaldocument{notes}
 
 \begin{document}
 
@@ -27,14 +30,13 @@
 \pagenumbering{arabic}
 \pagestyle{main}
 \renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
-\setcounter{chapter}{15}
-\subfile{Chapter16/Chapter16.tex}
+\subfile{Week1/week1.tex}
 
-\subfile{Chapter17/Chapter17.tex}
+\subfile{Week2/week2.tex}
 
-\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (Carbonyl Compounds' \texorpdfstring{$\alpha$}{TEXT}-Carbons)}{}}
-\subfile{Chapter18/Chapter18.tex}
-\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\subfile{Week3/week3.tex}
+
+\subfile{Week4/week4.tex}
 
 \printbibliography[heading=bibintoc]
 
