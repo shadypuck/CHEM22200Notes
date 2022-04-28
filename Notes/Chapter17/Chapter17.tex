@@ -1870,5 +1870,181 @@
 
 
 
+\section{Problem Session}
+\begin{itemize}
+    \item \marginnote{4/19:}Practice problems.
+    \begin{enumerate}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{H_2N-[:30](=[2]O)-[:-30]-[:30](=[2]O)-[:-30]OH}
+                \arrow{->[\begin{tabular}{l}
+                    1. \ce{SOCl2}\\
+                    2. \ce{NaN3}\\
+                    3. \ce{NaOH}\\
+                \end{tabular}]}[,1.4]
+                \color{orx}
+                \chemfig{NC-[:-30]-[:30](=[2]O)-[:-30]Cl}
+                \arrow
+                \color{orx}
+                \chemfig{NC-[:-30]-[:30]N=C=O}
+                \arrow
+                \color{rex}
+                \chemfig{H_2N-[:30](=[2]O)-[:-30]-[:30]NH_2}
+            \schemestop
+        \end{center}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{NC-[:-30]-[:30]\charge{90:3pt=$\oplus$}{P}Ph_3}
+                \arrow{->[\begin{tabular}{l}
+                    1. \ce{KO^{$t$}Bu}\\
+                    2. \ce{EtCOH}\\
+                \end{tabular}]}[,1.4]
+                \color{rex}
+                \chemfig{-[:-30]-[:30](=[2](-[:30]CN)(-[:150]H))-[:-30]H}
+            \schemestop
+        \end{center}
+        \begin{itemize}
+            \item This reaction involves a stabilized ylide, hence the formation of the \emph{trans} product.
+        \end{itemize}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{**6(-N--(-(=[2]O)-[:-30]OH)---)}
+                \arrow{->[\color{rex}DCC / \ce{HNEt2}]}[,1.8]
+                \chemfig{**6(-N--(-(=[2]O)-[:-30]NEt_2)---)}
+            \schemestop
+        \end{center}
+        \begin{itemize}
+            \item You could add catalytic amounts of pyridine, DMAP, or any other nonnucleophilic source of nitrogen to speed up this reaction.
+        \end{itemize}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{*6(--=---)}
+                \arrow{->[\color{rex}\begin{tabular}{l}
+                    1. \ce{O3}\\
+                    2. \ce{Me2S}\\
+                    3. \ce{H2NNH2} / \ce{KOH} / $\Delta$\\
+                \end{tabular}]}[,2.7]
+                \chemfig{-[:30]-[:-30]-[:30]-[:-30]-[:30]}
+            \schemestop
+        \end{center}
+        \begin{itemize}
+            \item In an exam setting, we won't be charged with knowing that we need heat.
+        \end{itemize}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{*6(----(=O)-(-)-)}
+                \arrow{->[\begin{tabular}{l}
+                    1. mCPBA\\
+                    2. \ce{H3O+}\\
+                \end{tabular}]}[,1.5]
+                \color{orx}
+                \chemfig{[:-12.86]*7((-)-----(=O)-O-)}
+                \arrow
+                \color{rex}
+                \chemfig{-[:30](-[2]OH)-[:-30]-[:30]-[:-30]-[:30]-[:-30](=[6]O)-[:30]OH}
+            \schemestop
+        \end{center}
+        \begin{itemize}
+            \item The second step proceeds as a consequence of the acid \ce{H-OH2} to a carboxylic acid derivative, as per Figure \ref{fig:acidCarboxylica}.
+        \end{itemize}
+        \item ${\color{white}hi}$
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{H-[:30](=[2]O)-[:-30]-[:30]-[:-30]-[:30]=_[:-30]}
+                \arrow{->[\begin{tabular}{l}
+                    1. \ce{OsO4}\\
+                    2. \ce{H+} $[-\ce{H2O}]$\\
+                \end{tabular}]}[,1.8]
+                \color{rex}
+                \chemfig{[:-12.86]*7(--(-[:120,0.9]O?)--O-?--)}
+            \schemestop
+        \end{center}
+        \item Mechanism: Goes over the Curtius rearrangement.
+        \item Retrosynthesis.
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{-[:30]-[:-30]-[:30]-[:-30]Br}
+                \arrow{->[*{0} {\color{rex}\chemfig[atom sep=1.2em]{MgBr-~-H}}]}[-90]
+                \color{rex}
+                \chemfig{-[:-30]-[:30]-[:-30]-[:30]~[:30]}
+                \arrow{->[\color{rex}\ce{Ph3PAu+}][\color{rex}\ce{H3O+}]}[,1.3]
+                \color{rex}
+                \chemfig{-[:-30]-[:30]-[:-30]-[:30](=[2]O)-[:-30]}
+                \arrow{->[\color{rex}\chemfig[atom sep=1.2em]{Ph3P=_[2]-[:30]CO2Et}]}[,1.5]
+                \color{rex}
+                \chemfig{-[:-30]-[:30]-[:-30]-[:30](=_[2]-[:30](=[2]O)-[:-30]OEt)-[:-30]}
+                \arrow{->[\color{rex}DIBAL-D][\color{rex}\ce{H3O+}]}[,1.3]
+                \chemfig{-[:-30]-[:30]-[:-30]-[:30](=_[2]-[:30](=[2]O)-[:-30]D)-[:-30]}
+            \schemestop
+        \end{center}
+        \begin{itemize}
+            \item That deuterated aldehyde should indicate DIBAL-D.
+            \item \ce{COOEt} is an EWG, and we will get the desired trans product in a Wittig with it.
+        \end{itemize}
+        \item Retrosynthesis.
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{[:18]*5(---(<Br)--)}
+                \arrow{->[\color{rex}\ce{NaCN}]}
+                \color{rex}\chemfig{[:18]*5(---(<:CN)--)}
+                \arrow{->[\color{rex}\ce{MeLi}][\color{rex}\ce{H3O+}]}
+                \color{rex}\chemfig{[:18]*5(---(<:(-[:30])(=_[:150]O))--)}
+                \arrow{->[\color{rex}\ce{HN3}]}
+                \chemfig{[:18]*5(---(<:N(-[:150]H)(-[:30](=[2]O)-[:-30]))--)}
+            \schemestop
+        \end{center}
+        \item Retrosynthesis.
+        \begin{center}
+            \footnotesize
+            \setchemfig{atom sep=1.4em}
+            \schemestart
+                \chemfig{**6(---(-Br)---)}
+                \arrow{->[\color{rex}\ce{Mg${}^\circ$}]}
+                \color{rex}\chemfig{**6(---(-MgBr)---)}
+                \arrow{->[\color{rex}\begin{tabular}{l}
+                    1. \ce{CO2}\\
+                    2. \ce{H3O+}\\
+                \end{tabular}]}[,1.3]
+                \color{rex}\chemfig{**6(---(-(=[2]O)-[:-30]OH)---)}
+                \arrow{->[\color{rex}\ce{DCC, NH3}][\color{rex}cat. \ce{Py}]}[,1.4]
+                \color{rex}\chemfig{**6(---(-(=[2]O)-[:-30]NH_2)---)}
+                \arrow{->[\color{rex}\begin{tabular}{l}
+                    1. \ce{LiAlH4}\\
+                    2. \ce{H3O+}\\
+                \end{tabular}]}[,1.4]
+                \chemfig{**6(---(--[:-30]NH_2)---)}
+            \schemestop
+        \end{center}
+        \begin{itemize}
+            \item We will get credit if our synthesis is right even if it is not the most efficient.
+        \end{itemize}
+    \end{enumerate}
+    \item For mechanism questions, if we're struggling, think back to the sentence trick from the very beginning of the course.
+    \item For synthesis questions, just throw as many reactions out there as we can think of.
+\end{itemize}
+
+
+
 
 \end{document}
