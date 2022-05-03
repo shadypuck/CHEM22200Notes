@@ -1,0 +1,655 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{4}
+
+\begin{document}
+
+
+
+
+\chapter{Alpha-Carbon Reactions}
+\section[Reactions at the \texorpdfstring{$\alpha$}{TEXT}-Carbon of Carbonyl Compounds 2]{Reactions at the \texorpdfstring{$\bm{\alpha}$}{TEXT}-Carbon of Carbonyl Compounds 2}
+\begin{itemize}
+    \item \marginnote{4/26:}Announcements.
+    \begin{itemize}
+        \item Professor Tang starts next Tuesday.
+        \item Midterm 2 will be written by Levin.
+        \item PSet 4-6 and the final will be written by Tang (she will release practice exams).
+    \end{itemize}
+    \item Midterm 1 stats.
+    \begin{itemize}
+        \item Range: 0-91.
+        \item Mean/st. dev: $34\pm 20$ recurved to $70\pm 10$.
+        \item Median: 33.
+        \item Nobody got 3a, the first mechanism.
+        \item Such recurving will be done for all exams.
+    \end{itemize}
+    \item Midterm 1 comments.
+    \begin{itemize}
+        \item This is Levin's first time teaching undergrads. As an undergrad, he had a professor for whom it was their first time and it was brutal for him, so he said he wouldn't do that but accidentally did it regardless.
+        \item Levin also says that for all the people who feel like they don't know what's going on, that's on him.
+        \item If you wanna judge how good you're doing, see how you did on the cyanohydrin formation and the amine cyclization. If those felt ok, you're doing fine; you can consider the others to have been challenge problems.
+    \end{itemize}
+    \item Reversible formation of enols and enolates.
+    \begin{itemize}
+        \item As discussed in the previous lecture, a ketone in the presence of a hydroxide base will equilibriate with its enolate.
+        \item Since $\pKa=25$ for the ketone and $\pKa=15$ for the enolate, $10^{10}$ times more of the ketone is present in solution.
+        \item Note that the amount of enolate present is still sufficient to do some chemistry (like that which we discussed last time). It does beg the question, however, of how stoichiometric deprotonation can be accomplished.
+        \item Stoichiometric deprotonation is useful (and necessary) for the reaction of enolates with relatively weaker electrophiles.
+    \end{itemize}
+    \item Stoichiometric deprotonation.
+    \item In theory, we could just use a stronger base.
+    \begin{itemize}
+        \item We might assume that nBuLi\footnote{Also pronounced "BYOO-lee".} will deprotontate ketones to form butane and the enolate (with a lithium countercation).
+        \item Since butane is so basic, this would work very well ($K\approx 10^{25}$). However, nBuLi has competitive reactivity as a nucleophile attacking the carbonyl, and this is what it will do (as we discussed last unit).
+        \item Thus, we need an \textbf{innocent base}.
+    \end{itemize}
+    \item \textbf{Innocent base}: A base that does not have reactivity competing with its ability to do deprotonations.
+    \item \textbf{LDA}: Lithium diisopropyl amide, a sterically hindered, very strong, innocent base. \emph{Structure}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{\charge{90:3pt=$\ominus$}{N}(-[,0.3,,,white]\charge{90:3pt=$\oplus$}{Li})(-[:120](-[::60])(-[::-60]))(-[:-120](-[::60])(-[::-60]))}
+        \caption{Lithium diisopropyl amide (LDA).}
+        \label{fig:LDA}
+    \end{figure}
+    \begin{itemize}
+        \item One implication of the name of this compound is that the term "amide" refers to both the carboxylic acid derivatives of nitrogen (see Figure \ref{fig:carboxylicAcidDerivativese}) and deprotonated amines (such as LDA).
+        \item Some chemists proclaim that there is a difference in pronunciation, i.e., that one is pronounced "AM-id" and the other "AE-mide."
+    \end{itemize}
+    \item Synthesis of LDA.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{-[:30]-[:-30]-[:30]-[:-30]Li}
+            \+{1em,1em}
+            \chemfig{N(-H)(-[:120](-[::60])(-[::-60]))(-[:-120](-[::60])(-[::-60]))}
+            \arrow
+            \chemfig{-[:30]-[:-30]-[:30]}
+            \+{1em,1em}
+            \chemfig{\charge{90:3pt=$\ominus$}{N}(-[,0.3,,,white]\charge{90:3pt=$\oplus$}{Li})(-[:120](-[::60])(-[::-60]))(-[:-120](-[::60])(-[::-60]))}
+        \schemestop
+        \caption{Synthesizing LDA.}
+        \label{fig:LDASynthesis}
+    \end{figure}
+    \begin{itemize}
+        \item The reactants are n-butyl lithium and diisopropyl amine.
+    \end{itemize}
+    \item Consider what would happen if LDA tried to act as a nucleophile.
+    \begin{itemize}
+        \item The product would be sterically disfavored.
+        \item Additionally, there is an easy reversible mechanism because while we an alkoxide can't kick out carbon, the amide is a good leaving group.
+        \item Thus, this is a reversible reaction that favors the starting material.
+    \end{itemize}
+    \item Since LDA has no competitive reactivity, it will stoichiometrically deprotonate ketones.
+    \begin{itemize}
+        \item Consider the reaciton of methyl phenyl ketone and LDA.
+        \item Since the ketone has $\pKa\approx 25$ and diisopropylamine has $\pKa\approx 36$, the equilibrium constant is approximately $10^{11}$.
+    \end{itemize}
+    \item Orbital effects for deprotonation.
+    \begin{figure}[H]
+        \centering
+        \begin{tikzpicture}[
+            every node/.style=black
+        ]
+            \footnotesize
+            \begin{scope}[xshift=-3cm]
+                \fill [ory] (0,0.85) circle (3.5mm)
+                    node[left=3.5mm]{$s$}
+                ;
+                \filldraw [thick,draw=orx,fill=ory] (0,0)      to[out=120,in=60,looseness=250]   ++(0.01,0);
+                \filldraw [thick,draw=orx,fill=ory] (0,0)      to[out=-120,in=-60,looseness=100] ++(0.01,0)
+                    node[below=2.5mm]{$sp^3$}
+                ;
+                \filldraw [thick,draw=orx,fill=ory] (30:0.8)   to[out=110,in=70,looseness=300]   ++(0.01,0)
+                    node[above=8mm]{$p$}
+                ;
+                \filldraw [thick,draw=orx,fill=ory] (30:0.8)   to[out=-110,in=-70,looseness=300] ++(0.01,0);
+                \filldraw [thick,draw=orx,fill=ory] (1.7,0.52) to[out=110,in=70,looseness=250]   ++(0.01,0)
+                    node[above=6.5mm]{$p$}
+                ;
+                \filldraw [thick,draw=orx,fill=ory] (1.7,0.15) to[out=-110,in=-70,looseness=250] ++(0.01,0);
+    
+                \draw
+                    (90:0.6) node[above=-1mm,circle,thick,draw=orx,inner sep=4pt]{\ce{H}}
+                        -- (0,0)
+                        -- (30:0.8)
+                        -- ++(-5:0.8) node[right]{\ce{O}}
+                    (30:0.8) ++(30:0.1) -- ++(-5:0.75)
+                ;
+    
+                \node at (-1.8,1.5) {\chemfig{\charge{0=\:,45:1pt=$\ominus$}{N}(-[:120](-[::60])(-[::-60]))(-[:-120](-[::60])(-[::-60]))}};
+                \draw [curved arrow={0pt}{0pt},-CF] (-1,1.5) to[out=0,in=120] (-0.3,1.2);
+                \draw [curved arrow={0pt}{2pt},-CF] (0.2,0.4) to[out=60,in=100,looseness=2.5] (30:0.6);
+                \draw [curved arrow={2pt}{2pt},-CF] (30:0.9) ++(-5:0.3) to[bend left=60,looseness=1.8] ++(-5:0.55);
+            \end{scope}
+            \draw [-CF] (-0.5,0.4) -- ++(1,0);
+            \begin{scope}[xshift=1cm]
+                \filldraw [thick,draw=orx,fill=ory] (0,0)      to[out=110,in=70,looseness=300]   ++(0.01,0)
+                    node[above=8mm]{$p$}
+                ;
+                \filldraw [thick,draw=orx,fill=ory] (0,0)      to[out=-110,in=-70,looseness=300] ++(0.01,0);
+                \filldraw [thick,draw=orx,fill=ory] (30:0.8)   to[out=110,in=70,looseness=300]   ++(0.01,0)
+                    node[above=8mm]{$p$}
+                ;
+                \filldraw [thick,draw=orx,fill=ory] (30:0.8)   to[out=-110,in=-70,looseness=300] ++(0.01,0);
+                \filldraw [thick,draw=orx,fill=ory] (1.7,0.52) to[out=110,in=70,looseness=250]   ++(0.01,0)
+                    node[above=6.5mm]{$p$}
+                ;
+                \filldraw [thick,draw=orx,fill=ory] (1.7,0.15) to[out=-110,in=-70,looseness=250] ++(0.01,0);
+    
+                \draw
+                    (0,0)
+                        -- (30:0.8)
+                        -- ++(-5:0.8) node[right]{\ce{O-}}
+                    (30:0.8) ++(170:0.1) -- ++(-150:0.62)
+                ;
+            \end{scope}
+        \end{tikzpicture}
+        \caption{Orbital effects for LDA deprotonation.}
+        \label{fig:orbitalDeprotonation}
+    \end{figure}
+    \begin{itemize}
+        \item In the fully formed enolate, conjugation of the oxygen anion into the $\pi$-system is stabilizing because of resonance.
+        \item However, for the reaction to proceed, there must be resonance stabilization from the moment the anion begins forming.
+        \item Thus, we need the $sp^3$ and the two $p$-orbitals to be aligned, as above. Notice how the \ce{C-H} bond is parallel to the $p$-orbitals of the \ce{C=O} $\pi$-system.
+        \item As we deprotonate, we continuously transform the $sp^3$ orbital into a third $p$ orbital that will be in conjugation with the other two preexisting ones.
+    \end{itemize}
+    \item Consequences of orbital effects.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \chemfig{*6(-(-(-[:-30])(-[6])(-[:-150]))---(=O)--)}
+            \caption{Axial vs. equatorial acidity.}
+            \label{fig:LDAcyclohexanea}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \chemfig{*6(-(<\ce{Bu^{$t$}})--(<:Me)-(=O)-(<:Me)-)}
+            \caption{Blocked $\alpha$-hydrogens.}
+            \label{fig:LDAcyclohexaneb}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \chemfig{[:-30]*6(?---(-[:165,1.05]?)-(=O)-(-[:100])(-[:140])-)}
+            \caption{Locked $\alpha$-hydrogen.}
+            \label{fig:LDAcyclohexanec}
+        \end{subfigure}
+        \caption{Molecules with deprotonation reactivity affected by orbital effects.}
+        \label{fig:LDAcyclohexane}
+    \end{figure}
+    \begin{itemize}
+        \item Cyclohexane conformations affect the acidity of equatorial and axial $\alpha$-hydrogens.
+        \item Consider the molecule in Figure \ref{fig:LDAcyclohexanea}.
+        \begin{itemize}
+            \item Recall that \emph{tert}-butyl groups are always equatorial.
+            \item It follows that the carbonyl is equatorial, too, and therefore that its $\pi$-system is axial.
+            \item Thus, the axial $\alpha$-protons are more acidic because of their alignment with the \ce{C=O} $\pi$-system.
+            \item Consequently, LDA selectively deprotonates these.
+            \item We can confirm this via selective deuteration of some cyclohexane hydrogens.
+        \end{itemize}
+        \item Now consider the molecule in Figure \ref{fig:LDAcyclohexaneb}.
+        \begin{itemize}
+            \item Once again, conformations force the \ce{Bu^{$t$}} group to be equatorial.
+            \item Thus, this compound cannot be deprotonated by LDA because it has no acidic protons.
+        \end{itemize}
+        \item Lastly, consider the molecule in Figure \ref{fig:LDAcyclohexanec}.
+        \begin{itemize}
+            \item A bicyclic hydrocarbon can be locked in the unreactive conformation.
+        \end{itemize}
+        \item Drawing the relevant chair conformations here is an important skill.
+    \end{itemize}
+    \item Selectivity.
+    \item Some compounds will not be selectively deprotonated.
+    \begin{itemize}
+        \item For example, treating 1-phenylheptan-4-one with LDA will yield products that have been deprotonated at every $\alpha$-hydrogen in equal amounts.
+    \end{itemize}
+    \item LDA prefers to deprotonate at less substituted positions due to its sterics.
+    \item Comparing LDA- and hydroxide-based deprotonations.
+    \begin{itemize}
+        \item LDA is a lot more basic than hydroxide.
+        \item Thus, hydroxide deprotonations are reversible while LDA deprotonations are irreversible.
+        \item It follows that hydride deprotonations are under thermodynamic control (stability is important) while LDA deprotonations are under kinetic control (rate is important).
+    \end{itemize}
+    \item Rate is controlled by the transition state energy.
+    \begin{itemize}
+        \item Levin draws a 1D energy diagram for an exothermic reaction with a large $\Delta G^\ddagger$, noting that this large $\Delta G^\ddagger$ will make the reaction slower.
+    \end{itemize}
+    \item Selectivity in terms of kinetic and thermodynamic control.
+    \begin{figure}[h!]
+        \centering
+        \begin{tikzpicture}[
+            every node/.style=black
+        ]
+            \footnotesize
+            \draw [very thin,dashed]
+                (-5,0) -- ++(6,0)
+                (5,-1) -- ++(-6,0)
+                (-2.5,2) -- ++(5,0)
+            ;
+            \draw [very thin,<->,shorten <=1pt,shorten >=1pt] (0,-1) -- node[right]{Thermodynamics} ++(0,1);
+            \draw [very thin,<->,shorten <=1pt,shorten >=1pt] (-2,2) -- node[right]{$\Delta G^\ddagger$} ++(0,1);
+            \draw [very thin,<->,shorten <=1pt,shorten >=1pt] (2,2) -- node[right]{$\Delta G^\ddagger$} ++(0,1.5);
+    
+            \draw [grx,thick] (-6,0)
+                -- node[pos=0.6,above,text width=1.1cm]{Left product} node[pos=0.6,below=1.5cm,align=center]{Kinetic\\product\\(less stable)} (-5,0)
+                to[out=0,in=180] (-2,3) node[above=5mm,align=center]{lower energy TS\\faster}
+                to[out=0,in=180] (0,2) node[above=1mm]{SM}
+                to[out=0,in=180] (2,3.5) node[above,align=center]{higher energy TS\\slower}
+                to[out=0,in=180] (5,-1)
+                -- node[above,text width=1.1cm]{Right product} node[pos=0.6,below=0.5cm,align=center]{Thermodynamic\\product\\(more stable)} (6,-1)
+            ;
+        \end{tikzpicture}
+        \caption{Thermodynamic vs. kinetic control.}
+        \label{fig:thermodynamicKineticPotential}
+    \end{figure}
+    \begin{itemize}
+        \item A reaction that is reversible will form the thermodynamic product.
+        \item A reaction that is irreversible will form the kinetic product.
+        \item Note that there are paradigms in which one product is both the kinetic and thermodynamic one.
+        \item To determine the kinetic product, we compare transition states.
+        \item To determine the thermodynamic product, we compare the products, themselves.
+    \end{itemize}
+    \item Application.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemname{\chemfig{-[:30]-[:-30](-[6])-[:30](-[2]\charge{45:1pt=$\ominus$}{O})=^[:-30]-[:30]}}{Less stable}
+                \arrow{0}
+                \chemname{\chemfig{-[:30]-[:-30](-[6])=^[:30](-[2]\charge{45:1pt=$\ominus$}{O})-[:-30]-[:30]}}{More stable}
+            \schemestop
+            \caption{Thermodynamic stability.}
+            \label{fig:thermoKineticStabilitya}
+        \end{subfigure}
+    \end{figure}
+    \begin{figure}[h!]
+        \ContinuedFloat
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemname{
+                    \chemleft{[}
+                        \chemfig{H-[:-5](-[2,,,,dash pattern=on 2pt off 2pt]H-[:130,,,,dash pattern=on 2pt off 2pt]\charge{45:1pt=$\ominus$}{N}(-[2](-[::60])(-[::-60]))(-[:-175](-[::60])(-[::-60])))(-[:-50]CH_3)-[:30,,,,rddbond](-[:-20,,,,lddbond]O)-[:70,0.7](-[:120,0.6])-[:15]-[:-30]}
+                    \chemright{]^\ddagger}
+                }{Favored}
+                \arrow{0}
+                \chemname{
+                    \chemleft{[}
+                        \chemfig{-[:-5](-[2,,,,dash pattern=on 2pt off 2pt]H-[:130,,,,dash pattern=on 2pt off 2pt]\charge{45:1pt=$\ominus$}{N}(-[2](-[::60])(-[::-60]))(-[:-175](-[::60]@{C})(-[::-60])))(-[:-50]-[:10])-[:30,,,,rddbond](-[:-20,,,,lddbond]O)-[:70,0.7]-[:15]CH_3}
+                    \chemright{]^\ddagger}
+                }{Disfavored}
+            \schemestop
+            \chemmove{
+                \draw [blx,thick,-] ([xshift=1mm,yshift=-4mm]C.center) to[bend right=70,looseness=1.5] ++(0.5,0.4);
+                \draw [blx,thick,-] ([xshift=4mm,yshift=-7mm]C.center) to[bend left=70,looseness=1.5] ++(0.5,0.4);
+            }
+            \caption{Kinetic favorability.}
+            \label{fig:thermoKineticStabilityb}
+        \end{subfigure}
+        \caption{Thermodynamic and kinetic stability in enolates.}
+        \label{fig:thermoKineticStability}
+    \end{figure}
+    \begin{itemize}
+        \item The tetrasubstituted enolate is the more stable product by Zaitsev's rule.
+        \item The trisubstituted enolate has a more stable transition state.
+    \end{itemize}
+    \item "An analogy may assist in understanding kinetically and thermodynamically controlled reactions. Imagine a very inebriated gentleman stumbling randomly around a pasture. Near each other in the paster are a shallow watering hole and a deep well with a high fence around it. Our drunken friend is likely to fall in the hole several times, but because it is shallow, he can climb out of it and continue staggering around the pasture. After a very long while, however, he makes it over the fence and falls into the well; once in the well, he is there to stay. If we now imagine Avogadro's number of people staggering around a (very large) pasture, we get a reasonably good picture of kinetic and thermodynamic control. Initially, a large number of people fall into the shallow hole. If we wait long enough, however, most of the will end up in the deep well. The frequent occurrence --- falling in the shallow hole --- is reversible, but the rare occurrence --- climbing the fence and falling in the well --- is irreversible" \parencite{bib:DrunkGentleman}.
+    \begin{itemize}
+        \item The Avogadro's number correction is to bring an element of statistics and probability into the example.
+        \item In the new edition, the drunken gentleman has been changed to "disoriented steers," maybe to be PC.
+    \end{itemize}
+    \item In general, we cannot guess how long it will take the thermodynamic enolate to accumulate (though it will likely be a long time), so we need an alternate method of generating them.
+    \item Generating thermodynamic enolates.
+    \begin{enumerate}
+        \item Use \ce{OH-}, which catalyzes \emph{reversible} enolate formation.
+        \item Use a sub-stoichiometric equivalent ($\approx 0.95$) of LDA.
+    \end{enumerate}
+    \item Sub-stoichiometric LDA addition.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{-[:30]-[:-30](-[6])-[:30](-[@{sb1}2]@{O1}\charge{180=\:,90:3pt=$\ominus$}{O})=^[@{db1}:-30]-[:30]}
+            \+
+            \chemfig{-[:30]-[:-30](-[6])(-[@{sb2a}2]@{H2}H)-[@{sb2b}:30](=[@{db2}2]@{O2}O)-[:-30]-[:30]}
+            \arrow
+            \chemfig{-[:30]-[:-30](-[6])-[:30](=[2]O)-[:-30]-[:30]}
+            \+
+            \chemfig{-[:30]-[:-30](-[6])=^[:30](-[2]\charge{180=\:,90:3pt=$\ominus$}{O})-[:-30]-[:30]}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={6pt}{2pt}] (O1) to[bend right=90,looseness=3] (sb1);
+            \draw [curved arrow={4pt}{2pt}] (db1) to[out=60,in=180] (H2);
+            \draw [curved arrow={2pt}{2pt}] (sb2a) to[bend left=70,looseness=3] (sb2b);
+            \draw [curved arrow={3pt}{2pt}] (db2) to[bend right=90,looseness=3] (O2);
+        }
+        \caption{Sub-stoichiometric LDA addition.}
+        \label{fig:LDASubStoichiometric}
+    \end{figure}
+    \begin{itemize}
+        \item Using a sub-stoichiometric amount leaves some ketone behind to react with the kinetic enolate as in the above picture, generating the thermodynamic enolate and regenerating the ketone to react again.
+        \item The wait time for this process to occur is usually a few hours at room temperature.
+    \end{itemize}
+    \item Note that if you want to form solely the kinetic product, you will need to do it quickly and with more than one equivalent (we can just say one equivalent for the purposes of this class; we use a little excess to account for any mismeasurement/human error in real live), and you will need to keep the mixture at $-\SI{78}{\celsius}$ (using a dry ice/acetone bath).
+    \item Kinetic enolate formation.
+    \begin{equation*}
+        \ce{Ketone ->[LDA ($>1\text{ equiv}$)][\SI{-78}{\celsius}] Enolate}
+    \end{equation*}
+    \item Thermodynamic enolate formation.
+    \begin{equation*}
+        \ce{Ketone ->[LDA ($0.95\text{ equiv}$)][time] Enolate}
+    \end{equation*}
+    \item Uses for enolates.
+    \begin{enumerate}
+        \item Halogenation.
+        \item \ce{C-C} bond formation.
+        \item Selenium electrophile reactions.
+    \end{enumerate}
+    \item \textbf{N-bromosuccinimide}: A source of electrophilic bromine. \emph{Also known as} \textbf{NBS}. \emph{Structure}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{*5(-(=O)-N(-Br)-(=O)--)}
+        \caption{N-bromosuccinimide.}
+        \label{fig:NBS}
+    \end{figure}
+    \item Halogenation.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30]-[:-30](-[6])-[:30](=[2]O)-[:-30]-[:30]}
+            \arrow{->[1. LDA][2. NBS]}[,1.2]
+            \chemfig{-[:30]-[:-30](-[6])-[:30](=[2]O)-[:-30](-[6]Br)-[:30]}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item We get bromination of the kinetic enolate assuming we perform keep this reaction cold and perform it fast.
+    \end{itemize}
+    \item Mechanism.
+    \begin{itemize}
+        \item The enolate attacks the bromine of NBS, and the \ce{N-Br} electrons retreat onto the nitrogen.
+    \end{itemize}
+    \item Reacting the thermodynamic enolate.
+    \begin{itemize}
+        \item Although we might think to use \ce{OH-} / \ce{Br2}, this would from an $\alpha,\beta$ unsaturated compound as per Figure \ref{fig:haloformBeta}.
+        \item Thus, we turn to acidic conditions.
+    \end{itemize}
+    \item Acidic conditions form thermodynamic enols.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30]-[:-30](-[6])-[:30](=[2]O)-[:-30]-[:30]}
+            \arrow{->[\ce{H+}][\ce{Br2}]}
+            \chemfig{-[:30]-[:-30](-[:-110])(-[:-70]Br)-[:30](=[2]O)-[:-30]-[:30]}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item These enols are formed reversibly (see Figure \ref{fig:mechanismEnolHalogenationAcid}), so they have an opportunity to equilibriate and favor the thermodynamic product.
+        \item Once the thermodynamic enol has been built up, it reacts selectively with \ce{Br2}.
+    \end{itemize}
+    \item \ce{C-C} bond formation with enolates.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{*6(=-=(-(=[2]O)-[:-30]-)-=-)}
+            \arrow{->[1. LDA][2. \ce{RX}\rule{5pt}{0pt}]}[,1.2]
+            \chemfig{*6(=-=(-(=[2]O)-[:-30](-[6]R)-)-=-)}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item Note that phenyl alkyl ketones have no selectivity problems because they only have $\alpha$-hydrogens on one side.
+        \item \ce{X} is bromine or iodine.
+        \item Works great if \ce{R} is a methyl group.
+        \item Works ok if \ce{R} is a primary alkyl.
+        \item E2 of the alkyl halide starts to dominate if \ce{R} is secondary or tertiary.
+    \end{itemize}
+    \item Examples.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{*6(=-=(-(=[2]O)-[:-30]-)-=-)}
+                \arrow{->[1. LDA][2. \ce{MeI}\rule{3pt}{0pt}]}[,1.2]
+                \chemfig{*6(=-=(-(=[2]O)-[:-30](-[6])-)-=-)}
+            \schemestop
+            \caption{Methyl \ce{R} group.}
+            \label{fig:enolateCCexamplesa}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{*6(=-=(-(=[2]O)-[:-30]-)-=-)}
+                \arrow{->[LDA]}
+                \chemfig{*6(=-=(-(-[@{sb2}2]@{O2}\charge{180=\:,45:1pt=$\ominus$}{O})=^[@{db2}:-30]-)-=-)}
+                \arrow{->[\chemfig[atom sep=1.4em]{@{H3}H-[@{sb3a}:-30]-[@{sb3b}:30](-[@{sb3c}2]@{I3}I)-[:-30]}]}[,1.4]
+                \chemfig{*6(=-=(-(=[2]O)-[:-30](-[6])-)-=-)}
+                \arrow{0}[,0.1]\+
+                \chemfig{=_[:30]-[:-30]}
+            \schemestop
+            \chemmove{
+                \draw [curved arrow={6pt}{2pt}] (O2) to[bend right=90,looseness=3] (sb2);
+                \draw [curved arrow={4pt}{2pt}] (db2) to[out=60,in=150,looseness=1.2] (H3);
+                \draw [curved arrow={2pt}{2pt}] (sb3a) to[bend left=80,looseness=3] (sb3b);
+                \draw [curved arrow={2pt}{2pt}] (sb3c) to[bend right=90,looseness=3] (I3);
+            }
+            \caption{Isopropyl \ce{R} group.}
+            \label{fig:enolateCCexamplesb}
+        \end{subfigure}
+        \caption{Examples of \ce{C-C} bond-forming reactions with enolates.}
+        \label{fig:enolateCCexamples}
+    \end{figure}
+    \begin{itemize}
+        \item We'll fix the issue that arises in Figure \ref{fig:enolateCCexamplesb} next time.
+    \end{itemize}
+    \item A new electrophile (selenium).
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{*6(=-=(-(=[2]O)-[:-30]-)-=-)}
+            \arrow{->[1. LDA\rule{1.1em}{0pt}][2. \ce{PhSeCl}]}[,1.4]
+            \chemfig{*6(=-=(-(=[2]O)-[:-30](-[6]SePh)-)-=-)}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item We can use either the phenyl selenyl chloride or phenyl selenyl bromide.
+    \end{itemize}
+    \item Mechanism.
+    \begin{itemize}
+        \item The enolate attacks the selenium atom and kicks out chlorine in one concerted step.
+    \end{itemize}
+    \item The purpose of adding selenium to compounds.
+    \begin{itemize}
+        \item We put selenium in just to take it back out again.
+        \item We typically don't want to build molecules with it because it's quite toxic and not commonly used in biochemistry.
+    \end{itemize}
+    \item Eliminating phenyl selenide.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{*6(=-=(-(=[2]O)-[:-30](-[6])-SePh)-=-)}
+            \arrow{->[reagents]}[,1.2]
+            \chemfig{*6(=-=(-(=[2]O)-[:-30]=_[6])-=-)}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item The reagents are either mCPBA or \ce{H2O2}.
+        \item We use this method over hydroxide and bromine because it is compatible with LDA, which means that we can get selectivity for elimination now in addition to bromination.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{*6(=-=(-(=[2]O)-[:-30](-[6])-SePh)-=-)}
+            \arrow{->[mCPBA]}[,1.2]
+            % \chemfig{*6(=-=(-(=[2]O)-[:-30](-[6]-[:-30]H)-Se(-[2]Ph)(=[:-30]O))-=-)}
+            \chemfig{*6(=-=(-(=[2]O)-[:-30]*5([:-30,1.2]-[@{sb2a}]-[@{sb2b}]@{H2}H-[,,,,white]O=[@{db2}]@{Se2}Se(-Ph)-[@{sb2c}]))-=-)}
+            \arrow
+            \chemfig{*6(=-=(-(=[2]O)-[:-30]=_[6])-=-)}
+            \arrow{0}[,0.1]\+{,,0.7em}
+            \chemfig{Ph-[:30]Se-[:-30]OH}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={3pt}{2pt}] (db2) to[out=-138,in=110] (H2);
+            \draw [curved arrow={2pt}{2pt}] (sb2b) to[bend right=60,looseness=1.8] (sb2a);
+            \draw [curved arrow={2pt}{2pt}] (sb2c) to[bend right=60,looseness=1.8] (Se2);
+        }
+        \caption{Phenyl selenide elimination mechanism.}
+        \label{fig:mechanismPhenylSelenideE2}
+    \end{figure}
+    \begin{itemize}
+        \item The first intermediate is a \textbf{selenoxide}.
+    \end{itemize}
+    \item Selectivity.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{-[:-30]-[:30](=[2]O)-[:-30](-[6])-[:30]}
+            \arrow(a--b){->[\ce{OH-}][\ce{Br2}]}
+            \chemfig{-[:-30]-[:30](=[2]O)-[:-30](=[6])-[:30]}
+            \arrow(@a--c){->[*{0.-90}
+                \begin{tabular}{l}
+                    1. LDA\\
+                    2. \ce{PhSeBr}\\
+                    3. mCPBA\\
+                \end{tabular}
+            ]}[180,1.5]
+            \chemfig{=^[:-30]-[:30](=[2]O)-[:-30](-[6])-[:30]}
+        \schemestop
+        \caption{Selectivity in the formation of $\alpha,\beta$ unsaturated compounds.}
+        \label{fig:alphaBetaE2Selectivity}
+    \end{figure}
+    \begin{itemize}
+        \item We use the thermodynamic enolate (accessible via reversible hydroxide) for the right side and the kinetic enolate (accessible via irreversible LDA) for the left side.
+    \end{itemize}
+    \item Applications to carboxylic acid derivatives.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{-[:-30]O-[:30](=[2]O)-[:-30]-[:30]H}
+                \arrow{->[LDA]}
+                \chemfig{-[:-30]O-[:30](-[2]\charge{45:1pt=$\ominus$}{O})=[:-30]}
+                \arrow{->[\ce{E+}]}
+                \chemfig{-[:-30]O-[:30](=[2]O)-[:-30]-[:30]E}
+            \schemestop
+            \caption{Esters.}
+            \label{fig:carboxylicEnolatea}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{-[:-30]N(-[6])-[:30](=[2]O)-[:-30]-[:30]H}
+                \arrow{->[LDA]}
+                \chemfig{-[:-30]N(-[6])-[:30](-[2]\charge{45:1pt=$\ominus$}{O})=[:-30]}
+                \arrow{->[\ce{E+}]}
+                \chemfig{-[:-30]N(-[6])-[:30](=[2]O)-[:-30]-[:30]E}
+            \schemestop
+            \caption{Amides.}
+            \label{fig:carboxylicEnolateb}
+        \end{subfigure}
+    \end{figure}
+    \begin{figure}[h!]
+        \ContinuedFloat
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{N~[:-30]C-[:-30]-[:30]H}
+                \arrow{->[LDA]}
+                \chemname{\chemfig{\charge{90:3pt=$\ominus$}{N}=[:-30]C=[:-30]}}{ketene imidate}
+                \arrow{->[\ce{E+}]}
+                \chemfig{N~[:-30]C-[:-30]-[:30]E}
+            \schemestop
+            \caption{Nitriles.}
+            \label{fig:carboxylicEnolatec}
+        \end{subfigure}
+        \caption{Carboxylic acid derivatives as enolates.}
+        \label{fig:carboxylicEnolate}
+    \end{figure}
+    \item Comparing the nucleophilicity of ketone enolates, ester enolates, and amide enolates.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{-[:30](-[@{sb1}2]@{O1}\charge{180=\:,45:1pt=$\ominus$}{O})=[@{db1}:-30]@{C1}}
+                \arrow{<->}
+                \chemfig{-[:30](=[2]O)-[:-30]\charge{45:1pt=$\ominus$}{}}
+            \schemestop
+            \chemmove{
+                \draw [curved arrow={6pt}{2pt},blx] (O1) to[bend right=90,looseness=3] (sb1);
+                \draw [curved arrow={3pt}{3pt},blx] (db1) to[bend left=90,looseness=4] (C1);
+            }
+            \caption{Ketone enolate resonance.}
+            \label{fig:carboxylicEnolateResonancea}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{-[:-30]@{O1}\charge{90:3pt=$\oplus$}{O}=[@{db1}:30](-[2]\charge{45:1pt=$\ominus$}{O})-[@{sb1}:-30]@{C1}\charge{45:1pt=$\ominus$}{}}
+                \arrow{<->}
+                \chemfig{-[:-30]O-[:30](-[@{sb2}2]@{O2}\charge{180=\:,45:1pt=$\ominus$}{O})=[@{db2}:-30]@{C2}}
+                \arrow{<->}
+                \chemfig{-[:-30]O-[:30](=[2]O)-[:-30]\charge{45:1pt=$\ominus$}{}}
+            \schemestop
+            \chemmove{
+                \draw [curved arrow={10pt}{2pt},blx] (C1) to[bend right=90,looseness=5] (sb1);
+                \draw [curved arrow={3pt}{2pt},blx] (db1) to[bend left=90,looseness=3] (O1);
+                \draw [curved arrow={6pt}{2pt},blx] (O2) to[bend right=90,looseness=3] (sb2);
+                \draw [curved arrow={3pt}{3pt},blx] (db2) to[bend left=90,looseness=4] (C2);
+            }
+            \caption{Ester enolate resonance.}
+            \label{fig:carboxylicEnolateResonanceb}
+        \end{subfigure}
+        \caption{An extra resonance form for carboxylic acid derivative enolates.}
+        \label{fig:carboxylicEnolateResonance}
+    \end{figure}
+    \begin{itemize}
+        \item Nucleophilicity depends on how electron-rich the $\pi$ system is.
+        \item Oxygen and nitrogen both donate their lone pairs to the $\pi$ system.
+        \item The additional resonance form makes the carboxylic acid derivative enolates more nucleophilic.
+        \item Nitrogen is the most nucleophilic (because of its lower electronegativity relative to oxygen), then oxygen, then carbon (of these three).
+    \end{itemize}
+    \item We will not be asked to compare the nucleophilicity of ketene imidates to ketone, ester, or amide enolates.
+    \item Selectivity is nice for all carboxylic acid derivatives; there's at most one set of $\alpha$-hydrogens for all of them.
+    \item Compounds whose enolates are less useful.
+    \begin{itemize}
+        \item Carboxylic acids: These will become carboxylates upon the first deprotonation. The second deprotonation takes a much stronger base, forms a dianion, and doesn't work too well.
+        \item Amides with hydrogens: These deprotonate first as well and then run into the same dianion problem.
+        \item Acid chlorides: These kick out the chloride along with deprotonation, forming a \textbf{ketene}. There are things we can do with ketenes, but we won't talk about them since they aren't useful as enolates.
+        \item Aldehydes: These will dimerize. In particular, one deprotonated aldehyde will engage in a nucleophilic attack on another.
+        \begin{itemize}
+            \item This will form most of the rest of the class.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+
+
+
+\end{document}

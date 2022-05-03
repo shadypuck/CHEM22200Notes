@@ -57,6 +57,23 @@
 
 \setchemfig{atom sep=2em,fixed length=true,bond offset=3pt,cram width=3pt}
 \setcharge{extra sep=3pt}
+\pgfdeclaredecoration{ddbond}{initial}{
+    \state{initial}[width=3.5pt]{
+        \pgfpathlineto{\pgfpoint{4pt}{0pt}}
+        \pgfpathmoveto{\pgfpoint{0pt}{2pt}}
+        \pgfpathlineto{\pgfpoint{1pt}{2pt}}
+        \pgfpathmoveto{\pgfpoint{3pt}{2pt}}
+        \pgfpathlineto{\pgfpoint{4pt}{2pt}}
+        \pgfpathmoveto{\pgfpoint{4pt}{0pt}}
+    }
+    \state{final}{
+        \pgfpathlineto{\pgfpointdecoratedpathlast}
+    }
+}
+\tikzset{
+    lddbond/.style={decorate,decoration=ddbond},
+    rddbond/.style={decorate,decoration={ddbond,mirror}}
+}
 
 \newcommand{\pKa}{\text{p}K_\text{a}}
 

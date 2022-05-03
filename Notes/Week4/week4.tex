@@ -819,8 +819,8 @@
             \chemfig{R-[:-30]=^[:30](-[2]\charge{45:1pt=$\ominus$}{O})-[:-30]R'}
         \schemestop
         \chemmove{
-            \draw [curved arrow={10pt}{2pt}] (C1) to[bend right=100,looseness=6] (sb1);
-            \draw [curved arrow={3pt}{2pt}] (db1) to[bend right=90,looseness=3] (O1);
+            \draw [curved arrow={10pt}{2pt},blx] (C1) to[bend right=100,looseness=6] (sb1);
+            \draw [curved arrow={3pt}{2pt},blx] (db1) to[bend right=90,looseness=3] (O1);
         }
         \caption{Enolate.}
         \label{fig:enolate}
@@ -863,8 +863,8 @@
     \end{itemize}
     \item $\pKa$'s.
     \begin{itemize}
-        \item Deprotonating an \ce{O-H} bond: Recall that acetic acid ($\pKa\approx 15$) is $10^{10}$ times more acidic than ethanol ($\pKa\approx 5$) due to resonance stabilization of the conjugate base in the former.
-        \item Deprotonating a \ce{C-H} bond: A hydrogen on the 1-carbon of propane ($\pKa\approx 50$) is \numrange{e25}{e30} times more acidic than a hydrogen on acetone ($\pKa\approx\text{\numrange{20}{25}}$) once again due to resonance stabilization (note that deprotonated acetone constitutes an enolate).
+        \item Deprotonating an \ce{O-H} bond: Recall that acetic acid ($\pKa\approx 5$) is $10^{10}$ times more acidic than ethanol ($\pKa\approx 15$) due to resonance stabilization of the conjugate base in the former.
+        \item Deprotonating a \ce{C-H} bond: A hydrogen on the 1-carbon of propane ($\pKa\approx 50$) is \numrange{e25}{e30} times less acidic than a hydrogen on acetone ($\pKa\approx\text{\numrange{20}{25}}$) once again due to resonance stabilization of the latter (note that deprotonated acetone constitutes an enolate).
     \end{itemize}
     \item Enolates have two main modes of reactivity.
     \begin{figure}[H]
@@ -893,7 +893,7 @@
                 \arrow{0}[,0.6]
                 \chemfig{@{E2}\charge{45:1pt=$\oplus$}{E}}
                 \arrow
-                \chemfig{-[:30](=[2]O)-[:-30]-[:30]E}
+                \chemfig{-[:30](-[2]OE)=^[:-30]}
             \schemestop
             \chemmove{
                 \draw [curved arrow={6pt}{2pt}] (O1) to[out=90,in=90,looseness=1.5] (E2);
@@ -1046,7 +1046,7 @@
         \item Deuteration of carbonyl compounds (Figure \ref{fig:enolEvidencea}).
         \begin{itemize}
             \item Proves the existence of a process that is "washing in" the deuterium, but only at the $\alpha$-positions.
-            \item Note that \ce{D2O / DO-} denotes basic deuterated water, and that only acidic or basic deuterated water is used at one time.
+            \item Note that \ce{D2O / DO-} denotes basic deuterated water, and that only one of acidic \emph{or} basic deuterated water is used at one time.
         \end{itemize}
         \item Racemization of compounds that are enantiopure at the $\alpha$-position (Figure \ref{fig:enolEvidenceb}).
         \begin{itemize}
@@ -1125,7 +1125,7 @@
     \end{itemize}
     \item \textbf{Bromoform}: The right product of the haloform general reaction above. \emph{Also known as} \textbf{tribromomethane}.
     \begin{itemize}
-        \item More generally, any trihalomethane has an old-school, common -form name. For example, we alo have \textbf{chloroform} (trichloromethane) and \textbf{iodoform} (triiodomethane).
+        \item More generally, any trihalomethane has an old-school, common -form name. For example, we also have \textbf{chloroform} (trichloromethane) and \textbf{iodoform} (triiodomethane).
     \end{itemize}
     \item Mechanism.
     \begin{figure}[h!]
@@ -1208,7 +1208,7 @@
         \end{itemize}
         \item As further evidence, if we do the basic version with only 1 equivalent of bromine, we observe 1/3 carboxylate, a corresponding amount of bromoform, and 2/3 SM in the products.
     \end{itemize}
-    \item The haloform reaction doesn't always work.
+    \item The haloform reaction doesn't always work (see Figure \ref{fig:haloformBeta}).
     \begin{figure}[h!]
         \centering
         \footnotesize
