@@ -339,7 +339,7 @@
         \item Using a sub-stoichiometric amount leaves some ketone behind to react with the kinetic enolate as in the above picture, generating the thermodynamic enolate and regenerating the ketone to react again.
         \item The wait time for this process to occur is usually a few hours at room temperature.
     \end{itemize}
-    \item Note that if you want to form solely the kinetic product, you will need to do it quickly and with more than one equivalent (we can just say one equivalent for the purposes of this class; we use a little excess to account for any mismeasurement/human error in real live), and you will need to keep the mixture at $-\SI{78}{\celsius}$ (using a dry ice/acetone bath).
+    \item Note that if you want to form solely the kinetic product, you will need to do it quickly and with more than one equivalent (we can just say one equivalent for the purposes of this class; we use a little excess to account for any mismeasurement/human error in real life), and you will need to keep the mixture at $-\SI{78}{\celsius}$ (using a dry ice/acetone bath).
     \item Kinetic enolate formation.
     \begin{equation*}
         \ce{Ketone ->[LDA ($>1\text{ equiv}$)][\SI{-78}{\celsius}] Enolate}
@@ -641,11 +641,553 @@
     \begin{itemize}
         \item Carboxylic acids: These will become carboxylates upon the first deprotonation. The second deprotonation takes a much stronger base, forms a dianion, and doesn't work too well.
         \item Amides with hydrogens: These deprotonate first as well and then run into the same dianion problem.
-        \item Acid chlorides: These kick out the chloride along with deprotonation, forming a \textbf{ketene}. There are things we can do with ketenes, but we won't talk about them since they aren't useful as enolates.
+        \item Acid chlorides: These kick out the chloride along with deprotonation, forming a \textbf{ketene}. There are things we can do with ketenes, but we won't talk about them since they aren't as useful as enolates.
         \item Aldehydes: These will dimerize. In particular, one deprotonated aldehyde will engage in a nucleophilic attack on another.
         \begin{itemize}
             \item This will form most of the rest of the class.
         \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+
+
+\section[Reactions at the \texorpdfstring{$\alpha$}{TEXT}-Carbon of Carbonyl Compounds 3]{Reactions at the \texorpdfstring{$\bm{\alpha}$}{TEXT}-Carbon of Carbonyl Compounds 3}
+\begin{itemize}
+    \item \marginnote{4/28:}Last time.
+    \begin{itemize}
+        \item Enolates derived from ketones that are the major species in solution.
+        \item Specifically, ones that are generated selectively.
+        \item Enolates can be used to make new \ce{C-C} bonds (but in a limited number of cases).
+    \end{itemize}
+    \item Today.
+    \begin{itemize}
+        \item Expanding the utility of enolates in \ce{C-C} bond forming reactions.
+        \item In particular, developing solutions to the following issues.
+    \end{itemize}
+    \item Problems with enolates.
+    \begin{enumerate}
+        \item Enolates are basic.
+        \begin{itemize}
+            \item This means that enolates preferentially eliminate secondary and tertiary alkyls instead of adding into them via S\textsubscript{N}2.
+        \end{itemize}
+        \item LDA is not regioselective for similar sites.
+        \begin{itemize}
+            \item Recall 1-phenylhept-4-one.
+        \end{itemize}
+        \item Aldehyde enolates self-attack.
+        \begin{itemize}
+            \item Weixin will talk at length about how to control this "problem" and actually utilize it.
+        \end{itemize}
+    \end{enumerate}
+    \item The solutions.
+    \begin{itemize}
+        \item There is no unified solution; rather, we will discuss two partial solutions.
+        \item Both of these solutions solve problem 1. In addition, one solves problem 2, and the other solves problem 3.
+    \end{itemize}
+    \item Generalizing about the problems we face.
+    \begin{itemize}
+        \item The overall problem is that enolates are too reactive.
+        \item Solution: Use the enol --- it's less reactive than the enolate because it's neutral.
+        \item However, enols are the minor species in solution relative to their ketone tautomers, and since these two molecules are constitutional isomers (i.e., nothing is gained or lost in the tautomerization), there is no way to push the equilibrium to one side or the other with Le Ch\^{a}telier's principle.
+    \end{itemize}
+    \item Solution 1 (to problems 1 and 3): Enamines.
+    \item Levin reviews enamine formation.
+    \begin{itemize}
+        \item See the general form below Figure \ref{fig:enamine}.
+        \item Levin notes that removing water can further drive the reaction in the forward direction.
+    \end{itemize}
+    \item As one might assume from the structural homology between enols and enamines, the two compounds do indeed have similar reactivity.
+    \item Comparing enolate, enamine, and enol reactivity.
+    \begin{itemize}
+        \item Enolates are more reactive than enamines, which are more reactive than enols.
+        \begin{itemize}
+            \item In layman's terms, this is due to the presence/lack thereof of formal charges and the relative electronegativities of nitrogen and oxygen, respectively.
+            \item More specifically, when we draw the resonance forms for all three of these compounds that put the negative charge on the $\alpha$-carbon, we note two things.
+            \item First, enamines and enols both have a counterbalancing positive charge on their heteroatom. This makes their $\alpha$-carbons significantly less basic (hence less reactive) than enolates'.
+            \item Second, oxygen is more electronegative than nitrogen. Thus, the positively charged oxygen withdraws electron density to an even greater extent than the positively charged nitrogen. Consequently, the enol's $\alpha$-carbon is less basic than the enamine's.
+        \end{itemize}
+        \item Therefore, enamines are Goldilocks nucleophiles (with reactivity between enols and enolates).
+        \item Advantages of enamines over enolates.
+        \begin{itemize}
+            \item Less reactive.
+            \item Still reactive enough.
+        \end{itemize}
+        \item Advantages of enamines over enols.
+        \begin{itemize}
+            \item Enamines can be stoichiometrically generated.
+            \item We can use them as nucleophiles.
+        \end{itemize}
+    \end{itemize}
+    \item Using enamines to alkylate carbonyls.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]}
+            \arrow{->[\begin{tabular}{l}
+                1. $2^\circ$ amine, $[-\ce{H2O}]$, \ce{H+}\\
+                2. \ce{{}^{$i$}PrI}\\
+                3. \ce{H3O+}\\
+            \end{tabular}]}[,2.7]
+            \chemfig{R-[:30](=[2]O)-[:-30]-[:30](-[2])-[:-30]}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item This procedure permits secondary $\alpha$-alkylation of carbonyl compounds, solving problem 1.
+        \item $\ce{R}=\ce{H,C}$.
+        \begin{itemize}
+            \item Thus, this procedure $\alpha$-alkylates both ketones and aldehydes, solving problem 3.
+        \end{itemize}
+        \item We can any secondary amine we like. Some examples are pyrrolidine or morpholine (the latter is used in Figure \ref{fig:enamineAlkylationMechanism}).
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30]}
+            \arrow{0}[,0.1]\+
+            \chemfig{*6(-\chembelow{N}{H}---O--)}
+            \arrow{->[\ce{H+}][$[-\ce{H2O}]$]}[,1.2]
+            \chemfig{*6([:60]\vphantom{O}-[,,,,white]-[,,,,white]-[,,,,white](-[:30](-[2]N*6(---O---))=^[:-30]))}
+            \arrow{->[\chemfig[atom sep=1.4em]{-[:30](-[2]I)-[:-30]}]}
+            \chemfig{*6([:60]\vphantom{O}-[,,,,white]-[,,,,white]-[,,,,white](-[:30](=[2]\charge{90:3pt=$\oplus$}{N}*6(---O---)-[0,0.6,,,white]\charge{45:1pt=$\ominus$}{I})-[:-30]-[:30](-[2])-[:-30]))}
+            \arrow{->[\ce{H3O+}]}
+            \chemfig{-[:30](=[2]O)-[:-30]-[:30](-[2])-[:-30]}
+            \arrow{0}[,0.1]\+
+            \chemfig{*6(-\chembelow{N}{H}---O--)}
+        \schemestop
+        \vspace{-3em}
+        \caption{$\alpha$-alkylating carbonyl compounds using enamines mechanism.}
+        \label{fig:enamineAlkylationMechanism}
+    \end{figure}
+    \begin{itemize}
+        \item The $\alpha$-alkylated iminium generated as the second intermediate above is stable until workup.
+        \begin{itemize}
+            \item This is fairly remarkable since it is difficult (requires removing water) to generate iminiums from ketones.
+            \item However, since we have already isolated the enamine before the second reaction above, there is no chance of it reacting backwards. This is what leads to the stability of the iminium intermediates.
+        \end{itemize}
+        \item That being said, adding the water back in (in the form of an acid workup) readily hydrolyzes the iminium back down to a ketone.
+        \begin{itemize}
+            \item Recall, wrt. the third step, that imines are prone to hydrolysis (see Lecture 2).
+        \end{itemize}
+    \end{itemize}
+    \item Aside (will not be tested).
+    \begin{itemize}
+        \item Since the amine reacts in Figure \ref{fig:enamineAlkylationMechanism} but is regenerated at the end, it is technically a catalyst.
+        \item More generally, catalytic alkylations and electrofunctionalizations can be accomplished via the above mechanism. Thus, instead of introducing a stoichiometric amount of the amine, we can cycle through a small, catalytic quantity of amine.
+        \item Moreover, if we use a chiral amine, we can influence the stereocenter in the product.
+        \item This is what the 2021 Nobel Prize was awarded for: Asymmetric organocatalysis.
+        \item Dave Macmillan of Princeton (one of the Nobel laureates) is a great chemist but also a master salesman, so what he realized and sold was that you can use small organic molecules as catalysts (or \textbf{organocatalysts}).
+        \begin{itemize}
+            \item This was revolutionary because it was thought in the early 2000s that catalysts had to either be transition metals or enzymes.
+        \end{itemize}
+        \item A common organocatalyst is proline.
+        % \begin{figure}[h!]
+        %     \centering
+        %     \begin{tikzpicture}
+        %         \footnotesize
+        %         \node (C0) at (90:6) {\chemfig{*5([:-18]-\chembelow{N}{H}-\charge{45=*}{}(-[0](=[::60]O)-[::-60]OH)---)}};
+        %         \node (C1) at (90:3) {\chemfig{*5([:-18]-\charge{90:3pt=$\oplus$}{N}(-[:-70]{\color{grx}H})(-[:-110]H)-\charge{45=*}{}(-[0](=[::60]O)-[::-60]\charge{45:1pt=$\ominus$}{O})---)}};
+        %         \node (C2) at (-30:3) {\chemfig{*5([:-18]-N(-(-[::-60]H)=^[::60]-[::60])-\charge{45=*}{}(-[0](=[::60]O)-[::-60]OH)---)}};
+        %         \node (C3) at (-150:3) {\chemfig{*5([:-18]-\charge{90:3pt=$\oplus$}{N}(=(-[::-60]H)-[::60]\charge{90=*}{}(-[::-60]E)-[::60])-\charge{45=*}{}(-[0](=[::60]O)-[::-60]OH)---)}};
+        
+        %         \draw [blo,semithick,arrows={-CF[harpoon]}] (C1.92) -- (C0.-93);
+        %         \draw [blo,semithick,arrows={-CF[harpoon]}] (C0.-87) -- (C1.88);
+        %         \draw [blo,semithick,-CF] (C1) to[bend left=40] (C2);
+        %         \draw [blo,semithick,-CF] (C2) to[bend left=35] ([xshift=1cm,yshift=-1.2cm]C3.center);
+        %         \draw [blo,semithick,-CF] (C3) to[bend left=35] (C1);
+        
+        %         \node (R1) at (50:4.5) {\chemfig{H-[:30](=[2]{\color{grx}O})-[:-30](-[6]{\color{grx}H})-[:30]}};
+        %         \node (P1) at (10:4.5) {\color{grx}\ce{H2O}};
+        %         \node (R2) at (-70:4.5) {\chemfig{\charge{45:1pt=$\oplus$}{E}}};
+        %         \node (R3) at (170:4.2) {\ce{H2O}};
+        %         \node (P3) at (135:4.5) {\chemfig{H-[:30](=[2]O)-[:-30]\charge{90=*}{}(-[6]E)-[:30]}};
+        
+        %         \draw [blo,semithick,-CF] ([xshift=-3mm,yshift=-5mm]R1.center) to[bend right=60,looseness=1.24] (P1);
+        %         \draw [blo,semithick] (R2) to[out=120,in=0] (-90:3.253);
+        %         \draw [blo,semithick,-CF] (R3) to[bend right=55,looseness=1.5] (P3);
+        %     \end{tikzpicture}
+        %     \caption{Proline organocatalysis.}
+        %     \label{fig:organocatalysis}
+        % \end{figure}
+        \begin{figure}[h!]
+            \centering
+            \begin{tikzpicture}
+                \footnotesize
+                \node (C0) at (90:6) {\chemfig{*5([:-18]-\chembelow{N}{H}-\charge{45=*}{}(-[0](=[::60]O)-[::-60]OH)---)}};
+                \node (C1) at (90:3) {\chemfig{*5([:-18]-\charge{90:3pt=$\oplus$}{N}(-[:-70]{\color{grx}H})(-[:-110]H)-\charge{45=*}{}(-[0](=[::60]O)-[::-60]\charge{45:1pt=$\ominus$}{O})---)}};
+                \node (C2) at (-30:3) {\chemfig{*5([:-18]-N(-(-[::-60]H)=^[::60]-[::60])-\charge{45=*}{}(-[0](=[::60]O)-[::-60]OH)---)}};
+                \node (C3) at (-150:3) {\chemfig{*5([:-18]-\charge{90:3pt=$\oplus$}{N}(=(-[::-60]H)-[::60]\charge{90=*}{}(-[::-60]E)-[::60])-\charge{45=*}{}(-[0](=[::60]O)-[::-60]OH)---)}};
+        
+                \draw [blo,semithick,arrows={-CF[harpoon]}] (C1.92) -- (C0.-93);
+                \draw [blo,semithick,arrows={-CF[harpoon]}] (C0.-87) -- (C1.88);
+                \draw [blo,semithick,-CF] (60:3) arc[start angle=60,end angle=-5,radius=3cm];
+                \draw [blo,semithick,-CF] (-70:3) arc[start angle=-70,end angle=-130,radius=3cm];
+                \draw [blo,semithick,-CF] (180:3) arc[start angle=180,end angle=115,radius=3cm];
+        
+                \node (R1) at (50:4.5) {\chemfig{H-[:30](=[2]{\color{grx}O})-[:-30](-[6]{\color{grx}H})-[:30]}};
+                \node (P1) at (10:4.5) {\color{grx}\ce{H2O}};
+                \node (R2) at (-70:4.5) {\chemfig{\charge{45:1pt=$\oplus$}{E}}};
+                \node (R3) at (170:4.2) {\ce{H2O}};
+                \node (P3) at (135:4.8) {\chemfig{H-[:30](=[2]O)-[:-30]\charge{90=*}{}(-[6]E)-[:30]}};
+        
+                \draw [blo,semithick] (R2) to[out=110,in=0] (-90:3);
+                \draw [blo,semithick,-CF] ([xshift=-3mm,yshift=-5mm]R1.center) to[bend right=55,looseness=1.22] (P1);
+                \draw [blo,semithick,-CF] (R3) to[bend right=55,looseness=1.2] ([xshift=7mm,yshift=-5mm]P3.center);
+            \end{tikzpicture}
+            \caption{Proline organocatalysis.}
+            \label{fig:organocatalysis}
+        \end{figure}
+        \begin{itemize}
+            \item The substrate is any simple aldehyde.
+            \item Because proline (a simple, cheap amino acid) is chiral, its stereocenter influences the final one by favoring one face of the substrate for electrophilic attack over the other.
+            \item However, you need to use a lot of it.
+        \end{itemize}
+        \item \textbf{Macmillan's catalyst} is drawn as well.
+        \begin{figure}[h!]
+            \centering
+            \footnotesize
+            \chemfig{*5((<(-[::60])(-[::-60])-)-\chembelow{N}{H}-(<-[::60]Ph)-(=O)-HN-[,,2])}
+            \caption{Macmillan's catalyst.}
+            \label{fig:macmillanCatalyst}
+        \end{figure}
+        \begin{itemize}
+            \item Macmillan's catalyst allows much lower loadings while retaining high levels of stereocontrol.
+        \end{itemize}
+    \end{itemize}
+    \item Enamines don't solve problem 2 (regioselectivity for similar sites), however.
+    \item Solution 2 (to problems 1 and 2): $\beta$-dicarbonyl compounds.
+    \item $\beta$-dicarbonyl compounds.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{0.25\linewidth}
+            \centering
+            \chemfig{-[:30](=[2]O)-[:-30]-[:30](=[2]O)-[:-30]}
+            \caption{$\beta$-diketone.}
+            \label{fig:betaDicarbonylsa}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.25\linewidth}
+            \centering
+            \chemfig{RO-[:30](=[2]O)-[:-30]-[:30](=[2]O)-[:-30]}
+            \caption{$\beta$-ketoester.}
+            \label{fig:betaDicarbonylsb}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.25\linewidth}
+            \centering
+            \chemfig{RO-[:30](=[2]O)-[:-30]-[:30](=[2]O)-[:-30]OR'}
+            \caption{Malonate.}
+            \label{fig:betaDicarbonylsc}
+        \end{subfigure}
+        \caption{$\beta$-dicarbonyl compounds.}
+        \label{fig:betaDicarbonyls}
+    \end{figure}
+    \begin{itemize}
+        \item $\beta$-dicarbonyls are referred to as such because relative to either carbonyl functional group, the other carbonyl is on the original carbonyl's $\beta$-carbon (two away along the chain from the carbon involved in the functional group).
+        \item Malonates could be called $\beta$-diesters, but nobody refers to them as such.
+    \end{itemize}
+    \item $\beta$-dicarbonyls are useful because $9\leq\pKa\leq 11$ for the hydrogens on the central $\alpha$-carbon.
+    \begin{itemize}
+        \item As specific examples, pentane-2,4-dione (Figure \ref{fig:betaDicarbonylsa}) has $\pKa=9$, dimethyl malonate has $\pKa=11$, and methyl acetoacetate is somewhere in the middle.
+        \item The implication is that we can deprotonate $\beta$-dicarbonyls far easier than regular ketones.
+    \end{itemize}
+    \item In particular, while we need LDA for acetone, we can use methoxide for $\beta$-dicarbonyls.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{MeO-[:30](=[2]O)-[:-30](-[@{sb1a}6]@{H1}H)-[@{sb1b}:30](=[@{db1}2]@{O1}O)-[:-30]}
+            \arrow{->[\chemfig{@{O2}\charge{180=\:,90:3pt=$\ominus$}{O}Me} / \ce{MeOH}]}[,1.9]
+            \chemleft{[}
+                \subscheme{
+                    \chemfig{MeO-[:30](=[2]O)-[:-30]@{C3}=^[@{db3}:30](-[@{sb3}2]@{O3}\charge{45:1pt=$\ominus$}{O})-[:-30]}
+                    \arrow{<->}
+                    \chemfig{MeO-[:30](=[@{db4}2]@{O4}O)-[@{sb4}:-30]@{C4}\charge{-90:3pt=$\ominus$}{}-[:30](=[2]O)-[:-30]}
+                    \arrow{<->}
+                    \chemfig{MeO-[:30](-[2]\charge{45:1pt=$\ominus$}{O})=^[:-30]-[:30](=[2]O)-[:-30]}
+                }
+            \chemright{]}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={6pt}{2pt}] (O2) to[out=180,in=0,out looseness=0.8,in looseness=2] (H1);
+            \draw [curved arrow={2pt}{2pt}] (sb1a) to[bend right=70,looseness=2] (sb1b);
+            \draw [curved arrow={3pt}{2pt}] (db1) to[bend left=90,looseness=3] (O1);
+            \draw [curved arrow={10pt}{2pt},blx] (O3) to[out=45,in=0,looseness=4] (sb3);
+            \draw [curved arrow={4pt}{4pt},blx] (db3) to[bend right=80,looseness=4] (C3);
+            \draw [curved arrow={11pt}{2pt},blx] (C4) to[out=-90,in=-120,looseness=6] (sb4);
+            \draw [curved arrow={3pt}{2pt},blx] (db4) to[bend left=90,looseness=3] (O4);
+        }
+        \caption{Deprotonating $\beta$-dicarbonyls.}
+        \label{fig:betaDicarbonylDeprotonation}
+    \end{figure}
+    \begin{itemize}
+        \item It makes sense that $\beta$-dicarbonyls are more acidic than regular carbonyl compounds because their conjugate bases have three resonance forms, as above, compared to the two of regular carbonyls (as in Figure \ref{fig:enolate}).
+        \begin{itemize}
+            \item Recall that carbonyl compounds are in turn more acidic than alkanes because alkanes only have one resonance form.
+        \end{itemize}
+        \item Since $\pKa=10$ for methyl acetoacetate and $\pKa=15$ for \ce{MeOH}, only 1 in every $10^5$ $\beta$-dicarbonyls is not deprotonated, so the above equilibrium lies fairly far to the right.
+        \item Note that we do need to "match" the alkyl ester group(s), organic base, and solvent so that background competitive nucleophilic acyl substitution does not become observable.
+        \begin{itemize}
+            \item For example, in the above reaction, we use \emph{methyl} acetoacetate, \emph{meth}oxide, and \emph{meth}anol.
+        \end{itemize}
+    \end{itemize}
+    \item The reason for performing this reaction in alcholic solvent is purely practical.
+    \begin{itemize}
+        \item Sodium alkoxides can be bought, but they're air-sensitive and prone to decomposition.
+        \item Thus, we prefer to generate them fresh.
+        \item To do so, we treat some quantity of alcohol with sodium hydride or sodium metal. Either way, we form solvated sodium alkoxide in methanol and releasing \ce{H2} gas.
+        \item Performing this reaction in an excess of methanol allows us to easily proceed with the reaction in liquid media, just with the necessary condition that the solvent is the alcohol.
+    \end{itemize}
+    \item Other ways of deprotonating $\beta$-dicarbonyls.
+    \begin{itemize}
+        \item Since protonated triethyl amine has a comparable $\pKa$ to methyl acetoacetate, mixing \ce{NEt3} with methyl acetoacetate generates the deprotonated form reversibly.
+        \item In principle, we could also use LDA. It's overkill (it would lead to $10^{26}$-fold deprotonation), but there's nothing chemically wrong with it.
+    \end{itemize}
+    \item We now get into the reactions of $\beta$-dicarbonyls.
+    \item Monoalkylation.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30](-[6]H)-[:30](=[2]O)-[:-30]OMe}
+            \arrow{->[1. \ce{NaOMe} / \ce{MeOH} (1 equiv.)][2. \ce{MeI}\rule{3.07cm}{0pt}]}[,3.1]
+            \chemfig{-[:30](=[2]O)-[:-30](-[6]Me)-[:30](=[2]O)-[:-30]OMe}
+        \schemestop
+    \end{center}
+    \item Mechanism.
+    \begin{itemize}
+        \item We generate the enolate (as in Figure \ref{fig:betaDicarbonylDeprotonation}). It subsequently attacks methyl iodide from the backside via an S\textsubscript{N}2 mechanism.
+    \end{itemize}
+    \item Dialkylation.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30](-[6]H)-[:30](=[2]O)-[:-30]OMe}
+            \arrow{->[\ce{NaOMe} / \ce{MeOH} (excess)][\ce{MeI} (excess)]}[,2.7]
+            \chemfig{-[:30](=[2]O)-[:-30](-[6]Me)-[:30](=[2]O)-[:-30]OMe}
+        \schemestop
+    \end{center}
+    \item Mechanism.
+    \begin{itemize}
+        \item The first two steps are the same as the monoalkylation mechanism.
+        \item The third and fourth steps are deprotonation of the monoalkylated product followed by S\textsubscript{N}2.
+    \end{itemize}
+    \item Note that monoalkylation proceeds to completion (instead of generating one-half equivalent of dialkylated product) because the alkylated product is less reactive than the starting material (methyl groups are electron-donating through induction, so they destabilize the enolate intermediate).
+    \item Cyclization (with alkyl halides).
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30]@{C1}-[:30](=[2]O)-[:-30]OMe}
+            \arrow{->[\ce{NaOMe} / \ce{MeOH} (excess)][\chemfig[atom sep=1.2em]{Br-[:30]@{C2a}-[:-30]@{C2b}-[:30]@{C2c}-[:-30]Br}]}[,2.7]
+            \chemfig{-[:30](=[2]O)-[:-30]@{C3a}(*4([6]-@{C3b}-@{C3c}-@{C3d}-))-[:30](=[2]O)-[:-30]OMe}
+        \schemestop
+        \chemmove{
+            \node [below,font=\scriptsize,orx] at (C1)  {4};
+            \node [below,font=\scriptsize,orx] at (C2a) {1};
+            \node [below,font=\scriptsize,orx] at (C2b) {2};
+            \node [below,font=\scriptsize,orx] at (C2c) {3};
+            \node [above,font=\scriptsize,orx] at (C3a) {4};
+            \node [left ,font=\scriptsize,orx] at (C3b) {1};
+            \node [below,font=\scriptsize,orx] at (C3c) {2};
+            \node [right,font=\scriptsize,orx] at (C3d) {3};
+        }
+    \end{center}
+    \begin{itemize}
+        \item We use one equivalent of the dibromide.
+    \end{itemize}
+    \item Mechanism.
+    \begin{itemize}
+        \item The first three steps are the same as the dialkylation mechanism.
+        \item The fourth step is that the enolate attacks the other side of the alkyl bromide \emph{intramolecularly} instead of attacking a new molecule.
+        \begin{itemize}
+            \item The chelate effect is what prefers an intramolecular attack over an intermolecular attack.
+            \item There's no such thing as higher rates of collisions than intramolecular.
+        \end{itemize}
+        \item This is highly effective, great chemistry.
+    \end{itemize}
+    \item Cyclization (with alcohols).
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{HO-[:30]@{C1a}-[:-30]@{C1b}-[:30]@{C1c}-[:-30]@{C1d}-[:30]@{C1e}-[:-30]OH}
+            \arrow{->[1. \ce{TsCl} / \ce{Py}\rule{2.97cm}{0pt}][2. \ce{NaOMe} / \ce{MeOH} (excess), Hacac]}[,3.6]
+            \chemfig{-[:30](=[2]O)-[:-30](*6([6]------))-[:30](=[2]O)-[:-30]}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item This reaction has broad synthetic utility\footnote{We've learned a lot of reactions that make alcohols. A problem combining those reactions with $\beta$-dicarbonyl chemistry via this reactions would be great, in Levin's opinion.}.
+    \end{itemize}
+    \item Mechanism.
+    \begin{itemize}
+        \item The first step takes place as in Figure 9.4 of \textcite{bib:CHEM22000Notes} and Figure 8.3 of \textcite{bib:CHEM22100Notes}.
+        \item The second step takes place as in the cyclization of an alkyl halide above, except that tosylate is our leaving group instead of bromide.
+    \end{itemize}
+    \item Transforming $\beta$-diketoesters to carbonyls.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30](*4([6]----))-[:30](=[2]O)-[:-30]OR}
+            \arrow{->[1. \ce{NaOH}][2. \ce{H3O+}]}[,1.3]
+            \chemfig{-[:30](=[2]O)-[:-30]*4(----)}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item We use one equivalent of sodium hydroxide.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30](*4([6]----))-[:30](=[2]O)-[:-30]OMe}
+            \arrow{->[\ce{NaOH}]}
+            \chemfig{-[:30](=[2]O)-[:-30](*4([6]----))-[:30](=[2]O)-[:-30]@{O2}\charge{90:3pt=$\ominus$}{O}}
+            \arrow{->[\chemfig[atom sep=1.4em]{@{H3}H-[@{sb3}]@{O3}\charge{90:3pt=$\oplus$}{O}H_2}][-\ce{H2O}]}[,1.3]
+            \chemfig{*6([,1.25](-[,1])(=[@{db4}2,1]O)-[@{sb4a}](*4([:-105,1]----))-[@{sb4b}](=[,1]O)-[@{sb4c}]O-[@{sb4d}]@{H4}H)}
+            \arrow{->[][-\ce{CO2}]}
+            \chemfig{-[:30](-[2]OH)=^[:-30]*4(----)}
+            \arrow
+            \chemfig{-[:30](=[2]O)-[:-30]*4(----)}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={11pt}{2pt}] (O2) to[out=90,in=90,looseness=3] (H3);
+            \draw [curved arrow={2pt}{2pt}] (sb3) to[out=110,in=130,looseness=3] (O3);
+            \draw [curved arrow={3pt}{2pt}] (db4) to[bend right=40,looseness=1.1] (H4);
+            \draw [curved arrow={2pt}{2pt}] (sb4d) to[bend right=50,looseness=1.3] (sb4c);
+            \draw [curved arrow={2pt}{2pt}] (sb4b) to[bend right=50,looseness=1.3] (sb4a);
+        }
+        \caption{Transforming $\beta$-diketoesters to carbonyls mechanism.}
+        \label{fig:diToMonoCarbonylMechanism}
+    \end{figure}
+    \begin{itemize}
+        \item The first step above proceeds via the saponification mechanism to yield a stable carboxylate (under the given conditions).
+        \item The last step above proceeds via the reverse keto-enol tautomerization mechanism (Figure \ref{fig:enolFormationAcid} depicts the forward version), as dictated by the principle of microscopic reversibility and with \ce{H3O+} as the acid.
+    \end{itemize}
+    \item Transforming malonates to carbonyls.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{RO-[:30](=[2]O)-[:-30](-[:-70])(-[:-110])-[:30](=[2]O)-[:-30]OR}
+            \arrow{->[1. \ce{NaOH} (2 equiv.)][2. \ce{H3O+}\rule{1.37cm}{0pt}]}[,2.2]
+            \chemfig{HO-[:30](=[2]O)-[:-30](-[6])-[:30]}
+        \schemestop
+    \end{center}
+    \item Mechanism.
+    \begin{itemize}
+        \item Double saponification yields a dicarboxylate in the first step.
+        \item From here, we protonate both carboxylates to form a dicarboxylic acid.
+        \item With free rotation about both $\alpha$-$\beta$ axes, one of the carboxylic acids will eventually rotate into a suitable position for step 3 of Figure \ref{fig:diToMonoCarbonylMechanism} to happen.
+        \item We will then have a final keto-enol tautomerization. 
+    \end{itemize}
+    \item Malonic acid reactions.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{HO-[:30](=[2]O)-[:-30]-[:30](=[2]O)-[:-30]OH}
+                \arrow{->[$\Delta$]}
+                \chemfig{HO-[:30](=[2]O)-[:-30]-[:30,,,,white]}
+                \arrow{0}[,0.1]\+
+                \chemfig{CO_2}
+            \schemestop
+            \caption{Slowest.}
+            \label{fig:malonicAcidDecompa}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{HO-[:30](=[2]O)-[:-30](-[6])-[:30](=[2]O)-[:-30]OH}
+                \arrow{->[$\Delta$]}
+                \chemfig{HO-[:30](=[2]O)-[:-30]-[:30]}
+                \arrow{0}[,0.1]\+
+                \chemfig{CO_2}
+            \schemestop
+            \caption{Faster.}
+            \label{fig:malonicAcidDecompb}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{HO-[:30](=[2]O)-[:-30](-[:-70])(-[:-110])-[:30](=[2]O)-[:-30]OH}
+                \arrow{->[\SI{25}{\celsius}]}
+                \chemfig{HO-[:30](=[2]O)-[:-30](-[6])-[:30]}
+                \arrow{0}[,0.1]\+
+                \chemfig{CO_2}
+            \schemestop
+            \caption{Fastest.}
+            \label{fig:malonicAcidDecompc}
+        \end{subfigure}
+        \caption{Decomposition of alkylated malonic acid.}
+        \label{fig:malonicAcidDecomp}
+    \end{figure}
+    \begin{itemize}
+        \item When heated, malonic acid decomposes to release \ce{CO2}.
+        \item Its methylated forms, however, react much more quickly. Monomethylation confers a noticeable increase in rate, while dimethylation has the reaction proceed at rapidly at room temperature.
+        \item The reason for this acceleration is that the carbonyl oxygen and alcohol hydrogen that will react as per Figure \ref{fig:diToMonoCarbonylMechanism} can freely rotate, but we need them close together before the reaction can happen. Indeed, the methyls squeeze the hydrogen and oxygen together because of their steric clash with the neighboring carbonyl and alcohol groups.
+    \end{itemize}
+    \item Since $\beta$-diketoester enolates are less basic than normal enolates, they permit $\alpha$-alkylation of secondary carbonyl compounds, solving problem 1.
+    \item $\beta$-diketoesters are still too reactive to work with aldehydes, so they do \emph{not} solve problem 3.
+    \item They do solve problem 2 (regioselectivity), however.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{-[:30]-[:-30]-[:30](=[2]O)-[:-30](-[6]-[:-30]-[6]Ph)-[:30](=[2]O)-[:-30]OMe}
+            \arrow{->[\begin{tabular}{l}
+                1. \ce{NaOMe}, \ce{MeOH}\\
+                2. \ce{MeI}\\
+                3. \ce{NaOH}\\
+                4. \ce{H3O+}\\
+            \end{tabular}]}[,2.1]
+            \chemfig{-[:30]-[:-30]-[:30](=[2]O)-[:-30](-[6]Me)-[:30]-[:-30]-[:30]Ph}
+        \schemestop
+        \caption{$\beta$-ketoesters and regioselectivity.}
+        \label{fig:betaRegio}
+    \end{figure}
+    \begin{itemize}
+        \item Suppose we're asked to make the product above from \ce{MeI} and any other compound(s) of our choosing.
+        \item Performing a retrosynthetic disconnection yields 1-phenylhept-4-one, a carbonyl that would not be regioselective to LDA as discussed last lecture.
+        \item We can, however, start from a $\beta$-ketoester, methylate once (steps 1-2), and then remove the ester (steps 3-4) to yield our final product.
+    \end{itemize}
+    \item One last regioselectivity tool.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{*6(--=-(=O)--)}
+            \arrow{->[*{0} \ce{LiCuMe2}]}[-90]
+            \chemfig{*6((-[,,,,white]\phantom{Me})--(-Me)-=(-\charge{45:1pt=$\ominus$}{O})--)}
+            \arrow(b--){->[\begin{tabular}{l}
+                1. \ce{H3O+}\\
+                2. LDA\\
+                3. \ce{MeI}\\
+            \end{tabular}]}[,1.3]
+            \chemfig{*6(--(-Me)--(=O)-(-Me)-)}
+            \arrow(@b--){->[\ce{MeI}]}[180]
+            \chemfig{*6(--(-Me)-(-Me)-(=O)--)}
+        \schemestop
+        \caption{Regioselectivity with $\alpha,\beta$-unsaturated compounds.}
+        \label{fig:regioselectivityAlphaBeta}
+    \end{figure}
+    \begin{itemize}
+        \item When adding a cuprate to an $\alpha,\beta$-unsaturated compound, 1,4-addition generates an enolate before aqueous workup.
+        \item If we proceed with the aqueous workup and then use LDA, we will selectively deprotonate the less sterically encumbered hydrogens, leading to methylation on the carbonyl's left $\alpha$-carbon when \ce{MeI} is introduced.
+        \item If we use the existing enolate, we methylate the carbonyl's right $\alpha$-carbon when \ce{MeI} is introduced.
     \end{itemize}
 \end{itemize}
 
