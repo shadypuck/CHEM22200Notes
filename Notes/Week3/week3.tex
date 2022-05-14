@@ -29,6 +29,7 @@
                 \arrow{0}[,0.1]\+
                 \chemname{\chemfig{-[:30](-[2]OH)-[:-30]-[6]}}{50\%}
             \schemestop
+            \chemnameinit{}
             \chemmove{
                 \draw [curved arrow={2pt}{2pt}] (sb3) to[out=-90,in=-30] (C1);
                 \draw [curved arrow={4pt}{2pt}] (db1b) to[bend left=60,looseness=2] (sb1);
@@ -49,6 +50,7 @@
                 \arrow{0}[,0.1]\+
                 \chemname{\chemfig{-[:30](=[2]O)-[:-30]-[6]}}{Minor}
             \schemestop
+            \chemnameinit{}
             \chemmove{
                 \draw [curved arrow={2pt}{2pt}] (sb2) to[out=-90,in=-30] (C1);
                 \draw [curved arrow={4pt}{2pt}] (db1b) to[bend left=60,looseness=2] (sb1);
@@ -184,6 +186,7 @@
             \arrow{->[*{0.-90}\chemfig{H_2@{O11}\charge{90=\:}{O}}]}[180]
             \chemfig{R-[:30](=[2]O)-[:-30]H}
         \schemestop
+        \chemnameinit{}
         \chemmove{
             \draw [curved arrow={6pt}{2pt}] (O1) to[out=90,in=90,looseness=1.5] (Al2);
             \draw [curved arrow={2pt}{3pt}] (sb3) to[out=-150,in=30] (C3);
@@ -412,6 +415,7 @@
             \arrow
             \chemfig{R-[:30](=[2]O)-[:-30]R'}
         \schemestop
+        \chemnameinit{}
         \caption{Carboxylic acid to ketone mechanism.}
         \label{fig:mechanismCarboxylicKetone}
     \end{figure}
@@ -691,6 +695,7 @@
             \arrow{->[][-\ce{mCBA}]}[,1.2]
             \chemfig{[:-12.86]*7(----O-(=O)--)}
         \schemestop
+        \chemnameinit{}
         \chemmove{
             \draw [curved arrow={6pt}{2pt}] (O1) to[out=90,in=180,out looseness=2] (H2);
             \draw [curved arrow={2pt}{2pt}] (sb2) to[bend right=80,looseness=3] (O2);
@@ -708,15 +713,15 @@
         \item Criegee made his fame for studying this reaction. He was the one who actually first proposed the existence of the intermediate that now bears his name.
         \item In the Criegee intermediate, one of the neighboring \ce{C-C} bonds can slide over in a \textbf{migration}.
         \begin{itemize}
-            \item Think about the parallel to hydroboration/oxidation (Figure \ref{fig:mechanismAlkyneHydroboration}) and the formation of the enol boronate.
+            \item Think about the parallel to the formation of the enol boronate in Figure \ref{fig:mechanismAlkyneHydroboration}.
         \end{itemize}
-        \item Additionally, the \ce{O-O} bond is pretty weak and can be displaced.
+        % \item Additionally, the \ce{O-O} bond is pretty weak and can be displaced.
+        % \begin{itemize}
+        %     \item Because this is mCPBA (with its electron-withdrawing carbonyl), the \ce{O-O} electrons can swing around, facilitating the carbonyl electrons' attack on the substrate's acidic proton.
+        % \end{itemize}
+        \item Overall last step arrow pushing chronology: The \ce{O-H} electrons swinging down. Reforming the carbonyl provides the oomph that breaks the \ce{C-C} bond. The \ce{C-C} electrons migrate. This makes everything else just swing around.
         \begin{itemize}
-            \item However, because this is mCPBA (with its electron withdrawing carbonyl), the \ce{O-O} electrons can swing around and facilitate the attack of the carbonyl electrons on the substrate's acidic proton.
-        \end{itemize}
-        \item Last step arrow pushing chronology: The \ce{O-H} electrons swinging down. Reforming the carbonyl provides the oomph that breaks the \ce{C-C} bond. The \ce{C-C} electrons migrate. This makes everything else just swing around.
-        \begin{itemize}
-            \item Note that this chronology is not technically accurate; curved arrows are a human invention we assert overtop a concerted step. However, this is a good trick to think of for memorization purposes.
+            \item Note that this chronology is not technically accurate; curved arrows are a human invention we assert overtop a concerted step. However, this is a good trick for memorization purposes.
         \end{itemize}
     \end{itemize}
     \item \textbf{Migratory aptitude}: How likely a group is to shift, or migrate.
@@ -736,19 +741,18 @@
             \schemestop
             \caption{A selective case.}
             \label{fig:baeyerVilligerAsymmetrica}
-        \end{subfigure}
-    \end{figure}
-    \begin{figure}[H]
-        \ContinuedFloat
+        \end{subfigure}\\[2em]
         \begin{subfigure}[b]{\linewidth}
             \centering
+            \chemnameinit{\chemfig{(-[:-150]*6(-=-=-=))(-[:-30]O-[:30](-[::60])(-[::-60]))(=[2]O)}}
             \schemestart
                 \chemfig{(-[:-150]*6(-=-=-=))(-[:-30](-[::60])(-[::-60]))(=[2]O)}
                 \arrow{->[mCPBA]}[,1.2]
                 \chemname{\chemfig{(-[:-150]O-[:150]*6(-=-=-=))(-[:-30](-[::60])(-[::-60]))(=[2]O)}}{50\%}
-                \+{,,-1.5em}
+                \arrow{0}[,0.1]\+{,,-1.5em}
                 \chemname{\chemfig{(-[:-150]*6(-=-=-=))(-[:-30]O-[:30](-[::60])(-[::-60]))(=[2]O)}}{50\%}
             \schemestop
+            \chemnameinit{}
             \caption{An unselective case.}
             \label{fig:baeyerVilligerAsymmetricb}
         \end{subfigure}
@@ -764,7 +768,7 @@
             > 1^\circ\text{ alkyls}
             > \text{methyl}
         \end{equation*}
-        where the $\alpha$-carbon being $3^\circ$ promotes the reaction the most and it being a methyl group promotes it the least.
+        where a $3^\circ$ $\alpha$-carbon greatly promotes the reaction a methyl $\alpha$-carbon does the opposite.
         \begin{itemize}
             \item This does work with aldehydes; hydrogen will migrate faster than anything else (i.e., forming carboxylic acids).
             \item Jones is a cheat to do the same thing, though.
@@ -791,9 +795,10 @@
     \begin{itemize}
         \item This is useful industrially, but less useful in the lab (because of all the associated hazards).
     \end{itemize}
-    \item Mechanism (See Figure \ref{fig:mechanismSchmidt}).
+    \item Mechanism.
     \begin{figure}[h!]
         \centering
+        \vspace{1em}
         \footnotesize
         \schemestart
             \chemfig{[:18]*5(---(=@{O1}\charge{90=\:}{O})--)}
@@ -846,7 +851,10 @@
         \item You would form an amide in this case.
         \item It's rare to see this in the literature, though.
     \end{itemize}
-    \item Using an alkyl group in place of the hydrogen on the hydrazoic acid \emph{requires} catalytic acid (the new acid isn't strong enough to catalyze its own chemistry). The alkyl group just gets added to the nitrogen in the product.
+    \item Using an alkyl group in place of the hydrogen on hydrazoic acid \emph{requires} catalytic acid (the new acid isn't strong enough to catalyze its own chemistry).
+    \begin{itemize}
+        \item The alkyl group just gets added to the nitrogen in the product.
+    \end{itemize}
     \item The Schmidt reaction also works intramolecularly.
     \begin{figure}[h!]
         \centering
@@ -858,6 +866,7 @@
             \+{,,1.5em}
             \chemname{\chemfig{*6(---([:72,1.7]--[::72,1.7]-[::72,1.7]?)-(=O)-N?-)}}{Minor product}
         \schemestop
+        \chemnameinit{}
         \caption{Intramolecular Schmidt reaction.}
         \label{fig:intramolecularSchmidt}
     \end{figure}
@@ -908,7 +917,11 @@
             }
             \caption{Step 1.}
             \label{fig:mechanismCurtiusa}
-        \end{subfigure}\\[2em]
+        \end{subfigure}
+    \end{figure}
+    \begin{figure}[H]
+        \ContinuedFloat
+        \footnotesize
         \begin{subfigure}[b]{\linewidth}
             \centering
             \schemestart

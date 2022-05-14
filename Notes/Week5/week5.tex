@@ -266,6 +266,7 @@
                 \arrow{0}
                 \chemname{\chemfig{-[:30]-[:-30](-[6])=^[:30](-[2]\charge{45:1pt=$\ominus$}{O})-[:-30]-[:30]}}{More stable}
             \schemestop
+            \chemnameinit{}
             \caption{Thermodynamic stability.}
             \label{fig:thermoKineticStabilitya}
         \end{subfigure}
@@ -288,6 +289,7 @@
                     \chemright{]^\ddagger}
                 }{Disfavored}
             \schemestop
+            \chemnameinit{}
             \chemmove{
                 \draw [blx,thick,-] ([xshift=1mm,yshift=-4mm]C.center) to[bend right=70,looseness=1.5] ++(0.5,0.4);
                 \draw [blx,thick,-] ([xshift=4mm,yshift=-7mm]C.center) to[bend left=70,looseness=1.5] ++(0.5,0.4);
@@ -580,10 +582,11 @@
             \schemestart
                 \chemfig{N~[:-30]C-[:-30]-[:30]H}
                 \arrow{->[LDA]}
-                \chemname{\chemfig{\charge{90:3pt=$\ominus$}{N}=[:-30]C=[:-30]}}{ketene imidate}
+                \chemname{\chemfig{\charge{90:3pt=$\ominus$}{N}=[:-30]C=[:-30]}}{Ketene imidate}
                 \arrow{->[\ce{E+}]}
                 \chemfig{N~[:-30]C-[:-30]-[:30]E}
             \schemestop
+            \chemnameinit{}
             \caption{Nitriles.}
             \label{fig:carboxylicEnolatec}
         \end{subfigure}

@@ -138,6 +138,7 @@
             \arrow{->[\chemfig[atom sep=1.4em]{K@{O4}\charge{90=\:}{O}^{\emph{t}}Bu}][-\ce{HO^{$t$}Bu, KBr}]}[,1.6]
             \chemfig{Ph_3\charge{90:3pt=$\oplus$}{P}-\charge{90:3pt=$\ominus$}{C}H_2}
         \schemestop
+        \chemnameinit{}
         \chemmove{
             \draw [curved arrow={6pt}{2pt}] (P1) to[bend left=90,looseness=1.5] (C2);
             \draw [curved arrow={2pt}{2pt}] (sb2) to[bend left=90,looseness=3] (Br2);
@@ -183,14 +184,15 @@
             \arrow{0}[,0.1]\+
             \chemfig{Ph_3\charge{90:3pt=$\oplus$}{P}-@{C2}\charge{90:3pt=$\ominus$}{C}H_2}
             \arrow
-            \chemname[0.9em]{\chemfig{@{O3}\charge{90:3pt=$\ominus$}{O}-[:-60](-[:-140]R')(-[:-100]R)--[:60]@{P3}\charge{90:3pt=$\oplus$}{P}Ph_3}}{Betaine}
+            \chemname{\chemfig{(-[:120]@{O3}\charge{90:3pt=$\ominus$}{O})(-[:-140]R')(-[:-100]R)--[:60]@{P3}\charge{90:3pt=$\oplus$}{P}Ph_3}}{Betaine}
             \arrow
-            \chemname[-1em]{\chemfig[atom sep=2.5em]{*4((-[:-155,0.8]R)(-[:-115,0.8]R')-[@{sb4a}]-[@{sb4b,0.6}]PPh_3-[@{sb4c}]O-[@{sb4d}])}}{Oxaphosphetane}
+            \chemname{\chemfig{*4([,1.25](-[:-155,1]R)(-[:-115,1]R')-[@{sb4a}]-[@{sb4b,0.6}]PPh_3-[@{sb4c}]O-[@{sb4d}])}}{Oxaphosphetane}
             \arrow
             \chemfig{R-[:30](=[2]CH_2)-[:-30]R'}
             \arrow{0}[,0.1]\+
             \chemfig{Ph_3P=O}
         \schemestop
+        \chemnameinit{}
         \chemmove{
             \draw [curved arrow={10pt}{3pt}] (C2) to[out=90,in=30] (C1);
             \draw [curved arrow={3pt}{2pt}] (db1) to[bend left=90,looseness=3] (O1);
@@ -502,7 +504,7 @@
     \item A key property of carboxylic acids is that they're\dots acidic.
     \item Acidity.
     \begin{itemize}
-        \item Gives the $\pKa$'s of benzoic acid, benzyl alcohol, and phenol to demonstrate that resonance is king in determining acidity.
+        \item Gives the $\pKa$'s of benzoic acid, benzyl alcohol, and phenol to demonstrate that resonance is king.
         \begin{itemize}
             \item Benzoic acid is more acidic than phenol, which is more acidic than benzyl alcohol.
         \end{itemize}
@@ -543,10 +545,11 @@
         \schemestart
             \chemfig{R-[@{sb1}]Li}
             \arrow{->[\chemfig[atom sep=1.4em]{O=@{C2}C=[@{db2}]@{O2}O}]}[,1.5]
-            \chemname[-3em]{\chemfig{R-[:30](=[2]O)-[:-30]\charge{45:1pt=$\ominus$}{O}-[,0.6,,,white]\charge{45:1pt=$\oplus$}{Li}}}{Carboxylate salt}
+            \chemname{\chemfig{R-[:30](=[2]O)-[:-30]\charge{45:1pt=$\ominus$}{O}-[,0.6,,,white]\charge{45:1pt=$\oplus$}{Li}}}{Carboxylate salt}
             \arrow{->[\ce{H3O+}]}
             \chemfig{R-[:30](=[2]O)-[:-30]OH}
         \schemestop
+        \chemnameinit{}
         \chemmove{
             \draw [curved arrow={2pt}{2pt}] (sb1) to[bend left=90,looseness=1.5] (C2);
             \draw [curved arrow={3pt}{2pt}] (db2) to[bend left=90,looseness=3] (O2);
@@ -555,7 +558,7 @@
         \label{fig:mechanismLithiateCarboxylation}
     \end{figure}
     \item Mechanistic interlude: Nucleophilic acyl substitution.
-    \begin{figure}[H]
+    \begin{figure}[h!]
         \centering
         \footnotesize
         \begin{subfigure}[b]{\linewidth}
@@ -573,7 +576,11 @@
             \schemestop
             \caption{Acid-catalyzed reactivity.}
             \label{fig:acidCarboxylica}
-        \end{subfigure}\\[2em]
+        \end{subfigure}
+    \end{figure}
+    \begin{figure}[h!]
+        \ContinuedFloat
+        \footnotesize
         \begin{subfigure}[b]{\linewidth}
             \centering
             \schemestart
@@ -612,7 +619,7 @@
     \begin{itemize}
         \item This mode of reactivity is the one that is most typical of carboxylic acid derivatives.
         \begin{itemize}
-            \item It is so-named because the portion of a carboxylic acid derivative that is not the leaving group is called an acyl group, and we are substituting one group on the acyl for another.
+            \item It is so-named because the portion of a carboxylic acid derivative that is not the leaving group is called an \textbf{acyl group}, and we are substituting one group on the acyl for another.
         \end{itemize}
         \item Think of all of the carboxylic acid derivatives (see Figure \ref{fig:carboxylicAcidDerivatives}) as containing a leaving group on one of their sides.
         \begin{itemize}
@@ -620,10 +627,12 @@
         \end{itemize}
         \item These reactions are either acid- or base-catalyzed.
         \begin{itemize}
-            \item In the acid-catalyzed version (Figure \ref{fig:acidCarboxylica}), the first step proceeds exactly as in Figure \ref{fig:acidPromotedNua}, except that $\ce{R$'$}=\ce{LG}$. The second step proceeds exactly as in Figure \ref{fig:acidPromotedNub}, except that it is the leaving group that is protonated and kicked out instead of the nucleophile we just added in.
+            \item In the acid-catalyzed version (Figure \ref{fig:acidCarboxylica}), the first step proceeds exactly as in Figure \ref{fig:acidPromotedNua}, except that $\ce{R$'$}=\ce{LG}$. The second step proceeds exactly as in Figure \ref{fig:acidPromotedNub}, except that it is the leaving group that is protonated/removed instead of the nucleophile we just added in.
             \item The basic mechanism is related to Figure \ref{fig:basePromotedNu}, but rather than being a straight replication, the alkoxide species produced in Figure \ref{fig:basePromotedNua} proceeds straight to the reactivity of the alkoxide in Figure \ref{fig:basePromotedNub} (see Figure \ref{fig:acidCarboxylicb}).
         \end{itemize}
     \end{itemize}
+    \item \textbf{Acyl group}: A moiety derived from the removal of the leaving group in a carboxylic acid derivative. \emph{Not to be confused with} \textbf{acetyl group}.
+    \item \textbf{Acetyl group}: A moiety derived from the removal of the hydroxyl group in acetic acid (for example). \emph{Denoted by} \textbf{Ac}.
     \item \textbf{Tetrahedral intermediates}: The nucleophilic acyl substitution intermediates (of both the acidic and basic pathways) that have four groups attached to the central carbon.
     \begin{figure}[h!]
         \centering
@@ -656,7 +665,7 @@
         \item The existence of this reaction is the reason we consider nitriles to be carboxylic acid derivatives (i.e., because we can interconvert them with carboxylic acids). 
     \end{itemize}
     \item Mechanism.
-    \begin{figure}[h!]
+    \begin{figure}[H]
         \centering
         \footnotesize
         \schemestart
@@ -875,7 +884,10 @@
     \end{equation*}
     \begin{itemize}
         \item The carboxylate is an end-stage product. Resonance delocalizes the negative charge over the carbon atom, significantly decreasing its electrophilicity and hence its capacity to participate in future reactions.
-        \item The presence of basic conditions make it so that this reaction is not reversible. Indeed, if we mix a base with \ce{RCOOH}, we will just deprotonate the acid and return to the carboxylate form.
+        \item The presence of basic conditions make it so that this reaction is not reversible.
+        \begin{itemize}
+            \item Indeed, if we mix a base with \ce{RCOOH}, we will just deprotonate the acid and return to the carboxylate form.
+        \end{itemize}
     \end{itemize}
     \item Mechanism.
     \begin{itemize}
@@ -922,7 +934,7 @@
         \label{fig:mechanismAcidChloride}
     \end{figure}
     \begin{itemize}
-        \item Since chloride is a fairly week nucleophile, it's addition in step 3 takes a while and is reversible.
+        \item Since chloride is a fairly week nucleophile, its addition in step 3 takes a while and is reversible.
         \begin{itemize}
             \item However, this step is driven in the forward direction by releasing \ce{SO2} gas from the resulting tetrahedral intermediate (Le Ch\^{a}telier's principle).
         \end{itemize}
@@ -930,11 +942,11 @@
     \item Anhydride synthesis.
     \item General form (standard).
     \begin{equation*}
-        \ce{2RCOOH ->[\Delta][{[-H2O]}] RCOOCOR}
+        \ce{2RCOOH ->[\Delta][{[-\ce{H2O}]}] RCOOCOR}
     \end{equation*}
     \begin{itemize}
         \item High heat is required.
-        \item If you use two different carboxylic acids, you will get a statistical mixture (no real selectivity).
+        \item If you use two different carboxylic acids, you will get a statistical mixture of products. Importantly, you will not get any real selectivity.
     \end{itemize}
     \item You can selectively create 5-6 membered rings containing anhydrides because this reaction proceeds intramolecularly as well as intramolecularly.
     \item General form (intramolecular).
@@ -1043,6 +1055,7 @@
             \arrow{->[\ce{H2O}]}
             \chemname{\chemfig{(-[:-30]N(-[6]H)-[:30]*6(------))(-[:-150]N(-[6]H)-[:150]*6(------))(=[2]O)}}{Dicyclohexylurea}
         \schemestop
+        \chemnameinit{}
         \caption{DCC and water.}
         \label{fig:DCCH2O}
     \end{figure}
