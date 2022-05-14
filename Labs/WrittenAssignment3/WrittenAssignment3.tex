@@ -1,0 +1,109 @@
+\documentclass[landscape]{article}
+
+\input{../../preamble.tex}
+
+\pagestyle{main}
+\renewcommand{\leftmark}{Written Assignment 3 (Journal Club)}
+
+\begin{document}
+
+
+
+
+\begin{figure}
+    \centering
+    \footnotesize
+    \schemestart
+        \chemfig{[:-180]*6(-(*5([::-66]-[,,,,red]O---O-[,,,,red]))---(*5([::-66]-[,,,,red]O---O-[,,,,red]))-(*6(---=(--[:30]-[:-30](-[:30])*6(=---(~[2]-[2]))))))}
+        \+
+        \chemfig{H_2O}
+        \arrow{->[cat. \ce{HCl}][$\Delta$]}[,1.2]
+        \chemfig{[:-180]*6(-(=[,,,,blx]O)---(=[,,,,blx]O)-(*6(---=(--[:30]-[:-30](-[:30])*6(=---(~[2]-[2]))))))}
+        \arrow{0}[,0.1]\+{,5pt,0.2em}
+        \arrow{0}[,0]{2\ }\arrow{0}[,0.15]
+        \chemfig{HO-[:60]--[:-60]OH}
+    \schemestop
+\end{figure}
+\clearpage
+
+\begin{figure}
+    \centering
+    \footnotesize
+    \schemestart
+        \chemfig{[:-180]*6(-(*5([::-66]-O---@{O1}\charge{180=\:}{O}-))---(*5([::-66]-O---O-))-(*6(---=(--[:30]-[:-30](-[:30])*6(=---(~[2]-[2]))))))}
+        \arrow{->[\chemfig[atom sep=1.4em]{@{H2}H-[@{sb2}]@{Cl2}Cl}][-\ce{Cl-}]}[,1.1]
+        \chemfig{[:-180]*6(-(*5([::-66]-[@{sb3a}]@{O3a}\charge{[extra sep=1.5pt]-45=\:}{O}---H@{O3b}\charge{120:2pt=$\oplus$}{O}-[@{sb3b}]))---(*5([::-66]-O---O-))-(*6(---=(--[:30]-[:-30](-[:30])*6(=---(~[2]-[2]))))))}
+        \arrow
+        \chemfig{[:-180]*6(-@{C4}(=[@{db4}]@{O4}\charge{135:1pt=$\oplus$}{O}-[:30]-[::60]-[::-60]OH)---(*5([::-66]-O---O-))-(*6(---=(--[:30]-[:-30](-[:30])*6(=---(~[2]-[2]))))))}
+        \arrow{->[\chemfig{H_2@{O5}\charge{90=\:}{O}}]}
+        \chemfig{[:-180]*6(-(-[:70]O-[:30]-[::60]-[::-60]OH)(-[:110]@{O6}\chemabove{\charge{135:1pt=$\oplus$}{O}}{H}-[@{sb6}4]@{H6}H)---(*5([::-66]-O---O-))-(*6(---=(--[:30]-[:-30](-[:30])*6(=---(~[2]-[2]))))))}
+        \arrow{->[*{0}-\ce{H3O+}][*{0}\chemfig{@{O7}\charge{180=\:}{O}H_2}]}[-90]
+        \chemfig{[:-180]*6(-(-[:70]@{O8}\charge{90=\:}{O}-[:30]-[::60]-[::-60]OH)(-[:110]HO)---(*5([::-66]-O---O-))-(*6(---=(--[:30]-[:-30](-[:30])*6(=---(~[2]-[2]))))))}
+        \arrow{->[*{0.-90} {\chemfig[atom sep=1.4em]{@{H9}H-[@{sb9}]@{Cl9}Cl}}][*{0.90}-\ce{Cl-}]}[180,1.1]
+        \chemfig{[:-180]*6(-(-[@{sb10a}:70]@{O10a}\chemabove{\charge{0:3pt=$\oplus$}{O}}{H}-[:30]-[::60]-[::-60]OH)(-[@{sb10b}:110]H@{O10b}\charge{90=\:}{O})---(*5([::-66]-O---O-))-(*6(---=(--[:30]-[:-30](-[:30])*6(=---(~[2]-[2]))))))}
+        \arrow{->[][*{0.90} - {\chemfig[atom sep=1.4em]{HO-[:60]--[:-60]OH}}]}[180,1.7]
+        \chemfig{[:-180]*6(-(=@{O12}\charge{135:1pt=$\oplus$}{O}-[@{sb12}:30]@{H12}H)---(*5([::-66]-O---O-))-(*6(---=(--[:30]-[:-30](-[:30])*6(=---(~[2]-[2]))))))}
+        \arrow{->[*{0.-90}\chemfig{H_2@{O13}\charge{90=\:}{O}}][*{0.90}-\ce{H3O+}]}[180]
+        \chemfig{[:-180]*6(-(=O)---(*5([::-66]-O---O-))-(*6(---=(--[:30]-[:-30](-[:30])*6(=---(~[2]-[2]))))))}
+    \schemestop
+    \chemmove{
+        \draw [curved arrow={6pt}{2pt}] (O1) to[out=180,in=90,in looseness=3] (H2);
+        \draw [curved arrow={2pt}{2pt}] (sb2) to[bend left=90,looseness=3] (Cl2);
+        \draw [curved arrow={6pt}{2pt}] (O3a) to[out=-45,in=-30,looseness=3] (sb3a);
+        \draw [curved arrow={2pt}{2pt}] (sb3b) to[bend left=60,looseness=2] (O3b);
+        \draw [curved arrow={6pt}{3pt}] (O5) to[out=90,in=150,looseness=2.5] (C4);
+        \draw [curved arrow={3pt}{2pt}] (db4) to[bend right=90,looseness=3] (O4);
+        \draw [curved arrow={6pt}{2pt}] (O7) to[out=180,in=-90] (H6);
+        \draw [curved arrow={2pt}{2pt}] (sb6) to[bend right=90,looseness=3] (O6);
+        \draw [curved arrow={6pt}{2pt}] (O8) to[out=90,in=90,looseness=1.5] (H9);
+        \draw [curved arrow={2pt}{2pt}] (sb9) to[bend left=90,looseness=3] (Cl9);
+        \draw [curved arrow={6pt}{2pt}] (O10b) to[out=90,in=-150,looseness=7] (sb10b);
+        \draw [curved arrow={2pt}{1pt}] (sb10a) to[bend right=70,looseness=2.5] (O10a);
+        \draw [curved arrow={6pt}{2pt}] (O13) to[out=90,in=90,looseness=1.5] (H12);
+        \draw [curved arrow={2pt}{2pt}] (sb12) to[bend left=90,looseness=3] (O12);
+    }
+\end{figure}
+\clearpage
+
+\begin{figure}
+    \centering
+    \footnotesize
+    \schemestart
+        \chemfig{[:-180]*6(-(=O)---(*5([::-66]-O---@{O1}\charge{0=\:}{O}-))-(*6(---=(--[:30]-[:-30](-[:30])*6(=---(~[2]-[2]))))))}
+        \arrow{->[\chemfig[atom sep=1.4em]{@{H2}H-[@{sb2}]@{Cl2}Cl}][-\ce{Cl-}]}[,1.1]
+        \chemfig{[:-180]*6(-(=O)---(*5([::-66]-[@{sb3a}]@{O3a}\charge{[extra sep=1.5pt]135=\:}{O}---@{O3b}\charge{-60:2pt=$\oplus$}{O}H-[@{sb3b}]))-(*6(---=(--[:30]-[:-30](-[:30])*6(=---(~[2]-[2]))))))}
+        \arrow
+        \chemfig{[:-180]*6(-(=O)---@{C4}(=[@{db4}]@{O4}\charge{-135:1pt=$\oplus$}{O}-[:-30]-[::60]-[::-60]OH)-(*6(---=(--[:30]-[:-30](-[:30])*6(=---(~[2]-[2]))))))}
+        \arrow{->[\chemfig{H_2@{O5}\charge{90=\:}{O}}]}
+        \chemfig{[:-180]*6(-(=O)---(-[:-70]O-[:-30]-[::60]-[::-60]OH)(-[:-110]@{O6}\chembelow{\charge{-135:1pt=$\oplus$}{O}}{H}-[@{sb6}4]@{H6}H)-(*6(---=(--[:30]-[:-30](-[:30])*6(=---(~[2]-[2]))))))}
+        \arrow{->[*{0}-\ce{H3O+}][*{0}\chemfig{@{O7}\charge{180=\:}{O}H_2}]}[-90]
+        \chemfig{[:-180]*6(-(=O)---(-[:-70]@{O8}\charge{-90=\:}{O}-[:-30]-[::60]-[::-60]OH)(-[:-110]HO)-(*6(---=(--[:30]-[:-30](-[:30])*6(=---(~[2]-[2]))))))}
+        \arrow{->[*{0.-90} {\chemfig[atom sep=1.4em]{@{H9}H-[@{sb9}]@{Cl9}Cl}}][*{0.90}-\ce{Cl-}]}[180,1.1]
+        \chemfig{[:-180]*6(-(=O)---(-[@{sb10a}:-70]@{O10a}\chembelow{\charge{0:3pt=$\oplus$}{O}}{H}-[:-30]-[::60]-[::-60]OH)(-[@{sb10b}:-110]H@{O10b}\charge{-90=\:}{O})-(*6(---=(--[:30]-[:-30](-[:30])*6(=---(~[2]-[2]))))))}
+        \arrow{->[][*{0.90} - {\chemfig[atom sep=1.4em]{HO-[:60]--[:-60]OH}}]}[180,1.7]
+        \chemfig{[:-180]*6(-(=O)---(=@{O12}\charge{-45:1pt=$\oplus$}{O}-[@{sb12}:-150]@{H12}H)-(*6(---=(--[:30]-[:-30](-[:30])*6(=---(~[2]-[2]))))))}
+        \arrow{->[*{0.-90}\chemfig{H_2@{O13}\charge{90=\:}{O}}][*{0.90}-\ce{H3O+}]}[180]
+        \chemfig{[:-180]*6(-(=O)---(=O)-(*6(---=(--[:30]-[:-30](-[:30])*6(=---(~[2]-[2]))))))}
+    \schemestop
+    \chemmove{
+        \draw [curved arrow={6pt}{2pt}] (O1) to[out=0,in=-160] (H2);
+        \draw [curved arrow={2pt}{2pt}] (sb2) to[bend left=90,looseness=3] (Cl2);
+        \draw [curved arrow={6pt}{2pt}] (O3a) to[out=135,in=150,looseness=3] (sb3a);
+        \draw [curved arrow={2pt}{2pt}] (sb3b) to[bend left=60,looseness=2] (O3b);
+        \draw [curved arrow={6pt}{3pt}] (O5) to[out=90,in=-30,in looseness=1.6] (C4);
+        \draw [curved arrow={3pt}{2pt}] (db4) to[bend right=90,looseness=3] (O4);
+        \draw [curved arrow={6pt}{2pt}] (O7) to[out=180,in=-90,looseness=1.2] (H6);
+        \draw [curved arrow={2pt}{2pt}] (sb6) to[bend left=90,looseness=3] (O6);
+        \draw [curved arrow={6pt}{2pt}] (O8) to[out=-90,in=180,looseness=1.5] (H9);
+        \draw [curved arrow={2pt}{2pt}] (sb9) to[bend left=90,looseness=3] (Cl9);
+        \draw [curved arrow={6pt}{2pt}] (O10b) to[out=-90,in=150,looseness=7] (sb10b);
+        \draw [curved arrow={2pt}{1pt}] (sb10a) to[bend left=70,looseness=2.5] (O10a);
+        \draw [curved arrow={6pt}{2pt}] (O13) to[out=90,in=90,out looseness=1.5,in looseness=2.5] (H12);
+        \draw [curved arrow={2pt}{2pt}] (sb12) to[bend left=90,looseness=3] (O12);
+    }
+\end{figure}
+
+
+
+
+\end{document}
