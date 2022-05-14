@@ -1,0 +1,529 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{5}
+
+\begin{document}
+
+
+
+
+\chapter{Carbonyl Condensation Reactions}
+\section{Carbonyl Condensation Reactions 1}
+\begin{itemize}
+    \item \marginnote{5/3:}On Tang.
+    \begin{itemize}
+        \item Teaching style.
+        \begin{itemize}
+            \item For those not headed to organic chemistry grad school, this is you're last hurdle with organic chemistry. Thus, she'll try to make these last four weeks as painless as possible.
+            \item Additionally, she will always tell us at the beginning of every lecture which sections of \textcite{bib:SolomonsEtAl} correspond to what will be covered today, which will be covered next time, and which practice problems we should do.
+            \item That being said, the class will sometimes go beyond the textbook, and it will also sometimes not cover content that is in the textbook.
+            \item She will also usually take the first three minutes of class to review last class's material.
+        \end{itemize}
+        \item Research.
+        \begin{itemize}
+            \item Runs a chemical biology lab, with a focus on the chemistry of carbonyls and amines.
+            \item She cares about these functional groups and their reactions not as a way to build complexity but with an eye to how they interact in biological systems, and how we can use their reactions to understand and interpret biology.
+        \end{itemize}
+        \item Questions style.
+        \begin{itemize}
+            \item Will try not to integrate reactions from previous quarters with reactions from this quarter.
+            \item If we want practice problems that integrate everything, look to the suggested book problems.
+        \end{itemize}
+    \end{itemize}
+    \item Today's lecture content in \textcite{bib:SolomonsEtAl}.
+    \begin{itemize}
+        \item Today: Sections 19.4-19.6 and a bit of 19.1-19.3.
+        \item Next time: Sections 19.1-19.3 and 19.7-19.8.
+        \item Practice problems: 19.23-19.37, 19.41-19.44, 19.48.
+    \end{itemize}
+    \item The content from today and Thursday completes what we need for both PSet 4 and Midterm 2.
+    \item The course up to this point.
+    \begin{itemize}
+        \item Chapters 16-17 were about carbonyl chemistry.
+        \begin{itemize}
+            \item These chapters focus on the carbonyl carbon, a great electrophile the reactivity of which varies depending on whether or not a leaving group is present.
+        \end{itemize}
+        \item Chapter 18 was about the acidity of carbonyls' $\alpha$-hydrogens and the ensuing consequences.
+        \item Chapter 19 is about combining these great nucleophiles and electrophiles to form new \ce{C-C} bonds.
+    \end{itemize}
+    \item Tang is dividing this chapter into three parts.
+    \begin{enumerate}[label={\Roman*.}]
+        \item Aldol reactions.
+        \item Claisen condensation.
+        \item Conjugate addition.
+    \end{enumerate}
+    \item Today, we will cover the following.
+    \begin{enumerate}[label={\Roman*.}]
+        \item Aldol reactions.
+        \begin{enumerate}[label={\Alph*.}]
+            \item Basic conditions.
+            \item Acidic conditions.
+            \item Intramolecular ketone reactions.
+            \item Cross-aldol reactions.
+        \end{enumerate}
+        \item Claisen condensation.
+        \begin{enumerate}[label={\Alph*.}]
+            \item General reaction.
+        \end{enumerate}
+    \end{enumerate}
+    \item \textbf{Aldol reaction}: A reaction that (before any heating) produces a product containing both an \underline{ald}ehyde and an alcoh\underline{ol} functional group.
+    \item Basic conditions.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:-30]-[:30](=[2]O)-[:-30]H}
+            \arrow{<->>[\ce{NaOH}][\ce{EtOH}]}[,1.2]
+            \chemfig{-[:-30]-[:30](-[2]OH)-[:-30](-[6])-[:30](=[2]O)-[:-30]H}
+            \arrow{->[$\Delta$]}
+            % \chemfig{-[:-30]-[:30]=^[:-30](-[6])-[:30](=[2]O)-[:-30]H}
+            \chemfig{-[:-30]-[:30]*6(=(-)-(-H)(=[2]O))}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item \ce{NaOH} is a stoichiometric reagent.
+        \item \ce{EtOH} is a solvent.
+        \item The full reaction from left to right can be done all at once with heat added from the beginning.
+        \item Notice that the first molecule (3-hydroxy-1-methylpentanal) has molecular formula exactly double that of the starting material (propanal).
+        \begin{equation*}
+            2\times\ce{C3H6O} = \ce{C6H12O2}
+        \end{equation*}
+        \begin{itemize}
+            \item We can easily see where the addition took place by splitting 3-hydroxy-1-methylpentanal along the C2-C3 bond.
+        \end{itemize}
+        \item The third molecule (2-methylpent-2-enal) is just 3-hydroxy-1-methylpentanal, minus a water molecule (\ce{H2O}); thus, the overall reaction is an example of a \textbf{condensation reaction}.
+        \begin{itemize}
+            \item Note that 2-methylpent-2-enal is an $\alpha,\beta$-unsaturated compound.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Condensation reaction}: A reaction that adds two small molecules together and is usually driven by the loss of some small molecule.
+    \item Mechanism.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{H-[:30](=[@{db1}2]@{O1}O)-[@{sb1a}:-30](-[@{sb1b}6]@{H1}H)-[:30]}
+                \arrow{<=>[\chemfig{@{O2}\charge{180=\:,90:3pt=$\ominus$}{O}Et}][\ce{EtOH}]}[,1.1]
+                \chemfig{H-[:30](-[@{sb3}2]@{O3}\charge{180=\:,45:1pt=$\ominus$}{O})=^[@{db3}:-30]-[:30]}
+                \arrow{<=>[\chemfig[atom sep=1.4em]{H-[:30]@{C4}(=[@{db4}2]@{O4}O)-[:-30]-[:30]}]}[,1.5]
+                \chemfig{H-[:30](=[2]O)-[:-30](-[6])-[:30](-[2]@{O5}\charge{90=\:,45:1pt=$\ominus$}{O})-[:-30]-[:30]}
+                \arrow{<=>[\chemfig[atom sep=1.4em]{@{H6}H-[@{sb6}]@{O6}OEt}][\ce{EtO-}]}[,1.4]
+                \chemfig{H-[:30](=[2]O)-[:-30](-[6])-[:30](-[2]OH)-[:-30]-[:30]}
+            \schemestop
+            \chemmove{
+                \draw [curved arrow={6pt}{2pt}] (O2) to[out=180,in=0,looseness=1.2] (H1);
+                \draw [curved arrow={2pt}{2pt}] (sb1b) to[bend left=70,looseness=2] (sb1a);
+                \draw [curved arrow={3pt}{2pt}] (db1) to[bend left=90,looseness=3] (O1);
+                \draw [curved arrow={6pt}{2pt}] (O3) to[bend right=90,looseness=3] (sb3);
+                \draw [curved arrow={4pt}{3pt}] (db3) to[out=60,in=150] (C4);
+                \draw [curved arrow={3pt}{2pt}] (db4) to[bend right=90,looseness=3] (O4);
+                \draw [curved arrow={6pt}{2pt}] (O5) to[out=90,in=90,looseness=1.5] (H6);
+                \draw [curved arrow={2pt}{2pt}] (sb6) to[bend left=90,looseness=3] (O6);
+            }
+            \caption{Aldol reaction proper.}
+            \label{fig:mechanismAldolBasica}
+        \end{subfigure}
+    \end{figure}
+    \begin{figure}[H]
+        \ContinuedFloat
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{H-[:30](=[@{db1}2]@{O1}O)-[@{sb1a}:-30](-[:-70])(-[@{sb1b}:-110]@{H1}H)-[:30](-[2]OH)-[:-30]-[:30]}
+                \arrow{<=>[\chemfig{@{O2}\charge{180=\:,90:3pt=$\ominus$}{O}Et}][\ce{EtOH}]}[,1.1]
+                \chemfig{H-[:30](-[@{sb3a}2]@{O3a}\charge{180=\:,45:1pt=$\ominus$}{O})=^[@{db3}:-30](-[6])-[@{sb3b}:30](-[@{sb3c}2]@{O3b}OH)-[:-30]-[:30]}
+                \arrow{->[$\Delta$][-\ce{OH-}]}
+                \chemfig{H-[:30](=[2]O)-[:-30](-[6])=^[:30]-[:-30]-[:30]}
+            \schemestop
+            \chemmove{
+                \draw [curved arrow={6pt}{2pt}] (O2) to[out=180,in=-30,out looseness=0.6,in looseness=1.2] (H1);
+                \draw [curved arrow={2pt}{2pt}] (sb1b) to[bend left=70,looseness=2] (sb1a);
+                \draw [curved arrow={3pt}{2pt}] (db1) to[bend left=90,looseness=3] (O1);
+                \draw [curved arrow={6pt}{2pt}] (O3a) to[bend right=90,looseness=3] (sb3a);
+                \draw [curved arrow={4pt}{2pt}] (db3) to[bend left=70,looseness=2] (sb3b);
+                \draw [curved arrow={2pt}{2pt}] (sb3c) to[bend left=80,looseness=2.4] (O3b);
+            }
+            \caption{Subsequent dehydration.}
+            \label{fig:mechanismAldolBasicb}
+        \end{subfigure}
+        \caption{Basic aldol reaction mechanism.}
+        \label{fig:mechanismAldolBasic}
+    \end{figure}
+    \begin{itemize}
+        \item Dehydration is irreversible. However, hydroxide is not a very good leaving group, hence why we need heat to accomplish the last step.
+        \item It is evident from the mechanism that two equivalents of aldehyde lead to one equivalent of the condensation product.
+        \item Note that we use these conditions because 80\% of the reactions in this chapter follow from the exact same ones. Thus, whenever you want to do a condensation reaction in a problem, it should be easy to remember the appropriate reagents.
+        \begin{itemize}
+            \item Hydroxide will work here as the initial base, but it will not work in the Claisen condensation?
+            \item If asked to predict the products on a problem set, we will see conditions beyond ethoxide (for clarity), even though we almost never need anything else chemically.
+        \end{itemize}
+        \item Equilibrium positions of the three steps in Figure \ref{fig:mechanismAldolBasica}.
+        \begin{itemize}
+            \item First: Slightly to the left (the SM's $\alpha$-hydrogen has $\pKa=17$ and ethanol's hydroxyl hydrogen has $\pKa=16$; we will favor the weaker acid).
+            \item Second: Strongly to the right (aldehydes have \emph{very} electron-deficient carbonyl carbons).
+            \item Third: Neutral (we are reacting an alkoxide with the conjugate acid of an alkoxide [specifically, ethoxide]).
+        \end{itemize}
+        \item Adding up the three equilibria, we can see that the reaction favors the products without any additional external driving force.
+        \item In both the first and second parts of this reaction (and hence in the overall reaction, too), ethoxide acts as a catalyst.
+        \begin{itemize}
+            \item In Figure \ref{fig:mechanismAldolBasica}, we consume one equivalent of ethoxide in the first step, and regenerate one equivalent in the last step.
+            \item In Figure \ref{fig:mechanismAldolBasicb}, we consume one equivalent of ethoxide in the first step and generate one equivalent of hydroxide in the last step. However, since hydroxide is a stronger base than ethoxide, it will quickly deprotonate one equivalent of ethanol, regenerating our one equivalent of ethoxide.
+        \end{itemize}
+    \end{itemize}
+    \item Key points.
+    \begin{enumerate}
+        \item For aldehydes, the equilibrium favors the product.
+        \item For ketones, the equilibrium favors the reactants.
+        \begin{itemize}
+            \item The equilibrium analogous to the first step in Figure \ref{fig:mechanismAldolBasica} leans far more strongly toward the reactants for ketones.
+            \item If you heat the reaction up however, dehydration and Le Ch\^{a}telier's principle take hold, yielding that product.
+        \end{itemize}
+    \end{enumerate}
+    \item Aldol reactions form two new chiral centers.
+    \begin{itemize}
+        \item Consider the C2 and C3 carbons in the product of Figure \ref{fig:mechanismAldolBasica}.
+        \item Thus, some more complicated SMs will yield a stereodivergent synthesis based on the mechanism.
+    \end{itemize}
+    \item There is a table on \textcite[859]{bib:SolomonsEtAl} that focuses on how we can take aldol products to other compounds.
+    \item Acidic conditions.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:-30]-[:30](=[2]O)-[:-30]H}
+            \arrow{->[\ce{HCl}]}
+            \chemfig{-[:-30]-[:30]*6(=(-)-(-H)(=[2]O))}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item Notice that here, we directly get the $\alpha,\beta$-unsaturated carbonyl, i.e., we do not need additional heat as with basic conditions.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \vspace{2em}
+        \footnotesize
+        \centering
+        \schemestart
+            \chemfig{-[:-30]-[:30](=[2]O)-[:-30]H}
+            \arrow(1--2){<=>}[,1.2]
+            \chemfig{-[:-30]=^[@{db2}:30](-[@{sb2}2]@{O2}\charge{90=\:}{O}H)-[:-30]H}
+            \arrow(@1--3){0}[90]
+            \chemfig{-[:-30]-[:30](=[2]@{O3}\charge{90=\:}{O})-[:-30]H}
+            \arrow(@3--5){->[\chemfig[atom sep=1.4em]{@{H4}H-[@{sb4}]@{Cl4}Cl}][-\ce{Cl-}]}[,1.2]
+            \chemfig{-[:-30]-[:30]@{C5}(=[@{db5}2]@{O5}\charge{90:3pt=$\oplus$}{O}H)-[:-30]H}
+            \arrow(@2--6){<=>}[,1.5]
+            \chemfig{-[:-30]-[:30](-[2]OH)-[:-30](-[6])-[:30](=[2]@{O6}\charge{90:3pt=$\oplus$}{O}-[@{sb6}:30]@{H6}H)-[:-30]H}
+            \arrow{<=>[\chemfig{@{Cl7}\charge{90:3pt=$\ominus$}{Cl}}]}
+            \chemfig{-[:-30]-[:30](-[2]@{O8}\charge{90=\:}{O}H)-[:-30](-[6])-[:30](=[2]O)-[:-30]H}
+            \arrow{<=>[*{0} {\chemfig[atom sep=1.4em]{@{H9}H-[@{sb9}]@{Cl9}Cl}}]}[-90]
+            \subscheme{
+                \chemfig{-[:-30]-[:30](-[@{sb10a}2]@{O10}\charge{90:3pt=$\oplus$}{O}H_2)-[@{sb10b}:-30](-[:-70])(-[@{sb10c}:-110]@{H10}H)-[:30](=[2]O)-[:-30]H}
+                \arrow{0}[,0.6]
+                \chemfig{@{Cl11}\charge{180=\:,45:1pt=$\ominus$}{Cl}}
+            }
+            \arrow{->[][*{0.90} {-\ce{HCl}, \ce{H2O}}]}[180,1.4]
+            \chemfig{-[:-30]-[:30]=_[:-30](-[6])-[:30](=[2]O)-[:-30]H}
+        \schemestop
+        \chemmove{
+            \draw [-] (5.east) to[out=0,in=180,out looseness=0.5] ++(1.7,-2.707);
+            \draw [curved arrow={6pt}{2pt}] (O3) to[out=90,in=90,looseness=1.8] (H4);
+            \draw [curved arrow={2pt}{2pt}] (sb4) to[bend left=90,looseness=3] (Cl4);
+            \draw [curved arrow={6pt}{2pt}] (O2) to[out=90,in=0,looseness=5] (sb2);
+            \draw [curved arrow={4pt}{2pt}] (db2) to[out=120,in=-90,looseness=1] (C5);
+            \draw [curved arrow={3pt}{2pt}] (db5) to[bend left=90,looseness=3] (O5);
+            \draw [curved arrow={11pt}{2pt}] (Cl7) to[out=90,in=0,looseness=1.4] (H6);
+            \draw [curved arrow={2pt}{2pt}] (sb6) to[bend left=70,looseness=2.5] (O6);
+            \draw [curved arrow={6pt}{2pt}] (O8) to[out=90,in=30,out looseness=2,in looseness=4] (H9);
+            \draw [curved arrow={2pt}{2pt}] (sb9) to[bend right=90,looseness=3] (Cl9);
+            \draw [curved arrow={6pt}{2pt}] (Cl11) to[out=180,in=-30,in looseness=1.5] (H10);
+            \draw [curved arrow={2pt}{2pt}] (sb10c) to[bend left=60,looseness=2] (sb10b);
+            \draw [curved arrow={2pt}{2pt}] (sb10a) to[bend left=90,looseness=3] (O10);
+        }
+        \caption{Acidic aldol reaction mechanism.}
+        \label{fig:mechanismAldolAcidic}
+    \end{figure}
+    \begin{itemize}
+        \item The first step is enol formation.
+        \item We also must preactivate the aldehyde before the enol can react with it.
+        \item In the last step, since \ce{Cl-} is a really crappy base, we have to motivate the leaving group via protonation.
+        \begin{itemize}
+            \item Note that the reason that this dehydration reaction is easier than the one under basic conditions is that \ce{H2O} is a significantly better leaving group than \ce{OH-}.
+        \end{itemize}
+        \item There are many other proposed mechanisms for this reaction, but this is the one that \textcite{bib:SolomonsEtAl} uses.
+    \end{itemize}
+    \item Acetone will undergo an aldol reaction under acidic conditions even though the first four equalibria will strongly favor the reverse reaction for it. This is because the irreversible dehydration is such a strong driving force.
+    \item A note on testable material.
+    \begin{itemize}
+        \item Tang will only use the basic aldol reaction in synthesis/reagent problems; the acidic aldol reaction will only ever show up as a mechanism question.
+        \item She wants us to know the mechanism because knowing what it takes to get an enol to react is important. However, since we'd only ever really do a basic aldol synthetically, she'll only test us on that.
+    \end{itemize}
+    \item Although ketones typically won't react under basic aldol conditions, they may cyclize intramolecularly.
+    \item Intramolecular ketone reactions.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{@{C1a}-[:30]@{C1b}(=[2]O)-[:-30]@{C1c}-[:30]@{C1d}-[:-30]@{C1e}-[:30]@{C1f}(=[2]O)-[:-30]@{C1g}}
+            \arrow{->[\ce{NaOH}][\ce{EtOH}]}[,1.1]
+            \chemfig{@{C2a}-[:30]@{C2b}*6(-@{C2c}-@{C2d}-@{C2e}-@{C2f}(=O)-@{C2g}=)}
+        \schemestop
+        \chemmove{
+            \foreach \nod/\n in {C1a/1,C1b/2,C1c/3,C1d/4,C1e/5,C1f/6,C1g/7} {
+                \node [below,font=\scriptsize\color{orx}] at (\nod) {\n};
+            }
+            \node [below,font=\scriptsize\color{orx}] at (C2a) {7};
+            \node [below,font=\scriptsize\color{orx}] at (C2b) {6};
+            \node [below,font=\scriptsize\color{orx}] at (C2c) {5};
+            \node [below,font=\scriptsize\color{orx}] at (C2d) {4};
+            \node [above,font=\scriptsize\color{orx}] at (C2e) {3};
+            \node [below,font=\scriptsize\color{orx}] at (C2f) {2};
+            \node [above,font=\scriptsize\color{orx}] at (C2g) {1};
+        }
+    \end{center}
+    \vspace{0em}
+    \begin{itemize}
+        \item \ce{NaOH} and \ce{EtOH} play the same roles as in the original basic conditions setup.
+    \end{itemize}
+    \item Mechanism.
+    % \begin{figure}[h!]
+    %     \centering
+    %     \footnotesize
+    %     \schemestart
+    %         \chemfig{@{H1a}H-[@{sb1a}2]-[@{sb1b}:30](=[@{db1}2]@{O1}O)-[@{sb1c}:-30](-[@{sb1d}6]@{H1b}H)-[:30]-[:-30]-[:30](=[2]O)-[:-30]}
+    %         \arrow(1--){<=>[\chemfig{@{O2}\charge{180=\:,90:3pt=$\ominus$}{O}Et}][\ce{EtOH}]}[,1.1]
+    %         \chemfig{=_[@{db3a}:30](-[@{sb3}2]@{O3a}\charge{180=\:,45:1pt=$\ominus$}{O})-[:-30]-[:30]-[:-30]-[:30]@{C3}(=[@{db3b}2]@{O3b}O)-[:-30]}
+    %         \arrow{<=>}
+    %         \chemfig{*6((-[:-130])(-[:-170]@{O4}\charge{90:3pt=$\ominus$}{O})----(=O)--)}
+    %         \arrow{<=>[\chemfig[atom sep=1.4em]{@{H5}H-[@{sb5}]@{O5}OEt}][\ce{EtO-}]}[,1.4]
+    %         \chemfig{*6((-[:-130])(-[:-170]HO)----(=[@{db6}]@{O6}O)-[@{sb6a}](-[@{sb6b}]@{H6}H)-)}
+    %         \arrow{<=>[*{0}\chemfig{Et@{O7}\charge{0=\:,90:3pt=$\ominus$}{O}}][*{0}\ce{EtOH}]}[-90]
+    %         \chemfig{*6((-[:-130])(-[@{sb8a}:-170]H@{O8a}O)----(-[@{sb8b}]@{O8b}\charge{180=\:,90:3pt=$\ominus$}{O})=[@{db8}]-[@{sb8c}])}
+    %         \arrow{->[][*{0.90}-\ce{OH-}]}[180]
+    %         \chemfig{*6((-)----(=O)-=)}
+    %         % 
+    %         \arrow(@1--){<=>}[90]
+    %         \chemfig{-[:30](-[@{sb10}2]@{O10a}\charge{180=\:,45:1pt=$\ominus$}{O})=^[@{db10a}:-30]-[:30]-[:-30]-[:30]@{C10}(=[@{db10b}2]@{O10b}O)-[:-30]}
+    %         \arrow{<<->}
+    %         \chemfig{*4([,1.25](-[:-115,1])(-[:-155,1]\charge{135:1pt=$\ominus$}{O})---(-[,1](=[::-60,1]O)-[::60,1])-)}
+    %     \schemestop
+    %     \chemmove{
+    %         \draw [curved arrow={6pt}{2pt}] (O2) to[out=180,in=-20,out looseness=0.4,in looseness=2.5] (H1a);
+    %         \draw [curved arrow={2pt}{2pt}] (sb1a) to[bend right=60,looseness=2] (sb1b);
+    %         \draw [curved arrow={3pt}{2pt}] (db1) to[bend left=90,looseness=3] (O1);
+    %         \draw [curved arrow={6pt}{2pt}] (O3a) to[bend right=90,looseness=3] (sb3);
+    %         \draw [curved arrow={4pt}{2pt}] (db3a) to[out=-60,in=-90] (C3);
+    %         \draw [curved arrow={3pt}{2pt}] (db3b) to[bend right=90,looseness=3] (O3b);
+    %         \draw [curved arrow={11pt}{2pt}] (O4) to[out=90,in=90,out looseness=2.5,in looseness=1.8] (H5);
+    %         \draw [curved arrow={2pt}{2pt}] (sb5) to[bend left=90,looseness=3] (O5);
+    %         \draw [curved arrow={6pt}{2pt}] (O7) to[out=0,in=90,out looseness=3,in looseness=4] (H6);
+    %         \draw [curved arrow={2pt}{2pt}] (sb6b) to[bend left=60,looseness=2] (sb6a);
+    %         \draw [curved arrow={3pt}{2pt}] (db6) to[bend left=90,looseness=3] (O6);
+    %         \draw [curved arrow={6pt}{2pt}] (O8b) to[bend right=90,looseness=3] (sb8b);
+    %         \draw [curved arrow={4pt}{2pt}] (db8) to[bend left=60,looseness=2] (sb8c);
+    %         \draw [curved arrow={2pt}{2pt}] (sb8a) to[bend right=90,looseness=3] (O8a);
+    %         %
+    %         \draw [curved arrow={6pt}{2pt},densely dashed] (O2) to[out=180,in=-20,out looseness=0.5,in looseness=2] (H1b);
+    %         \draw [curved arrow={2pt}{2pt},densely dashed] (sb1d) to[bend left=60,looseness=2] (sb1c);
+    %         \draw [curved arrow={3pt}{2pt},densely dashed] (db1) to[bend right=90,looseness=3] (O1);
+    %         \draw [curved arrow={6pt}{2pt},densely dashed] (O10a) to[bend right=90,looseness=3] (sb10);
+    %         \draw [curved arrow={4pt}{3pt},densely dashed] (db10a) to[out=30,in=150] (C10);
+    %         \draw [curved arrow={3pt}{2pt},densely dashed] (db10b) to[bend right=90,looseness=3] (O10b);
+    %     }
+    %     \caption{Intramolecular ketone aldol reaction mechanism.}
+    %     \label{fig:mechanismAldolIntra}
+    % \end{figure}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{@{H1a}H-[@{sb1a}2]-[@{sb1b}:30](=[@{db1}2]@{O1}O)-[@{sb1c,0.2}:-30](-[@{sb1d,0.8}2]@{H1b}H)-[:30]-[:-30]-[:30](=[2]O)-[:-30]}
+            \arrow(1--){<=>[\chemfig{@{O2}\charge{180=\:,90:3pt=$\ominus$}{O}Et}][\ce{EtOH}]}[,1.1]
+            \chemfig{=_[@{db3a}:30](-[@{sb3}2]@{O3a}\charge{180=\:,45:1pt=$\ominus$}{O})-[:-30]-[:30]-[:-30]-[:30]@{C3}(=[@{db3b}2]@{O3b}O)-[:-30]}
+            \arrow{<=>}
+            \chemfig{*6((-[:-130])(-[:-170]@{O4}\charge{90:3pt=$\ominus$}{O})----(=O)--)}
+            \arrow{<=>[\chemfig[atom sep=1.4em]{@{H5}H-[@{sb5}]@{O5}OEt}][\ce{EtO-}]}[,1.4]
+            \chemfig{*6((-[:-130])(-[:-170]HO)----(=[@{db6}]@{O6}O)-[@{sb6a}](-[@{sb6b}]@{H6}H)-)}
+            \arrow{<=>[*{0}\chemfig{Et@{O7}\charge{0=\:,90:3pt=$\ominus$}{O}}][*{0}\ce{EtOH}]}[-90]
+            \chemfig{*6((-[:-130])(-[@{sb8a}:-170]H@{O8a}O)----(-[@{sb8b}]@{O8b}\charge{180=\:,90:3pt=$\ominus$}{O})=[@{db8}]-[@{sb8c}])}
+            \arrow{->[][*{0.90}-\ce{OH-}]}[180]
+            \chemfig{*6((-)----(=O)-=)}
+            % 
+            \arrow(@1--){<=>[*{0}\chemfig{@{O10}\charge{-90=\:,90:3pt=$\ominus$}{O}Et}][*{0}\ce{EtOH}]}[90]
+            \chemfig{-[:30](-[@{sb11}2]@{O11a}\charge{180=\:,45:1pt=$\ominus$}{O})=^[@{db11a}:-30]-[:30]-[:-30]-[:30]@{C11}(=[@{db11b}2]@{O11b}O)-[:-30]}
+            \arrow{<<->}
+            \chemfig{*4([,1.25](-[:-115,1])(-[:-155,1]\charge{135:1pt=$\ominus$}{O})---(-[,1](=[::-60,1]O)-[::60,1])-)}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={6pt}{2pt}] (O2) to[out=180,in=0,out looseness=0.5,in looseness=2.8] (H1a);
+            \draw [curved arrow={2pt}{2pt}] (sb1a) to[bend right=60,looseness=2] (sb1b);
+            \draw [curved arrow={3pt}{2pt}] (db1) to[bend left=90,looseness=3] (O1);
+            \draw [curved arrow={6pt}{2pt}] (O3a) to[bend right=90,looseness=3] (sb3);
+            \draw [curved arrow={4pt}{2pt}] (db3a) to[out=-60,in=-90] (C3);
+            \draw [curved arrow={3pt}{2pt}] (db3b) to[bend right=90,looseness=3] (O3b);
+            \draw [curved arrow={11pt}{2pt}] (O4) to[out=90,in=90,out looseness=2.5,in looseness=1.8] (H5);
+            \draw [curved arrow={2pt}{2pt}] (sb5) to[bend left=90,looseness=3] (O5);
+            \draw [curved arrow={6pt}{2pt}] (O7) to[out=0,in=90,out looseness=3,in looseness=4] (H6);
+            \draw [curved arrow={2pt}{2pt}] (sb6b) to[bend left=60,looseness=2] (sb6a);
+            \draw [curved arrow={3pt}{2pt}] (db6) to[bend left=90,looseness=3] (O6);
+            \draw [curved arrow={6pt}{2pt}] (O8b) to[bend right=90,looseness=3] (sb8b);
+            \draw [curved arrow={4pt}{2pt}] (db8) to[bend left=60,looseness=2] (sb8c);
+            \draw [curved arrow={2pt}{2pt}] (sb8a) to[bend right=90,looseness=3] (O8a);
+            %
+            \draw [curved arrow={6pt}{2pt},densely dashed] (O10) to[out=-90,in=90] (H1b);
+            \draw [curved arrow={2pt}{2pt},densely dashed] (sb1d) to[bend right=30,looseness=1.5] (sb1c);
+            \draw [curved arrow={3pt}{2pt},densely dashed] (db1) to[bend right=70,looseness=2] (O1);
+            \draw [curved arrow={6pt}{2pt},densely dashed] (O11a) to[bend right=90,looseness=3] (sb11);
+            \draw [curved arrow={4pt}{3pt},densely dashed] (db11a) to[out=30,in=150] (C11);
+            \draw [curved arrow={3pt}{2pt},densely dashed] (db11b) to[bend right=90,looseness=3] (O11b);
+        }
+        \caption{Intramolecular ketone aldol reaction mechanism.}
+        \label{fig:mechanismAldolIntra}
+    \end{figure}
+    \begin{itemize}
+        \item The diketone above is symmetric. Thus, it does not matter which side acts as the nucleophile (gets deprotonated) and which side acts as the electrophile (is attacked by the enolate). Therefore, we may WLOG deprotonate the left side of the molecule above.
+        \item Having chosen a ketone to deprotonate, we realize that there are two types of acidic $\alpha$-hydrogens.
+        \begin{itemize}
+            \item In solution, both will deprotonate.
+            \item However, at most one of these deprotonations can lead to a stable (5- or 6-membered) ring and thus complete the full reaction.
+            \item The other reversible pathway \emph{will} occur; the product molecule will just react backwards.
+        \end{itemize}
+        \item Notice that the last three steps are entirely analogous to Figure \ref{fig:mechanismAldolBasicb}.
+    \end{itemize}
+    \item Rules.
+    \begin{enumerate}
+        \item You must be able to form a 5- or 6-membered ring for the full reaction to proceed.
+        \item The diketone above is symmetric. If given an asymmetric ketone, the less hindered side will act as the electrophile, and the more hindered side will act as the nucleophile.
+    \end{enumerate}
+    \item Further notes on intramolecular ketone aldol reactions.
+    \begin{itemize}
+        \item The above rules are not true all the time, but for the sake of the class, we will assume them to always be true.
+        \item Rule 2 also applies to aldehydes vs. ketones. The aldehyde portion, if it exists, is by definition less sterically encumbered and therefore will act as the electrophile.
+        \begin{itemize}
+            \item The preferential use of aldehydes as electrophiles also squares with their electronics, i.e., that aldehydes are stronger electrophiles since hydrogens are worse electron-donating groups than alkyl groups.
+            \item Rule 2 is an empirical finding, though.
+        \end{itemize}
+        \item When looking at a cyclization retrosynthetically, break the double bond --- the side of the double bond nearer the extant carbonyl will be the $\alpha$-carbon of the original nucleophilic carbonyl, and the other side will be the carbonyl carbon of the original electrophilic carbonyl.
+    \end{itemize}
+    \item \textbf{Cross-aldol reaction}: An aldol reaction between two different aldehydes.
+    \begin{itemize}
+        \item Cross-aldol reactions are usually not productive: Given two aldehydes, they will yield a stoichiometric mix of all four products.
+    \end{itemize}
+    \item Cross-aldol reactions can be useful synthetically in two main ways.
+    \begin{enumerate}
+        \item When one SM cannot form enolates.
+        \begin{itemize}
+            \item Think benzaldehyde or acetaldehyde.
+        \end{itemize}
+        \item When we form stoichiometric enolate and then add the aldehyde.
+    \end{enumerate}
+    \item Consider the cross-aldol reaction of benzaldehyde and acetaldehyde.
+    \begin{itemize}
+        \item Some acetaldehyde enolates will react with more acetaldehyde.
+        \item We can cut down on this however by mixing the benzaldehyde and base first and then adding acetaldehyde dropwise while stirring.
+        \item In this latter case, as soon as an enolate forms, it will find that it is surrounded by benzaldehyde, and likely react with it.
+    \end{itemize}
+    \item Consider the cross-aldol reaction of cyclohexanone and acetaldehyde.
+    \begin{itemize}
+        \item If we stoichiometrically deprotonate cyclohexanone with LDA at \SI{-78}{\celsius} and then add acetaldehyde, the major species will be the alkoxide (but stabilized by a \ce{Li+} countercation).
+        \item This species is stable until workup.
+        \item Note that the molecule that we stoichiometrically deprotonate must be a ketone (i.e., not an aldehyde).
+        \begin{itemize}
+            \item This is because aldehydes will dimerize, as discussed at the end of Lecture 8.
+            \item Another possible side reaction is partial nucleophilic acyl substitution by LDA (since aldehydes are so open sterically).
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Claisen condensation}: A reaction analogous to an aldol reaction that uses esters instead of aldehydes or ketones.
+    \begin{itemize}
+        \item Claisen condensations are electronically different from aldol reactions.
+        \begin{itemize}
+            \item An ester's carbonyl carbon is less electrophilic than either an aldehyde's or a ketone's.
+            \item An ester's $\alpha$-hydrogen is less acidic than either an aldehyde's or a ketone's.
+        \end{itemize}
+        \item Esters also have leaving groups; thus, a secondary deprotonation need not be part of the reaction pathway.
+        \item Claisen condensations only occur under basic conditions.
+    \end{itemize}
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30]OEt}
+            \arrow{->[1. \ce{NaOH} / \ce{EtOH}][2. \ce{H3O+}\rule{1.15cm}{0pt}]}[,2]
+            \chemfig{-[:30](=[2]O)-[:-30]-[:30](=[2]O)-[:-30]OEt}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item Forms a $\beta$-ketoester!
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{EtO-[:30](=[@{db1}2]@{O1}O)-[@{sb1a}:-30]-[@{sb1b}:30]@{H1}H}
+            \arrow{<=>[\chemfig{@{O2}\charge{180=\:,90:3pt=$\ominus$}{O}Et}][\ce{EtOH}]}[,1.1]
+            \chemfig{EtO-[:30](-[@{sb3}2]@{O3}\charge{180=\:,90:3pt=$\ominus$}{O})=^[@{db3}:-30]}
+            \arrow{<=>[\chemfig[atom sep=1.4em]{-[:30]@{C4}(=[@{db4}2]@{O4}O)-[:-30]OEt}]}[,1.5]
+            \chemfig{EtO-[:30](=[2]O)-[:-30]-[:30](-[@{sb5a}2]@{O5a}\charge{180=\:,90:3pt=$\ominus$}{O})(-[@{sb5b}:-70]@{O5b}OEt)-[:-30]}
+            \arrow{<=>[][*{0}\ce{EtO-}]}[-90]
+            \chemfig{EtO-[:30](=[2]O)-[:-30](-[@{sb6a}6]@{H6}H)-[@{sb6b}:30](=[@{db6}2]@{O6}O)-[:-30]}
+            \arrow{<=>[*{0.-90}\ce{EtOH}][*{0.90}\chemfig{@{O7}\charge{-90:3pt=$\ominus$}{O}Et}]}[180,1.1]
+            \chemfig{EtO-[:30](=[2]O)-[:-30]=^[@{db8}:30](-[@{sb8}2]@{O8}\charge{0=\:,90:3pt=$\ominus$}{O})-[:-30]}
+            \arrow{->[*{0.-90}{\chemfig[atom sep=1.4em]{@{H9}H-[@{sb9}]@{O9}\charge{90:3pt=$\oplus$}{O}H_2}}][*{0.90}-\ce{H2O}]}[180,1.3]
+            \chemfig{EtO-[:30](=[2]O)-[:-30]-[:30](=[2]O)-[:-30]}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={6pt}{2pt}] (O2) to[out=180,in=40] (H1);
+            \draw [curved arrow={2pt}{2pt}] (sb1b) to[bend right=70,looseness=2] (sb1a);
+            \draw [curved arrow={3pt}{2pt}] (db1) to[bend left=90,looseness=3] (O1);
+            \draw [curved arrow={6pt}{2pt}] (O3) to[bend right=90,looseness=3] (sb3);
+            \draw [curved arrow={4pt}{3pt}] (db3) to[out=60,in=150] (C4);
+            \draw [curved arrow={3pt}{2pt}] (db4) to[bend right=90,looseness=3] (O4);
+            \draw [curved arrow={6pt}{2pt}] (O5a) to[bend right=90,looseness=3] (sb5a);
+            \draw [curved arrow={2pt}{2pt}] (sb5b) to[bend right=90,looseness=3] (O5b);
+            \draw [curved arrow={11pt}{2pt}] (O7) to[out=-90,in=180] (H6);
+            \draw [curved arrow={2pt}{2pt}] (sb6a) to[bend right=70,looseness=2] (sb6b);
+            \draw [curved arrow={3pt}{2pt}] (db6) to[bend right=90,looseness=3] (O6);
+            \draw [curved arrow={6pt}{2pt}] (O8) to[bend left=90,looseness=3] (sb8);
+            \draw [curved arrow={4pt}{2pt}] (db8) to[out=110,in=90,out looseness=2] (H9);
+            \draw [curved arrow={2pt}{2pt}] (sb9) to[out=110,in=130,looseness=3] (O9);
+        }
+        \caption{Claisen condensation mechanism.}
+        \label{fig:mechanismClaisen}
+    \end{figure}
+    \begin{itemize}
+        \item The above mechanism diverges from Figure \ref{fig:mechanismAldolBasic} in step 3. Here, we kick out the leaving group instead of protonating.
+        \item Equilibrium positions.
+        \begin{itemize}
+            \item First: Strongly to the left (the SM's $\alpha$-hydrogen has $\pKa=25$ and ethanol's hydroxyl hydrogen has $\pKa=16$; we will favor the weaker acid).
+            \item Second: Strongly to the left (esters are less electrophilic than aldehydes or ketones; the equilibrium position hinges on the electrophilicity of the electrophile).
+            \item Third: Slightly to the right.
+            \item Fourth: Strongly to the right (the third intermediate's double $\alpha$-hydrogen has $\pKa\approx 9$ and ethanol's hydroxyl hydrogen has $\pKa=16$; we will favor deprotonation in this case).
+        \end{itemize}
+        \item Thus, the fourth intermediate is stable until workup (i.e., is the end result of step 1 in the general form).
+        \item The role of ethoxide.
+        \begin{itemize}
+            \item Ethoxide is a stoichiometric reagent. For every unit of product we form, we need one equivalent of ethoxide and two equivalents of SM.
+        \end{itemize}
+    \end{itemize}
+    \item An implication of the equilibrium positions.
+    \begin{itemize}
+        \item Consider subjecting ethyl isobutyrate to Claisen condensation conditions.
+        \item Following the mechanism in Figure \ref{fig:mechanismClaisen}, the third intermediate will have two methyl groups where the dual $\alpha$-proton(s) should be.
+        \item Thus, the third intermediate will not be able to react forward to the stabilized form and will just react backwards to the starting material.
+    \end{itemize}
+\end{itemize}
+
+
+
+
+\end{document}
