@@ -1,0 +1,455 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{7}
+
+\begin{document}
+
+
+
+
+\chapter{Amine Reactions and Carbohydrate Structure}
+\section{Amines 2}
+\begin{itemize}
+    \item \marginnote{5/17:}Midterm 2.
+    \begin{itemize}
+        \item Scores back after class.
+        \item Request a regrade (of your whole exam) ASAP if needed.
+        \item Raw score: $56\pm 24$ (median 59).
+        \item Range: 0-99.
+        \item Adjusted: $70\pm 10$.
+    \end{itemize}
+    \item Today's lecture content in \textcite{bib:SolomonsEtAl}.
+    \begin{itemize}
+        \item Today: Sections 20.4, 20.12, and 20.6-20.7.
+        \item Next time: Sections 22.1-22.2, 22.9A.
+        \item Practice problems: 20.19-20.24, 20.26, 20.34-20.36.
+    \end{itemize}
+    \item Review of last lecture.
+    \begin{itemize}
+        \item Basicity of amines.
+        \item Higher $\pKa(\ce{RNH3+})$ means more basic \ce{RNH2}.
+        \item Key: How willing is \ce{N} to share its lone pair.
+    \end{itemize}
+    \item Today, we will cover the following.
+    \begin{enumerate}[label={\Roman*.}]
+        \item Properties of amines.
+        \begin{enumerate}[label={\Alph*.}]
+            \stepcounter{enumii}
+            \item Acid-base properties (cotd.).
+        \end{enumerate}
+        \item Preparation of amines.
+        \begin{enumerate}[label={\Alph*.}]
+            \item Alkylation.
+            \item Reduction.
+            \item Hofmann rearrangement.
+            \item Curtius rearrangement (review).
+        \end{enumerate}
+        \item Reactions of amines.
+        \begin{enumerate}[label={\Alph*.}]
+            \item Hofmann elimination.
+            \item Cope elimination.
+        \end{enumerate}
+    \end{enumerate}
+    \item Acid-base properties (cotd.).
+    \item Additional example amine $\pKa$'s.
+    \begin{itemize}
+        \item \ce{Py} has $\pKa(\ce{PyH+})=5.3$.
+        \begin{itemize}
+            \item Its basicity is intermediate between \ce{NH3} and \ce{PhNH2} due to its $sp^2$ hybridization.
+        \end{itemize}
+        \item Pyrrole has $\pKa(\ce{RH+})=0.4$.
+        \begin{itemize}
+            \item Since nitrogen's lone pair here is fully incorporated into the aromatic system, it is not basic.
+            \item In fact, pyrrole has $\pKa(\ce{R})=16.5$.
+            \item This means that its amine hydrogen is actually mildly acidic (about equivalent to ethanol's hydroxyl hydrogen).
+        \end{itemize}
+        \item Indole (left to us).
+        \begin{itemize}
+            \item Indole is like pyrrole: To have $4n+2$ aromatic electrons, it needs nitrogen's lone pair.
+        \end{itemize}
+        \item See the Aromaticity 2 lecture from \textcite{bib:CHEM22100Notes} for more on aromatic $\pKa$'s.
+        \item Amides.
+        \begin{itemize}
+            \item An amide will coordinate a proton at its oxygen, not its nitrogen.
+            \item This protonated species will have $\pKa=0$.
+            \item The reason for coordination at oxygen is that the resonance structure with a negative charge on oxygen makes a significant contribution to the overall molecule (oxygen is more electronegative than nitrogen). In fact, this resonance structure implies that the \ce{C-N} bond in an amide is not rotatable, and thus the six atoms \ce{C-C(=O)-NH2} are coplanar.
+            \item Additionally, the nitrogen protons are slightly acidic with $\pKa(\ce{RNH2})=18$.
+            \item Hence, if we react an amide with a Grignard, we will deprotonate the \ce{NH2} portion.
+        \end{itemize}
+    \end{itemize}
+    \item A note on how protonation can be used to isolate amines (and other basic species) when synthesizing them in the lab.
+    \begin{itemize}
+        \item Begin by protonating the amines and performing an extraction.
+        \item The protonated amines will be attracted to the polar aqueous layer and all other organic compounds can be separated out with the organic layer.
+        \item Then we can deprotonate to recover our desired amines.
+    \end{itemize}
+    \item Preparation of amines.
+    \item Alkylation (direct).
+    \item General form.
+    \begin{equation*}
+        \ce{NH3 ->[1. MeI][2. NaOH] MeNH2}
+    \end{equation*}
+    \item Mechanism.
+    \begin{itemize}
+        \item The first step proceeds via an S\textsubscript{N}2 mechanism to yield a quaternary ammonium salt.
+        \item The second step (a basic workup) removes one of the three nitrogen protons, yielding \ce{H2O + NaI} as side products.
+    \end{itemize}
+    \item Problems with direct alkylation:
+    \begin{itemize}
+        \item Even before the basic workup, we have base in solution (\ce{NH3}). This base can accomplish the second-step deprotonation, introducing \ce{MeNH2} into our initial reaction mixture.
+        \item But adding alkyl groups (EDGs) creates more reactive amines, so \ce{MeNH2} will preferentially attack \ce{CH3I} compared with \ce{NH3}.
+        \item Thus, with direct alkylation, we cannot stop at one particular stage; we will always get a mixture of \ce{NH3}, \ce{MeNH2}, \ce{Me2NH}, \ce{Me3N}, and \ce{Me4NI}.
+    \end{itemize}
+    \item One potential solution.
+    \begin{itemize}
+        \item In some cases, we can use excess amine and a bulky alkyl halide.
+        \item For example, mixing approx. 20 equivalents of \ce{MeNH2} with \ce{BnCl} yields fairly pure \ce{BnNMeH}.
+    \end{itemize}
+    \item Alkylation (Gabriel synthesis).
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{*6(=-(*5(-(=O)-NH-(=O)-))=-=-)}
+            \arrow{->[1. reagents][2. \ce{MeI}\rule{5.5mm}{0pt}]}[,1.5]
+            \chemfig{*6(=-(*5(-(=O)-N(-)-(=O)-))=-=-)}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item The Gabriel synthesis prepares primary amines.
+        \item The starting material is called \textbf{phthalimide}.
+        \item Reagents is either \ce{NaH} (nice because it liberates \ce{H2_{(g)}} as an additional driving force) or \ce{K2CO3} (nice because it's not as strong as \ce{NaH}).
+    \end{itemize}
+    \item \textbf{Phthalimide}: A $2^\circ$ amine, the lone hydrogen of which has has $\pKa=8.3$ since it is subject to \emph{two} EWG carbonyls and additional resonance with the aromatic ring. \emph{Structure} see above left.
+    \item Mechanism.
+    \begin{itemize}
+        \item The first step is a deprotonation.
+        \item The second step proceeds via an S\textsubscript{N}2 mechanism.
+        \begin{itemize}
+            \item Thus, we preferentially use it in conjunction with primary alkyl halides.
+            \item Secondary, allylic, and benzylic alkyl halides will work.
+            \item An attempt to run this reaction with a tertiary alkyl halide will lead to elimination.
+        \end{itemize}
+        \item Notice that the product is a $3^\circ$ amide and thus cannot react any further.
+    \end{itemize}
+    \item There are three ways to recover the primary amine from the product above.
+    \begin{enumerate}
+        \item Use \ce{H2SO4}, \ce{H2O}, and heat.
+        \begin{itemize}
+            \item This amide hydrolysis proceeds analogously to the last several steps of Figure \ref{fig:mechanismNitrileHydrolysis}.
+            \item A subsequent deprotonation of \ce{MeNH3+} will be required.
+        \end{itemize}
+        \item Use \ce{NaOH}, \ce{H2O}, and heat.
+        \begin{itemize}
+            \item This amide hydrolysis proceeds analogous to the saponification mechanism.
+        \end{itemize}
+        \item Use \ce{H2NNH2} and reflux.
+        \begin{itemize}
+            \item See \textcite{bib:SolomonsEtAl} for the mechanism.
+        \end{itemize}
+    \end{enumerate}
+    \item Reduction.
+    \begin{itemize}
+        \item This method of preparation can proceed from a number of starting materials.
+    \end{itemize}
+    \item From azides.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{*5([:18]--(--[::-60]-Br)---)}
+            \arrow{->[1. \ce{NaN3}\rule{3.3mm}{0pt}][2. reagents]}[,1.5]
+            \chemfig{*5([:18]--(--[::-60]-NH_2)---)}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item Begin with the desired alkyl group as an alkyl halide.
+        \item React it with an azide nucleophile via an S\textsubscript{N}2 mechanism.
+        \begin{itemize}
+            \item Azide is one of the few nucleophiles that is a very poor base, so it is very good for S\textsubscript{N}2.
+        \end{itemize}
+        \item Reagents is either \ce{LiAlH4} followed by an acidic workup or hydrogenation (\ce{H2 + Pd/C}).
+    \end{itemize}
+    \item From nitriles.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{*6(--(--[:30]Br)----)}
+            \arrow{->[\begin{tabular}{l}
+                1. \ce{NaCN}\\
+                2. \ce{LiAlH4}\\
+                3. \ce{H3O+}\\
+            \end{tabular}]}[,1.4]
+            \chemfig{*6(--(--[:30]-NH_2)----)}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item Take the desired alkyl group, S\textsubscript{N}2 it with a cyanide nucleophile, and then reduce with \ce{LiAlH4} as in Chapter 17.
+        \item Notice that this reaction adds an extra carbon before the amide, unlike with azides.
+    \end{itemize}
+    \item From amides.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]NR'R''}
+            \arrow{->[1. \ce{LiAlH4}][2. \ce{H3O+}\rule{1.4mm}{0pt}]}[,1.4]
+            \chemfig{R-[:30]-[:-30]NR'R''}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item This is a review reaction; see the discussion associated with Figure \ref{fig:mechanismAmideReduction}.
+    \end{itemize}
+    \item From iminium ions (reductive amination).
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{*6(----(=O)--)}
+            \arrow{0}[,0.1]\+
+            \chemfig{\chembelow{N}{H}(-[:30])(-[:150])}
+            \arrow{->[reagents]}[,1.2]
+            \chemfig{*6(----(-N(-[:30])(-[:150]))--)}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item This is a very useful reaction in the pharmaceutical industry.
+        \item Depending on the reagents, we can accomplish this reaction in a stepwise fashion or all at once.
+        \item Stepwise reagents.
+        \begin{itemize}
+            \item Use mild \ce{H+} followed by a mild hydride source, such as \ce{NaBH4}.
+            \item In the first step, we create an enamine in equilibrium with the corresponding iminium ion.
+            \item In the second step, hydride attacks the iminium ion's carbon, leading to the final product.
+        \end{itemize}
+        \item This set of reagents explains the name of the reaction: It is \emph{amination} because we are replacing an oxygen with a nitrogen and \emph{reductive} because we are reducing the iminium ion's double bond.
+        \item If we use these reagents, we must (in theory) perform the reaction stepwise because \ce{NaBH4} can reduce any unreacted ketone.
+        \begin{itemize}
+            \item In reality, there is a trick we can use to do this reaction all at once with these reagents.
+        \end{itemize}
+        \item One-step reagents.
+        \begin{itemize}
+            \item Use sodium cyanoborohydride (\ce{NaBH3CN}) in alcoholic solvent (\ce{EtOH} or \ce{MeOH}).
+        \end{itemize}
+        \item \ce{NaBH3CN} is a weaker hydride source (cyano groups are EWGs), so it can't react with the ketone because it's not electrophilic enough (the charged iminium ion is much more electrophilic).
+    \end{itemize}
+    \item Reductive amination describes the above reaction of a relatively complicated ketone with a relatively simple amine. If we use, instead, a relatively simple ketone and a relatively complicated amine, the reaction is called\dots
+    \item Reductive alkylation.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{*5([:18]--(-\chemabove{N}{H}-[::-60]-Ph)---)}
+            \arrow{->[\ce{HCHO}, \ce{MeOH}, \ce{NaBH3CN}]}[,2.8]
+            \chemfig{*5([:18]--(-N(-[2])-[::-60]-Ph)---)}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item Remember that \ce{HCHO} is formaldehyde, which is our carbon source here.
+    \end{itemize}
+    \item Reductive amination/alkylation can be more controlled than alkylation.
+    \begin{itemize}
+        \item This is because with alkylation, our final $3^\circ$ amine could still form a quaternary ammonium salt in the presence of excess \ce{MeI}.
+        \item However, a $3^\circ$ amine can never form another iminium ion.
+    \end{itemize}
+    \item From nitro groups.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{*6(=-=(-NO_2)-=-)}
+            \arrow{->[reagents]}[,1.2]
+            \chemfig{*6(=-=(-NH_2)-=-)}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item Reagents is \ce{H2 + Pd/C}, \ce{Fe + HCl}, or \ce{Zn(Hg) + HCl}.
+    \end{itemize}
+    \item Hofmann rearrangement.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]NH_2}
+            \arrow{->[\ce{NaOH}, \ce{Br2}][\ce{H2O}]}[,1.5]
+            \chemfig{R-NH_2}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item Whereas with azides and amides kept the number of carbons constant and nitriles added a carbon, here we lose a carbon.
+        \item This reaction is similar to the Curtius rearrangement.
+        \item The conditions are identical to those used in the haloform reaction, and we will see that there are homologies in the mechanisms, too.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]@{N1}N(-[6]H)-[@{sb1}:30]@{H1}H}
+            \arrow{->[\chemfig{@{O2}\charge{90:3pt=$\ominus$}{O}H}][-\ce{H2O}]}
+            \chemleft{[}
+                \subscheme{
+                    \chemfig{R-[:30](=[2]O)-[:-30]@{N3}\charge{90:3pt=$\ominus$}{N}-[6]H}
+                    \arrow{<->}[-90]
+                    \chemfig{R-[:30](-[2]\charge{135:1pt=$\ominus$}{O})=^[:-30]N-[6]H}
+                }
+            \chemright{]}
+            \arrow{->[\chemfig[atom sep=1.4em]{@{Br5a}Br-[@{sb5}]@{Br5b}Br}][-\ce{Br-}]}[,1.2]
+            \chemfig{R-[:30](=[2]O)-[:-30]@{N6}N(-[6]Br)-[@{sb6}:30]@{H6}H}
+            \arrow{->[\chemfig{@{O7}\charge{90:3pt=$\ominus$}{O}H}][-\ce{H2O}]}
+            \chemleft{[}
+                \subscheme{
+                    \chemfig{R-[@{sb8a}:30](=[2]O)-[@{sb8b}:-30]@{N8}\charge{90:3pt=$\ominus$}{N}-[@{sb8c}6]@{Br8}Br}
+                    \arrow{<->}[-90]
+                    \chemfig{R-[@{sb9a}:30](-[@{sb9b}2]@{O9}\charge{135:1pt=$\ominus$}{O})=^[:-30]@{N9}N-[@{sb9c}6]@{Br9}Br}
+                }
+            \chemright{]}
+            \arrow{->[][-\ce{Br-}]}
+            \chemfig{R-[:30]N=[:-30]C=[:-30]O}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={11pt}{2pt}] (O2) to[out=90,in=90,looseness=3] (H1);
+            \draw [curved arrow={2pt}{2pt}] (sb1) to[out=120,in=90,looseness=2.5] (N1);
+            \draw [curved arrow={11pt}{2pt}] (N3) to[out=90,in=90,out looseness=1.5,in looseness=3] (Br5a);
+            \draw [curved arrow={2pt}{2pt}] (sb5) to[bend left=90,looseness=3] (Br5b);
+            \draw [curved arrow={11pt}{2pt}] (O7) to[out=90,in=90,looseness=3] (H6);
+            \draw [curved arrow={2pt}{2pt}] (sb6) to[out=120,in=90,looseness=2.5] (N6);
+            \draw [curved arrow={11pt}{2pt},densely dashed] (N8) to[out=90,in=60,looseness=3] (sb8b);
+            \draw [curved arrow={2pt}{2pt},densely dashed] (sb8a) to[out=-60,in=-150,looseness=1.3] (N8);
+            \draw [curved arrow={2pt}{2pt},densely dashed] (sb8c) to[bend right=90,looseness=3] (Br8);
+            \draw [curved arrow={11pt}{2pt}] (O9) to[out=135,in=180,looseness=4] (sb9b);
+            \draw [curved arrow={2pt}{2pt}] (sb9a) to[out=-60,in=-150,looseness=1.3] (N9);
+            \draw [curved arrow={2pt}{2pt}] (sb9c) to[bend right=90,looseness=3] (Br9);
+        }
+        \caption{Hofmann rearrangement mechanism (isocyanate formation).}
+        \label{fig:mechanismHofmannRearr}
+    \end{figure}
+    \begin{itemize}
+        \item Many of these reactions are reversible, but the equilibria are not that important here.
+        \item The first two brominations proceed analogously to those in Figure \ref{fig:mechanismHaloformRxn}.
+        \begin{itemize}
+            \item Recall that the second bromination happens more readily because having bromine (an EWG) on the nitrogen makes the remaining hydrogen more acidic.
+        \end{itemize}
+        \item There are two possible rearrangement mechanisms after this for forming the isocyanate.
+        \begin{itemize}
+            \item The two proceed from different resonance structures.
+            \item The one drawn in dashed lines is advocated for by \textcite{bib:SolomonsEtAl}. In it, the \emph{nitrogen} lone pair kicks in, the alkyl group migrates to the nitrogen, and bromine leaves.
+            \item The one drawn in solid lines is advocated for by Tang. In it, the \emph{oxygen} lone pair kicks in, the alkyl group migrates to the nitrogen, and bromine leaves.
+            \item Tang will accept either on a test despite her preference for the latter.
+        \end{itemize}
+        \item Once we have an isocyanate, we remove it exactly as in Figure \ref{fig:mechanismCurtiusb}.
+        \begin{itemize}
+            \item The \ce{NHCOOH} intermediate (intermediate 2 in Figure \ref{fig:mechanismCurtiusb}) is a \textbf{carbamic acid}.
+            \item A possible intermediate between intermediate 1 and the carbamic acid is a resonance form of the former wherein we have kicked the oxygen lone pair in and used the double bond to create a lone pair on nitrogen, negatively charging it.
+            \item Note that \textcite{bib:SolomonsEtAl} uses a simplified mechanism for these first two steps (isocyanate to carbamic acid). Therein the hydroxide attacks the isocyanate carbon and kicks the \ce{N=C} electrons back onto nitrogen, forming the negatively charged nitrogen intermediate described above in one go. From here, the negative nitrogen can attack water to form the carbamic acid.
+            \item The mechanism of \textcite{bib:SolomonsEtAl} is inaccurate, though, because when displaced the electrons will preferentially move toward the more electronegative oxygen.
+            \item Regardless, both mechanisms will be accepted as correct in this course.
+        \end{itemize}
+        \item Other comments.
+        \begin{itemize}
+            \item Whereas we can isolate the isocyanate intermediate in the Curtius rearrangement, the conditions of the Hofmann rearrangement are such that it will continue reacting immediately upon being formed.
+            \item Even though \ce{CO2} is released by this mechanism, we will not observe bubbling in the reaction mixture because the gas is absorbed by the basic media.
+            \item Overall, we form isocyanate and then perform two consecutive types of nucleophilic acyl substitution.
+        \end{itemize}
+    \end{itemize}
+    \item An advantage of the Hofmann rearrangement is that it maintains the chirality in the \ce{R} group.
+    \begin{itemize}
+        \item In particular, we preserve the chirality at the carbon that ends up being $\alpha$ to the amine.
+        \item This differs from any of the reductive pathways that use S\textsubscript{N}2, for instance.
+    \end{itemize}
+    \item Comments on the Curtius rearrangement.
+    \begin{itemize}
+        \item In the first step, heat is used to transform the (relatively stable) acyl azide into the isocyanate and liberate \ce{N2} gas.
+        \item This detail was not mentioned in Lecture 6 and is not shown in Figure \ref{fig:mechanismCurtiusa}.
+        \item You can hydrolyze the isocyanate with alcohol instead of water, leading to different products. We will explore this in PSet 5.
+    \end{itemize}
+    \item Reactions of amines.
+    \item Hofmann elimination.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:-30]-[:30]-[:-30]NH_2}
+            \arrow{->[1. \ce{MeI} (excess), base][2. \ce{Ag2O}, \ce{H2O}, $\Delta$\rule{4mm}{0pt}]}[,2.3]
+            \chemfig{-[:-30]=^[:30]}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item This reaction solves the problem of how to turn \ce{NH2} into a good leaving group so that we can eliminate it.
+        \item Example bases are \ce{NEt3} or a \ce{NaOH} pellet (it doesn't even have to be dissolved).
+        \item Yields the non-Zaitsev product\footnote{This is why Mrs. Meer introduced the Zaitsev v. Hofmann product!} (less substituted alkene).
+    \end{itemize}
+    \item Mechanism.
+    \begin{itemize}
+        \item The first step makes the amide \ce{NH2-} into a good leaving group by transforming it into a quaternary ammonium salt.
+        \item The second step causes the elimination. How it works centers around the dual role \ce{Ag2O} serves.
+        \begin{itemize}
+            \item First, it relinquishes a silver cation to precipitate the iodide anion of the ammonium salt\footnote{Silver and iodide ions preferentially bond because of the HSAB principle from \textcite{bib:CHEM20100Notes}.}.
+            \item Second, the remaining \ce{AgO-} species acts as a strong bulky base.
+        \end{itemize}
+    \end{itemize}
+    \item If we use a non-Hofmann elimination base (e.g., \ce{NaOEt}) after forming the quaternary ammonium salt, then we get a mix of products with the Zaitsev product as the major product.
+    \item Cope elimination.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{R-[:-30]-[:30]-[:-30]NMe_2}
+            \arrow{->[1. reagents][2. $\Delta$\rule{8.3mm}{0pt}]}[,1.5]
+            \chemfig{R-[:-30]=^[:30]}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item Reagents is mCPBA or \ce{H2O2}.
+        \item We need heat around \SI{150}{\celsius} in the second step.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{R-[:-30]-[:30]-[:-30]NMe_2}
+            \arrow{->[mCPBA]}[,1.2]
+            \chemfig{*6([:120,1.25]@{O2}\charge{180=\:,45:1pt=$\ominus$}{O}-@{N2}\charge{90:3pt=$\oplus$}{N}Me_2-[@{sb2a}]-[@{sb2b}](-[,1]R)-[@{sb2c}]@{H2}H)}
+            \arrow{->[$\Delta$]}
+            \chemfig{R-[:-30]=^[:30]}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={6pt}{2pt}] (O2) to[bend right=20] (H2);
+            \draw [curved arrow={2pt}{2pt}] (sb2c) to[bend right=60,looseness=1.8] (sb2b);
+            \draw [curved arrow={2pt}{2pt}] (sb2a) to[bend right=80,looseness=2.5] (N2);
+        }
+        \caption{Cope elimination mechanism.}
+        \label{fig:mechanismCope}
+    \end{figure}
+    \begin{itemize}
+        \item A concerted second step; hence, this is syn elimination.
+    \end{itemize}
+    \item The Cope elimination is regioselective.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{*6(-(<(-[::60])(-[::-60]))-(<N(-[::60])(-[::-60]))--(<:)--)}
+            \arrow{->[1. mCPBA][2. $\Delta$\rule{8.5mm}{0pt}]}[,1.5]
+            \chemfig{*6(-(<(-[::60])(-[::-60]))-=-(<:)--)}
+        \schemestop
+        \caption{Cope elimination regioselectivity.}
+        \label{fig:copeRegioselectivity}
+    \end{figure}
+    \begin{itemize}
+        \item The hydrogen and oxygen need to be able to align (i.e., in the transition state). Thus, if they cannot, we will not get elimination there.
+        \item Guiding principle: The proton that you pull off has to point in the same direction as the nitrogen.
+    \end{itemize}
+\end{itemize}
+
+
+
+
+\end{document}
