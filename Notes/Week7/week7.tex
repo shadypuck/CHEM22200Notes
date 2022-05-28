@@ -1,0 +1,133 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{6}
+
+\begin{document}
+
+
+
+
+\chapter{Intro to Amines}
+\section{Amines 1}
+\begin{itemize}
+    \item \marginnote{5/10:}Today's lecture content in \textcite{bib:SolomonsEtAl}.
+    \begin{itemize}
+        \item Today: More examples for Chapter 19 and Sections 20.1-20.3.
+        \item Next time: Sections 20.4, 20.12, and 20.6-20.7.(review).
+        \item Practice problems: None.
+    \end{itemize}
+    \item The exam format will be the same as Midterm 1; the difficulty will be decreased.
+    \item Tang thinks that Chapter 19 is the hardest chapter in Organic Chemistry III.
+    \item Problem set 4 incorporates real reactions from the literature!
+    \item Review of Chapter 19 content.
+    \begin{itemize}
+        \item Many good examples/tables/charts/summaries.
+        \item Carbonyl condensation calling cards.
+        \begin{itemize}
+            \item A 1,3-dioxygen setup comes from a condensation reaction (aldol or Claisen).
+            \item Similarly, the Mannich reaction yields a 1,3-diheteroatom setup.
+            \item A 1,5-dioxygen setup comes from conjugate addition.
+            \item A cyclohexenone group comes from Robinson annulation.
+        \end{itemize}
+        \item The only alkoxide bases we will ever see for the Chapter 19 reactions are ethoxide or methoxide.
+        \begin{itemize}
+            \item \ce{NaOH} / \ce{EtOH} and \ce{NaOEt} / \ce{EtOH} are equivalent conditions.
+        \end{itemize}
+        \item A trick for drawing cyclized molecules from linear molecules: The enolate side does not change.
+        \begin{itemize}
+            \item For an aldol reaction, the enolate side will be the one that kept the carbonyl.
+            \item For a Claisen condensation, the enolate side will be the one that kept the ester.
+        \end{itemize}
+        \item Mechanics of the retro-Claisen.
+        \begin{itemize}
+            \item The lack of a middle $\alpha$-hydrogen implies that the ketone carbonyl carbon is much more reactive. In other words, if the ethoxide base is not attracted to an electrophilic, acidic proton, it is more likely to be attracted to the electrophilic carbonyl carbon.
+            \item Once ethoxide adds in, it can definitely be kicked back out again. However, we will only draw the productive route, i.e., that in which the next step is breaking the \ce{C-C} bond.
+            \item Always look out for forward Claisens after performing a retro-Claisen (we are still under Claisen condensation conditions)!
+            \item As a particular example, if we subject the leftmost molecule in Figure \ref{fig:DieckmannAsymmetric} to \ce{NaOEt} / \ce{EtOH}, the final product will not be the middle molecule but the rightmost molecule.
+        \end{itemize}
+        \item Claisen condensation special/tricky cases.
+        \begin{itemize}
+            \item A Claisen condensation will proceed with most any \emph{single} \ce{R} group on the $\alpha$-carbon of the ester; in particular, we need not just have a methyl group there, but can also have bigger things, like isopropyl groups. Issues only arise when we have \emph{two} \ce{R} groups on the ester's $\alpha$-carbon.
+            \item Ethyl cyclohexanecarboxylate cleverly disguises double \ce{R} groups on the $\alpha$-carbon as a ring. Regardless, if we can correctly identify it, we will see that it will only react via protonation/deprotonation under Claisen condensation conditions.
+            \item Claisen condensation products that can perform a retro-Claisen can sometimes continue to react in another forward Claisen. However, in such cases, we find that the retro-Claisen is preferred. There will always be a bunch of background reactions, but what determines the major product is still thermodynamics (i.e., what the most stable product is).
+        \end{itemize}
+    \end{itemize}
+    \item Motivating Chapter 20.
+    \begin{itemize}
+        \item Amines are very important in chemistry, biochemistry, and pharmaceuticals.
+        \item We have simple $1^\circ$, $2^\circ$, and $3^\circ$ amines in chemistry.
+        \item In biology, amines appear in nucleotide base pairs, peptides, amphetamines, etc.
+        \item Amides are the least reactive (neutral) carboxylic acid derivative.
+    \end{itemize}
+    \item Acid/base properties of amines.
+    \begin{itemize}
+        \item Amines are our first basic functional group.
+    \end{itemize}
+    \item Tang is dividing this chapter into three parts.
+    \begin{enumerate}[label={\Roman*.}]
+        \item Properties of amines.
+        \item Preparation of amines.
+        \item Reactions of amines.
+    \end{enumerate}
+    \item Today, we will cover the following.
+    \begin{enumerate}[label={\Roman*.}]
+        \item Properties of amines.
+        \begin{enumerate}[label={\Alph*.}]
+            \item Structure.
+            \item Acid-base properties.
+        \end{enumerate}
+    \end{enumerate}
+    \item Draws a 3D hybridized amine structure and discusses the stereochemical inversion of amines about the nitrogen center.
+    \begin{itemize}
+        \item Chirality cannot be stabily maintained.
+        \item For the umbrealla flip, $E_a=\SI{6}{\kilo\calorie\per\mole}$.
+        \begin{itemize}
+            \item Recall that this is very much on the same order of magnitude as rotation from eclipsed to staggered to eclipsed in ethane (that transformation has an activation barrier of about \SI{3}{\kilo\calorie\per\mole}).
+            \item Note that any reaction with $E_a<\SI{25}{\kilo\calorie\per\mole}$ can proceed at room temp.
+            \item This reaction is far below that barrier, so it proceeds readily. Perhaps we could isolate amines in one conformation at lower temperatures, though?
+        \end{itemize}
+        \item With all four substitutions different, nitrogen behaves like a carbon and does not stereoinvert.
+    \end{itemize}
+    \item Acid-base properties.
+    \item Amines are not that strong but \emph{tend} to be good bases.
+    \begin{itemize}
+        \item We say "tend" because there are cases where amines are not basic.
+    \end{itemize}
+    \item Quantifying the basicity of amines.
+    \begin{itemize}
+        \item We use the $\pKa$ of the protonated amine.
+        \item This is so that we can consider \ce{RNH2} species picking up a new proton (as desired). If we were to consider $\pKa(\ce{RNH2})$, we would be discussing that species losing a proton (or \ce{RHN-} picking up a proton).
+    \end{itemize}
+    \item Simple amines have $\pKa\approx 9\text{-}10$.
+    \begin{itemize}
+        \item \ce{HCl} has $\pKa=-7$.
+        \item \ce{BuH} has $\pKa=50$.
+    \end{itemize}
+    \item Example amine $\pKa$'s.
+    \begin{itemize}
+        \item \ce{NH3} has $\pKa(\ce{NH4+})=9.24$.
+        \item \ce{MeNH2} has $\pKa(\ce{MeNH3+})=10.62$.
+        \begin{itemize}
+            \item This $\pKa$ is higher because methyl groups are electron donating, so they make the nitrogen more nucleophilic.
+        \end{itemize}
+        \item \ce{PhNH2} has $\pKa(\ce{PhNH3+})=4.6$.
+        \begin{itemize}
+            \item The nitrogen lone pair participates in resonance with the phenyl group.
+            \item Thus, it is $sp^2$ hybridized.
+            \item Another consequence of this resonance/hybridization is that the whole molecule will be planar. From an orbital perspective, this promotes facile resonance among all seven $p$ orbitals. This also presents an activation barrier to free rotation about the \ce{C-N} bond.
+            \item The overall effect is that since the nitrogen's lone pair is delocalized into the $\pi$ system and held closer to the nucleus via the $sp^2$ hybridization, it is less basic.
+        \end{itemize}
+        \item Substituted anilines.
+        \begin{itemize}
+            \item EWGs on the ring lower $\pKa$.
+            \item EDGs on the ring raise $\pKa$.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+
+
+
+\end{document}
