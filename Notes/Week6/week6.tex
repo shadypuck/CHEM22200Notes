@@ -259,7 +259,7 @@
         \end{itemize}
         \item There are many other proposed mechanisms for this reaction, but this is the one that \textcite{bib:SolomonsEtAl} uses.
     \end{itemize}
-    \item Acetone will undergo an aldol reaction under acidic conditions even though the first four equalibria will strongly favor the reverse reaction for it. This is because the irreversible dehydration is such a strong driving force.
+    \item Acetone will undergo an aldol reaction under acidic conditions even though the first four equilibria will strongly favor the reverse reaction for it. This is because the irreversible dehydration is such a strong driving force.
     \item A note on testable material.
     \begin{itemize}
         \item Tang will only use the basic aldol reaction in synthesis/reagent problems; the acidic aldol reaction will only ever show up as a mechanism question.
@@ -421,7 +421,7 @@
     \begin{enumerate}
         \item When one SM cannot form enolates.
         \begin{itemize}
-            \item Think benzaldehyde or acetaldehyde.
+            \item Think benzaldehyde.
         \end{itemize}
         \item When we form stoichiometric enolate and then add the aldehyde.
     \end{enumerate}
@@ -520,6 +520,387 @@
         \item Consider subjecting ethyl isobutyrate to Claisen condensation conditions.
         \item Following the mechanism in Figure \ref{fig:mechanismClaisen}, the third intermediate will have two methyl groups where the dual $\alpha$-proton(s) should be.
         \item Thus, the third intermediate will not be able to react forward to the stabilized form and will just react backwards to the starting material.
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{Carbonyl Condensation Reactions 2}
+\begin{itemize}
+    \item \marginnote{5/5:}Today's lecture content in \textcite{bib:SolomonsEtAl}.
+    \begin{itemize}
+        \item Today: Sections 19.1-19.3 and 19.7-19.8.
+        \item Next time: Additional examples and Sections 20.1-20.4.
+        \item Practice problems: 19.41-19.48, 19.50-19.51, 19.58-19.59.
+    \end{itemize}
+    \item Today will be mostly content and not have very many examples.
+    \begin{itemize}
+        \item Tang is primarily concerned with getting us the knowledge we need to do PSet 4 and Midterm 2 today.
+        \item Next lecture will have a lot of examples.
+    \end{itemize}
+    \item Review of last lecture.
+    \item Today, we will cover the following.
+    \begin{enumerate}[label={\Roman*.}]
+        \stepcounter{enumi}
+        \item Claisen condensation.
+        \begin{enumerate}[label={\Alph*.}]
+            \stepcounter{enumii}
+            \item Cross Claisen condensations.
+            \item Intramolecular reactions.
+            \item Retro-Claisen condensations.
+        \end{enumerate}
+        \item Conjugate addition.
+        \begin{enumerate}[label={\Alph*.}]
+            \item Michael addition.
+            \item Robinson annulation.
+        \end{enumerate}
+        \item Mannich reaction.
+    \end{enumerate}
+    \item Cross Claisen condensation.
+    \begin{itemize}
+        \item A Claisen condensation between two different esters.
+        \item As with cross-aldol reactions, these are not usually productive.
+    \end{itemize}
+    \item Cross Claisen condensations can be useful synthetically in three main ways.
+    \begin{enumerate}
+        \item When one SM has no $\alpha$-hydrogens.
+        \item When we form stoichiometric enolate and then add an acid chloride.
+        \item Between esters and ketones.
+    \end{enumerate}
+    \item An SM without $\alpha$ hydrogens.
+    \begin{itemize}
+        \item Similarly to cross-aldol reactions, we can mix the non-enolate-forming species and base first and then add the enolate-forming species dropwise.
+        \item When given a synthesis problem, we don't have to highlight this fact; we will assume that we use the proper experimental technique.
+        \item Liberating \ce{CO2} from a $\beta$-diketoester: \ce{NaOH} then \ce{H3O+} \emph{or} \ce{H3O+} and heat.
+    \end{itemize}
+    \item Claisen condensations with acid chlorides.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:-30](-[6])-[:30](=[2]O)-[:-30]OEt}
+            \arrow{->[1. LDA, \SI{-78}{\celsius}][2. \ce{PhCOCl}\rule{6.2mm}{0pt}]}[,2]
+            \chemfig{(-[:-150]*6(-=-=-=))(=[2]O)-[:-30](-[:-70])(-[:-110])-[:30](=[2]O)(-[:-30]OEt)}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item This reaction will not be tested; it's just for our own understanding of the fact that this is possible.
+    \end{itemize}
+    \item Claisen condensations between esters and ketones.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:-30](-[6]H)-[:30](=[2]O)-[:-30]-[:30]}
+            \+
+            \chemfig{-[:-30](-[6]H)-[:30](=[2]O)-[:-30]OEt}
+            \arrow{->[1. \ce{NaOEt}][2. \ce{H3O+}\rule{1mm}{0pt}]}[,1.4]
+            \chemfig{-[:-30]-[:30](=[2]O)-[:-30](-[6])-[:30](=[2]O)-[:-30]-[:30]}
+        \schemestop
+    \end{center}
+    \item Mechanism.
+    \begin{itemize}
+        \item The mechanism is entirely analogous to Figure \ref{fig:mechanismClaisen}, except that we form a ketone enolate instead of an ester enolate.
+        \item The ketone forms the enolate since its $\alpha$-hydrogens are much more acidic.
+        \item Why we don't have other cross Claisen condensations.
+        \begin{itemize}
+            \item Ketone-ketone: As with ketone-based aldol reactions, these will not happen under basic conditions because we lack the driving force.
+            \item Ester-ketone: Same reason as above, plus the additional issue that ester enolates are harder to form.
+            \item Ester-ester: Again, the issue here is that ketone enolates form much more readily.
+        \end{itemize}
+    \end{itemize}
+    \item Tang postulates that acid and heat is the way to liberate \ce{CO2} from $\beta$-ketoesters?
+    \item Intramolecular (Dieckmann) reactions.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{EtO-[:30]@{C1a}(=[2]O)-[:-30]@{C1b}-[:30]@{C1c}-[:-30]@{C1d}-[:30]@{C1e}-[:-30]@{C1f}-[:30]@{C1g}(=[2]O)-[:-30]OEt}
+            \arrow{->[1. \ce{NaOEt}][2. \ce{H3O+}\rule{1mm}{0pt}]}[,1.4]
+            \chemfig{*6(@{C2a}-@{C2b}-@{C2c}-@{C2d}(-@{C2e}(=[2]O)-[:-30]OEt)-@{C2f}(=O)-@{C2g}-)}
+        \schemestop
+        \chemmove{
+            \foreach \nod/\n in {C1a/1,C1b/2,C1c/3,C1d/4,C1e/5,C1f/6,C1g/7} {
+                \node [below,font=\scriptsize\color{orx}] at (\nod) {\n};
+            }
+            \node [below,font=\scriptsize\color{orx}] at (C2a) {3};
+            \node [below,font=\scriptsize\color{orx}] at (C2b) {4};
+            \node [below,font=\scriptsize\color{orx}] at (C2c) {5};
+            \node [above,font=\scriptsize\color{orx}] at (C2d) {6};
+            \node [below,font=\scriptsize\color{orx}] at (C2e) {7};
+            \node [below,font=\scriptsize\color{orx}] at (C2f) {1};
+            \node [above,font=\scriptsize\color{orx}] at (C2g) {2};
+        }
+    \end{center}
+    \item Mechanism.
+    \begin{itemize}
+        \item The mechanism is entirely analogous to Figure \ref{fig:mechanismClaisen}. As drawn, we deprotonate C6, and then the enolate on the right attacks the ester on the left.
+    \end{itemize}
+    \item Asymmetric diesters.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{EtO-[:30]@{C1a}(=[2]O)-[:-30]@{C1b}-[:30]@{C1c}-[:-30]@{C1d}-[:30]@{C1e}-[:-30]@{C1f}(-[6])-[:30]@{C1g}(=[2]O)-[:-30]OEt}
+            \arrow(1--2){->[1. \ce{NaOEt}][2. \ce{H3O+}\rule{1mm}{0pt}]}[,1.4]
+            \chemfig{*6(@{C2a}-@{C2b}-@{C2c}-@{C2d}(-@{C2e}(=[2]O)-[:-30]OEt)(-[2]H)-@{C2f}(=O)-@{C2g}(-)-)}
+            \arrow(@1--3){-/>[*{0.-90}{1. \ce{NaOEt}\rule[-1mm]{0pt}{1cm}}][*{0.90}2. \ce{H3O+}\rule{1mm}{0pt}\rule{0pt}{3mm}]}[180,1.4]
+            \chemfig{*6(@{C3a}-@{C3b}-@{C3c}-@{C3d}(-@{C3e}(=[2]O)-[:-30]OEt)(-[2])-@{C3f}(=O)-@{C3g}-)}
+        \schemestop
+        \chemmove{
+            \node [below,font=\scriptsize\color{orx}] at (C1a) {1};
+            \node [above,font=\scriptsize\color{orx}] at (C1b) {2};
+            \node [below,font=\scriptsize\color{orx}] at (C1c) {3};
+            \node [above,font=\scriptsize\color{orx}] at (C1d) {4};
+            \node [below,font=\scriptsize\color{orx}] at (C1e) {5};
+            \node [above,font=\scriptsize\color{orx}] at (C1f) {6};
+            \node [below,font=\scriptsize\color{orx}] at (C1g) {7};
+            %
+            \node [anchor=-150,font=\scriptsize\color{orx}] at (C2a) {5};
+            \node [anchor=-90 ,font=\scriptsize\color{orx}] at (C2b) {4};
+            \node [anchor=-30 ,font=\scriptsize\color{orx}] at (C2c) {3};
+            \node [anchor=30  ,font=\scriptsize\color{orx}] at (C2d) {2};
+            \node [anchor=90  ,font=\scriptsize\color{orx}] at (C2e) {1};
+            \node [anchor=90  ,font=\scriptsize\color{orx}] at (C2f) {7};
+            \node [anchor=150 ,font=\scriptsize\color{orx}] at (C2g) {6};
+            %
+            \node [anchor=-150,font=\scriptsize\color{orx}] at (C3a) {3};
+            \node [anchor=-90 ,font=\scriptsize\color{orx}] at (C3b) {4};
+            \node [anchor=-30 ,font=\scriptsize\color{orx}] at (C3c) {5};
+            \node [anchor=30  ,font=\scriptsize\color{orx}] at (C3d) {6};
+            \node [anchor=90  ,font=\scriptsize\color{orx}] at (C3e) {7};
+            \node [anchor=90  ,font=\scriptsize\color{orx}] at (C3f) {1};
+            \node [anchor=150 ,font=\scriptsize\color{orx}] at (C3g) {2};
+        }
+        \caption{Asymmetric diesters in the Dieckmann condensation.}
+        \label{fig:DieckmannAsymmetric}
+    \end{figure}
+    \begin{itemize}
+        \item As a general rule, the more substituted side acts as the electrophile and the less substituted side acts as the nucleophile.
+        \item Even though the more substituted enolate is more thermodynamically stable and thus will form more readily, the product it leads to (left above) is much less stable.
+        \begin{itemize}
+            \item From a mechanistic point of view (see Figure \ref{fig:mechanismClaisen}), we must form the species that still has a middle $\alpha$-hydrogen (i.e., the one like the right species above).
+            \item This is so that we can deprotonate and create an enolate that will be stable until workup.
+        \end{itemize}
+        \item Recall that only rings of size 5-6 are stable.
+    \end{itemize}
+    \item Retro-Claisen condensations.
+    \begin{itemize}
+        \item Suppose we subject a $\beta$-diketoester to Claisen condensation conditions (e.g., excess \ce{EtO-}).
+        \item If there is a middle $\alpha$-hydrogen, we will preferentially deprotonate and form a stable enolate until workup.
+        \item If there is \emph{not} a middle $\alpha$-hydrogen, \ce{EtO-} can add into the ketone, forming intermediate 2 of Figure \ref{fig:mechanismClaisen}. From here, we can react backwards to intermediates 2 and then the starting material.
+        \begin{itemize}
+            \item The arrow pushing for the reverse is the exact opposite of the forward version, as per the principle of microscopic reversibility.
+        \end{itemize}
+        \item Note that $\beta$-ketoesters of all kinds are perfectly stable in ethanol or acid workup conditions; it is just that dimethyl substituted ones will decompose under Claisen condensation conditions.
+        \begin{itemize}
+            \item Stated another way, if you put either ethyl acetate or its Claisen condensation product under \ce{NaOEt}, we will get the Claisen condensation product. However, if we put either ethyl isobutyrate or its Claisen condensation product under \ce{NaOEt}, we will get the ester.
+            \item Tang will give more examples next lecture.
+        \end{itemize}
+    \end{itemize}
+    \item Conjugate addition.
+    \item Tang draws three resonance structures for an $\alpha,\beta$ unsaturated compound: One neutral, the next one with the \ce{C=O} bond shifted up onto the oxygen (positive carbonyl carbon), and the next one with the double bond flipped (positive $\beta$ carbon).
+    \begin{itemize}
+        \item This justifies why 1,2- and 1,4-addition happens at the carbons they do.
+    \end{itemize}
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{=^[:-30]-[:30](=[2]O)-[:-30]R}
+            \arrow{->[\ce{Nu}]}
+            \chemfig{Nu-[:30]-[:-30]-[:30](=[2]O)-[:-30]R}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item The overall picture looks like we added \ce{HNu} to the double bond, but mechanistically, this reaction will nor proceed without the presence of the carbonyl.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \vspace{1em}
+        \footnotesize
+        \schemestart
+            \chemfig{@{C1}=^[@{db1a}:-30]-[@{sb1}:30](=[@{db1b}2]@{O1}O)-[:-30]R}
+            \arrow{->[\chemfig{@{Nu2}\charge{90=\:,45:3pt=$\ominus$}{Nu}}]}
+            \chemfig{Nu-[:30]-[:-30]=^[@{db3}:30](-[@{sb3}2]@{O3}\charge{45:1pt=$\ominus$}{O})-[:-30]R}
+            \arrow{->[\chemfig[atom sep=1.4em]{@{H4}H-[@{sb4}]@{Nu4}Nu}]}[,1.2]
+            \chemfig{Nu-[:30]-[:-30]-[:30](=[2]O)-[:-30]R}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={6pt}{4pt}] (Nu2) to[out=90,in=70,looseness=1.5] (C1);
+            \draw [curved arrow={4pt}{2pt}] (db1a) to[out=60,in=120,looseness=2] (sb1);
+            \draw [curved arrow={3pt}{2pt}] (db1b) to[bend right=90,looseness=3] (O1);
+            \draw [curved arrow={11pt}{2pt}] (O3) to[out=45,in=0,looseness=5] (sb3);
+            \draw [curved arrow={4pt}{2pt}] (db3) to[out=120,in=90,looseness=3] (H4);
+            \draw [curved arrow={3pt}{2pt}] (sb4) to[bend left=90,looseness=3] (Nu4);
+        }
+        \caption{Conjugate addition mechanism.}
+        \label{fig:mechanismConjAdd}
+    \end{figure}
+    \item Review.
+    \begin{itemize}
+        \item Reagents that do 1,2-addition: Lithiates, Grignards (mostly), and \ce{LiAlH4}.
+        \item Reagents that do 1,4-addition: \ce{H2O}, \ce{R-SH}, \ce{RNH2}, \ce{CN-}, and \ce{R2CuLi}.
+    \end{itemize}
+    \item \textbf{Michael addition}: Conjugate addition with an enolate serving as the nucleophile. \emph{Also known as} \textbf{1,4-addition}, \textbf{Michael-type addition}.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30]-[:30](=[2]O)-[:-30]OEt}
+            \arrow{0}[,0.1]\+
+            \chemfig{=^[:-30]-[:30](=[2]O)-[:-30]R}
+            \arrow{->[\ce{NaOEt}]}[,1.1]
+            \chemfig{-[:30](=[2]O)-[:-30](-[6]-[:-30]-[6](=[:-30]O)(-[:-150]EtO))-[:30](=[2]O)-[:-30]OEt}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item The product is a 1,5-dicarbonyl, or \textbf{Michael}.
+    \end{itemize}
+    \item Mechanism.
+    \begin{itemize}
+        \item We deprotonate the $\beta$-ketoester in the middle to form an enolate, which then attacks the $\alpha,\beta$ unsaturated compound as in Figure \ref{fig:mechanismConjAdd}.
+        \item The key point here is that the $\beta$-ketoester will form the nucleophile since its double $\alpha$-proton is more acidic than the enone's.
+    \end{itemize}
+    \item Compounds that can serve as Michael donors and acceptors.
+    \begin{itemize}
+        \item Acceptable donors: Ketones and esters yield an enolate under basic conditions.
+        \item Unacceptable donors: Aldehydes.
+        \begin{itemize}
+            \item We will get an aldol reaction.
+        \end{itemize}
+        \item Acceptable Michael acceptors: $\alpha,\beta$-unsaturated ketones, aldehydes, esters, nitriles, nitros, and alkyl amides.
+        \item Unacceptable Michael acceptors: $\alpha,\beta$-unsaturated carboxylic acids, hydrogen amides, and acid chlorides.
+        \begin{itemize}
+            \item We get initial deptotonations in basic media, or nucleophilic acyl substitution followed by deprotonation.
+        \end{itemize}
+    \end{itemize}
+    \item We will only consider enolate-based Michael reactions in this class; in reality, Michael additions can proceed in acidic media, too, but that's beyond the scope of this class.
+    \item \textbf{Annulation}: A ring-forming reaction.
+    \item Robinson annulation.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{*6(----(=O)--)}
+            \arrow{0}[,0.1]\+
+            \chemfig{=^[:-30]-[:30](=[2]O)-[:-30]}
+            \arrow{->[\ce{NaOEt}][\ce{EtOH}]}[,1.1]
+            \chemfig{*6(--(*6(---(=O)-=))----)}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item A one-pot reaction of Michael and aldol.
+        \item Methyl vinyl ketone (MVK) is a key reactant in Robinson annulations.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[H]
+        \centering
+        \vspace{1em}
+        \footnotesize
+        \schemestart
+            \chemfig{*6(---(-[@{sb1a}]@{H1}H)-[@{sb1b}](=[@{db1}]@{O1}O)--)}
+            \arrow{<=>[\chemfig{@{O2}\charge{90:3pt=$\ominus$}{O}Et}][\ce{EtOH}]}
+            \chemfig{*6(---=[@{db3}](-[@{sb3}]@{O3}\charge{180=\:,45:1pt=$\ominus$}{O})--)}
+            \arrow{->[\chemfig[atom sep=1.4em]{@{C4}=^[@{db4a}:-30]-[@{sb4}:30](=[@{db4b}2]@{O4}O)-[:-30]}]}[,1.3]
+            \chemfig{*6(---(--[:-30]=^[@{db5}](-[@{sb5}2]@{O5}\charge{45:1pt=$\ominus$}{O})-[:-30])-(=O)--)}
+            \arrow{->[\chemfig[atom sep=1.4em]{@{H6}H-[@{sb6}]@{O6}OEt}][-\ce{EtO-}]}[,1.3]
+            \chemfig{*6(---(--[:-30]-(=[@{db7}2]@{O7}O)-[@{sb7a}:-30]-[@{sb7b}]@{H7}H)-(=O)--)}
+            \arrow{<=>[*{0}\chemfig{Et@{O8}\charge{45:1pt=$\ominus$}{O}}][*{0}\ce{EtOH}]}[-90]
+            \chemfig{*6(--(--[:30]-(-[@{sb9}6]@{O9a}\charge{180=\:,45:1pt=$\ominus$}{O})=^[@{db9a}:30])-@{C9}(=[@{db9b}]@{O9b}O)---)}
+            \arrow{<=>}[180]
+            \chemfig{*6(--(*6(---(=O)--))-(-[2]\charge{45:1pt=$\ominus$}{O})---)}
+            \arrow[180]
+            \chemfig{*6(--(*6(---(=O)-=))----)}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={11pt}{2pt}] (O2) to[out=90,in=90,looseness=3] (H1);
+            \draw [curved arrow={2pt}{2pt}] (sb1a) to[bend right=60,looseness=1.8] (sb1b);
+            \draw [curved arrow={3pt}{2pt}] (db1) to[bend left=90,looseness=3] (O1);
+            \draw [curved arrow={6pt}{2pt}] (O3) to[bend right=90,looseness=3] (sb3);
+            \draw [curved arrow={2pt}{2pt}] (db3) to[out=60,in=120,looseness=1.5] (C4);
+            \draw [curved arrow={4pt}{2pt}] (db4a) to[bend left=60,looseness=1.8] (sb4);
+            \draw [curved arrow={3pt}{2pt}] (db4b) to[bend right=90,looseness=3] (O4);
+            \draw [curved arrow={11pt}{2pt}] (O5) to[out=45,in=0,looseness=5] (sb5);
+            \draw [curved arrow={4pt}{2pt}] (db5) to[out=120,in=90,out looseness=4,in looseness=5] (H6);
+            \draw [curved arrow={3pt}{2pt}] (sb6) to[bend left=90,looseness=3] (O6);
+            \draw [curved arrow={11pt}{2pt}] (O8) to[out=45,in=-90] (H7);
+            \draw [curved arrow={2pt}{2pt}] (sb7b) to[bend right=60,looseness=1.8] (sb7a);
+            \draw [curved arrow={3pt}{2pt}] (db7) to[bend left=90,looseness=3] (O7);
+            \draw [curved arrow={6pt}{2pt}] (O9a) to[bend left=90,looseness=3] (sb9);
+            \draw [curved arrow={4pt}{3pt}] (db9a) to[out=120,in=-30] (C9);
+            \draw [curved arrow={3pt}{2pt}] (db9b) to[bend left=90,looseness=3] (O9b);
+        }
+        \caption{Robinson annulation mechanism.}
+        \label{fig:mechanismRobinsonAnnulation}
+    \end{figure}
+    \begin{itemize}
+        \item In this class, we assume that Michael reactions are irreversible; in reality, this is not always the case.
+        \item The last step is accomplished in an analogous manner to the last three steps of \ref{fig:mechanismAldolIntra}.
+        \item Tang will give more examples next lecture
+    \end{itemize}
+    \item Note that Robinson was a Nobel laureate, but not for this.
+    \item Retrosynthetic analysis.
+    \begin{itemize}
+        \item Break the double bond first.
+        \item Then break four carbons away to recover MVK.
+    \end{itemize}
+    \item Mannich reaction.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30]}
+            \arrow{0}[,0.1]\+{,,1em}
+            \chemfig{H-[:30](=[2]O)-[:-30]H}
+            \arrow{0}[,0.1]\+
+            \chemfig{\chembelow{N}{H}(-[:30])(-[:150])}
+            \arrow{->[\ce{HCl}]}
+            \chemfig{-[:30](=[2]O)-[:-30]-[:30]-[:-30]N(-[6])-[:30]}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item The key components here are (1) a ketone, (2) an aldehyde (typically formaldehyde), (3) a \emph{secondary} amine, (4) acidic conditions, and (5) the ability to drive off \ce{H2O}.
+    \end{itemize}
+    \item Mechanism.
+    \begin{itemize}
+        \item The first step is forming an iminium ion (a great electrophile; even better than formaldehyde because it's positively charged).
+        \item The second step is converting the ketone to an enol.
+        \item The enol then attacks the iminium ion and we deprotonate.
+    \end{itemize}
+    \item Why we need a secondary amine.
+    \begin{itemize}
+        \item If we use a primary amine, the product can react again.
+        \item This can be useful synthetically, but those applications are beyond the scope of this course.
+        \begin{itemize}
+            \item For example, asymmetric secondary amines can tune the selectivity of the whole reaction.
+        \end{itemize}
+    \end{itemize}
+    \item A reaction of a quaternary ammonium salt.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30]-[:30]-[:-30]N(-[6])-[:30]}
+            \arrow{->[1. \ce{MeI}\rule{6.6mm}{0pt}][2. \ce{Ag2O}, $\Delta$]}[,1.5]
+            \chemfig{-[:30](=[2]O)-[:-30]=^[:30]}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item Nitrogen attacks \ce{MeI} to form an \ce{NMe3R+} species. It is this molecule that reacts with silver oxide.
+    \end{itemize}
+    \item Formaldehyde does not participate in aldol reactions.
+    \begin{itemize}
+        \item This is because it exists as a hydrate in aqueous solution and thus cannot serve as an aldol electrophile.
+        \item Thus, if we want to prepare MVK, we cannot go through acetone and formaldehyde directly; we need the Mannich reaction followed by the above quaternary ammonium salt elimination.
     \end{itemize}
 \end{itemize}
 
