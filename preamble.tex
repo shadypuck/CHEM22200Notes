@@ -42,7 +42,7 @@
 \DeclareSIUnit{\angstrom}{\textup{\AA}}
 \DeclareSIUnit{\calorie}{cal}
 
-\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.pathmorphing,positioning,calc}
 \colorlet{rex}{magenta}
 \colorlet{orx}{orange!90!yellow!95!black!90}
 \colorlet{ory}{orange!90!yellow!95!black!20}
@@ -53,8 +53,12 @@
 \tikzset{
     numcirc/.style={circle,draw,inner sep=1pt,font=\scriptsize},
     curved arrow/.style 2 args={rex,semithick,shorten <=#1,shorten >=#2},
-    wv/.style={decorate,decoration={coil,aspect=0,amplitude=2pt,segment length=11pt}}
+    wv/.style={decorate,decoration={coil,aspect=0,amplitude=2pt,segment length=11pt}},
+    wvbond/.style={decorate,decoration={snake,amplitude=1pt,segment length=3.8pt}}
 }
+
+\DeclareMathOperator{\pH}{pH}
+\DeclareMathOperator{\pKa}{p\textit{K}_a}
 
 \setchemfig{atom sep=2em,fixed length=true,bond offset=3pt,cram width=3pt}
 \setcharge{extra sep=3pt}
@@ -75,7 +79,5 @@
     lddbond/.style={decorate,decoration=ddbond},
     rddbond/.style={decorate,decoration={ddbond,mirror}}
 }
-
-\newcommand{\pKa}{\text{p}K_\text{a}}
 
 \usepackage{subfiles}
