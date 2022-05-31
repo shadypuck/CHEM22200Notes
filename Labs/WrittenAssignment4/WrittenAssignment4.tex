@@ -1,0 +1,84 @@
+\documentclass{article}
+
+\input{../../preamble.tex}
+
+\pagestyle{main}
+\renewcommand{\leftmark}{Azo Dyes for Earth Albedo}
+\renewcommand{\figurename}{Scheme}
+
+\begin{document}
+
+
+
+
+\noindent Steven Labalme\\
+\noindent Dr. Keller\\
+\noindent CHEM 22200 (1A05)\\
+\noindent 23 May 2022
+
+\begin{center}
+    \section*{Large-Scale Synthesis of Azo Dyes to Increase Earth Albedo}
+\end{center}
+\subsection*{Purpose}
+One vicious positive feedback loop contributing to climate change is the decrease in the Earth's albedo, or capacity to reflect solar radiation back into space: As white ice melts, it is replaced by dark water, which absorbs more heat, melting more ice, and on and on. To address this issue, I propose dyeing the Earth's surface and oceans bright, reflective colors with two azo dyes, thus cooling the Earth.
+
+
+\subsection*{Results/Discussion}
+Azo dyes were prepared (Scheme \ref{fig:synthesis}) by transforming stable aniline precursors into electrophilic diazonium salts, which could then attract nucleophilic aromatic rings in a second step. The experiments led to yields of approximately \SIrange{55}{75}{\percent} of dyes that were highly effective at coloring test strands of wool yarn the predicted color based on past experiments.\par
+\begin{figure}[h!]
+    \centering
+    \footnotesize
+    % \begin{subfigure}[b]{\linewidth}
+    %     \centering
+    %     \chemnameinit{\chemfig{N(=[:-150]N-[6]*6(-=-(-NO_2)=-=))-[2]*6(=-=(-NH_2)-=-)}}
+    %     \schemestart
+    %         \chemname{\chemfig{*6((-O_2N)-=-(-NH_2)=-=)}}{p-nitroaniline}
+    %         \arrow(.base east--.base west){->[1. \ce{NaNO2}, \ce{HCl}][2. \ce{PhNH2}\rule{7mm}{0pt}]}[,1.9]
+    %         \chemname{\chemfig{N(=[:-150]N-[6]*6(-=-(-NO_2)=-=))-[2]*6(=-=(-NH_2)-=-)}}{Disperse orange 3}
+    %     \schemestop
+    %     \chemnameinit{}
+    %     \caption{Disperse orange 3.}
+    %     \label{fig:synthesisa}
+    % \end{subfigure}\\[2em]
+    % \begin{subfigure}[b]{\linewidth}
+    %     \centering
+    %     \chemnameinit{\chemfig{N(=[:-150]-[6]*6(-=-=-=))-[2]*6(=-=(-OH)-=-)}}
+    %     \schemestart
+    %         \chemname{\chemfig{*6(-=-(-NH_2)=-=)}}{aniline}
+    %         \arrow(.base east--.base west){->[1. \ce{NaNO2}, \ce{HCl}][2. \ce{PhOH}\rule{8.4mm}{0pt}]}[,1.9]
+    %         \chemname{\chemfig{N(=[:-150]N-[6]*6(-=-=-=))-[2]*6(=-=(-OH)-=-)}}{Solvent yellow 7}
+    %     \schemestop
+    %     \chemnameinit{}
+    %     \caption{Solvent yellow 7.}
+    %     \label{fig:synthesisb}
+    % \end{subfigure}
+    \begin{subfigure}[b]{\linewidth}
+        \centering
+        \schemestart
+            \chemname{\chemfig{*6((-O_2N)-=-(-NH_2)=-=)}}{p-nitroaniline}
+            \arrow(.base east--.base west){->[1. \ce{NaNO2}, \ce{HCl}][2. \ce{PhNH2}\rule{7mm}{0pt}]}[,1.9]
+            \chemname{\chemfig{*6((-O_2N)-=-(-N=[:-30]N-*6(-=-(-NH_2)=-=))=-=)}}{Disperse orange 3}
+        \schemestop
+        \caption{Disperse orange 3.}
+        \label{fig:synthesisa}
+    \end{subfigure}\\[2em]
+    \begin{subfigure}[b]{\linewidth}
+        \centering
+        \schemestart
+            \chemname{\chemfig{*6((-[,,,,white]\phantom{O_2N})-=-(-NH_2)=-=)}}{aniline}
+            \arrow(.base east--.base west){->[1. \ce{NaNO2}, \ce{HCl}][2. \ce{PhOH}\rule{8.4mm}{0pt}]}[,1.9]
+            \chemname{\chemfig{*6((-[,,,,white]\phantom{O_2N})-=-(-N=[:-30]N-[:30]*6(-=-(-OH)=-=))=-=)}}{Solvent yellow 7}
+        \schemestop
+        \caption{Solvent yellow 7.}
+        \label{fig:synthesisb}
+    \end{subfigure}
+    \caption{Synthesis of azo dyes.}
+    \label{fig:synthesis}
+\end{figure}
+Since this method scales well and is not excessively energy intensive (indeed, the experimental setup needs to be cooled to \SI{0}{\celsius}, not heated), I predict that we will be able to scale up production to meet the needs of this project. The atom economy is also quite high --- only a couple of small molecules are released as byproducts over the course of the reaction, so it should be fairly economical, too.\par
+Of course, more research does need to be done before this project can come to fruition (e.g., how best to spread the dye, how to make sure that is does not degrade or get covered up), and there is certainly room for improvement in the initial results (e.g., the yield). For instance, although the \SIrange{55}{75}{\percent} yield is good, it would be nice for it to be much higher. As such, a logical next step is an optimization study to test what kinds of conditions lead to the highest yield, as well as if there are other brightly colored azo dyes that are more readily synthesized. Examples of variables we can alter in follow up studies are the reagent concentrations (perhaps an excess or lack thereof will accelerate the reaction) and the temperature (perhaps greater purity will be achieved at lower temperatures, or perhaps conversely we will find that the reaction proceeds faster and in just as good yield at higher temperatures).
+
+
+
+
+\end{document}
