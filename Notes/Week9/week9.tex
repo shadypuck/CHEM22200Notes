@@ -1,0 +1,336 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{8}
+
+\begin{document}
+
+
+
+
+\chapter{Intro to Biological Molecules}
+\section{Carbohydrates 2}
+\begin{itemize}
+    \item \marginnote{5/24:}Today's lecture content in \textcite{bib:SolomonsEtAl}.
+    \begin{itemize}
+        \item Today: Sections 22.3-22.4, 22.6-22.7 and 22.9A-22.9B. Read Sections 22.10-22.11.
+        \item Next time: Sections 25.1-25.2, 25.4-25.5, 24.11, and more.
+        \item Practice problems: 22.20, 22.31, and 22.43.
+    \end{itemize}
+    \item Final exam info.
+    \begin{itemize}
+        \item The final exam will be 2.2 times longer than the midterm (so slightly more than twice as many problems).
+        \item This should help us as we won't lose so many points if we can't get a mechanism this way.
+        \item The final is cumulative, though Tang will try to test more on new content.
+        \item The practice exam is almost as hard as the real final exam.
+    \end{itemize}
+    \item Review of last lecture.
+    \begin{itemize}
+        \item In the Kiliani-Fischer synthesis, the carboxylic acid intermediate can cyclize into a lactone and the final product can cyclize into a sugar.
+        \begin{figure}[h!]
+            \centering
+            \footnotesize
+            \begin{subfigure}[b]{0.49\linewidth}
+                \centering
+                \schemestart
+                    \chemfig{COOH-[6](-H)(-[4]HO)-[6](-OH)(-[4]H)-[6]-OH}
+                    \arrow{<->>}
+                    \chemfig{-[:20]O-[:-20](=^[,0.8]O)-[:-130](-[2,0.5,,2]HO)-[4](-[6,0.5]OH)-[:130]}
+                \schemestop
+                \caption{Intermediate 2.}
+                \label{fig:kilianiFischerCyclea}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.49\linewidth}
+                \centering
+                \schemestart
+                    \chemfig{CHO-[6](-H)(-[4]HO)-[6](-OH)(-[4]H)-[6]-OH}
+                    \arrow{<->>}
+                    \chemfig{-[:20]O-[:-20](-[,0.8,,,wvbond]OH)-[:-130](-[2,0.5,,2]HO)-[4](-[6,0.5]OH)-[:130]}
+                \schemestop
+                \caption{Product.}
+                \label{fig:kilianiFischerCycleb}
+            \end{subfigure}
+            \caption{Extra Kiliani-Fischer cyclizations.}
+            \label{fig:kilianiFischerCycle}
+        \end{figure}
+        \item D-threose is now used in biology to mimic ribose.
+    \end{itemize}
+    \item Today, we will cover the following.
+    \begin{enumerate}[label={\Roman*.}]
+        \stepcounter{enumi}
+        \item Reactions.
+        \begin{enumerate}[label={\Alph*.}]
+            \stepcounter{enumii}
+            \item Mutarotation.
+            \item Glycosides.
+            \item Oxidation/degradation.
+        \end{enumerate}
+    \end{enumerate}
+    \item Differences between $\alpha$-D-glucopyranose and $\beta$-D-glucapyranose.
+    \begin{align*}
+        \text{MP}_\alpha &= \SI{146}{\celsius}&
+            [\alpha]_\alpha &= \pm\ang{112.2}\\
+        \text{MP}_\beta &= \SI{150}{\celsius}&
+            [\alpha]_\beta &= \pm\ang{18.7}
+    \end{align*}
+    \begin{itemize}
+        \item The \textbf{anomers} differ in their melting point (MP) and optical rotation ($[\alpha]$).
+    \end{itemize}
+    \item Crystallization of a D-glucose solution at different temperatures can isolate either one of them.
+    \begin{itemize}
+        \item $\alpha$ can be crystallized at room temperature; $\beta$ can be crystallized at \SI{100}{\celsius}.
+    \end{itemize}
+    \item If the $\alpha$ and $\beta$ anomers (in any proportion) are added to \ce{H2O}, over time, the optical rotation tends toward \ang{52.6}.
+    \begin{itemize}
+        \item This is because of \textbf{mutarotation}, which will always make the $\beta:\alpha$ ratio tend to $64:36$.
+        \item If we now take a weighted average of the specific rotations of the pure anomers, we will get approximately \ang{52.6}.
+    \end{itemize}
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:20]O-[:-50,,1]@{C1}(-[6,0.8]OH)-[:170,1.3](-[:-70,0.8,,2]HO)-[:-160,1.3](-[:170,0.8]HO)-[:130,1.3](-[:-170,0.8]HO)-[:-10,1.3](-[:110,0.8]-[:40,0.8]OH)}
+            \arrow{<=>[\ce{H+}]}
+            \chemfig{-[:20]O-[:-50,,1]@{C2}(-[:10,0.8]OH)-[:170,1.3](-[:-70,0.8,,2]HO)-[:-160,1.3](-[:170,0.8]HO)-[:130,1.3](-[:-170,0.8]HO)-[:-10,1.3](-[:110,0.8]-[:40,0.8]OH)}
+        \schemestop
+        \chemmove{
+            \fill [rex,opacity=0.5] (C1) circle (2pt);
+            \fill [rex,opacity=0.5] (C2) circle (2pt);
+        }
+    \end{center}
+    \begin{itemize}
+        \item We use an acid catalyst to simplify the mechanism, but it may not be necessary?
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \subscheme{
+                \chemfig{-[:20]@{O1}\charge{90=\:}{O}-[:-50,,1](-[6,0.8]OH)-[:170,1.207](-[:-70,0.8]OH)-[:-160,1.207](-[:160,0.8]HO)-[:130,1.207](-[:-160,0.8]HO)-[:-10,1.207](-[:110,0.8]-[:40,0.8]OH)}
+                \hspace{0.5em}
+            }
+            \arrow{<=>[\chemfig[atom sep=1.4em]{@{H2}H-[@{sb2}]@{O2}\charge{90:3pt=$\oplus$}{O}H_2}][\ce{H2O}]}[,1.4]
+            \subscheme{
+                \hspace{0.5em}
+                \chemfig{-[:20]@{O3a}\charge{90:3pt=$\oplus$}{O}H-[@{sb3a}:-50,,1](-[@{sb3b}6,0.8]@{O3b}\charge{-90=\:}{O}H)-[:170,1.207](-[:-70,0.8]OH)-[:-160,1.207](-[:160,0.8]HO)-[:130,1.207](-[:-160,0.8]HO)-[:-10,1.207](-[:110,0.8]-[:40,0.8]OH)}
+                \hspace{0.5em}
+            }
+            \arrow{<=>}
+            \subscheme{
+                \hspace{1em}
+                \chemfig{-[:20]OH-[:-50,,1,,white](=^[6,0.8]\charge{-90:3pt=$\oplus$}{O}H)-[:170,1.207](-[:-70,0.8]OH)-[:-160,1.207](-[:160,0.8]HO)-[:130,1.207](-[:-160,0.8]HO)-[:-10,1.207](-[:110,0.8]-[:40,0.8]OH)}
+                \hspace{1em}
+            }
+            \arrow{<=>}[-90]
+            \chemfig{-[:20]@{O5a}\charge{90=\:}{O}H-[:-50,,1,,white]@{C5}(=_[@{db5}:10,0.8]@{O5b}\charge{90:3pt=$\oplus$}{O}H)-[:170,1.207](-[:-70,0.8]OH)-[:-160,1.207](-[:160,0.8]HO)-[:130,1.207](-[:-160,0.8]HO)-[:-10,1.207](-[:110,0.8]-[:40,0.8]OH)}
+            \arrow{<=>}[180]
+            \chemfig{-[:20]@{O6}\charge{90:3pt=$\oplus$}{O}(-[@{sb6}:5]@{H6}H)-[:-50,,1](-[:10,0.8]OH)-[:170,1.207](-[:-70,0.8]OH)-[:-160,1.207](-[:160,0.8]HO)-[:130,1.207](-[:-160,0.8]HO)-[:-10,1.207](-[:110,0.8]-[:40,0.8]OH)}
+            \arrow{<=>[\ce{H3O+}][*{0.90} {\chemfig[atom sep=1.4em]{H-@{O7}\charge{-90=\:}{O}H}}]}[180,1.3]
+            \chemfig{-[:20]O-[:-50,,1](-[:10,0.8]OH)-[:170,1.207](-[:-70,0.8]OH)-[:-160,1.207](-[:160,0.8]HO)-[:130,1.207](-[:-160,0.8]HO)-[:-10,1.207](-[:110,0.8]-[:40,0.8]OH)}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={6pt}{2pt}] (O1) to[out=90,in=90,looseness=1.5] (H2);
+            \draw [curved arrow={2pt}{2pt}] (sb2) to[out=110,in=130,looseness=3] (O2);
+            \draw [curved arrow={6pt}{2pt}] (O3b) to[out=-90,in=0,looseness=5] (sb3b);
+            \draw [curved arrow={2pt}{2pt}] (sb3a) to[out=40,in=50,looseness=3] (O3a);
+            \draw [curved arrow={6pt}{2pt}] (O5a) to[out=90,in=90,out looseness=2,in looseness=3] (C5);
+            \draw [curved arrow={4pt}{2pt}] (db5) to[bend right=90,looseness=3] (O5b);
+            \draw [curved arrow={6pt}{2pt}] (O7) to[out=-90,in=-25,out looseness=1,in looseness=2] (H6);
+            \draw [curved arrow={2pt}{2pt}] (sb6) to[out=70,in=50,looseness=3] (O6);
+        }
+        \vspace{1em}
+        \caption{Mutarotation mechanism.}
+        \label{fig:mechanismMutarotation}
+    \end{figure}
+    \begin{itemize}
+        \item When we recyclize, we can form either anomer once again.
+        \item Note that if we lose a proton from the second intermediate, we can create the linear form of glucose.
+    \end{itemize}
+    \item Key: Rapid interconversion of the $\alpha,\beta$ forms.
+    \item The equatorial, $\beta$ anomer is not always energetically preferred.
+    \begin{itemize}
+        \item For example, $\alpha$-D-mannose (or $\alpha$-D-mannopyranose) is preferable to $\beta$-D-mannose (or $\beta$-D-mannopyranose).
+        \item The mechanism is not fully understood, but the current assumption is that on the $\alpha$-anomer, the $\sigma^*$ orbital of the axial \ce{C-O} bond accepts electrons from the oxo lone pair via hyperconjugation in a stabilizing fashion.
+        \item $\alpha$ or $\beta$ case-by-case prediction is not testable material.
+    \end{itemize}
+    \item \textbf{Glycoside}: A cyclic acetal/ketal of a sugar.
+    \item Glycoside formation.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:20]O-[:-50,,1](-[:10,0.8]OH)-[:170,1.3](-[:-70,0.8,,2]HO)-[:-160,1.3](-[:170,0.8]HO)-[:130,1.3](-[:-170,0.8]HO)-[:-10,1.3](-[:110,0.8]-[:40,0.8]OH)}
+            \arrow{->[\ce{MeOH}][\ce{H+}]}[,1.1]
+            \chemname{\chemfig{-[:20]O-[:-50,,1](-[6,0.8]OMe)-[:170,1.3](-[:-70,0.8,,2]HO)-[:-160,1.3](-[:170,0.8]HO)-[:130,1.3](-[:-170,0.8]HO)-[:-10,1.3](-[:110,0.8]-[:40,0.8]OH)}}{Major product}
+            \+{,1em,-1em}
+            \chemname{\chemfig{-[:20]O-[:-50,,1](-[:10,0.8]OMe)-[:170,1.3](-[:-70,0.8,,2]HO)-[:-160,1.3](-[:170,0.8]HO)-[:130,1.3](-[:-170,0.8]HO)-[:-10,1.3](-[:110,0.8]-[:40,0.8]OH)}}{Minor product}
+        \schemestop
+        \chemnameinit{}
+    \end{center}
+    \begin{itemize}
+        \item We notably do not form the open hemiacetal from the open form of a sugar.
+        \item The two anomers of the product are called \textbf{methyl $\bm{\alpha}$-D-glucopyranoside} (major) and \textbf{methyl $\bm{\beta}$-D-glucopyranoside} (minor).
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{-[:20]O-[:-50,,1](-[:20,0.8]@{O1}\charge{90=\:}{O}H)-[:170,1.207](-[:-70,0.8]OH)-[:-160,1.207](-[:160,0.8]HO)-[:130,1.207](-[:-160,0.8]HO)-[:-10,1.207](-[:110,0.8]-[:40,0.8]OH)}
+            \arrow{<=>[\chemfig[atom sep=1.4em]{@{H2}H-[@{sb2}]@{O2}\charge{90:3pt=$\oplus$}{O}H_2}][\ce{H2O}]}[,1.4]
+            \chemfig{-[:20]@{O3a}\charge{90=\:}{O}-[@{sb3a}:-50,,1](-[@{sb3b}:20,0.8]@{O3b}\charge{90:3pt=$\oplus$}{O}H_2)-[:170,1.207](-[:-70,0.8]OH)-[:-160,1.207](-[:160,0.8]HO)-[:130,1.207](-[:-160,0.8]HO)-[:-10,1.207](-[:110,0.8]-[:40,0.8]OH)}
+            \arrow{<=>[][\ce{H2O}]}
+            \chemfig{-[:20]@{O4}\charge{90:3pt=$\oplus$}{O}=^[@{db4}:-50,,1]@{C4}-[:170,1.207](-[:-70,0.8]OH)-[:-160,1.207](-[:160,0.8]HO)-[:130,1.207](-[:-160,0.8]HO)-[:-10,1.207](-[:110,0.8]-[:40,0.8]OH)}
+            \arrow{<=>[*{0}\chemfig{Me@{O5}\charge{90=\:}{O}H}]}[-90]
+            \chemfig{-[:20]O-[:-50,,1](-[6]@{O6}\charge{55:2pt=$\oplus$}{O}Me-[@{sb6}6]@{H6}H)-[:170,1.207](-[:-70,0.8]OH)-[:-160,1.207](-[:160,0.8]HO)-[:130,1.207](-[:-160,0.8]HO)-[:-10,1.207](-[:110,0.8]-[:40,0.8]OH)}
+            \arrow{<=>[\ce{H3O+}][*{0.90} {\chemfig[atom sep=1.4em]{H-@{O7}\charge{-90=\:}{O}H}}]}[180,1.3]
+            \chemfig{-[:20]O-[:-50,,1](-[6]OMe)-[:170,1.207](-[:-70,0.8]OH)-[:-160,1.207](-[:160,0.8]HO)-[:130,1.207](-[:-160,0.8]HO)-[:-10,1.207](-[:110,0.8]-[:40,0.8]OH)}
+        \schemestop
+        \chemmove{
+            \draw [curved arrow={6pt}{2pt}] (O1) to[out=90,in=90,looseness=2] (H2);
+            \draw [curved arrow={2pt}{2pt}] (sb2) to[out=110,in=130,looseness=3] (O2);
+            \draw [curved arrow={6pt}{2pt}] (O3a) to[out=90,in=40,looseness=3] (sb3a);
+            \draw [curved arrow={2pt}{2pt}] (sb3b) to[bend right=90,looseness=3] (O3b);
+            \draw [curved arrow={6pt}{2pt}] (O5) to[out=90,in=-90,in looseness=2] (C4);
+            \draw [curved arrow={6pt}{4pt},densely dashed] (O5) to[out=90,in=-90] ++(1.3,0.8) to[out=90,in=40,looseness=2] (C4);
+            \draw [curved arrow={4pt}{2pt}] (db4) to[bend right=90,looseness=3] (O4);
+            \draw [curved arrow={6pt}{2pt}] (O7) to[out=-90,in=180,out looseness=0.8] (H6);
+            \draw [curved arrow={2pt}{2pt}] (sb6) to[bend left=90,looseness=3] (O6);
+        }
+        \caption{Glycoside formation mechanism.}
+        \label{fig:mechanismGlycosides}
+    \end{figure}
+    \begin{itemize}
+        \item Note that the mechanism is symmetric for $\alpha$-D-glucose.
+        \item Which anomer of the product is formed depends on the side from which the \ce{MeOH} nucleophile attacks. Indeed, if we use the dashed attack in step 3 instead of the solid attack, we will get the $\beta$ product.
+    \end{itemize}
+    \item Note that mutarotation and glycoside formation proceed through different intermediates.
+    \begin{itemize}
+        \item We use the mutarotation intermediate because it is much likelier to form in water. The glycoside formation one is just what we need for glycoside formation to proceed, so we have no choice but to go through it.
+    \end{itemize}
+    \item Oxidation/degradation.
+    \item Periodic acid.
+    \item Consider periodic acid (\ce{HIO4}).
+    \begin{itemize}
+        \item Recall diol cleavage (see Figure \ref{fig:mechanismDiolCleavage}).
+    \end{itemize}
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{CHO-[6](-OH)(-[4]H)-[6](-OH)(-[4]H)-[6](-OH)}
+            \arrow{->[\ce{HIO4}][-\ce{H2CO}]}[,1.2]
+            \chemfig{CHO-[6](-OH)(-[4]H)-[6]CHO}
+            \arrow{->[\ce{H2O}]}
+            \chemfig{CHO-[6](-OH)(-[4]H)-[6](-OH)(-[4]HO)}
+            \arrow{->[\ce{HIO4}][-\ce{HCOOH}]}[,1.3]
+            \chemfig{CHO-[6]CHO}
+            \arrow{->[1. \ce{2H2O}][2. \ce{HIO4}\rule{0.5mm}{0pt}]}[,1.3]
+            2\arrow{0}[,0.1]
+            \chemfig{H-[:30](=[2]O)-[:-30]OH}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item Applying it to sugars cleaves repeatedly.
+        \item We get formic acid and formaldehyde in multiple equivalents?
+        \item We have to see aldehydes as hydrates here.
+    \end{itemize}
+    \item Tang works through D-fructose as an example.
+    \item Bromine water.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{CHO-[6](-OH)(-[4]H)-[6]-OH}
+            \arrow{->[\ce{Br2}][\ce{H2O}]}
+            \chemfig{COOH-[6](-OH)(-[4]H)-[6]-OH}
+            \arrow{0}[,0.1]\+
+            \chemfig{\charge{45:1pt=$\ominus$}{Br}}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item This is a good, mild way to convert aldehydes to carboxylic acids.
+    \end{itemize}
+    \item Mechanism.
+    \emph{picture; email Tang.}
+    \item Nitric acid and heat.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{CHO-[6](-OH)(-[4]H)-[6](-H)(-[4]HO)-[6](-OH)(-[4]H)-[6](-OH)(-[4]H)-[6](-OH)}
+            \arrow{->[\ce{HNO3}][$\Delta$]}
+            \chemfig{COOH-[6](-OH)(-[4]H)-[6](-H)(-[4]HO)-[6](-OH)(-[4]H)-[6](-OH)(-[4]H)-[6]COOH}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item The product is \textbf{glucaric acid}.
+    \end{itemize}
+    \item Mechanism.
+    \emph{picture; email Tang.}
+    \item Ruff degradation.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{CHO-[6](-OH)(-[4]H)-[6](-H)(-[4]HO)-[6](-OH)(-[4]H)-[6](-OH)(-[4]H)-[6](-OH)}
+            \arrow{->[1. \ce{Br2, H2O}\rule{1.05cm}{0pt}][2. \ce{H2O2, Fe2(SO4)3}]}[,2.3]
+            \chemfig{CHO-[6](-H)(-[4]HO)-[6](-OH)(-[4]H)-[6](-OH)(-[4]H)-[6](-OH)}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item Read 22.11 for ??
+        \item The first step is bromine water again.
+        \item The second step is the exact opposite of Kiliani-Fischer synthesis.
+    \end{itemize}
+    \item Mechanism.
+    \emph{picture; Google it.}
+    \item Wohl degradiation.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{CHO-[6](-OH)(-[4]H)-[6](-H)(-[4]HO)-[6](-OH)(-[4]H)-[6](-OH)(-[4]H)-[6](-OH)}
+            \arrow{->[\begin{tabular}{l}
+                1. \ce{H2NOH}\\
+                2. \ce{Ac2O, NaOAc}\\
+                3. \ce{NaOH}
+            \end{tabular}]}[,2]
+            \chemfig{CHO-[6](-H)(-[4]HO)-[6](-OH)(-[4]H)-[6](-OH)(-[4]H)-[6](-OH)}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item The reactant is hydroxylamine and forms an oxime.
+        \item \ce{Ac2O} is acetic anhydride very reactive.
+        \item The product is \textbf{D-arabinose}.
+    \end{itemize}
+    \item Mechanism.
+    \begin{itemize}
+        \item Essentially, we form an oxime from the top aldehyde.
+        \item Then we turn the hydroxyl portion of the oxime into \ce{AcO}, a good leaving group. \ce{AcO-} engages in an E2 elimination on the oxime hydrogen, forming a cyano group.
+        \item Base then eliminates the cyano group, giving us an aldehyde one carbon down.
+    \end{itemize}
+    \item What Tang expects us to know from Chapter 22.
+    \begin{itemize}
+        \item The mechanisms she showed us (only a few).
+        \item No synthesis problems with sugars.
+        \begin{itemize}
+            \item Tang has shown us some good reactions, but modern sugar synthesis does not use any of these reactions; these are all decades old.
+            \item Modern sugar chemistry is very hard; these reactions are just classic ones.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+
+
+
+\end{document}
