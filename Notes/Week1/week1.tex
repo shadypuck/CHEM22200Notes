@@ -93,8 +93,8 @@
             \item \ce{Cr-Cl} bond breaks; becomes \ce{Cl} l.p.
             \item \ce{Cl} l.p. makes \ce{H-Cl} bond.
             \item \ce{O-H} bond breaks; becomes \ce{O} l.p.
-            \item \ce{O} l.p. makes new \ce{OH} bond.
-            \item \ce{CH} bond breaks and electrons make a new \ce{C=O} $\pi$ bond.
+            \item \ce{O} l.p. makes new \ce{O-H} bond.
+            \item \ce{C-H} bond breaks and electrons make a new \ce{C=O} $\pi$ bond.
             \item \ce{O-Cr} bond breaks; becomes a \ce{Cr} l.p.
         \end{enumerate}
     \end{itemize}
@@ -142,13 +142,13 @@
     \end{figure}
     \begin{itemize}
         \item Note that the charge on aluminum in \ce{AlCl4-} is a \emph{formal} charge; it is not indicative of the presence of a lone pair.
-        \item Remember that we form the ortho/para product because those dearomatized intermediates benefit more greatly from resonance stabilization.
+        \item Remember that we form the \emph{ortho}/\emph{para} product because those dearomatized intermediates benefit more greatly from resonance stabilization.
         \item Sentences.
         \begin{enumerate}
             \item \ce{Cl} l.p. makes a bond to aluminum.
-            \item \ce{O} l.p. makes \ce{C=O} $\pi$ bond.
+            \item \ce{O} l.p. makes \ce{C#O} $\pi$ bond.
             \item \ce{C-Cl} bond breaks; becomes \ce{Cl} l.p.
-            \item \ce{C-C} $\pi$ bond breaks, and makes a new \ce{C-C} bond.
+            \item \ce{C=C} $\pi$ bond breaks, and makes a new \ce{C-C} bond.
             \item \ce{C#O} $\pi$ bond breaks; makes \ce{O} l.p.
             \item \ce{Cl} l.p. makes a bond to \ce{H}.
             \item \ce{C-H} bond breaks; becomes a \ce{C=C} $\pi$ bond.
@@ -187,7 +187,7 @@
         \schemestop
     \end{center}
     \begin{itemize}
-        \item Cis-diols react faster, but aren't necessarily required.
+        \item \emph{cis}-diols react faster, but aren't necessarily required.
     \end{itemize}
     \item Mechanism.
     \begin{figure}[h!]
@@ -220,7 +220,7 @@
         \schemestop
     \end{center}
     \begin{itemize}
-        \item Every place gold is we can use mercury instead, but since gold is less toxic and more active, we prefer to use it (even though it's more expensive). Any of the soft Lewis acid transition metals in the bottom-right corner island will work, though.
+        \item Every place gold is we can use mercury instead, but since gold is less toxic and more active, we prefer to use it (even though it's more expensive). Any of the soft Lewis acid transition metals in the bottom-right corner island will work, though\footnote{Gold acts as a soft $\pi$-Lewis acid here! Just like in the Gold MOL project from Lin lab \parencite{bib:GoldMOLProject}.}.
     \end{itemize}
     \item Mechanism.
     \begin{figure}[h!]
@@ -255,7 +255,11 @@
         \label{fig:mechanismAlkyneHydrogenation}
     \end{figure}
     \begin{itemize}
-        \item We won't need to know the arrow-pushing mechanism for the tautomerization until Unit 3.
+        \item We won't need to know the arrow-pushing mechanism for the final tautomerization until Unit 3.
+        \item Recall this enol-keto tautomerization from first quarter, specifically Figure 7.6 of \textcite{bib:CHEM22000Notes}.
+        \begin{itemize}
+            \item At the same time, we alluded to a catalytic mechanism using \ce{HgSO4}; this mechanism is presumably very similar to the above, since mercury is like gold as mentioned earlier.
+        \end{itemize}
     \end{itemize}
     \item Alkyne hydroboration.
     \item General form.
@@ -277,7 +281,7 @@
         \label{fig:9-BBN-H}
     \end{figure}
     \item Mechanism.
-    \begin{figure}[h!]
+    \begin{figure}[H]
         \centering
         \footnotesize
         \schemestart
@@ -292,9 +296,9 @@
                 \setchemfig{arrow double sep=2pt}
                 \subscheme{
                     \subscheme{
-                        \chemfig{\charge{90:3pt=$\ominus$}{O}H}
-                        \+
                         \chemfig{H_2O_2}
+                        \+
+                        \chemfig{\charge{90:3pt=$\ominus$}{O}H}
                     }
                     \arrow{<=>}[-90,0.8]
                     \subscheme{
@@ -509,7 +513,7 @@
         \end{itemize}
     \end{itemize}
     \item Aside: Formaldehyde's state at STP is gaseous.
-    \begin{figure}[h!]
+    \begin{figure}[H]
         \centering
         \footnotesize
         \begin{subfigure}[b]{\linewidth}
@@ -536,11 +540,11 @@
     \end{itemize}
     \item Mechanism.
     \begin{itemize}
-        \item The mechanisms are identical to Figures \ref{fig:acidPromotedNua} and \ref{fig:basePromotedNua} with $\ce{Nu-H}=\ce{HO-H}$ and $\ce{H-X}=\ce{H-OH2+}$ or $\ce{B}=\ce{OH-}$, respectively.
+        \item Identical to Figures \ref{fig:acidPromotedNua} and \ref{fig:basePromotedNua} with $\ce{Nu-H}=\ce{HO-H}$ and $\ce{H-X}=\ce{H-OH2+}$ or $\ce{B}=\ce{OH-}$.
         \item Note that it is not necessary to show the first step of Figure \ref{fig:basePromotedNua} (deprotonation of the nucleophile by the base) in this case because this is just the reaction \ce{HO-H + OH- -> HO- + H-OH}.
     \end{itemize}
-    \item Note that \ce{H3O+} or \ce{H+} is an abbreviation for some strong acid in solution, but there is always a counterion present; if there were even a couple of excess positive molecules, you would generate a huge static field.
-    \item \textbf{Ketal}: The class of molecules resulting from the nucleophilic addition of an alcohol (\ce{ROH}) to a ketone. \emph{Structure}
+    \item Note that \ce{H3O+} or \ce{H+} is an abbreviation for some strong acid in solution, but there is always a counterion present; even a couple of excess positive molecules would generate a huge static field.
+    \item \textbf{Ketal}: The product of the nucleophilic addition of an alcohol (\ce{ROH}) to a ketone. \emph{Structure}
     \begin{figure}[h!]
         \centering
         \footnotesize
@@ -548,7 +552,7 @@
         \caption{Ketal.}
         \label{fig:ketal}
     \end{figure}
-    \item \textbf{Acetal}: The class of molecules resulting from the nucleophilic addition of an alcohol (\ce{ROH}) to an aldehyde. \emph{Structure}
+    \item \textbf{Acetal}: The product of the nucleophilic addition of an alcohol (\ce{ROH}) to an aldehyde. \emph{Structure}
     \begin{figure}[h!]
         \centering
         \footnotesize
@@ -573,7 +577,7 @@
         \begin{itemize}
             \item Water is generated as a byproduct during the course of the reaction, and removing it drives the reaction in the forward direction by Le Ch\^{a}telier's principle.
         \end{itemize}
-        \item The formation of ketals and acetals incorporates two molecules of \ce{ROH}.
+        % \item The formation of ketals and acetals incorporates two molecules of \ce{ROH}.
         \item Ketals and acetals can only form under acidic conditions.
     \end{itemize}
     \item Mechanism.
@@ -706,13 +710,14 @@
         \caption{Using ketals as protecting groups.}
         \label{fig:ketalProtection}
     \end{figure}
+    \pagebreak
     \item Using a ketal to protect a carbonyl (Figure \ref{fig:ketalProtectiona}).
     \begin{itemize}
         \item If we convert 1-bromo-5-hexanone (the starting material in Figure \ref{fig:ketalProtectiona}) to a Grignard directly, we can't prevent the intramolecular attack.
         \item However, we can first add an alcohol under acidic conditions while removing water.
         \begin{itemize}
             \item Chemists usually use ethylene glycol, which forms a cyclic diol.
-            \item Ethylene glycol is cheap, provides a more stable ring, and forms faster due to increased local concentration.
+            \item Ethylene glycol is cheap, provides a more stable ring, and forms faster due to increased local concentration (think chelate effect).
         \end{itemize}
         \item Now that no part of the molecule is electrophilic, we are free to make it into a Grignard and carry out our desired Grignard-based synthesis.
         \item As a last step, we can remove the alcohol.
@@ -728,12 +733,12 @@
             \item For the purposes of this class, medium sized rings will not form.
         \end{itemize}
         \item Once we have protected our alcohols, we can react the rest of the molecule, finally removing our protecting group with \ce{H3O+ + H2O}.
-        \item We'd need methods beyond the scope of this class to convert the other alcohols to aldehydes.
+        \item We'd need methods beyond this class to selectively convert the other alcohols to carbonyl groups.
     \end{itemize}
     \item Hemiacetals and hemiketals are rarely isolable.
     \begin{itemize}
         \item Exception: Hemiacetals in ring systems.
-        \item For example, glucose contains a hemiacetal.
+        \item For example, glucose contains a hemiacetal (we will discuss its chemistry more later).
         \item Hemiketals are almost never observed.
     \end{itemize}
     \item \textbf{Imine}: The class of molecules containing a \ce{C=N} double bond. \emph{Structure}
@@ -777,12 +782,12 @@
     \end{itemize}
     \item Further equilibrium constants.
     \begin{itemize}
-        \item \ce{CMe2(OH)+ + MeOH <=>> COMe2 + MeOH2}: $K\approx 100$.
+        \item \ce{Me2COH+ + MeOH <=>> Me2CO + MeOH2+}: $K\approx 100$.
         \begin{itemize}
             \item This equilibrium is related to ketal formation (Figure \ref{fig:mechanismKetalFormation}).
             \item In particular, it shows that even though only one out of every hundred molecules of acetone will exist in the protonated form (on average), that is enough to proceed with ketal formation.
         \end{itemize}
-        \item \ce{CMe2(OH)+ + MeNH2 <=>> COMe2 + MeNH3+}: $K\approx 10^{16}$.
+        \item \ce{Me2COH+ + MeNH2 <=>> Me2CO + MeNH3+}: $K\approx 10^{16}$.
         \begin{itemize}
             \item Thus, acid catalysis is far slower for amines than for alcohols.
         \end{itemize}
@@ -807,7 +812,7 @@
         \item Indeed, there is a background proton transfer equilibrium between the strong acid and the alcohol/amine. Such equilibria are typically established much more quickly than other kinds of equilibria and serve to quickly replenish the quantity of free acid in solution.
     \end{itemize}
     \item \textbf{Hydroxylamine}: The compound \ce{H2N-OH}.
-    \item \textbf{Oxime}: The class of molecules resulting from the nucleophilic addition of hydroxylamine to a carbonyl group. \emph{Structure}
+    \item \textbf{Oxime}: The product of the nucleophilic addition of hydroxylamine to a carbonyl group. \emph{Structure}
     \begin{figure}[h!]
         \centering
         \footnotesize
@@ -815,6 +820,7 @@
         \caption{Oxime.}
         \label{fig:oxime}
     \end{figure}
+    \pagebreak
     \item General form.
     \begin{center}
         \footnotesize
@@ -829,10 +835,10 @@
     \end{center}
     \item \textbf{Hydrazine}: The compound \ce{H2N-NH2}.
     \begin{itemize}
-        \item Hydrazine is used as rocket fuel.
-        \item It is highly explosive as a reduced (and thus less stable) form of dinitrogen (one of the most stable molecules in existence) that can, in addition, release hydrogen gas.
+        \item Also commonly written \ce{N2H4}.
+        \item Hydrazine is used as rocket fuel: It is highly explosive as a reduced (and thus less stable) form of dinitrogen (a very stable molecule) that can, in addition, release hydrogen gas.
     \end{itemize}
-    \item \textbf{Hydrazone}: The class of molecules resulting from the nucleophilic addition of hydrazine to a carbonyl group. \emph{Structure}
+    \item \textbf{Hydrazone}: The product of the nucleophilic addition of hydrazine to a carbonyl group. \emph{Structure}
     \begin{figure}[h!]
         \centering
         \footnotesize
@@ -862,7 +868,7 @@
         \item Oximes.
         \begin{itemize}
             \item The starting material (hydroxylamine) is destabilized by the \textbf{$\bm{\alpha}$-effect}.
-            \item There is increased $s$-character in the nitrogen lone pair of an oxime, which stabilizes the product.
+            \item Additionally, the increased $s$ character in the product (\ce{N} is $sp^2$ in an oxime, $sp^3$ in hydroxylamine) means that the lone pair on nitrogen is held tighter in the product and hence experiences a diminished $\alpha$-effect there.
         \end{itemize}
         \item Hydrazones.
         \begin{itemize}
@@ -872,7 +878,7 @@
     \item \textbf{$\bm{\alpha}$-effect}: The destabilizing effect of the repulsion of lone pairs across a chemical bond.
     \item The Wolff-Kishner reduction.
     \begin{itemize}
-        \item Again, we won't need to know names for tests ("the old white men who developed these reactions get enough credit"), but we will need them as we more forward in chemistry.
+        \item Again, we won't need to know names for tests ("the old white men who developed these reactions get enough credit"), but we will need them as we move forward in chemistry.
     \end{itemize}
     \item General form.
     \begin{center}
@@ -901,17 +907,15 @@
                     \chemfig{-[:30]\charge{45:2pt=$\ominus$}{}(-[2]N=[:30]@{N2}\charge{135:1pt=$\oplus$}{N}(-[@{sb2}2]@{H2}H)-[:-30]H)-[:-30]}
                 }
             \chemright{]}
-            \arrow{->[*{0}\chemfig{@{O3}\charge{-90=\:,135:1pt=$\ominus$}{O}H}]}[90]
+            \arrow{->[*{0}\chemfig{@{O3}\charge{-90=\:,135:1pt=$\ominus$}{O}H}][*{0}-\ce{H2O}]}[90]
             \chemfig{-[:30]@{C4}\charge{45:2pt=$\ominus$}{}(-[2]N=[:30]N-[:-30]H)-[:-30]}
-            \arrow{->[\chemfig[atom sep=1.4em]{@{H5}H-[@{sb5}]@{O5}OH}]}[,1.2]
+            \arrow{->[\chemfig[atom sep=1.4em]{@{H5}H-[@{sb5}]@{O5}OH}][*{0}-\ce{OH-}]}[,1.2]
             \chemfig{-[:30](-[:110]N=[::-60]@{N6}N-[@{sb6}::-60]@{H6}H)(-[:70]H)-[:-30]}
-            \arrow{0}[,0.1]\+
-            \chemfig{@{O7}\charge{90=\:,135:1pt=$\ominus$}{O}H}
-            \arrow{->[][-\ce{H2O}]}
+            \arrow{->[\chemfig{@{O7}\charge{90=\:,135:1pt=$\ominus$}{O}H}][-\ce{H2O}]}
             \chemfig{-[:30]@{C8}(-[@{sb8,0.6}:110]N=[@{db8}::-60]@{N8}\charge{90=\:,45:1pt=$\ominus$}{N})(-[:70]H)-[:-30]}
             \arrow{->[][-\ce{N2}]}
             \chemfig{-[:30]@{C9}\charge{45:2pt=$\ominus$}{}(-[2]H)-[:-30]}
-            \arrow{->[\chemfig[atom sep=1.4em]{@{H10}H-[@{sb10}]@{O10}OH}]}[,1.2]
+            \arrow{->[\chemfig[atom sep=1.4em]{@{H10}H-[@{sb10}]@{O10}OH}][*{0}-\ce{OH-}]}[,1.2]
             \chemfig{-[:30](-[:110]H)(-[:70]H)-[:-30]}
         \schemestop
         \chemmove{
@@ -921,7 +925,7 @@
             \draw [curved arrow={2pt}{2pt}] (sb2) to[bend left=90,looseness=3] (N2);
             \draw [curved arrow={11pt}{2pt}] (C4) to[out=45,in=-160] (H5);
             \draw [curved arrow={2pt}{2pt}] (sb5) to[bend left=90,looseness=3] (O5);
-            \draw [curved arrow={6pt}{2pt}] (O7) to[out=90,in=0,looseness=1.2] (H6);
+            \draw [curved arrow={6pt}{2pt}] (O7) to[out=90,in=30,looseness=1.5] (H6);
             \draw [curved arrow={2pt}{2pt}] (sb6) to[bend right=90,looseness=3] (N6);
             \draw [curved arrow={6pt}{3pt}] (N8) to[out=90,in=140,looseness=4] (db8);
             \draw [curved arrow={2pt}{2pt}] (sb8) to[out=180,in=170,looseness=3] (C8);
@@ -932,9 +936,9 @@
         \label{fig:mechanismWolffKishner}
     \end{figure}
     \begin{itemize}
-        \item Essentially, what we do is we return the hydrazone to a carbonyl, and then we remove the carbonyl.
+        \item Important consequence: This allows us to remove a carbonyl in two steps ($\text{carbonyl}\to\text{hydrazone}\to\text{Wolff-Kishner}$).
     \end{itemize}
-    \item \textbf{Enamine}: The class of molecules resulting from the nucleophilic addition of dialkyl amines (\ce{R2NH}) to a ketone or aldehyde. \emph{Structure}
+    \item \textbf{Enamine}: The product of the nucleophilic addition of a dialkyl amine (\ce{R2NH}) to a carbonyl group. \emph{Structure}
     \begin{figure}[h!]
         \centering
         \footnotesize
@@ -954,7 +958,7 @@
             \chemfig{-[:30](-[2]N(-[:150])(-[:30]))=[:-30]}
         \schemestop
     \end{center}
-    \item \textbf{Iminium}: The class of ions containing a \ce{C=N+} double bond. \emph{Structure}
+    \item \textbf{Iminium}: An ion containing a \ce{C=N+} double bond. \emph{Structure}
     \begin{figure}[h!]
         \centering
         \footnotesize
@@ -1008,8 +1012,8 @@
         \item Ethanone bonded at the carbonyl carbon is an ethanoyl (or acetyl [abbrev. Ac]) group.
         \item A ketone other than ethanone bonded at the carbonyl carbon is an alkanoyl or acyl group.
     \end{itemize}
-    \item For example, we might encounter 2-methanoylbenzoic acid (o-formylbenzoic acid).
-    \item Aluminum hydride derivatives less reactive than \ce{LiAlH4} include DIBAL-H and lithium tri-\emph{tert}-butoxy-aluminum hydride.
+    \item For example, we might encounter 2-methanoylbenzoic acid (\emph{o}-formylbenzoic acid).
+    \item Aluminum hydride derivatives less reactive than \ce{LiAlH4} include DIBAL-H (more on this later in the course) and lithium tri-\emph{tert}-butoxy-aluminum hydride.
     \item An additional, useful aldehyde-forming reaction is
     \begin{center}
         \footnotesize
